@@ -1,5 +1,44 @@
 [
     {
+        "DisplayName":"Game Port",
+        "Category":"Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$ApplicationPort1",
+        "InputType":"number",
+        "IsFlagArgument":false,
+        "Hidden":true,
+        "ParamFieldName":"DefaultPort",
+        "IncludeInCommandLine":false,
+        "DefaultValue":"16261"
+    },
+    {
+        "DisplayName":"Steam Port 1",
+        "Category":"Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$ApplicationPort2",
+        "InputType":"number",
+        "IsFlagArgument":false,
+        "Hidden":true,
+        "ParamFieldName":"SteamPort1",
+        "IncludeInCommandLine":false,
+        "DefaultValue":"8766"
+    },
+    {
+        "DisplayName":"Steam Port 2",
+        "Category":"Server Settings",
+        "Description":"",
+        "Keywords":"",
+        "FieldName":"$ApplicationPort3",
+        "InputType":"number",
+        "IsFlagArgument":false,
+        "Hidden":true,
+        "ParamFieldName":"SteamPort2",
+        "IncludeInCommandLine":false,
+        "DefaultValue":"8767"
+    },
+    {
         "DisplayName":"RCON Port",
         "Category":"Server Settings",
         "Description":"",
