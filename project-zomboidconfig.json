@@ -10,7 +10,7 @@
         "Hidden":true,
         "ParamFieldName":"RCONPort",
         "IncludeInCommandLine":false,
-        "DefaultValue":""
+        "DefaultValue":"27015"
     },
     {
         "DisplayName":"RCONPassword",
