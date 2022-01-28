@@ -391,10 +391,10 @@
         "Category":"Gameplay Settings",
         "Description":"If enabled, Player vs Player is allowed",
         "Keywords":"pvp",
-        "FieldName":"PvP",
+        "FieldName":"PVP",
         "InputType":"checkbox",
         "IsFlagArgument":false,
-        "ParamFieldName":"PvP",
+        "ParamFieldName":"PVP",
         "IncludeInCommandLine":false,
         "DefaultValue":"true",
         "EnumValues":{
