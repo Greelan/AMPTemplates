@@ -127,7 +127,7 @@
         "suffix":"players"
     },
     {
-        "DisplayName":"Enable Whitelist",
+        "DisplayName":"Disable Whitelist",
         "Category":"Server Settings",
         "Description":"",
         "Keywords":"whitelist,open",
@@ -138,14 +138,14 @@
         "IncludeInCommandLine":false,
         "DefaultValue":"true",
         "EnumValues":{
-            "True":"false",
-            "False":"true"
+            "True":"true",
+            "False":"false"
         }
     },
     {
         "DisplayName":"Automatically Whitelist Players",
         "Category":"Server Settings",
-        "Description":"Automatically add players to the whitelist (if enabled)",
+        "Description":"Automatically add players to the whitelist (if not disabled)",
         "Keywords":"whitelist,add,automatic",
         "FieldName":"AutoCreateUserInWhiteList",
         "InputType":"checkbox",
@@ -242,7 +242,7 @@
         "ParamFieldName":"Mods",
         "IncludeInCommandLine":false,
         "DefaultValue":"",
-        "placeholder":"eg: 67commando;86oshkoshP19A;92amgeneralM998"
+        "placeholder":"67commando;86oshkoshP19A;92amgeneralM998"
     },
     {
         "DisplayName":"Workshop Items",
@@ -255,7 +255,7 @@
         "ParamFieldName":"WorkshopItems",
         "IncludeInCommandLine":false,
         "DefaultValue":"",
-        "placeholder":"eg: 2478247379;2566953935"
+        "placeholder":"2478247379;2566953935"
     },
     {
         "DisplayName":"Display Player Usernames",
@@ -346,7 +346,7 @@
         "ParamFieldName":"CustomJavaArgs",
         "IncludeInCommandLine":false,
         "DefaultValue":"",
-        "placeholder":"eg: -Ddebug"
+        "placeholder":"-Ddebug"
     },
     {
         "DisplayName":"Additional Server Startup Parameters",
@@ -359,7 +359,7 @@
         "ParamFieldName":"CustomServerArgs",
         "IncludeInCommandLine":false,
         "DefaultValue":"",
-        "placeholder":"eg: -ip 192.168.1.10"
+        "placeholder":"-ip 192.168.1.10"
     },
     {
         "DisplayName":"Set Spawn Point",
@@ -384,7 +384,7 @@
         "ParamFieldName":"SpawnItems",
         "IncludeInCommandLine":false,
         "DefaultValue":"",
-        "placeholder":"eg: Base.BaseballBat,Base.WaterBottleFull"
+        "placeholder":"Base.BaseballBat,Base.WaterBottleFull"
     },
     {
         "DisplayName":"Allow PvP",
@@ -489,9 +489,9 @@
         "DefaultValue":"1.0"
     },
     {
-        "DisplayName":"Allow Fire",
+        "DisplayName":"Don't Allow Fire",
         "Category":"Gameplay Settings",
-        "Description":"If enabled, fires are allowed. Disable if fires cause problems for your server",
+        "Description":"If enabled, fires are not allowed. Enable if fires cause problems for your server",
         "Keywords":"fire",
         "FieldName":"NoFire",
         "InputType":"checkbox",
@@ -500,8 +500,8 @@
         "IncludeInCommandLine":false,
         "DefaultValue":"false",
         "EnumValues":{
-            "True":"false",
-            "False":"true"
+            "True":"true",
+            "False":"false"
         }
     },
     {
