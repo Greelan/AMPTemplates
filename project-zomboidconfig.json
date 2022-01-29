@@ -145,7 +145,7 @@
         "Category":"Server Settings",
         "Description":"Maximum number of players that may connect to the server",
         "Keywords":"maximum,players",
-        "FieldName":"MaxPlayers",
+        "FieldName":"$MaxUsers",
         "InputType":"number",
         "IsFlagArgument":false,
         "ParamFieldName":"MaxPlayers",
