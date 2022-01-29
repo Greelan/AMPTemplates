@@ -65,18 +65,6 @@
         "DefaultValue":"Password123"
     },
     {
-        "DisplayName":"Server Local Name",
-        "Category":"Server Settings",
-        "Description":"Server name as stored locally. Change only if really required",
-        "Keywords":"server,name",
-        "FieldName":"servername",
-        "InputType":"text",
-        "IsFlagArgument":false,
-        "ParamFieldName":"servername",
-        "IncludeInCommandLine":true,
-        "DefaultValue":"servertest"
-    },
-    {
         "DisplayName":"Server Public Name",
         "Category":"Server Settings",
         "Description":"Server name as shown to the public (if the server is visible)",
@@ -386,6 +374,18 @@
         "IncludeInCommandLine":false,
         "DefaultValue":"",
         "placeholder":"-Ddebug"
+    },
+    {
+        "DisplayName":"Server Local Name",
+        "Category":"Server Settings",
+        "Description":"Server name as stored locally. WARNING: Do not change unless you know what you are doing! Also update the server if this is changed",
+        "Keywords":"server,name",
+        "FieldName":"servername",
+        "InputType":"text",
+        "IsFlagArgument":false,
+        "ParamFieldName":"servername",
+        "IncludeInCommandLine":true,
+        "DefaultValue":"servertest"
     },
     {
         "DisplayName":"Additional Server Startup Parameters",
