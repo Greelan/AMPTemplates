@@ -52,19 +52,6 @@
         "DefaultValue":"27015"
     },
     {
-        "DisplayName":"RCONPassword",
-        "Category":"Server Settings",
-        "Description":"",
-        "Keywords":"",
-        "FieldName":"$RemoteAdminPassword",
-        "InputType":"text",
-        "IsFlagArgument":false,
-        "Hidden":true,
-        "ParamFieldName":"RCONPassword",
-        "IncludeInCommandLine":false,
-        "DefaultValue":"Password123"
-    },
-    {
         "DisplayName":"Server Public Name",
         "Category":"Server Settings",
         "Description":"Server name as shown to the public (if the server is visible)",
@@ -126,6 +113,18 @@
         "IsFlagArgument":false,
         "ParamFieldName":"adminpassword",
         "IncludeInCommandLine":true,
+        "DefaultValue":"Password123"
+    },
+    {
+        "DisplayName":"RCONPassword",
+        "Category":"Server Settings",
+        "Description":"Password to connect to RCON. You should change this after first installing the server",
+        "Keywords":"rcon,password",
+        "FieldName":"$RemoteAdminPassword",
+        "InputType":"password",
+        "IsFlagArgument":false,
+        "ParamFieldName":"RCONPassword",
+        "IncludeInCommandLine":false,
         "DefaultValue":"Password123"
     },
     {
