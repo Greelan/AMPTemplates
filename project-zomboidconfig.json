@@ -80,7 +80,7 @@
     {
         "DisplayName":"Server Password",
         "Category":"Server Settings",
-        "Description":"Password to connect to the server",
+        "Description":"Password to connect to the server. You should change this after first installing the server",
         "Keywords":"password",
         "FieldName":"Password",
         "InputType":"password",
