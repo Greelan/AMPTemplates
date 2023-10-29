@@ -910,6 +910,20 @@
         }
     },
     {
+        "DisplayName":"Allow Speed Levelling",
+        "Category":"ARK Gameplay Settings",
+        "Description":"If set, player and non-flyer can have their movement speed levelled up",
+        "Keywords":"player,non-flyer,movement,speed,level,up,allowspeedleveling",
+        "FieldName":"AllowSpeedLeveling",
+        "InputType":"checkbox",
+        "ParamFieldName":"AllowSpeedLeveling",
+        "DefaultValue":"",
+        "EnumValues":{
+            "False":"",
+            "True":"-AllowSpeedLeveling "
+        }
+    },
+    {
         "DisplayName":"Allow Cave Flyers",
         "Category":"ARK Gameplay Settings",
         "Description":"If set, flyers will always be allowed into caves",
