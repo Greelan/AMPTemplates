@@ -912,7 +912,7 @@
     {
         "DisplayName":"Allow Speed Levelling",
         "Category":"ARK Gameplay Settings",
-        "Description":"If set, player and non-flyer can have their movement speed levelled up",
+        "Description":"If set, players and non-flyers can have their movement speed levelled up. Disabled by default due to engine limitations. Use with caution",
         "Keywords":"player,non-flyer,movement,speed,level,up,allowspeedleveling",
         "FieldName":"AllowSpeedLeveling",
         "InputType":"checkbox",
@@ -1656,7 +1656,7 @@
     {
         "DisplayName":"Item Stack Size Multiplier",
         "Category":"ARK Multiplier Settings",
-        "Description":"Allow increasing or decreasing global item stack size, this means all default stack sizes will be multiplied by the value given (excluding items that have a stack size of 1 by default).",
+        "Description":"Sets the scaling factor for the global item stack size. All default stack sizes will be multiplied by this value (excluding items that have a stack size of 1 by default)",
         "Keywords":"item,stack,size,ItemStackSizeMultiplier",
         "FieldName":"ItemStackSizeMultiplier",
         "InputType":"number",
