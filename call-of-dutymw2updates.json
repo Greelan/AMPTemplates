@@ -6,6 +6,12 @@
         "UpdateSourceArgs":"{{$FullBaseDir}}userraw"
     },
     {
+        "UpdateStageName":"Players Directory Creation",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"CreateDirectory",
+        "UpdateSourceArgs":"{{$FullBaseDir}}players"
+    },
+    {
         "UpdateStageName":"Mods Directory Creation",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"CreateDirectory",
@@ -59,7 +65,7 @@
         "UpdateSource":"FetchURL",
         "UpdateSourceData":"https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/call-of-dutymw2server.cfg",
         "UpdateSourceArgs":"server.cfg",
-        "UpdateSourceTarget":"{{$FullBaseDir}}userraw",
+        "UpdateSourceTarget":"{{$FullBaseDir}}players",
         "OverwriteExistingFiles":false
     },
     {
