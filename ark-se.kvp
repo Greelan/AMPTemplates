@@ -62,7 +62,7 @@ App.Compatibility=None
 App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
-App.MonitorChildProcessName=ShooterGameServer.exe
+App.MonitorChildProcessName=^.*ShooterGameServer\.exe.*Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RCONConnected
