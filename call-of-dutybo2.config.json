@@ -1,405 +1,405 @@
 [
     {
+        "Category": "CoD BO2 Server Settings",
+        "Description": "",
         "DisplayName": "RCON Password",
-        "Category": "CoD BO2 Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
         "FieldName": "$RemoteAdminPassword",
-        "InputType": "text",
         "Hidden": true,
-        "ParamFieldName": "rcon_password",
-        "EnumValues": {}
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "rcon_password"
     },
     {
-        "DisplayName": "Continuous Log",
         "Category": "CoD BO2 Server Settings",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "g_logSync",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "g_logSync",
         "DefaultValue": "2",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Log File Name",
-        "Category": "CoD BO2 Server Settings",
         "Description": "",
-        "Keywords": "",
-        "FieldName": "g_log",
-        "InputType": "text",
+        "DisplayName": "Continuous Log",
+        "EnumValues": {},
+        "FieldName": "g_logSync",
         "Hidden": true,
-        "ParamFieldName": "g_log",
-        "DefaultValue": "logs\\games_mp.log",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "g_logSync"
     },
     {
-        "DisplayName": "Game Mode",
         "Category": "CoD BO2 Server Settings",
-        "Description": "Sets the game mode. Configure the relevant config file accordingly - 'storage/t6/dedicated.cfg' for Multiplayer, 'storage/t6/dedicated_zm.cfg' for Zombies",
-        "Keywords": "game,mode,gamemode",
-        "FieldName": "GameMode",
-        "InputType": "enum",
-        "ParamFieldName": "GameMode",
+        "DefaultValue": "logs\\games_mp.log",
+        "Description": "",
+        "DisplayName": "Log File Name",
+        "EnumValues": {},
+        "FieldName": "g_log",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "g_log"
+    },
+    {
+        "Category": "CoD BO2 Server Settings",
         "DefaultValue": "t6mp \"{{$FullBaseDir}}\" -dedicated +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +sv_config dedicated.cfg",
+        "Description": "Sets the game mode. Configure the relevant config file accordingly - 'storage/t6/dedicated.cfg' for Multiplayer, 'storage/t6/dedicated_zm.cfg' for Zombies",
+        "DisplayName": "Game Mode",
         "EnumValues": {
             "t6mp \"{{$FullBaseDir}}\" -dedicated +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +sv_config dedicated.cfg": "Multiplayer (default)",
             "t6zm \"{{$FullBaseDir}}\" -dedicated +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +sv_config dedicated_zm.cfg": "Zombies"
-        }
+        },
+        "FieldName": "GameMode",
+        "InputType": "enum",
+        "Keywords": "game,mode,gamemode",
+        "ParamFieldName": "GameMode"
     },
     {
-        "DisplayName": "Server Key",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [server key](https://platform.plutonium.pw/serverkeys) required to run the server. This also sets the server name. A Plutonium account must be at least one week old to create a key, and game ownership must be [verified](https://forum.plutonium.pw/topic/32250/an-update-on-game-ownership-verification)",
-        "Keywords": "server,key,serverkey",
+        "DisplayName": "Server Key",
+        "EnumValues": {},
         "FieldName": "ServerKey",
         "InputType": "password",
+        "Keywords": "server,key,serverkey",
         "ParamFieldName": "ServerKey",
-        "DefaultValue": "",
-        "Required": true,
-        "EnumValues": {}
+        "Required": true
     },
     {
-        "DisplayName": "Server Password",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password to join the server. Default is no password",
-        "Keywords": "password,g_password",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "g_password",
         "InputType": "password",
-        "ParamFieldName": "g_password",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "password,g_password",
+        "ParamFieldName": "g_password"
     },
     {
-        "DisplayName": "Load Mod",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the mod to load when starting the server, based on the path to the mod in the Mods directory",
-        "Keywords": "mods,mod,fs_game",
+        "DisplayName": "Load Mod",
+        "EnumValues": {},
         "FieldName": "Mod",
-        "InputType": "text",
-        "ParamFieldName": "Mod",
         "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
+        "InputType": "text",
+        "Keywords": "mods,mod,fs_game",
+        "ParamFieldName": "Mod",
         "Placeholder": "Mods/pezbot_bo2",
-        "EnumValues": {}
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "8",
         "Description": "Sets the maximum number of players allowed on the server at one time. Maximum 18 for Multiplayer, 8 for Zombies",
-        "Keywords": "max,players,limit,sv_maxclients",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": 1,
+        "Keywords": "max,players,limit,sv_maxclients",
         "MaxValue": 18,
+        "MinValue": 1,
         "ParamFieldName": "sv_maxclients",
-        "DefaultValue": "8",
         "Placeholder": "8",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Fast Download URL",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the URL for fast download of mods",
-        "Keywords": "base,url,download,redirection,sv_wwwBaseURL",
+        "DisplayName": "Fast Download URL",
+        "EnumValues": {},
         "FieldName": "sv_wwwBaseURL",
         "InputType": "url",
+        "Keywords": "base,url,download,redirection,sv_wwwBaseURL",
         "ParamFieldName": "seta sv_wwwBaseURL",
-        "DefaultValue": "",
-        "Placeholder": "http://domain.tld/t6",
-        "EnumValues": {}
+        "Placeholder": "http://domain.tld/t6"
     },
     {
-        "DisplayName": "Server Voice Chat Mode",
         "Category": "CoD BO2 Server Settings",
-        "Description": "Sets the server voice chat mode",
-        "Keywords": "voice,chat,mode,sv_voice",
-        "FieldName": "sv_voice",
-        "InputType": "enum",
-        "ParamFieldName": "sv_voice",
         "DefaultValue": "2",
+        "Description": "Sets the server voice chat mode",
+        "DisplayName": "Server Voice Chat Mode",
         "EnumValues": {
             "0": "Disabled",
             "1": "Everyone hears",
             "2": "Teams only hear (default)"
-        }
+        },
+        "FieldName": "sv_voice",
+        "InputType": "enum",
+        "Keywords": "voice,chat,mode,sv_voice",
+        "ParamFieldName": "sv_voice"
     },
     {
-        "DisplayName": "Server Voice Chat Quality",
         "Category": "CoD BO2 Server Settings",
+        "DefaultValue": "3",
         "Description": "Sets the server voice quality level",
-        "Keywords": "voice,chat,quality,sv_voicequality",
+        "DisplayName": "Server Voice Chat Quality",
+        "EnumValues": {},
         "FieldName": "sv_voicequality",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "voice,chat,quality,sv_voicequality",
         "MaxValue": 9,
+        "MinValue": 0,
         "ParamFieldName": "sv_voicequality",
-        "DefaultValue": "3",
-        "Placeholder": "3",
-        "EnumValues": {}
+        "Placeholder": "3"
     },
     {
-        "DisplayName": "Allow Aim Assist",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, Aim Assist will be allowed on gamepads",
-        "Keywords": "aim,assist,sv_allowAimAssist",
+        "DisplayName": "Allow Aim Assist",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_allowAimAssist",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_allowAimAssist",
+        "Keywords": "aim,assist,sv_allowAimAssist",
+        "ParamFieldName": "sv_allowAimAssist"
+    },
+    {
+        "Category": "CoD BO2 Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, matches will be recorded as demo files",
+        "DisplayName": "Enable Demo Recording",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Demo Recording",
-        "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, matches will be recorded as demo files",
-        "Keywords": "demo,recording,enable,demo_enabled",
+        },
         "FieldName": "demo_enabled",
         "InputType": "checkbox",
-        "ParamFieldName": "demo_enabled",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "demo,recording,enable,demo_enabled",
+        "ParamFieldName": "demo_enabled"
     },
     {
-        "DisplayName": "Server Say Name",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "Console",
         "Description": "Sets the name that server-side 'say' commands show up as",
-        "Keywords": "server,say,name,sv_sayname",
+        "DisplayName": "Server Say Name",
+        "EnumValues": {},
         "FieldName": "sv_sayname",
         "InputType": "text",
+        "Keywords": "server,say,name,sv_sayname",
         "ParamFieldName": "sv_sayname",
-        "DefaultValue": "Console",
-        "Placeholder": "Console",
-        "EnumValues": {}
+        "Placeholder": "Console"
     },
     {
-        "DisplayName": "Show Perks on Spawn (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, currently equipped perks will be displayed on the HUD when spawning",
-        "Keywords": "perks,hud,spawn,scr_showperksonspawn",
+        "DisplayName": "Show Perks on Spawn (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "scr_showperksonspawn",
         "InputType": "checkbox",
-        "ParamFieldName": "scr_showperksonspawn",
+        "Keywords": "perks,hud,spawn,scr_showperksonspawn",
+        "ParamFieldName": "scr_showperksonspawn"
+    },
+    {
+        "Category": "CoD BO2 Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, thrown lethal explosives will be removed when killed",
+        "DisplayName": "Delete Explosives On Spawn (Multiplayer)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Delete Explosives On Spawn (Multiplayer)",
-        "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, thrown lethal explosives will be removed when killed",
-        "Keywords": "explosives,spawn,delete,scr_deleteexplosivesonspawn",
+        },
         "FieldName": "scr_deleteexplosivesonspawn",
         "InputType": "checkbox",
-        "ParamFieldName": "scr_deleteexplosivesonspawn",
+        "Keywords": "explosives,spawn,delete,scr_deleteexplosivesonspawn",
+        "ParamFieldName": "scr_deleteexplosivesonspawn"
+    },
+    {
+        "Category": "CoD BO2 Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, custom classes will be disabled",
+        "DisplayName": "Disable Custom Classes (Multiplayer)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Disable Custom Classes (Multiplayer)",
-        "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, custom classes will be disabled",
-        "Keywords": "disable,custom,classes,scr_disable_cac",
+        },
         "FieldName": "scr_disable_cac",
         "InputType": "checkbox",
-        "ParamFieldName": "scr_disable_cac",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "disable,custom,classes,scr_disable_cac",
+        "ParamFieldName": "scr_disable_cac"
     },
     {
-        "DisplayName": "Maximum Rank (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "0",
         "Description": "Every player with a level above the set value will be blocked",
-        "Keywords": "maximum,rank,block,scr_max_rank",
+        "DisplayName": "Maximum Rank (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "scr_max_rank",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "maximum,rank,block,scr_max_rank",
         "MaxValue": 1000,
+        "MinValue": 0,
         "ParamFieldName": "scr_max_rank",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
+        "Placeholder": "0"
     },
     {
-        "DisplayName": "Minimum Prestige (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "0",
         "Description": "Every player with a prestige below the set value will be blocked",
-        "Keywords": "minimum,prestige,block,scr_min_prestige",
+        "DisplayName": "Minimum Prestige (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "scr_min_prestige",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "minimum,prestige,block,scr_min_prestige",
         "MaxValue": 15,
+        "MinValue": 0,
         "ParamFieldName": "scr_min_prestige",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
+        "Placeholder": "0"
     },
     {
-        "DisplayName": "Enable Item Restriction (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, enables the custom restriction system",
-        "Keywords": "enable,item,restriction,sv_enableItemRestriction",
+        "DisplayName": "Enable Item Restriction (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_enableItemRestriction",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_enableItemRestriction",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "enable,item,restriction,sv_enableItemRestriction",
+        "ParamFieldName": "sv_enableItemRestriction"
     },
     {
-        "DisplayName": "Restriction List File (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "restricted.cfg",
         "Description": "Sets the file name for the restriction system",
-        "Keywords": "restriction,list,file,sv_restrictionList",
+        "DisplayName": "Restriction List File (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "sv_restrictionList",
         "InputType": "text",
+        "Keywords": "restriction,list,file,sv_restrictionList",
         "ParamFieldName": "sv_restrictionList",
-        "DefaultValue": "restricted.cfg",
-        "Placeholder": "restricted.cfg",
-        "EnumValues": {}
+        "Placeholder": "restricted.cfg"
     },
     {
-        "DisplayName": "Custom Team Names (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "allies,Team 1|axis,Team 2",
         "Description": "Sets custom team names on the scoreboard",
-        "Keywords": "custom,team,names,g_customteamnames",
+        "DisplayName": "Custom Team Names (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "g_customteamnames",
         "InputType": "text",
+        "Keywords": "custom,team,names,g_customteamnames",
         "ParamFieldName": "g_customteamnames",
-        "DefaultValue": "allies,Team 1|axis,Team 2",
-        "Placeholder": "allies,Team 1|axis,Team 2",
-        "EnumValues": {}
+        "Placeholder": "allies,Team 1|axis,Team 2"
     },
     {
-        "DisplayName": "Allow Depth Of Field (Multiplayer)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "0",
         "Description": "If disabled, clients will not be allowed to have Depth of Field, in order to prevent glitches and gain performance",
-        "Keywords": "depth,field,dof,sv_allowDof",
+        "DisplayName": "Allow Depth Of Field (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_allowDof",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_allowDof",
-        "DefaultValue": "0",
+        "Keywords": "depth,field,dof,sv_allowDof",
+        "ParamFieldName": "sv_allowDof"
+    },
+    {
+        "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
+        "Description": "If set, DSR-50 patches will be applied on the server",
+        "DisplayName": "DSR-50 Patches (Multiplayer)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "DSR-50 Patches (Multiplayer)",
-        "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, DSR-50 patches will be applied on the server",
-        "Keywords": "dsr50,patches,sv_patch_dsr50",
+        },
         "FieldName": "sv_patch_dsr50",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_patch_dsr50",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "dsr50,patches,sv_patch_dsr50",
+        "ParamFieldName": "sv_patch_dsr50"
     },
     {
-        "DisplayName": "Minimum Starting Players (Zombies)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "Sets the minimum players needed to start the game. Do NOT set this higher than the Player Limit!",
-        "Keywords": "zombies,minimum,starting,players,zombies_minplayers",
+        "DisplayName": "Minimum Starting Players (Zombies)",
+        "EnumValues": {},
         "FieldName": "zombies_minplayers",
         "InputType": "number",
-        "MinValue": 1,
+        "Keywords": "zombies,minimum,starting,players,zombies_minplayers",
         "MaxValue": 8,
+        "MinValue": 1,
         "ParamFieldName": "zombies_minplayers",
-        "DefaultValue": "1",
         "Placeholder": "1",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Enable Gun Game (Zombies)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, Pluto's custom Gun Game will be enabled",
-        "Keywords": "zombies,gungame,gun,game,enable,zm_gungame",
+        "DisplayName": "Enable Gun Game (Zombies)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "zm_gungame",
         "InputType": "checkbox",
-        "ParamFieldName": "zm_gungame",
+        "Keywords": "zombies,gungame,gun,game,enable,zm_gungame",
+        "ParamFieldName": "zm_gungame"
+    },
+    {
+        "Category": "CoD BO2 Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, Pluto's custom Sharp Shooter will be enabled",
+        "DisplayName": "Enable Sharp Shooter (Zombies)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Sharp Shooter (Zombies)",
-        "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, Pluto's custom Sharp Shooter will be enabled",
-        "Keywords": "zombies,sharpshooter,enable,zm_sharpshooter",
+        },
         "FieldName": "zm_sharpshooter",
         "InputType": "checkbox",
-        "ParamFieldName": "zm_sharpshooter",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "zombies,sharpshooter,enable,zm_sharpshooter",
+        "ParamFieldName": "zm_sharpshooter"
     },
     {
-        "DisplayName": "Difficulty Level (Zombies)",
         "Category": "CoD BO2 Gameplay Settings",
-        "Description": "Sets the difficulty level for Zombies mode. If set to Easy, it must be manually set on the client as well",
-        "Keywords": "zombies,difficulty,zombies,zmDifficulty",
-        "FieldName": "zmDifficulty",
-        "InputType": "enum",
-        "ParamFieldName": "zmDifficulty",
         "DefaultValue": "1",
+        "Description": "Sets the difficulty level for Zombies mode. If set to Easy, it must be manually set on the client as well",
+        "DisplayName": "Difficulty Level (Zombies)",
         "EnumValues": {
             "0": "Easy",
             "1": "Normal"
-        }
+        },
+        "FieldName": "zmDifficulty",
+        "InputType": "enum",
+        "Keywords": "zombies,difficulty,zombies,zmDifficulty",
+        "ParamFieldName": "zmDifficulty"
     },
     {
-        "DisplayName": "Fix Weapons (Zombies)",
         "Category": "CoD BO2 Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, fixes the SMR's ADS spread, 870 MCS's penetration damage, and allow sprinting with Galvaknuckles",
-        "Keywords": "fix,zombies,weapons,sv_fix_zm_weapons",
+        "DisplayName": "Fix Weapons (Zombies)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_fix_zm_weapons",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_fix_zm_weapons",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "fix,zombies,weapons,sv_fix_zm_weapons",
+        "ParamFieldName": "sv_fix_zm_weapons"
     },
     {
-        "DisplayName": "Patch Weapons (Zombies)",
         "Category": "CoD BO2 Gameplay Settings",
-        "Description": "If set, applies Post DLC1 changes to tar21_zm, type95_zm, xm8_zm, an94_zm, hamr_zm, rpd_zm, pdw57_zm and kard_zm",
-        "Keywords": "patch,zombies,weapons,sv_patch_zm_weapons",
-        "FieldName": "sv_patch_zm_weapons",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_patch_zm_weapons",
         "DefaultValue": "1",
+        "Description": "If set, applies Post DLC1 changes to tar21_zm, type95_zm, xm8_zm, an94_zm, hamr_zm, rpd_zm, pdw57_zm and kard_zm",
+        "DisplayName": "Patch Weapons (Zombies)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
+        },
+        "FieldName": "sv_patch_zm_weapons",
+        "InputType": "checkbox",
+        "Keywords": "patch,zombies,weapons,sv_patch_zm_weapons",
+        "ParamFieldName": "sv_patch_zm_weapons"
     }
 ]

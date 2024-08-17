@@ -1,200 +1,198 @@
 [
     {
-        "DisplayName": "Profile ID",
         "Category": "Subsistence Server Settings",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "ProfileId",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.ProfileId",
         "DefaultValue": "1",
-        "EnumValues": {}
+        "Description": "",
+        "DisplayName": "Profile ID",
+        "EnumValues": {},
+        "FieldName": "ProfileId",
+        "Hidden": true,
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.ProfileId"
     },
     {
+        "Category": "Subsistence Server Settings",
+        "Description": "",
         "DisplayName": "Game Port",
-        "Category": "Subsistence Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
         "FieldName": "$GamePort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "URL.Port",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "URL.Port"
     },
     {
-        "DisplayName": "Query Port",
         "Category": "Subsistence Server Settings",
         "Description": "",
-        "Keywords": "",
+        "DisplayName": "Query Port",
+        "EnumValues": {},
         "FieldName": "$QueryPort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.QueryPort",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "OnlineSubsystemSteamworks.OnlineSubsystemSteamworks.QueryPort"
     },
     {
-        "DisplayName": "Server Name",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "AMP Powered Subsistence Server",
         "Description": "Sets the name of the server that is displayed in the in-game server list. Maximum 64 characters",
-        "Keywords": "server,name,servername",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
         "FieldName": "ServerName",
         "InputType": "text",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.ServerName",
-        "DefaultValue": "AMP Powered Subsistence Server",
-        "EnumValues": {}
+        "Keywords": "server,name,servername",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.ServerName"
     },
     {
-        "DisplayName": "Server Description",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "A Subsistence server",
         "Description": "Sets a short description of the server that is displayed when clicked on in the server list. Maximum 256 characters",
-        "Keywords": "server,description,serverdescription",
+        "DisplayName": "Server Description",
+        "EnumValues": {},
         "FieldName": "ServerDescription",
         "InputType": "text",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.ServerDescription",
-        "DefaultValue": "A Subsistence server",
-        "EnumValues": {}
+        "Keywords": "server,description,serverdescription",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.ServerDescription"
     },
     {
-        "DisplayName": "Host Name",
         "Category": "Subsistence Server Settingso",
+        "DefaultValue": "AMP",
         "Description": "Sets the name of the server host that is displayed in the in-game server list. Maximum 64 characters",
-        "Keywords": "host,name,hosted,hostedbyname",
+        "DisplayName": "Host Name",
+        "EnumValues": {},
         "FieldName": "HostedByName",
         "InputType": "text",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.HostedByName",
-        "DefaultValue": "AMP",
-        "EnumValues": {}
+        "Keywords": "host,name,hosted,hostedbyname",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.HostedByName"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password required for players to join the server. Default is no password",
-        "Keywords": "password,server",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "Password",
         "InputType": "password",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.Password",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "password,server",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.Password"
     },
     {
-        "DisplayName": "Admin Password",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "{{newguid()}}",
         "Description": "Sets the password for server admin login. Default is a strong, random password",
-        "Keywords": "admin,password,adminpassword",
+        "DisplayName": "Admin Password",
+        "EnumValues": {},
         "FieldName": "AdminPassword",
         "InputType": "password",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.AdminPassword",
-        "DefaultValue": "{{newguid()}}",
-        "EnumValues": {}
+        "Keywords": "admin,password,adminpassword",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.AdminPassword"
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "32",
         "Description": "Sets the maximum number of players allowed on the server at one time",
-        "Keywords": "max,players,slots,limit,maxplayers",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": 1,
+        "Keywords": "max,players,slots,limit,maxplayers",
         "MaxValue": 32,
+        "MinValue": 1,
         "ParamFieldName": "ColdGame.ColdDedServerSettings.MaxPlayers",
-        "DefaultValue": "32",
         "Placeholder": "32",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Difficulty Level",
         "Category": "Subsistence Server Settings",
-        "Description": "Sets the difficulty level of the server",
-        "Keywords": "difficulty,level,easy,normal,hardcore",
-        "FieldName": "Difficulty",
-        "InputType": "text",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.Difficulty",
         "DefaultValue": "normal",
+        "Description": "Sets the difficulty level of the server",
+        "DisplayName": "Difficulty Level",
         "EnumValues": {
             "easy": "Easy",
-            "normal": "Normal (default)",
-            "hardcore": "Hardcore"
-        }
+            "hardcore": "Hardcore",
+            "normal": "Normal (default)"
+        },
+        "FieldName": "Difficulty",
+        "InputType": "text",
+        "Keywords": "difficulty,level,easy,normal,hardcore",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.Difficulty"
     },
     {
-        "DisplayName": "Enable PvP Damage",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can damage other players",
-        "Keywords": "pvp,damage,pvpdamage",
+        "DisplayName": "Enable PvP Damage",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "PvPDamage",
         "InputType": "checkbox",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.PvPDamage",
+        "Keywords": "pvp,damage,pvpdamage",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.PvPDamage"
+    },
+    {
+        "Category": "Subsistence Server Settings",
         "DefaultValue": "true",
+        "Description": "If set, hunters will be enabled on the server",
+        "DisplayName": "Enable Hunters",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Enable Hunters",
-        "Category": "Subsistence Server Settings",
-        "Description": "If set, hunters will be enabled on the server",
-        "Keywords": "hunters,enabled,huntersenabled",
+        },
         "FieldName": "HuntersEnabled",
         "InputType": "checkbox",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.HuntersEnabled",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "hunters,enabled,huntersenabled",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.HuntersEnabled"
     },
     {
-        "DisplayName": "Hunter Attacks Type",
         "Category": "Subsistence Server Settings",
-        "Description": "Sets the type of attacks by hunters",
-        "Keywords": "hunter,attacks,revenge,hunterattacks",
-        "FieldName": "HunterAttacks",
-        "InputType": "enum",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.HunterAttacks",
         "DefaultValue": "0",
+        "Description": "Sets the type of attacks by hunters",
+        "DisplayName": "Hunter Attacks Type",
         "EnumValues": {
             "0": "Normal attacks (default)",
             "1": "Revenge attacks only",
             "2": "No attacks"
-        }
+        },
+        "FieldName": "HunterAttacks",
+        "InputType": "enum",
+        "Keywords": "hunter,attacks,revenge,hunterattacks",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.HunterAttacks"
     },
     {
-        "DisplayName": "Days Per Year",
         "Category": "Subsistence Server Settings",
-        "Description": "Sets the number of in-game days per in-game year",
-        "Keywords": "days,year,game,time,daysperyear",
-        "FieldName": "DaysPerYear",
-        "InputType": "enum",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.DaysPerYear",
         "DefaultValue": "36",
+        "Description": "Sets the number of in-game days per in-game year",
+        "DisplayName": "Days Per Year",
         "EnumValues": {
             "12": "12",
-            "24": "24",
-            "36": "36 (default)",
-            "48": "48",
-            "60": "60",
-            "90": "90",
             "120": "120",
             "200": "200",
-            "365": "365"
-        }
+            "24": "24",
+            "36": "36 (default)",
+            "365": "365",
+            "48": "48",
+            "60": "60",
+            "90": "90"
+        },
+        "FieldName": "DaysPerYear",
+        "InputType": "enum",
+        "Keywords": "days,year,game,time,daysperyear",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.DaysPerYear"
     },
     {
-        "DisplayName": "Month Override",
         "Category": "Subsistence Server Settings",
-        "Description": "Sets whether the server starts in a particular month, overriding the current save file",
-        "Keywords": "month,override,start,launch,monthoverride",
-        "FieldName": "MonthOverride",
-        "InputType": "enum",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.MonthOverride",
         "DefaultValue": "-1",
+        "Description": "Sets whether the server starts in a particular month, overriding the current save file",
+        "DisplayName": "Month Override",
         "EnumValues": {
             "-1": "No override (default)",
             "0": "January",
             "1": "February",
+            "10": "November",
+            "11": "December",
             "2": "March",
             "3": "April",
             "4": "May",
@@ -202,65 +200,67 @@
             "6": "July",
             "7": "August",
             "8": "September",
-            "9": "October",
-            "10": "November",
-            "11": "December"
-        }
+            "9": "October"
+        },
+        "FieldName": "MonthOverride",
+        "InputType": "enum",
+        "Keywords": "month,override,start,launch,monthoverride",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.MonthOverride"
     },
     {
-        "DisplayName": "Player Offline Hours Before Base Decay",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "0",
         "Description": "Sets the number of real-world hours that a player (and their team-mates) are offline before a player's base starts to decay. 0 = no decay",
-        "Keywords": "offline,hours,base,decay,inactivity,NumPlayerOfflineHoursBeforeBaseDecay",
+        "DisplayName": "Player Offline Hours Before Base Decay",
+        "EnumValues": {},
         "FieldName": "NumPlayerOfflineHoursBeforeBaseDecay",
         "InputType": "number",
+        "Keywords": "offline,hours,base,decay,inactivity,NumPlayerOfflineHoursBeforeBaseDecay",
         "MinValue": 0,
         "ParamFieldName": "ColdGame.ColdDedServerSettings.NumPlayerOfflineHoursBeforeBaseDecay",
-        "DefaultValue": "0",
         "Placeholder": "0",
-        "Suffix": "hours",
-        "EnumValues": {}
+        "Suffix": "hours"
     },
     {
-        "DisplayName": "Allow Players To Damage Player Bases",
         "Category": "Subsistence Server Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can damage player-placed buildables",
-        "Keywords": "damage,players,bases,buildables,PlayersCanDamagePlayerBases",
+        "DisplayName": "Allow Players To Damage Player Bases",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "PlayersCanDamagePlayerBases",
         "InputType": "checkbox",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.PlayersCanDamagePlayerBases",
+        "Keywords": "damage,players,bases,buildables,PlayersCanDamagePlayerBases",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.PlayersCanDamagePlayerBases"
+    },
+    {
+        "Category": "Subsistence Server Settings",
         "DefaultValue": "true",
+        "Description": "If set, players can access enemy player base items like storage chests and refineries. Does not affect doors, windows or hatches",
+        "DisplayName": "Allow Players To Access Enemy Player Base Items",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Allow Players To Access Enemy Player Base Items",
-        "Category": "Subsistence Server Settings",
-        "Description": "If set, players can access enemy player base items like storage chests and refineries. Does not affect doors, windows or hatches",
-        "Keywords": "access,enemy,player,base,items,storage,refineries,PlayersCanAccessEnemyPlayerBaseItems",
+        },
         "FieldName": "PlayersCanAccessEnemyPlayerBaseItems",
         "InputType": "checkbox",
-        "ParamFieldName": "ColdGame.ColdDedServerSettings.PlayersCanAccessEnemyPlayerBaseItems",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "access,enemy,player,base,items,storage,refineries,PlayersCanAccessEnemyPlayerBaseItems",
+        "ParamFieldName": "ColdGame.ColdDedServerSettings.PlayersCanAccessEnemyPlayerBaseItems"
     },
     {
-        "DisplayName": "Server Branch",
         "Category": "SteamCMD and Updates",
+        "DefaultValue": "public",
         "Description": "Sets the server branch to install. NOTE: Update the server after changing this setting!",
-        "Keywords": "branch,beta,public",
+        "DisplayName": "Server Branch",
+        "EnumValues": {
+            "experimental": "Experimental",
+            "public": "Public (default)"
+        },
         "FieldName": "ServerBranch",
         "InputType": "enum",
-        "ParamFieldName": "ServerBranch",
-        "DefaultValue": "public",
-        "EnumValues": {
-            "public": "Public (default)",
-            "experimental": "Experimental"
-        }
+        "Keywords": "branch,beta,public",
+        "ParamFieldName": "ServerBranch"
     }
 ]

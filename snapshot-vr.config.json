@@ -1,43 +1,43 @@
 [
     {
-        "DisplayName": "Room Name",
         "Category": "Server Settings",
-        "Description": "Sets the name of the server room",
-        "Keywords": "server,room,name,roomname",
-        "FieldName": "roomname",
-        "InputType": "text",
-        "ParamFieldName": "roomname",
-        "IncludeInCommandLine": true,
         "DefaultValue": "AMP Powered Snapshot VR Server",
-        "Required": true,
-        "EnumValues": {}
+        "Description": "Sets the name of the server room",
+        "DisplayName": "Room Name",
+        "EnumValues": {},
+        "FieldName": "roomname",
+        "IncludeInCommandLine": true,
+        "InputType": "text",
+        "Keywords": "server,room,name,roomname",
+        "ParamFieldName": "roomname",
+        "Required": true
     },
     {
-        "DisplayName": "Room Password",
         "Category": "Server Settings",
-        "Description": "Sets the password required to connect to the room",
-        "Keywords": "server,room,password",
-        "FieldName": "password",
-        "InputType": "password",
-        "ParamFieldName": "password",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "",
-        "EnumValues": {}
+        "Description": "Sets the password required to connect to the room",
+        "DisplayName": "Room Password",
+        "EnumValues": {},
+        "FieldName": "password",
+        "IncludeInCommandLine": true,
+        "InputType": "password",
+        "Keywords": "server,room,password",
+        "ParamFieldName": "password",
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Hit Detection Mode",
         "Category": "Server Settings",
-        "Description": "Sets the hit detection mode",
-        "Keywords": "hit,detection,mode,hitdetectionmode",
-        "FieldName": "hitdetectionmode",
-        "InputType": "enum",
-        "ParamFieldName": "hitdetectionmode",
-        "IncludeInCommandLine": true,
         "DefaultValue": "witness",
+        "Description": "Sets the hit detection mode",
+        "DisplayName": "Hit Detection Mode",
         "EnumValues": {
-            "witness": "Witness/classic (default)",
-            "authoritative": "Authoritative/improved"
-        }
+            "authoritative": "Authoritative/improved",
+            "witness": "Witness/classic (default)"
+        },
+        "FieldName": "hitdetectionmode",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "hit,detection,mode,hitdetectionmode",
+        "ParamFieldName": "hitdetectionmode"
     }
 ]

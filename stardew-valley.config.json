@@ -1,414 +1,414 @@
 [
     {
-        "DisplayName": "Server Port",
         "Category": "Stardew Valley Settings",
         "Description": "",
-        "Keywords": "",
+        "DisplayName": "Server Port",
+        "EnumValues": {},
         "FieldName": "$ServerPort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "$.ServerPort",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "$.ServerPort"
     },
     {
-        "DisplayName": "Server Hotkey",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "F9",
         "Description": "Specifies the hotkey to start/stop the server",
-        "Keywords": "server,hotkey,serverHotKey",
+        "DisplayName": "Server Hotkey",
+        "EnumValues": {},
         "FieldName": "serverHotKey",
         "InputType": "text",
+        "Keywords": "server,hotkey,serverHotKey",
         "ParamFieldName": "$.serverHotKey",
-        "DefaultValue": "F9",
-        "Placeholder": "F9",
-        "EnumValues": {}
+        "Placeholder": "F9"
     },
     {
-        "DisplayName": "Profit Margin",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "100",
         "Description": "Sets the profit margin",
-        "Keywords": "profit,margin,percent,profitmargin",
+        "DisplayName": "Profit Margin",
+        "EnumValues": {},
         "FieldName": "profitmargin",
         "InputType": "number",
-        "MinValue": 50,
+        "Keywords": "profit,margin,percent,profitmargin",
         "MaxValue": 150,
+        "MinValue": 50,
         "ParamFieldName": "$.profitmargin",
-        "DefaultValue": "100",
         "Placeholder": "100",
-        "Suffix": "%",
-        "EnumValues": {}
+        "Suffix": "%"
     },
     {
-        "DisplayName": "House Upgrade Level",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "0",
         "Description": "Sets the main house upgrade level. 0 = no upgrade",
-        "Keywords": "house,upgrade,level,upgradeHouse",
+        "DisplayName": "House Upgrade Level",
+        "EnumValues": {},
         "FieldName": "upgradeHouse",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "house,upgrade,level,upgradeHouse",
         "MaxValue": 3,
+        "MinValue": 0,
         "ParamFieldName": "$.upgradeHouse",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
+        "Placeholder": "0"
     },
     {
-        "DisplayName": "Pet Name",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "Funnysnek",
         "Description": "Sets the name of the pet. Maximum 10 characters",
-        "Keywords": "pet,name,petname",
+        "DisplayName": "Pet Name",
+        "EnumValues": {},
         "FieldName": "petname",
         "InputType": "text",
+        "Keywords": "pet,name,petname",
         "ParamFieldName": "$.petname",
-        "DefaultValue": "Funnysnek",
-        "Placeholder": "Funnysnek",
-        "EnumValues": {}
+        "Placeholder": "Funnysnek"
     },
     {
-        "DisplayName": "Farm Cave Choice",
         "Category": "Stardew Valley Settings",
-        "Description": "Sets the farm cave choice",
-        "Keywords": "farm,cave,choice,mushrooms,bats,farmcavechoicemushrooms",
-        "FieldName": "farmcavechoicemushrooms",
-        "InputType": "enum",
-        "ParamFieldName": "$.farmcavechoicemushrooms",
         "DefaultValue": "true",
+        "Description": "Sets the farm cave choice",
+        "DisplayName": "Farm Cave Choice",
         "EnumValues": {
             "false": "Bats",
             "true": "Mushrooms (default)"
-        }
+        },
+        "FieldName": "farmcavechoicemushrooms",
+        "InputType": "enum",
+        "Keywords": "farm,cave,choice,mushrooms,bats,farmcavechoicemushrooms",
+        "ParamFieldName": "$.farmcavechoicemushrooms"
     },
     {
-        "DisplayName": "Community Center Run",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "true",
         "Description": "If enabled, the host will attempt a Community Center run. If disabled, the host will do a Joja run",
-        "Keywords": "community,center,run,communitycenterrun",
+        "DisplayName": "Community Center Run",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "communitycenterrun",
         "InputType": "checkbox",
-        "ParamFieldName": "$.communitycenterrun",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "community,center,run,communitycenterrun",
+        "ParamFieldName": "$.communitycenterrun"
     },
     {
-        "DisplayName": "Sleep Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "2200",
         "Description": "Sets the time of day when the host goes to sleep, in military time. Up to 2600 for 2 A.M.",
-        "Keywords": "time,day,sleep,timeOfDayToSleep",
+        "DisplayName": "Sleep Time",
+        "EnumValues": {},
         "FieldName": "timeOfDayToSleep",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "time,day,sleep,timeOfDayToSleep",
         "MaxValue": 2600,
+        "MinValue": 0,
         "ParamFieldName": "$.timeOfDayToSleep",
-        "DefaultValue": "2200",
-        "Placeholder": "2200",
-        "EnumValues": {}
+        "Placeholder": "2200"
     },
     {
-        "DisplayName": "Lock Player Chests",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "true",
         "Description": "If set, players will not be able to access the chests or inventory in other players' cabins while server mode is on",
-        "Keywords": "lock,player,chests,lockPlayerChests",
+        "DisplayName": "Lock Player Chests",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "lockPlayerChests",
         "InputType": "checkbox",
-        "ParamFieldName": "$.lockPlayerChests",
-        "DefaultValue": "true",
+        "Keywords": "lock,player,chests,lockPlayerChests",
+        "ParamFieldName": "$.lockPlayerChests"
+    },
+    {
+        "Category": "Stardew Valley Settings",
+        "DefaultValue": "false",
+        "Description": "If enabled, clients will be able to pause the game by typing !pause/!unpause into chat",
+        "DisplayName": "Allow Clients To Pause",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Allow Clients To Pause",
-        "Category": "Stardew Valley Settings",
-        "Description": "If enabled, clients will be able to pause the game by typing !pause/!unpause into chat",
-        "Keywords": "clients,pause,clientsCanPause",
+        },
         "FieldName": "clientsCanPause",
         "InputType": "checkbox",
-        "ParamFieldName": "$.clientsCanPause",
-        "DefaultValue": "false",
+        "Keywords": "clients,pause,clientsCanPause",
+        "ParamFieldName": "$.clientsCanPause"
+    },
+    {
+        "Category": "Stardew Valley Settings",
+        "DefaultValue": "true",
+        "Description": "If sets, the current invite code to your computer's clipboard once a minute.",
+        "DisplayName": "Copy Invite Code To Clipboard",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Copy Invite Code To Clipboard",
-        "Category": "Stardew Valley Settings",
-        "Description": "If sets, the current invite code to your computer's clipboard once a minute.",
-        "Keywords": "copy,invite,code,clipboard,copyInviteCodeToClipboard",
+        },
         "FieldName": "copyInviteCodeToClipboard",
         "InputType": "checkbox",
-        "ParamFieldName": "$.copyInviteCodeToClipboard",
+        "Keywords": "copy,invite,code,clipboard,copyInviteCodeToClipboard",
+        "ParamFieldName": "$.copyInviteCodeToClipboard"
+    },
+    {
+        "Category": "Stardew Valley Settings",
         "DefaultValue": "true",
+        "Description": "If enabled, the host will attend festivals",
+        "DisplayName": "Attend Festivals",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Attend Festivals",
-        "Category": "Stardew Valley Settings",
-        "Description": "If enabled, the host will attend festivals",
-        "Keywords": "attend,festivals,festivalsOn",
+        },
         "FieldName": "festivalsOn",
         "InputType": "checkbox",
-        "ParamFieldName": "$.festivalsOn",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "attend,festivals,festivalsOn",
+        "ParamFieldName": "$.festivalsOn"
     },
     {
-        "DisplayName": "Egg Festival Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Egg festival until its main event",
-        "Keywords": "egg,festival,countdown,eggHuntCountDownConfig",
+        "DisplayName": "Egg Festival Countdown Time",
+        "EnumValues": {},
         "FieldName": "eggHuntCountDownConfig",
         "InputType": "number",
+        "Keywords": "egg,festival,countdown,eggHuntCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.eggHuntCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Egg Festival Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "120",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Egg festival",
-        "Keywords": "egg,festival,timeout,eggFestivalTimeOut",
+        "DisplayName": "Egg Festival Timeout",
+        "EnumValues": {},
         "FieldName": "eggFestivalTimeOut",
         "InputType": "number",
+        "Keywords": "egg,festival,timeout,eggFestivalTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.eggFestivalTimeOut",
-        "DefaultValue": "120",
         "Placeholder": "120",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Flower Dance Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Flower Dance festival until its main event",
-        "Keywords": "flower,dance,festival,countdown,flowerDanceCountDownConfig",
+        "DisplayName": "Flower Dance Countdown Time",
+        "EnumValues": {},
         "FieldName": "flowerDanceCountDownConfig",
         "InputType": "number",
+        "Keywords": "flower,dance,festival,countdown,flowerDanceCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.flowerDanceCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Flower Dance Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "120",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Flower Dance festival",
-        "Keywords": "flower,dance,festival,timeout,flowerDanceTimeOut",
+        "DisplayName": "Flower Dance Timeout",
+        "EnumValues": {},
         "FieldName": "flowerDanceTimeOut",
         "InputType": "number",
+        "Keywords": "flower,dance,festival,timeout,flowerDanceTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.flowerDanceTimeOut",
-        "DefaultValue": "120",
         "Placeholder": "120",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Luau Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Luau festival until its main event",
-        "Keywords": "luau,festival,countdown,luauSoupCountDownConfig",
+        "DisplayName": "Luau Countdown Time",
+        "EnumValues": {},
         "FieldName": "luauSoupCountDownConfig",
         "InputType": "number",
+        "Keywords": "luau,festival,countdown,luauSoupCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.luauSoupCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Luau Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "120",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Luau festival",
-        "Keywords": "luau,festival,timeout,luauTimeOut",
+        "DisplayName": "Luau Timeout",
+        "EnumValues": {},
         "FieldName": "luauTimeOut",
         "InputType": "number",
+        "Keywords": "luau,festival,timeout,luauTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.luauTimeOut",
-        "DefaultValue": "120",
         "Placeholder": "120",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Jelly Dance Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Dance of the Moonlight Jellies festival until its main event",
-        "Keywords": "jelly,jellies,dance,moonlight,festival,countdown,jellyDanceCountDownConfig",
+        "DisplayName": "Jelly Dance Countdown Time",
+        "EnumValues": {},
         "FieldName": "jellyDanceCountDownConfig",
         "InputType": "number",
+        "Keywords": "jelly,jellies,dance,moonlight,festival,countdown,jellyDanceCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.jellyDanceCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Jelly Dance Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "120",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Dance of the Moonlight Jellies festival",
-        "Keywords": "jelly,jellies,dance,moonlight,festival,timeout,danceOfJelliesTimeOut",
+        "DisplayName": "Jelly Dance Timeout",
+        "EnumValues": {},
         "FieldName": "danceOfJelliesTimeOut",
         "InputType": "number",
+        "Keywords": "jelly,jellies,dance,moonlight,festival,timeout,danceOfJelliesTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.danceOfJelliesTimeOut",
-        "DefaultValue": "120",
         "Placeholder": "120",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Stardew Valley Fair Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Stardew Valley Fair festival until its main event",
-        "Keywords": "stardew,valley,fair,festival,countdown,grangeDisplayCountDownConfig",
+        "DisplayName": "Stardew Valley Fair Countdown Time",
+        "EnumValues": {},
         "FieldName": "grangeDisplayCountDownConfig",
         "InputType": "number",
+        "Keywords": "stardew,valley,fair,festival,countdown,grangeDisplayCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.grangeDisplayCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Stardew Valley Fair Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "1200",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Stardew Valley Fair festival",
-        "Keywords": "stardew,valley,fair,festival,timeout,fairTimeOut",
+        "DisplayName": "Stardew Valley Fair Timeout",
+        "EnumValues": {},
         "FieldName": "fairTimeOut",
         "InputType": "number",
+        "Keywords": "stardew,valley,fair,festival,timeout,fairTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.fairTimeOut",
-        "DefaultValue": "1200",
         "Placeholder": "1200",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Festival Of Ice Countdown Time",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "60",
         "Description": "Specifies the countdown time from the start of the Festival of Ice until its main event",
-        "Keywords": "ice,festival,countdown,iceFishingCountDownConfig",
+        "DisplayName": "Festival Of Ice Countdown Time",
+        "EnumValues": {},
         "FieldName": "iceFishingCountDownConfig",
         "InputType": "number",
+        "Keywords": "ice,festival,countdown,iceFishingCountDownConfig",
         "MinValue": 0,
         "ParamFieldName": "$.iceFishingCountDownConfig",
-        "DefaultValue": "60",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Festival Of Ice Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "120",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Festival of Ice",
-        "Keywords": "ice,festival,timeout,festivalOfIceTimeOut",
+        "DisplayName": "Festival Of Ice Timeout",
+        "EnumValues": {},
         "FieldName": "festivalOfIceTimeOut",
         "InputType": "number",
+        "Keywords": "ice,festival,timeout,festivalOfIceTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.festivalOfIceTimeOut",
-        "DefaultValue": "120",
         "Placeholder": "120",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Spirit's Eve Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "900",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Spirit's Eve festival",
-        "Keywords": "spirit,spirits,eve,festival,timeout,spiritsEveTimeOut",
+        "DisplayName": "Spirit's Eve Timeout",
+        "EnumValues": {},
         "FieldName": "spiritsEveTimeOut",
         "InputType": "number",
+        "Keywords": "spirit,spirits,eve,festival,timeout,spiritsEveTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.spiritsEveTimeOut",
-        "DefaultValue": "900",
         "Placeholder": "900",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Feast Of The Winter Star Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "900",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Feast of the Winter Star festival",
-        "Keywords": "feast,winter,star,festival,timeout,winterStarTimeOut",
+        "DisplayName": "Feast Of The Winter Star Timeout",
+        "EnumValues": {},
         "FieldName": "winterStarTimeOut",
         "InputType": "number",
+        "Keywords": "feast,winter,star,festival,timeout,winterStarTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.winterStarTimeOut",
-        "DefaultValue": "900",
         "Placeholder": "900",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "End Of Day Timeout",
         "Category": "Stardew Valley Settings",
+        "DefaultValue": "300",
         "Description": "Specifies the timeout duration to prevent lockup from an AFK player during the Desert, Trout Derby, SquidFest and Night Market festivals",
-        "Keywords": "desert,trout,derby,squidfest,night,market,festival,timeout,endofdayTimeOut",
+        "DisplayName": "End Of Day Timeout",
+        "EnumValues": {},
         "FieldName": "endofdayTimeOut",
         "InputType": "number",
+        "Keywords": "desert,trout,derby,squidfest,night,market,festival,timeout,endofdayTimeOut",
         "MinValue": 0,
         "ParamFieldName": "$.endofdayTimeOut",
-        "DefaultValue": "300",
         "Placeholder": "300",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Game Branch",
         "Category": "SteamCMD and Updates",
+        "DefaultValue": "public",
         "Description": "Sets the game branch to install. The SMAPI Release and SMAPI Release Version should be set appropriately. Update the server after changing this setting",
-        "Keywords": "game,branch,public,legacy",
+        "DisplayName": "Game Branch",
+        "EnumValues": {
+            "legacy_1.5.6": "Legacy 1.5.6 version",
+            "public": "Public (default)"
+        },
         "FieldName": "GameBranch",
         "InputType": "enum",
-        "ParamFieldName": "GameBranch",
-        "DefaultValue": "public",
-        "EnumValues": {
-            "public": "Public (default)",
-            "legacy_1.5.6": "Legacy 1.5.6 version"
-        }
+        "Keywords": "game,branch,public,legacy",
+        "ParamFieldName": "GameBranch"
     },
     {
-        "DisplayName": "SMAPI Release",
         "Category": "SteamCMD and Updates",
-        "Description": "Sets the SMAPI release to install. If \"Specific version\" is selected, the version must be set under SMAPI Release Version. Update the server after changing this setting",
-        "Keywords": "server,release,latest,specific",
-        "FieldName": "SMAPIRelease",
-        "InputType": "enum",
-        "ParamFieldName": "SMAPIRelease",
         "DefaultValue": "latest",
+        "Description": "Sets the SMAPI release to install. If \"Specific version\" is selected, the version must be set under SMAPI Release Version. Update the server after changing this setting",
+        "DisplayName": "SMAPI Release",
         "EnumValues": {
             "latest": "Latest (default)",
             "specificversion": "Specific version"
-        }
+        },
+        "FieldName": "SMAPIRelease",
+        "InputType": "enum",
+        "Keywords": "server,release,latest,specific",
+        "ParamFieldName": "SMAPIRelease"
     },
     {
-        "DisplayName": "SMAPI Release Version",
         "Category": "SteamCMD and Updates",
+        "DefaultValue": "4.0.8",
         "Description": "Sets the [SMAPI release version](https://github.com/Pathoschild/SMAPI/releases) to install, if \"Specific version\" is selected under SMAPI Release. Update the server after changing this setting",
-        "Keywords": "smapi,release,version",
+        "DisplayName": "SMAPI Release Version",
+        "EnumValues": {},
         "FieldName": "SMAPIReleaseVersion",
         "InputType": "text",
+        "Keywords": "smapi,release,version",
         "ParamFieldName": "SMAPIReleaseVersion",
-        "DefaultValue": "4.0.8",
-        "Placeholder": "4.0.8",
-        "EnumValues": {}
+        "Placeholder": "4.0.8"
     }
 ]

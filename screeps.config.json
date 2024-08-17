@@ -1,41 +1,41 @@
 [
     {
-        "DisplayName": "Steam Web API Key",
         "Category": "Screeps:code",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [Steam Web API key](https://steamcommunity.com/dev/apikey) for the server. The Steam API will be used to authenticate users",
-        "Keywords": "steam,api,key,steam_api_key",
+        "DisplayName": "Steam Web API Key",
+        "EnumValues": {},
         "FieldName": "steam_api_key",
         "InputType": "password",
+        "Keywords": "steam,api,key,steam_api_key",
         "ParamFieldName": "steam_api_key",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "Screeps:code",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password required to join the server. Default is no password",
-        "Keywords": "server,password",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "password",
         "InputType": "password",
+        "Keywords": "server,password",
         "ParamFieldName": "password",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "CLI Server Binding",
         "Category": "Screeps:code",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "127.0.0.1",
         "Description": "Sets the IPv4 binding for the CLI server",
-        "Keywords": "cli,server,binding",
+        "DisplayName": "CLI Server Binding",
+        "EnumValues": {
+            "0.0.0.0": "0.0.0.0 (all IP addresses)",
+            "127.0.0.1": "127.0.0.1 (localhost) (default)"
+        },
         "FieldName": "cli_host",
         "InputType": "enum",
+        "Keywords": "cli,server,binding",
         "ParamFieldName": "cli_host",
-        "DefaultValue": "127.0.0.1",
-        "EnumValues": {
-            "127.0.0.1": "127.0.0.1 (localhost) (default)",
-            "0.0.0.0": "0.0.0.0 (all IP addresses)"
-        }
+        "Subcategory": "Server Settings"
     }
 ]

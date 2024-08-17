@@ -1,80 +1,75 @@
 [
     {
+        "Category": "BattleBit Server Settings",
+        "DefaultValue": "",
+        "Description": "",
         "DisplayName": "Config Path",
-        "Category": "BattleBit Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
         "FieldName": "ConfigPath",
-        "InputType": "text",
         "Hidden": true,
-        "ParamFieldName": "ConfigPath",
         "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "EnumValues": {}
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "ConfigPath",
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Game Port",
         "Category": "BattleBit Server Settings",
         "Description": "",
-        "Keywords": "",
+        "DisplayName": "Game Port",
+        "EnumValues": {},
         "FieldName": "$GamePort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "Port",
         "IncludeInCommandLine": false,
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "Port"
     },
     {
-        "DisplayName": "Server Name",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the server name visible in the server browser. Don't include dashes",
-        "Keywords": "server,name",
-        "FieldName": "Name",
-        "InputType": "text",
-        "ParamFieldName": "Name",
-        "IncludeInCommandLine": true,
         "DefaultValue": "AMP Powered BattleBit Remastered Server",
-        "EnumValues": {}
+        "Description": "Sets the server name visible in the server browser. Don't include dashes",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
+        "FieldName": "Name",
+        "IncludeInCommandLine": true,
+        "InputType": "text",
+        "Keywords": "server,name",
+        "ParamFieldName": "Name"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the password for players to connect to the server. Default is no password",
-        "Keywords": "password",
-        "FieldName": "Password",
-        "InputType": "password",
-        "ParamFieldName": "Password",
-        "IncludeInCommandLine": true,
         "DefaultValue": "",
-        "EnumValues": {}
+        "Description": "Sets the password for players to connect to the server. Default is no password",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
+        "FieldName": "Password",
+        "IncludeInCommandLine": true,
+        "InputType": "password",
+        "Keywords": "password",
+        "ParamFieldName": "Password"
     },
     {
-        "DisplayName": "Anti-Cheat Mode",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the anti-cheat mode for the server",
-        "Keywords": "anti,cheat,anti-cheat,anticheat",
-        "FieldName": "AntiCheat",
-        "InputType": "enum",
-        "ParamFieldName": "AntiCheat",
-        "IncludeInCommandLine": true,
         "DefaultValue": "none",
+        "Description": "Sets the anti-cheat mode for the server",
+        "DisplayName": "Anti-Cheat Mode",
         "EnumValues": {
-            "none": "None (default)",
             "eac": "Easy Anti-Cheat (EAC)",
-            "faceit": "FACEIT Anti-Cheat"
-        }
+            "faceit": "FACEIT Anti-Cheat",
+            "none": "None (default)"
+        },
+        "FieldName": "AntiCheat",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "anti,cheat,anti-cheat,anticheat",
+        "ParamFieldName": "AntiCheat"
     },
     {
-        "DisplayName": "Initial Map",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the initial map",
-        "Keywords": "initial,map,firstmap",
-        "FieldName": "FirstMap",
-        "InputType": "enum",
-        "ParamFieldName": "FirstMap",
-        "IncludeInCommandLine": true,
         "DefaultValue": "Dustydew",
+        "Description": "Sets the initial map",
+        "DisplayName": "Initial Map",
         "EnumValues": {
             "Azagor": "Azagor",
             "Basra": "Basra",
@@ -105,24 +100,24 @@
             "Wakistan": "Wakistan",
             "WineParadise": "Wine Paradise",
             "ZalfiBay": "Zalfi Bay"
-        }
+        },
+        "FieldName": "FirstMap",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "initial,map,firstmap",
+        "ParamFieldName": "FirstMap"
     },
     {
-        "DisplayName": "Initial Gamemode",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the initial gamemode. Not all gamemodes are available for all maps",
-        "Keywords": "initial,first,game,mode,gamemode,firstgamemode",
-        "FieldName": "FirstGamemode",
-        "InputType": "enum",
-        "ParamFieldName": "FirstGamemode",
-        "IncludeInCommandLine": true,
         "DefaultValue": "CONQ",
+        "Description": "Sets the initial gamemode. Not all gamemodes are available for all maps",
+        "DisplayName": "Initial Gamemode",
         "EnumValues": {
             "AAS": "Advance and Secure",
+            "CONQ": "Conquest (default)",
             "CaptureTheFlag": "Capture The Flag",
             "CashRun": "Cash Run",
             "CatchGame": "Catch Game",
-            "CONQ": "Conquest (default)",
             "DOMI": "Domination",
             "ELI": "Elimination",
             "FFA": "Free For All",
@@ -137,676 +132,681 @@
             "TDM": "Team Deathmatch",
             "VoxelFortify": "Voxel Fortify",
             "VoxelTrench": "Voxel Trench"
-        }
+        },
+        "FieldName": "FirstGamemode",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "initial,first,game,mode,gamemode,firstgamemode",
+        "ParamFieldName": "FirstGamemode"
     },
     {
-        "DisplayName": "Fixed Map Size",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets a fixed map size. Not all sizes are available for all gamemodes",
-        "Keywords": "fixed,map,size,fixedsize",
-        "FieldName": "FixedSize",
-        "InputType": "enum",
-        "ParamFieldName": "FixedSize",
-        "IncludeInCommandLine": true,
         "DefaultValue": "none",
+        "Description": "Sets a fixed map size. Not all sizes are available for all gamemodes",
+        "DisplayName": "Fixed Map Size",
         "EnumValues": {
+            "big": "Big (64vs64)",
+            "medium": "Medium (32vs32)",
             "none": "None (default)",
-            "tiny": "Tiny (8vs8)",
             "small": "Small (16vs16)",
-            "medium": "Medium (32vs32)",
-            "big": "Big (64vs64)",
+            "tiny": "Tiny (8vs8)",
             "ultra": "Ultra (127vs127)"
-        }
+        },
+        "FieldName": "FixedSize",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "fixed,map,size,fixedsize",
+        "ParamFieldName": "FixedSize"
     },
     {
-        "DisplayName": "Initial Map Size",
         "Category": "BattleBit Server Settings",
+        "DefaultValue": "ultra",
         "Description": "Sets the initial map size. Not all sizes are available for all gamemodes. Will be overridden by Fixed Map Size if that is not set to \"None\"",
-        "Keywords": "initial,first,map,size,firstsize",
+        "DisplayName": "Initial Map Size",
+        "EnumValues": {
+            "big": "Big (64vs64)",
+            "medium": "Medium (32vs32)",
+            "small": "Small (16vs16)",
+            "tiny": "Tiny (8vs8)",
+            "ultra": "Ultra (127vs127) (default)"
+        },
         "FieldName": "FirstSize",
-        "InputType": "enum",
-        "ParamFieldName": "FirstSize",
         "IncludeInCommandLine": true,
-        "DefaultValue": "ultra",
-        "EnumValues": {
-            "tiny": "Tiny (8vs8)",
-            "small": "Small (16vs16)",
-            "medium": "Medium (32vs32)",
-            "big": "Big (64vs64)",
-            "ultra": "Ultra (127vs127) (default)"
-        }
+        "InputType": "enum",
+        "Keywords": "initial,first,map,size,firstsize",
+        "ParamFieldName": "FirstSize"
     },
     {
-        "DisplayName": "Maximum Map Size",
         "Category": "BattleBit Server Settings",
+        "DefaultValue": "ultra",
         "Description": "Sets the maximum map size. Not all sizes are available for all gamemodes. Will be overridden by Fixed Map Size if that is not set to \"None\"",
-        "Keywords": "maximum,map,size,maxsize",
-        "FieldName": "MaxSize",
-        "InputType": "enum",
-        "ParamFieldName": "MaxSize",
-        "IncludeInCommandLine": true,
-        "DefaultValue": "ultra",
+        "DisplayName": "Maximum Map Size",
         "EnumValues": {
-            "tiny": "Tiny (8vs8)",
-            "small": "Small (16vs16)",
-            "medium": "Medium (32vs32)",
             "big": "Big (64vs64)",
+            "medium": "Medium (32vs32)",
+            "small": "Small (16vs16)",
+            "tiny": "Tiny (8vs8)",
             "ultra": "Ultra (127vs127) (default)"
-        }
+        },
+        "FieldName": "MaxSize",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "maximum,map,size,maxsize",
+        "ParamFieldName": "MaxSize"
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "BattleBit Server Settings",
+        "DefaultValue": "254",
         "Description": "Sets the maximum number of players at one time to display in the AMP status tab. This is visual only - the actual maximum is determined by the map size being played",
-        "Keywords": "maximum,players,clients,limit,maxplayers",
+        "DisplayName": "Player Limit",
+        "EnumValues": {
+            "128": "128 (big)",
+            "16": "16 (tiny)",
+            "254": "254 (ultra)",
+            "32": "32 (small)",
+            "64": "64 (medium)"
+        },
         "FieldName": "$MaxUsers",
         "InputType": "enum",
-        "ParamFieldName": "MaxPlayers",
-        "DefaultValue": "254",
-        "EnumValues": {
-            "16": "16 (tiny)",
-            "32": "32 (small)",
-            "64": "64 (medium)",
-            "128": "128 (big)",
-            "254": "254 (ultra)"
-        }
+        "Keywords": "maximum,players,clients,limit,maxplayers",
+        "ParamFieldName": "MaxPlayers"
     },
     {
-        "DisplayName": "Enable Voxel Mode",
         "Category": "BattleBit Server Settings",
-        "Description": "If set, voxel mode will be enabled for the server",
-        "Keywords": "voxel,mode,voxelmode",
-        "FieldName": "VoxelMode",
-        "InputType": "checkbox",
-        "ParamFieldName": "VoxelMode",
-        "IncludeInCommandLine": true,
         "DefaultValue": "false",
+        "Description": "If set, voxel mode will be enabled for the server",
+        "DisplayName": "Enable Voxel Mode",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Server Admins & Moderators",
-        "Category": "BattleBit Server Settings",
-        "Description": "List of [Steam64 IDs](https://steamidfinder.com/) for server admins/moderators and their assigned roles. Examples: 12345678909876543=admin | 34567890987654321=admin,moderator",
-        "Keywords": "admins,moderators,permissions",
-        "FieldName": "Permissions",
-        "InputType": "list",
-        "ParamFieldName": "Permissions",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "",
-        "Special": "listfile:./battlebit-remastered/671860/Permissions.txt",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Banned Player List",
-        "Category": "BattleBit Server Settings",
-        "Description": "List of [Steam64 IDs](https://steamidfinder.com/) of banned players",
-        "Keywords": "banlist,bans,blacklist",
-        "FieldName": "Blacklist",
-        "InputType": "list",
-        "ParamFieldName": "Blacklist",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "",
-        "Special": "listfile:./battlebit-remastered/671860/Blacklist.txt",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Server FPS",
-        "Category": "BattleBit Server Settings",
-        "Description": "Sets the server framerate (FPS)",
-        "Keywords": "framerate,fps,hz",
-        "FieldName": "Hz",
-        "InputType": "number",
-        "MinValue": 30,
-        "MaxValue": 240,
-        "ParamFieldName": "Hz",
+        },
+        "FieldName": "VoxelMode",
         "IncludeInCommandLine": true,
-        "DefaultValue": "60",
-        "Placeholder": "60",
-        "Suffix": "Hz",
-        "EnumValues": {}
+        "InputType": "checkbox",
+        "Keywords": "voxel,mode,voxelmode",
+        "ParamFieldName": "VoxelMode"
     },
     {
-        "DisplayName": "Maximum Ping",
         "Category": "BattleBit Server Settings",
-        "Description": "Sets the maximum ping allowed for players on the server. Empty = disabled",
-        "Keywords": "maximum,ping,maxping",
-        "FieldName": "MaxPing",
+        "DefaultValue": "",
+        "Description": "List of [Steam64 IDs](https://steamidfinder.com/) for server admins/moderators and their assigned roles. Examples: 12345678909876543=admin | 34567890987654321=admin,moderator",
+        "DisplayName": "Server Admins & Moderators",
+        "EnumValues": {},
+        "FieldName": "Permissions",
+        "IncludeInCommandLine": false,
+        "InputType": "list",
+        "Keywords": "admins,moderators,permissions",
+        "ParamFieldName": "Permissions",
+        "Special": "listfile:./battlebit-remastered/671860/Permissions.txt"
+    },
+    {
+        "Category": "BattleBit Server Settings",
+        "DefaultValue": "",
+        "Description": "List of [Steam64 IDs](https://steamidfinder.com/) of banned players",
+        "DisplayName": "Banned Player List",
+        "EnumValues": {},
+        "FieldName": "Blacklist",
+        "IncludeInCommandLine": false,
+        "InputType": "list",
+        "Keywords": "banlist,bans,blacklist",
+        "ParamFieldName": "Blacklist",
+        "Special": "listfile:./battlebit-remastered/671860/Blacklist.txt"
+    },
+    {
+        "Category": "BattleBit Server Settings",
+        "DefaultValue": "60",
+        "Description": "Sets the server framerate (FPS)",
+        "DisplayName": "Server FPS",
+        "EnumValues": {},
+        "FieldName": "Hz",
+        "IncludeInCommandLine": true,
         "InputType": "number",
+        "Keywords": "framerate,fps,hz",
+        "MaxValue": 240,
+        "MinValue": 30,
+        "ParamFieldName": "Hz",
+        "Placeholder": "60",
+        "Suffix": "Hz"
+    },
+    {
+        "Category": "BattleBit Server Settings",
+        "DefaultValue": "",
+        "Description": "Sets the maximum ping allowed for players on the server. Empty = disabled",
+        "DisplayName": "Maximum Ping",
+        "EnumValues": {},
+        "FieldName": "MaxPing",
+        "IncludeInCommandLine": true,
+        "InputType": "number",
+        "Keywords": "maximum,ping,maxping",
         "MinValue": 1,
         "ParamFieldName": "MaxPing",
-        "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Suffix": "milliseconds",
-        "EnumValues": {}
+        "Suffix": "milliseconds"
     },
     {
-        "DisplayName": "API Endpoint",
         "Category": "BattleBit Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the endpoint (address:port) for an [API server](https://github.com/MrOkiDoki/BattleBit-Community-Server-API) that can be used to manage the server via its API",
-        "Keywords": "api,endpoint,apiendpoint",
+        "DisplayName": "API Endpoint",
+        "EnumValues": {},
         "FieldName": "ApiEndpoint",
+        "IncludeInCommandLine": true,
         "InputType": "text",
+        "Keywords": "api,endpoint,apiendpoint",
         "ParamFieldName": "ApiEndpoint",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "EnumValues": {}
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "API Token",
         "Category": "BattleBit Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the token (if any) that is required for verification with the server API endpoint",
-        "Keywords": "api,endpoint,token,apitoken",
+        "DisplayName": "API Token",
+        "EnumValues": {},
         "FieldName": "ApiToken",
-        "InputType": "password",
-        "ParamFieldName": "ApiToken",
         "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "EnumValues": {}
+        "InputType": "password",
+        "Keywords": "api,endpoint,token,apitoken",
+        "ParamFieldName": "ApiToken",
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Additional Command Line Parameters",
         "Category": "BattleBit Server Settings",
-        "Description": "Specifies additional command line parameters that are not otherwise set by AMP. ONE LINE ONLY! Use with care",
-        "Keywords": "custom,server,arguments,variables,cvars,convars,parameters",
-        "FieldName": "CustomArgs",
-        "InputType": "Textarea",
-        "ParamFieldName": "CustomArgs",
-        "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "Placeholder": "",
-        "EnumValues": {}
+        "Description": "Specifies additional command line parameters that are not otherwise set by AMP. ONE LINE ONLY! Use with care",
+        "DisplayName": "Additional Command Line Parameters",
+        "EnumValues": {},
+        "FieldName": "CustomArgs",
+        "IncludeInCommandLine": false,
+        "InputType": "Textarea",
+        "Keywords": "custom,server,arguments,variables,cvars,convars,parameters",
+        "ParamFieldName": "CustomArgs",
+        "Placeholder": ""
     },
     {
-        "DisplayName": "Server Branch",
         "Category": "SteamCMD and Updates",
-        "Description": "Sets the server branch to install. You must set any required password under Beta Password. NOTE: Update the server after switching branches",
-        "Keywords": "server,branch",
-        "FieldName": "ServerBranch",
-        "InputType": "enum",
-        "ParamFieldName": "ServerBranch",
-        "IncludeInCommandLine": false,
         "DefaultValue": "public",
+        "Description": "Sets the server branch to install. You must set any required password under Beta Password. NOTE: Update the server after switching branches",
+        "DisplayName": "Server Branch",
         "EnumValues": {
-            "public": "Public (default)",
             "beta": "Beta",
             "community-testing": "Community Server Testing",
+            "public": "Public (default)",
             "server": "Server"
-        }
+        },
+        "FieldName": "ServerBranch",
+        "IncludeInCommandLine": false,
+        "InputType": "enum",
+        "Keywords": "server,branch",
+        "ParamFieldName": "ServerBranch"
     },
     {
-        "DisplayName": "Damage Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to damage dealt",
-        "Keywords": "damage,multiplier,damagemultiplier",
+        "DisplayName": "Damage Multiplier",
+        "EnumValues": {},
         "FieldName": "DamageMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "damage,multiplier,damagemultiplier",
         "ParamFieldName": "DamageMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Enable Friendly Fire",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If set, friendly fire will be enabled",
-        "Keywords": "friendly,fire,friendlyfireenabled",
+        "DisplayName": "Enable Friendly Fire",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "FriendlyFireEnabled",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "FriendlyFireEnabled",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "friendly,fire,friendlyfireenabled",
+        "ParamFieldName": "FriendlyFireEnabled"
     },
     {
-        "DisplayName": "Hide Map Votes",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If enabled, map voting options will be shown",
-        "Keywords": "hide,hidden,map,votes,hidemapvotes",
+        "DisplayName": "Hide Map Votes",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "HideMapVotes",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "HideMapVotes",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "hide,hidden,map,votes,hidemapvotes",
+        "ParamFieldName": "HideMapVotes"
     },
     {
-        "DisplayName": "Only Winner Team Can Vote",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If enabled, only the winning team will be allowed to vote",
-        "Keywords": "winner,team,vote,voting,onlwinnerteamcanvote",
+        "DisplayName": "Only Winner Team Can Vote",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "OnlyWinnerTeamCanVote",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "OnlyWinnerTeamCanVote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "winner,team,vote,voting,onlwinnerteamcanvote",
+        "ParamFieldName": "OnlyWinnerTeamCanVote"
     },
     {
-        "DisplayName": "Enable Player Collisions",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If enabled, player collisions will be allowed",
-        "Keywords": "player,collision,playercollision",
+        "DisplayName": "Enable Player Collisions",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "PlayerCollision",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "PlayerCollision",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "player,collision,playercollision",
+        "ParamFieldName": "PlayerCollision"
     },
     {
-        "DisplayName": "Medic Limit Per Squad",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "8",
         "Description": "Sets the maximum number of medics allowed in a squad",
-        "Keywords": "medic,squad,maximum,limit,mediclimitpersquad",
+        "DisplayName": "Medic Limit Per Squad",
+        "EnumValues": {},
         "FieldName": "MedicLimitPerSquad",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "medic,squad,maximum,limit,mediclimitpersquad",
         "ParamFieldName": "MedicLimitPerSquad",
-        "DefaultValue": "8",
         "Placeholder": "8",
-        "Suffix": "medics",
-        "EnumValues": {}
+        "Suffix": "medics"
     },
     {
-        "DisplayName": "Engineer Limit Per Squad",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "8",
         "Description": "Sets the maximum number of engineers allowed in a squad",
-        "Keywords": "engineer,squad,maximum,limit,engineerlimitpersquad",
+        "DisplayName": "Engineer Limit Per Squad",
+        "EnumValues": {},
         "FieldName": "EngineerLimitPerSquad",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "engineer,squad,maximum,limit,engineerlimitpersquad",
         "ParamFieldName": "EngineerLimitPerSquad",
-        "DefaultValue": "8",
         "Placeholder": "8",
-        "Suffix": "engineers",
-        "EnumValues": {}
+        "Suffix": "engineers"
     },
     {
-        "DisplayName": "Support Limit Per Squad",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "8",
         "Description": "Sets the maximum number of support personnel allowed in a squad",
-        "Keywords": "support,personnel,squad,maximum,limit,supportlimitpersquad",
+        "DisplayName": "Support Limit Per Squad",
+        "EnumValues": {},
         "FieldName": "SupportLimitPerSquad",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "support,personnel,squad,maximum,limit,supportlimitpersquad",
         "ParamFieldName": "SupportLimitPerSquad",
-        "DefaultValue": "8",
         "Placeholder": "8",
-        "Suffix": "support personnel",
-        "EnumValues": {}
+        "Suffix": "support personnel"
     },
     {
-        "DisplayName": "Recon Limit Per Squad",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "8",
         "Description": "Sets the maximum number of recon personnel allowed in a squad",
-        "Keywords": "recon,personnel,squad,maximum,limit,reconlimitpersquad",
+        "DisplayName": "Recon Limit Per Squad",
+        "EnumValues": {},
         "FieldName": "ReconLimitPerSquad",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "recon,personnel,squad,maximum,limit,reconlimitpersquad",
         "ParamFieldName": "ReconLimitPerSquad",
-        "DefaultValue": "8",
         "Placeholder": "8",
-        "Suffix": "recon personnel",
-        "EnumValues": {}
+        "Suffix": "recon personnel"
     },
     {
-        "DisplayName": "Running Speed Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to running speed",
-        "Keywords": "running,speed,multiplier,runspeedmultiplier",
+        "DisplayName": "Running Speed Multiplier",
+        "EnumValues": {},
         "FieldName": "RunningSpeedMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "running,speed,multiplier,runspeedmultiplier",
         "ParamFieldName": "RunningSpeedMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Receive Damage Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to received damage",
-        "Keywords": "receive,damage,multiplier,receivedamagemultiplier",
+        "DisplayName": "Receive Damage Multiplier",
+        "EnumValues": {},
         "FieldName": "ReceiveDamageMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "receive,damage,multiplier,receivedamagemultiplier",
         "ParamFieldName": "ReceiveDamageMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Give Damage Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to dealt damage",
-        "Keywords": "give,damage,multiplier,givedamagemultiplier",
+        "DisplayName": "Give Damage Multiplier",
+        "EnumValues": {},
         "FieldName": "GiveDamageMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "give,damage,multiplier,givedamagemultiplier",
         "ParamFieldName": "GiveDamageMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Jump Height Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to jump height",
-        "Keywords": "jump,height,multiplier,jumpheightmultiplier",
+        "DisplayName": "Jump Height Multiplier",
+        "EnumValues": {},
         "FieldName": "JumpHeightMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "jump,height,multiplier,jumpheightmultiplier",
         "ParamFieldName": "JumpHeightMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Fall Damage Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to fall damage",
-        "Keywords": "fall,damage,multiplier,falldamagemultiplier",
+        "DisplayName": "Fall Damage Multiplier",
+        "EnumValues": {},
         "FieldName": "FallDamageMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "fall,damage,multiplier,falldamagemultiplier",
         "ParamFieldName": "FallDamageMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Reload Speed Multiplier",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "1.0",
         "Description": "Sets the multiplier applied to reload speed",
-        "Keywords": "reload,speed,multiplier,reloadspeedmultiplier",
+        "DisplayName": "Reload Speed Multiplier",
+        "EnumValues": {},
         "FieldName": "ReloadSpeedMultiplier",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "reload,speed,multiplier,reloadspeedmultiplier",
         "ParamFieldName": "ReloadSpeedMultiplier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Enable Night Vision",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can use night vision",
-        "Keywords": "night,vision,canusenightvision",
+        "DisplayName": "Enable Night Vision",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "CanUseNightVision",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "CanUseNightVision",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "night,vision,canusenightvision",
+        "ParamFieldName": "CanUseNightVision"
     },
     {
-        "DisplayName": "Downtime Give Up Time",
         "Category": "BattleBit Gameplay Settings",
-        "Description": "Sets the time players have to give up during downtime",
-        "Keywords": "downtime,give,up,time,downtimegiveuptime",
-        "FieldName": "DownTimeGiveUpTime",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "DownTimeGiveUpTime",
         "DefaultValue": "60",
+        "Description": "Sets the time players have to give up during downtime",
+        "DisplayName": "Downtime Give Up Time",
+        "EnumValues": {},
+        "FieldName": "DownTimeGiveUpTime",
+        "Hidden": true,
+        "InputType": "number",
+        "Keywords": "downtime,give,up,time,downtimegiveuptime",
+        "ParamFieldName": "DownTimeGiveUpTime",
         "Placeholder": "60",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Enable Air Strafe",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can perform air strafing",
-        "Keywords": "air,strafe,airstrafe",
+        "DisplayName": "Enable Air Strafe",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "AirStrafe",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "AirStrafe",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "air,strafe,airstrafe",
+        "ParamFieldName": "AirStrafe"
     },
     {
-        "DisplayName": "Enable Deployment",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can deploy",
-        "Keywords": "deploy,deployment,candeploy",
+        "DisplayName": "Enable Deployment",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "CanDeploy",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "CanDeploy",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "deploy,deployment,candeploy",
+        "ParamFieldName": "CanDeploy"
     },
     {
-        "DisplayName": "Enable Spectating",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can spectate",
-        "Keywords": "spectate,spectating,canspectate",
+        "DisplayName": "Enable Spectating",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "CanSpectate",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "CanSpectate",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "spectate,spectating,canspectate",
+        "ParamFieldName": "CanSpectate"
     },
     {
-        "DisplayName": "Mute Text Chat",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If set, text chat will be muted",
-        "Keywords": "text,chat,mute,istextchatmuted",
+        "DisplayName": "Mute Text Chat",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "IsTextChatMuted",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "IsTextChatMuted",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "text,chat,mute,istextchatmuted",
+        "ParamFieldName": "IsTextChatMuted"
     },
     {
-        "DisplayName": "Mute Voice Chat",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If set, voice chat will be muted",
-        "Keywords": "voice,chat,mute,isvoicechatmuted",
+        "DisplayName": "Mute Voice Chat",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "IsVoiceChatMuted",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "IsVoiceChatMuted",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "voice,chat,mute,isvoicechatmuted",
+        "ParamFieldName": "IsVoiceChatMuted"
     },
     {
-        "DisplayName": "Respawn Time",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "10",
         "Description": "Sets the time for player respawn",
-        "Keywords": "respawn,time,respawntime",
+        "DisplayName": "Respawn Time",
+        "EnumValues": {},
         "FieldName": "RespawnTime",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "respawn,time,respawntime",
         "ParamFieldName": "RespawnTime",
-        "DefaultValue": "10",
         "Placeholder": "10",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Enable Suicide",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, players can initiate suicide",
-        "Keywords": "suicide,cansuicide",
+        "DisplayName": "Enable Suicide",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "CanSuicide",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "CanSuicide",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "suicide,cansuicide",
+        "ParamFieldName": "CanSuicide"
     },
     {
-        "DisplayName": "Minimum Damage To Start Bleeding",
         "Category": "BattleBit Gameplay Settings",
-        "Description": "Sets the minimum damage required to start bleeding. 100 = disabled (no bleeding)",
-        "Keywords": "minimum,damage,bleed,bleeding,minimumdamagetostartbleeding",
-        "FieldName": "MinDamageToStartBleeding",
-        "InputType": "number",
-        "MinValue": 0,
-        "MaxValue": 100,
-        "Hidden": true,
-        "ParamFieldName": "MinDamageToStartBleeding",
         "DefaultValue": "10",
-        "Placeholder": "10",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Minimum HP To Start Bleeding",
-        "Category": "BattleBit Gameplay Settings",
-        "Description": "Sets the minimum HP required to start bleeding. 0 = disabled (no bleeding)",
-        "Keywords": "minimum,hp,bleed,bleeding,minimumhptostartbleeding",
-        "FieldName": "MinHpToStartBleeding",
+        "Description": "Sets the minimum damage required to start bleeding. 100 = disabled (no bleeding)",
+        "DisplayName": "Minimum Damage To Start Bleeding",
+        "EnumValues": {},
+        "FieldName": "MinDamageToStartBleeding",
+        "Hidden": true,
         "InputType": "number",
+        "Keywords": "minimum,damage,bleed,bleeding,minimumdamagetostartbleeding",
+        "MaxValue": 100,
         "MinValue": 0,
+        "ParamFieldName": "MinDamageToStartBleeding",
+        "Placeholder": "10"
+    },
+    {
+        "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "40",
+        "Description": "Sets the minimum HP required to start bleeding. 0 = disabled (no bleeding)",
+        "DisplayName": "Minimum HP To Start Bleeding",
+        "EnumValues": {},
+        "FieldName": "MinHpToStartBleeding",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "minimum,hp,bleed,bleeding,minimumhptostartbleeding",
+        "MinValue": 0,
         "ParamFieldName": "MinHpToStartBleeding",
-        "DefaultValue": "40",
-        "Placeholder": "40",
-        "EnumValues": {}
+        "Placeholder": "40"
     },
     {
-        "DisplayName": "HP Restored Per Bandage Use",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "40",
         "Description": "Sets the HP restored per bandage use",
-        "Keywords": "hp,bandage,heal,hpperbandage",
+        "DisplayName": "HP Restored Per Bandage Use",
+        "EnumValues": {},
         "FieldName": "HPPerBandage",
-        "InputType": "number",
         "Hidden": true,
+        "InputType": "number",
+        "Keywords": "hp,bandage,heal,hpperbandage",
         "ParamFieldName": "HPPerBandage",
-        "DefaultValue": "40",
-        "Placeholder": "40",
-        "EnumValues": {}
+        "Placeholder": "40"
     },
     {
-        "DisplayName": "Enable Stamina",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "false",
         "Description": "If set, stamina mechanics will be enabled",
-        "Keywords": "stamina,mechanics,staminaenabled",
+        "DisplayName": "Enable Stamina",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "StaminaEnabled",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "StaminaEnabled",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "stamina,mechanics,staminaenabled",
+        "ParamFieldName": "StaminaEnabled"
     },
     {
-        "DisplayName": "Enable Hit Markers",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, hit markers will be enabled",
-        "Keywords": "hit,markers,hitmarkersenabled",
+        "DisplayName": "Enable Hit Markers",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "HitMarkersEnabled",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "HitMarkersEnabled",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "hit,markers,hitmarkersenabled",
+        "ParamFieldName": "HitMarkersEnabled"
     },
     {
-        "DisplayName": "Enable Friendly HUD",
         "Category": "BattleBit Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, friendly HUD elements will be enabled",
-        "Keywords": "friendly,hud,friendlyhudenabled",
+        "DisplayName": "Enable Friendly HUD",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "FriendlyHUDEnabled",
-        "InputType": "checkbox",
         "Hidden": true,
-        "ParamFieldName": "FriendlyHUDEnabled",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "InputType": "checkbox",
+        "Keywords": "friendly,hud,friendlyhudenabled",
+        "ParamFieldName": "FriendlyHUDEnabled"
     },
     {
-        "DisplayName": "Capture Flag Speed Multiplier",
         "Category": "BattleBit Gameplay Settings",
-        "Description": "Sets the multiplier applied to flag capturing speed",
-        "Keywords": "capture,flag,speed,multiplier,rate,captureflagspeedmultiplier",
-        "FieldName": "CaptureFlagSpeedMultiplier",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "CaptureFlagSpeedMultiplier",
         "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
+        "Description": "Sets the multiplier applied to flag capturing speed",
+        "DisplayName": "Capture Flag Speed Multiplier",
+        "EnumValues": {},
+        "FieldName": "CaptureFlagSpeedMultiplier",
+        "Hidden": true,
+        "InputType": "number",
+        "Keywords": "capture,flag,speed,multiplier,rate,captureflagspeedmultiplier",
+        "ParamFieldName": "CaptureFlagSpeedMultiplier",
+        "Placeholder": "1.0"
     },
     {
-        "DisplayName": "Enable Points Log HUD",
         "Category": "BattleBit Gameplay Settings",
-        "Description": "If set, the points log HUD will be enabled",
-        "Keywords": "point,log,hud,pointloghudenabled",
-        "FieldName": "PointLogHudEnabled",
-        "InputType": "checkbox",
-        "Hidden": true,
-        "ParamFieldName": "PointLogHudEnabled",
         "DefaultValue": "true",
+        "Description": "If set, the points log HUD will be enabled",
+        "DisplayName": "Enable Points Log HUD",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
+        },
+        "FieldName": "PointLogHudEnabled",
+        "Hidden": true,
+        "InputType": "checkbox",
+        "Keywords": "point,log,hud,pointloghudenabled",
+        "ParamFieldName": "PointLogHudEnabled"
     },
     {
-        "DisplayName": "Enable Kill Feed",
         "Category": "BattleBit Gameplay Settings",
-        "Description": "If set, the kill feed will be enabled",
-        "Keywords": "kill,feed,killfeedenabled",
-        "FieldName": "KillFeed",
-        "InputType": "checkbox",
-        "Hidden": true,
-        "ParamFieldName": "KillFeed",
         "DefaultValue": "false",
+        "Description": "If set, the kill feed will be enabled",
+        "DisplayName": "Enable Kill Feed",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
+        },
+        "FieldName": "KillFeed",
+        "Hidden": true,
+        "InputType": "checkbox",
+        "Keywords": "kill,feed,killfeedenabled",
+        "ParamFieldName": "KillFeed"
     }
 ]

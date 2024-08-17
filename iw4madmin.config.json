@@ -1,91 +1,91 @@
 [
     {
-        "DisplayName": "Ignore Startup Errors",
         "Category": "IW4MAdmin Settings",
-        "Description": "If set, startup errors will be ignored",
-        "Keywords": "ignore,startup,errors,no-confirm",
-        "FieldName": "no-confirm",
-        "InputType": "checkbox",
-        "ParamFieldName": "no-confirm",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "true",
+        "Description": "If set, startup errors will be ignored",
+        "DisplayName": "Ignore Startup Errors",
         "EnumValues": {
-            "True": "true",
-            "False": "false"
-        }
+            "False": "false",
+            "True": "true"
+        },
+        "FieldName": "no-confirm",
+        "IncludeInCommandLine": true,
+        "InputType": "checkbox",
+        "Keywords": "ignore,startup,errors,no-confirm",
+        "ParamFieldName": "no-confirm",
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Maximum Concurrent Requests",
         "Category": "IW4MAdmin Settings",
+        "DefaultValue": "25",
         "Description": "Sets the maximum concurrent requests to the database",
-        "Keywords": "maximum,concurrent,requests,max-concurrent-requests",
+        "DisplayName": "Maximum Concurrent Requests",
+        "EnumValues": {},
         "FieldName": "max-concurrent-requests",
+        "IncludeInCommandLine": true,
         "InputType": "number",
         "IsFlagArgument": false,
+        "Keywords": "maximum,concurrent,requests,max-concurrent-requests",
         "ParamFieldName": "max-concurrent-requests",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "25",
         "Placeholder": "25",
-        "Suffix": "requests",
-        "EnumValues": {}
+        "SkipIfEmpty": true,
+        "Suffix": "requests"
     },
     {
-        "DisplayName": "Request Queue Limit",
         "Category": "IW4MAdmin Settings",
+        "DefaultValue": "25",
         "Description": "Sets the request queue limit",
-        "Keywords": "request,queue,limit,request-queue-limit",
+        "DisplayName": "Request Queue Limit",
+        "EnumValues": {},
         "FieldName": "request-queue-limit",
+        "IncludeInCommandLine": true,
         "InputType": "number",
+        "Keywords": "request,queue,limit,request-queue-limit",
         "MinValue": 0,
         "ParamFieldName": "request-queue-limit",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "25",
         "Placeholder": "25",
-        "Suffix": "requests",
-        "EnumValues": {}
+        "SkipIfEmpty": true,
+        "Suffix": "requests"
     },
     {
-        "DisplayName": "Server Version",
         "Category": "SteamCMD and Updates",
-        "Description": "Sets whether to install the latest verified release, or a pre-release version as specified under Server Pre-release Version. NOTE: Update the server after changing this setting",
-        "Keywords": "server,version,release,pre-release,verified",
-        "FieldName": "ServerVersion",
-        "InputType": "enum",
-        "ParamFieldName": "ServerVersion",
         "DefaultValue": "latest",
+        "Description": "Sets whether to install the latest verified release, or a pre-release version as specified under Server Pre-release Version. NOTE: Update the server after changing this setting",
+        "DisplayName": "Server Version",
         "EnumValues": {
             "latest": "Latest verified release (default)",
             "prerelease": "Pre-release"
-        }
+        },
+        "FieldName": "ServerVersion",
+        "InputType": "enum",
+        "Keywords": "server,version,release,pre-release,verified",
+        "ParamFieldName": "ServerVersion"
     },
     {
-        "DisplayName": "Server Pre-Release Version",
         "Category": "SteamCMD and Updates",
+        "DefaultValue": "",
         "Description": "Sets the [server pre-release version](https://github.com/RaidMax/IW4M-Admin/releases) to install. Just use the version number, for example: 2024.2.5.6. NOTE: Update the server after changing this setting",
-        "Keywords": "server,version,pre-release",
+        "DisplayName": "Server Pre-Release Version",
+        "EnumValues": {},
         "FieldName": "ServerPrereleaseVersion",
         "InputType": "text",
+        "Keywords": "server,version,pre-release",
         "ParamFieldName": "ServerPrereleaseVersion",
-        "DefaultValue": "",
-        "Placeholder": "2024.2.5.6",
-        "EnumValues": {}
+        "Placeholder": "2024.2.5.6"
     },
     {
-        "DisplayName": "Dotnet Version",
         "Category": "SteamCMD and Updates",
+        "DefaultValue": "6.0.27",
         "Description": "Sets the [ASP.NET Core version](https://dotnet.microsoft.com/en-us/download/dotnet) to install. NOTE: Update the server after switching versions!",
-        "Keywords": "dotnet,version",
+        "DisplayName": "Dotnet Version",
+        "EnumValues": {},
         "FieldName": "DotnetVersion",
+        "IncludeInCommandLine": false,
         "InputType": "text",
         "IsFlagArgument": false,
+        "Keywords": "dotnet,version",
         "ParamFieldName": "DotnetVersion",
-        "IncludeInCommandLine": false,
-        "DefaultValue": "6.0.27",
         "Placeholder": "6.0.27",
-        "Required": true,
-        "EnumValues": {}
+        "Required": true
     }
 ]

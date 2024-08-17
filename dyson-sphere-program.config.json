@@ -1,98 +1,98 @@
 [
     {
+        "Category": "Dyson Sphere Program:stadia_controller",
+        "Description": "",
         "DisplayName": "Server Port",
-        "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
         "FieldName": "$ServerPort",
+        "Hidden": true,
         "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "Nebula - Settings.HostPort",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Disable BepInEx Console",
-        "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
-        "Description": "",
         "Keywords": "",
-        "FieldName": "LoggingConsoleEnabled",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "Logging.Console.Enabled",
-        "DefaultValue": "false",
-        "EnumValues": {}
+        "ParamFieldName": "Nebula - Settings.HostPort",
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Server Start Mode",
         "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "false",
+        "Description": "",
+        "DisplayName": "Disable BepInEx Console",
+        "EnumValues": {},
+        "FieldName": "LoggingConsoleEnabled",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "Logging.Console.Enabled",
+        "Subcategory": "Server Settings"
+    },
+    {
+        "Category": "Dyson Sphere Program:stadia_controller",
+        "DefaultValue": "-newgame {{galaxySeed}} {{starCount}} {{resourceMultiplier}}",
         "Description": "Sets the server start mode. If 'Start with specified save' is selected, also specify the relevant Save File",
-        "Keywords": "server,start,mode,newgame,load,load-latest",
+        "DisplayName": "Server Start Mode",
+        "EnumValues": {
+            "-load {{SaveFile}}": "Start with specified save",
+            "-load-latest": "Start with latest save",
+            "-newgame {{galaxySeed}} {{starCount}} {{resourceMultiplier}}": "Start new game (default)"
+        },
         "FieldName": "StartMode",
         "InputType": "enum",
+        "Keywords": "server,start,mode,newgame,load,load-latest",
         "ParamFieldName": "StartMode",
-        "DefaultValue": "-newgame {{galaxySeed}} {{starCount}} {{resourceMultiplier}}",
-        "EnumValues": {
-            "-newgame {{galaxySeed}} {{starCount}} {{resourceMultiplier}}": "Start new game (default)",
-            "-load {{SaveFile}}": "Start with specified save",
-            "-load-latest": "Start with latest save"
-        }
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Galaxy Seed",
         "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "-1",
         "Description": "Sets the seed for generating a new save. -1 = random",
-        "Keywords": "galaxy,seed,galaxySeed",
+        "DisplayName": "Galaxy Seed",
+        "EnumValues": {},
         "FieldName": "galaxySeed",
         "InputType": "number",
+        "Keywords": "galaxy,seed,galaxySeed",
         "MinValue": -1,
         "ParamFieldName": "Basic.galaxySeed",
-        "DefaultValue": "-1",
         "Placeholder": "-1",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Star Number",
         "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "-1",
         "Description": "Sets the size of the cluster (number of stars) when generating a new save. -1 = default (64)",
-        "Keywords": "star,count,starCount",
+        "DisplayName": "Star Number",
+        "EnumValues": {},
         "FieldName": "starCount",
         "InputType": "number",
+        "Keywords": "star,count,starCount",
         "MinValue": -1,
         "ParamFieldName": "Basic.starCount",
-        "DefaultValue": "-1",
         "Placeholder": "-1",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Resource Multiplier",
         "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "-1",
         "Description": "Sets the resource resource multiplier when generating a new save. -1 = default (1.0), 100 = infinite",
-        "Keywords": "resource,multiplier,resourceMultiplier",
+        "DisplayName": "Resource Multiplier",
+        "EnumValues": {},
         "FieldName": "resourceMultiplier",
         "InputType": "number",
-        "MinValue": -1,
+        "Keywords": "resource,multiplier,resourceMultiplier",
         "MaxValue": 100,
+        "MinValue": -1,
         "ParamFieldName": "Basic.resourceMultiplier",
-        "DefaultValue": "-1",
         "Placeholder": "-1",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     },
     {
-        "DisplayName": "Save File",
         "Category": "Dyson Sphere Program:stadia_controller",
-        "Subcategory": "Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the name of the save file to load on server start, if 'Start with specified save' is selected under Server Start Mode",
-        "Keywords": "save,file",
+        "DisplayName": "Save File",
+        "EnumValues": {},
         "FieldName": "SaveFile",
         "InputType": "text",
+        "Keywords": "save,file",
         "ParamFieldName": "SaveFile",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Subcategory": "Server Settings"
     }
 ]

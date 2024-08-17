@@ -1,122 +1,118 @@
 [
     {
+        "Category": "CoD WaW Server Settings",
+        "Description": "",
         "DisplayName": "RCON Password",
-        "Category": "CoD WaW Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
         "FieldName": "$RemoteAdminPassword",
-        "InputType": "text",
         "Hidden": true,
-        "ParamFieldName": "rcon_password",
-        "EnumValues": {}
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "rcon_password"
     },
     {
-        "DisplayName": "Enable Log File",
         "Category": "CoD WaW Server Settings",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "logfile",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "logfile",
         "DefaultValue": "2",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Continuous Log",
-        "Category": "CoD WaW Server Settings",
         "Description": "",
-        "Keywords": "",
-        "FieldName": "g_logSync",
+        "DisplayName": "Enable Log File",
+        "EnumValues": {},
+        "FieldName": "logfile",
+        "Hidden": true,
         "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "g_logSync",
-        "DefaultValue": "1",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Log File Name",
-        "Category": "CoD WaW Server Settings",
-        "Description": "",
         "Keywords": "",
-        "FieldName": "g_log",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "g_log",
-        "DefaultValue": "games_mp.log",
-        "EnumValues": {}
+        "ParamFieldName": "logfile"
     },
     {
-        "DisplayName": "Game Mode",
         "Category": "CoD WaW Server Settings",
-        "Description": "Sets the game mode. Configure the relevant config file accordingly - 'server.cfg' for Multiplayer, 'server_zm.cfg' for Zombies",
-        "Keywords": "game,mode,gamemode",
-        "FieldName": "GameMode",
-        "InputType": "enum",
-        "ParamFieldName": "GameMode",
+        "DefaultValue": "1",
+        "Description": "",
+        "DisplayName": "Continuous Log",
+        "EnumValues": {},
+        "FieldName": "g_logSync",
+        "Hidden": true,
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "g_logSync"
+    },
+    {
+        "Category": "CoD WaW Server Settings",
+        "DefaultValue": "games_mp.log",
+        "Description": "",
+        "DisplayName": "Log File Name",
+        "EnumValues": {},
+        "FieldName": "g_log",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "g_log"
+    },
+    {
+        "Category": "CoD WaW Server Settings",
         "DefaultValue": "t4mp \"{{$FullBaseDir}}\" -dedicated +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +exec server.cfg",
+        "Description": "Sets the game mode. Configure the relevant config file accordingly - 'server.cfg' for Multiplayer, 'server_zm.cfg' for Zombies",
+        "DisplayName": "Game Mode",
         "EnumValues": {
             "t4mp \"{{$FullBaseDir}}\" -dedicated +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +exec server.cfg": "Multiplayer (default)",
             "t4sp \"{{$FullBaseDir}}\" -dedicated +set zombiemode 1 +set key {{ServerKey}} +set fs_game \"{{Mod}}\" +exec server_zm.cfg": "Zombies"
-        }
+        },
+        "FieldName": "GameMode",
+        "InputType": "enum",
+        "Keywords": "game,mode,gamemode",
+        "ParamFieldName": "GameMode"
     },
     {
-        "DisplayName": "Server Key",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [server key](https://platform.plutonium.pw/serverkeys) required to run the server. This also sets the server name. A Plutonium account must be at least one week old to create a key, and game ownership must be [verified](https://forum.plutonium.pw/topic/32250/an-update-on-game-ownership-verification)",
-        "Keywords": "server,key,serverkey",
+        "DisplayName": "Server Key",
+        "EnumValues": {},
         "FieldName": "ServerKey",
         "InputType": "password",
+        "Keywords": "server,key,serverkey",
         "ParamFieldName": "ServerKey",
-        "DefaultValue": "",
-        "Required": true,
-        "EnumValues": {}
+        "Required": true
     },
     {
-        "DisplayName": "Server Password",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password to join the server. Default is no password",
-        "Keywords": "password,g_password",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "g_password",
         "InputType": "password",
-        "ParamFieldName": "g_password",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "password,g_password",
+        "ParamFieldName": "g_password"
     },
     {
-        "DisplayName": "Map Mode",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "+map_rotate",
         "Description": "Sets whether to enable map rotation (the Map Rotation List must then also be set) or to load a specific initial map (the Initial Game Type and Initial Map must then also be set)",
-        "Keywords": "map,mode,map_rotate",
+        "DisplayName": "Map Mode",
+        "EnumValues": {
+            "+map \"{{map_name}}\"": "Specific initial map",
+            "+map_rotate": "Map rotation (default)"
+        },
         "FieldName": "MapMode",
         "InputType": "enum",
-        "ParamFieldName": "MapMode",
-        "DefaultValue": "+map_rotate",
-        "EnumValues": {
-            "+map_rotate": "Map rotation (default)",
-            "+map \"{{map_name}}\"": "Specific initial map"
-        }
+        "Keywords": "map,mode,map_rotate",
+        "ParamFieldName": "MapMode"
     },
     {
-        "DisplayName": "Map Rotation List",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "",
         "Description": "Configure the map rotation in 'main/server.cfg' or 'main/server_zm.cfg' (as applicable)",
-        "Keywords": "map,rotation,list,sv_maprotation",
+        "DisplayName": "Map Rotation List",
+        "EnumValues": {},
         "FieldName": "MapRotation",
         "InputType": "hidden",
-        "ParamFieldName": "MapRotation",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "map,rotation,list,sv_maprotation",
+        "ParamFieldName": "MapRotation"
     },
     {
-        "DisplayName": "Initial Game Type",
         "Category": "CoD WaW Server Settings",
-        "Description": "Sets the game type to start the server with. This setting will be overridden if map rotation is configured. Settings for each game type can be set in 'server.cfg' or 'server_zm.cfg' (as applicable)",
-        "Keywords": "game,type,g_gametype",
-        "FieldName": "g_gametype",
-        "InputType": "enum",
-        "ParamFieldName": "g_gametype",
         "DefaultValue": "dm",
+        "Description": "Sets the game type to start the server with. This setting will be overridden if map rotation is configured. Settings for each game type can be set in 'server.cfg' or 'server_zm.cfg' (as applicable)",
+        "DisplayName": "Initial Game Type",
         "EnumValues": {
             "ctf": "Capture The Flag",
             "dm": "Deathmatch / Free For All (default)",
@@ -126,462 +122,466 @@
             "sd": "Search And Destroy",
             "tdm": "Team Deathmatch",
             "twar": "War"
-        }
+        },
+        "FieldName": "g_gametype",
+        "InputType": "enum",
+        "Keywords": "game,type,g_gametype",
+        "ParamFieldName": "g_gametype"
     },
     {
-        "DisplayName": "Initial Map",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "mp_downfall",
         "Description": "Sets the map to start the server with. See 'server.cfg' or 'server_zm.cfg' (as applicable) for map names. This setting will be overridden if map rotation is configured",
-        "Keywords": "map",
+        "DisplayName": "Initial Map",
+        "EnumValues": {},
         "FieldName": "map_name",
         "InputType": "text",
+        "Keywords": "map",
         "ParamFieldName": "map_name",
-        "DefaultValue": "mp_downfall",
-        "Placeholder": "mp_downfall",
-        "EnumValues": {}
+        "Placeholder": "mp_downfall"
     },
     {
-        "DisplayName": "Load Mod",
         "Category": "CoD WaW Server Settings",
-        "Description": "Sets the mod to load when starting the server, based on the path to the mod in the Mods directory",
-        "Keywords": "mods,mod,fs_game",
-        "FieldName": "Mod",
-        "InputType": "text",
-        "ParamFieldName": "Mod",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "",
+        "Description": "Sets the mod to load when starting the server, based on the path to the mod in the Mods directory",
+        "DisplayName": "Load Mod",
+        "EnumValues": {},
+        "FieldName": "Mod",
+        "IncludeInCommandLine": true,
+        "InputType": "text",
+        "Keywords": "mods,mod,fs_game",
+        "ParamFieldName": "Mod",
         "Placeholder": "Mods/PeZBOTWAW",
-        "EnumValues": {}
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "32",
         "Description": "Sets the maximum number of players allowed on the server at one time. Maximum 64 for Multiplayer, 4 for Zombies",
-        "Keywords": "max,players,limit,sv_maxclients",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": 1,
+        "Keywords": "max,players,limit,sv_maxclients",
         "MaxValue": 64,
+        "MinValue": 1,
         "ParamFieldName": "sv_maxclients",
-        "DefaultValue": "32",
         "Placeholder": "32",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "CoD WaW Server Settings",
         "Description": "",
-        "Keywords": "",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "ui_maxclients",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "ui_maxclients"
     },
     {
-        "DisplayName": "Private Player Limit",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "0",
         "Description": "Sets the maximum number of private players allowed on the server (those that can use non-public reserved slots). Will be limited to the Player Limit",
-        "Keywords": "max,private,players,limit,sv_privateclients",
+        "DisplayName": "Private Player Limit",
+        "EnumValues": {},
         "FieldName": "sv_privateclients",
         "InputType": "number",
+        "Keywords": "max,private,players,limit,sv_privateclients",
         "MinValue": 0,
         "ParamFieldName": "sv_privateclients",
-        "DefaultValue": "0",
         "Placeholder": "0",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Private Player Password",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password for private players to join the server. Private players entering this password have access to all slots on the server, otherwise the players only have access to the public slots (Player Limit less Private Player Limit)",
-        "Keywords": "private,player,password,sv_privatepassword",
+        "DisplayName": "Private Player Password",
+        "EnumValues": {},
         "FieldName": "sv_privatePassword",
         "InputType": "password",
-        "ParamFieldName": "sv_privatePassword",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "private,player,password,sv_privatepassword",
+        "ParamFieldName": "sv_privatePassword"
     },
     {
-        "DisplayName": "Pure Server",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "0",
         "Description": "If set, clients will be prevented from loading files not on the server",
-        "Keywords": "pure,server,cheats,sv_pure",
+        "DisplayName": "Pure Server",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_pure",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_pure",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "pure,server,cheats,sv_pure",
+        "ParamFieldName": "sv_pure"
     },
     {
-        "DisplayName": "Maximum Bandwidth",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "25000",
         "Description": "Sets the maximum bandwidth for the server",
-        "Keywords": "maximum,bandwidth,sv_maxrate",
+        "DisplayName": "Maximum Bandwidth",
+        "EnumValues": {},
         "FieldName": "sv_maxRate",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "maximum,bandwidth,sv_maxrate",
         "MaxValue": 100000,
+        "MinValue": 0,
         "ParamFieldName": "sv_maxRate",
-        "DefaultValue": "25000",
         "Placeholder": "25000",
-        "Suffix": "bytes/second",
-        "EnumValues": {}
+        "Suffix": "bytes/second"
     },
     {
-        "DisplayName": "Temporary Ban Period",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "300",
         "Description": "Sets the time for a player temporary ban (on kick/tempban)",
-        "Keywords": "ban,period,temporary,sv_kickbantime",
+        "DisplayName": "Temporary Ban Period",
+        "EnumValues": {},
         "FieldName": "sv_kickbantime",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "ban,period,temporary,sv_kickbantime",
         "MaxValue": 3600,
+        "MinValue": 0,
         "ParamFieldName": "sv_kickBanTime",
-        "DefaultValue": "300",
         "Placeholder": "300",
-        "Suffix": "seconds",
-        "EnumValues": {}
+        "Suffix": "seconds"
     },
     {
-        "DisplayName": "Allow Download From Server And Web",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "1",
         "Description": "If set, clients will be allowed to download content (maps, etc) from either the server or the web",
-        "Keywords": "allow,download,content,map,model,sv_allowdownload",
+        "DisplayName": "Allow Download From Server And Web",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_allowDownload",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_allowDownload",
-        "DefaultValue": "1",
+        "Keywords": "allow,download,content,map,model,sv_allowdownload",
+        "ParamFieldName": "sv_allowDownload"
+    },
+    {
+        "Category": "CoD WaW Server Settings",
+        "DefaultValue": "0",
+        "Description": "If set, clients will be allowed to download content (maps, etc) from the web. Requires the Base Download URL to be set",
+        "DisplayName": "Allow Download From Web",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Allow Download From Web",
-        "Category": "CoD WaW Server Settings",
-        "Description": "If set, clients will be allowed to download content (maps, etc) from the web. Requires the Base Download URL to be set",
-        "Keywords": "allow,download,content,map,model,sv_wwwDownload",
+        },
         "FieldName": "sv_wwwDownload",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_wwwDownload",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "allow,download,content,map,model,sv_wwwDownload",
+        "ParamFieldName": "sv_wwwDownload"
     },
     {
-        "DisplayName": "Base Download URL",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the base URL for download redirection. Must be http only",
-        "Keywords": "base,url,download,redirection,sv_wwwBaseURL",
+        "DisplayName": "Base Download URL",
+        "EnumValues": {},
         "FieldName": "sv_wwwBaseURL",
         "InputType": "url",
+        "Keywords": "base,url,download,redirection,sv_wwwBaseURL",
         "ParamFieldName": "sv_wwwBaseURL",
-        "DefaultValue": "",
-        "Placeholder": "http://domain.tld/waw",
-        "EnumValues": {}
+        "Placeholder": "http://domain.tld/waw"
     },
     {
-        "DisplayName": "Treat As Disconnected While Downloading",
         "Category": "CoD WaW Server Settings",
+        "DefaultValue": "0",
         "Description": "If set, clients will be treated as disconnected while downloading from the web",
-        "Keywords": "download,disconnect,sv_wwwDlDisconnected",
+        "DisplayName": "Treat As Disconnected While Downloading",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_wwwDlDisconnected",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_wwwDlDisconnected",
-        "DefaultValue": "0",
+        "Keywords": "download,disconnect,sv_wwwDlDisconnected",
+        "ParamFieldName": "sv_wwwDlDisconnected"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "1",
+        "Description": "If set, server voice chat will be enabled",
+        "DisplayName": "Enable Server Voice Chat",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Server Voice Chat",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, server voice chat will be enabled",
-        "Keywords": "voice,chat,sv_voice",
+        },
         "FieldName": "sv_voice",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_voice",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "voice,chat,sv_voice",
+        "ParamFieldName": "sv_voice"
     },
     {
-        "DisplayName": "Server Voice Chat Quality",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "3",
         "Description": "Sets the server voice quality level",
-        "Keywords": "voice,chat,quality,sv_voicequality",
+        "DisplayName": "Server Voice Chat Quality",
+        "EnumValues": {},
         "FieldName": "sv_voiceQuality",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "voice,chat,quality,sv_voicequality",
         "MaxValue": 9,
+        "MinValue": 0,
         "ParamFieldName": "sv_voiceQuality",
-        "DefaultValue": "3",
-        "Placeholder": "3",
-        "EnumValues": {}
+        "Placeholder": "3"
     },
     {
-        "DisplayName": "Enable Dead Voice Chat",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If enabled, dead players will be allowed to use voice chat to communicate with living players",
-        "Keywords": "voice,dead,chat,voice_deadchat",
+        "DisplayName": "Enable Dead Voice Chat",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "voice_deadChat",
         "InputType": "checkbox",
-        "ParamFieldName": "voice_deadChat",
+        "Keywords": "voice,dead,chat,voice_deadchat",
+        "ParamFieldName": "voice_deadChat"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If enabled, dead players will be allowed to use text chat to communicate with living players",
+        "DisplayName": "Enable Dead Text Chat (Zombies)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Dead Text Chat (Zombies)",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If enabled, dead players will be allowed to use text chat to communicate with living players",
-        "Keywords": "text,dead,chat,g_deadChat",
+        },
         "FieldName": "g_deadChat",
         "InputType": "checkbox",
-        "ParamFieldName": "g_deadChat",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "text,dead,chat,g_deadChat",
+        "ParamFieldName": "g_deadChat"
     },
     {
-        "DisplayName": "Spectating Type",
         "Category": "CoD WaW Gameplay Settings",
-        "Description": "Sets the type of spectating allowed in the game",
-        "Keywords": "spectating,type,scr_game_spectatetype",
-        "FieldName": "scr_game_spectatetype",
-        "InputType": "enum",
-        "ParamFieldName": "scr_game_spectatetype",
         "DefaultValue": "1",
+        "Description": "Sets the type of spectating allowed in the game",
+        "DisplayName": "Spectating Type",
         "EnumValues": {
             "0": "None",
             "1": "Players only (default)",
             "2": "Free"
-        }
+        },
+        "FieldName": "scr_game_spectatetype",
+        "InputType": "enum",
+        "Keywords": "spectating,type,scr_game_spectatetype",
+        "ParamFieldName": "scr_game_spectatetype"
     },
     {
-        "DisplayName": "Enable Killcam (Multiplayer)",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, the killcam feature will be enabled, which shows how a player was killed",
-        "Keywords": "killcam,scr_game_allowkillcam",
+        "DisplayName": "Enable Killcam (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "scr_game_allowkillcam",
         "InputType": "checkbox",
-        "ParamFieldName": "scr_game_allowkillcam",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "killcam,scr_game_allowkillcam",
+        "ParamFieldName": "scr_game_allowkillcam"
     },
     {
-        "DisplayName": "Gravity",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "800",
         "Description": "Sets the gravity in the game world",
-        "Keywords": "gravity,physics,g_gravity",
+        "DisplayName": "Gravity",
+        "EnumValues": {},
         "FieldName": "gravity,g_gravity",
         "InputType": "number",
-        "MinValue": 100,
+        "Keywords": "gravity,physics,g_gravity",
         "MaxValue": 1000,
+        "MinValue": 100,
         "ParamFieldName": "g_gravity",
-        "DefaultValue": "800",
-        "Placeholder": "800",
-        "EnumValues": {}
+        "Placeholder": "800"
     },
     {
-        "DisplayName": "Player Speed",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "190",
         "Description": "Sets the movement speed of players",
-        "Keywords": "speed,movement,players,g_speed",
+        "DisplayName": "Player Speed",
+        "EnumValues": {},
         "FieldName": "g_speed",
         "InputType": "number",
-        "MinValue": 100,
+        "Keywords": "speed,movement,players,g_speed",
         "MaxValue": 300,
+        "MinValue": 100,
         "ParamFieldName": "g_speed",
-        "DefaultValue": "190",
-        "Placeholder": "190",
-        "EnumValues": {}
+        "Placeholder": "190"
     },
     {
-        "DisplayName": "Team Balancing (Multiplayer)",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "1",
         "Description": "If set, team balancing will be enabled",
-        "Keywords": "team,balancing,scr_teambalance",
+        "DisplayName": "Team Balancing (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "scr_teambalance",
         "InputType": "checkbox",
-        "ParamFieldName": "scr_teambalance",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "team,balancing,scr_teambalance",
+        "ParamFieldName": "scr_teambalance"
     },
     {
-        "DisplayName": "Maximum Dropped Weapons (Multiplayer)",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "32",
         "Description": "Sets the maximum number of guns allowed to drop in the game",
-        "Keywords": "maximum,dropped,weapons,guns,g_maxDroppedWeapons",
+        "DisplayName": "Maximum Dropped Weapons (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "g_maxDroppedWeapons",
         "InputType": "number",
-        "MinValue": 1,
+        "Keywords": "maximum,dropped,weapons,guns,g_maxDroppedWeapons",
         "MaxValue": 50,
+        "MinValue": 1,
         "ParamFieldName": "g_maxDroppedWeapons",
-        "DefaultValue": "32",
-        "Placeholder": "32",
-        "EnumValues": {}
+        "Placeholder": "32"
     },
     {
-        "DisplayName": "Team Affects Bullet Penetration",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "true",
         "Description": "If set, teammates' bodies will affect bullet penetration",
-        "Keywords": "bullet,penetration,team,teammates,bodies,bullet_penetration_affected_by_team",
+        "DisplayName": "Team Affects Bullet Penetration",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "bullet_penetration_affected_by_team",
         "InputType": "checkbox",
-        "ParamFieldName": "bullet_penetration_affected_by_team",
+        "Keywords": "bullet,penetration,team,teammates,bodies,bullet_penetration_affected_by_team",
+        "ParamFieldName": "bullet_penetration_affected_by_team"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
         "DefaultValue": "true",
+        "Description": "If set, clipping players won't receive duplicate damage",
+        "DisplayName": "Fix Bullet Damage Duplication (Multiplayer)",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Fix Bullet Damage Duplication (Multiplayer)",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, clipping players won't receive duplicate damage",
-        "Keywords": "bullet,damage,duplication,clipping,prevent,g_fixBulletDamageDupe",
+        },
         "FieldName": "g_fixBulletDamageDupe",
         "InputType": "checkbox",
-        "ParamFieldName": "g_fixBulletDamageDupe",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "bullet,damage,duplication,clipping,prevent,g_fixBulletDamageDupe",
+        "ParamFieldName": "g_fixBulletDamageDupe"
     },
     {
-        "DisplayName": "Allow Voting (Multiplayer)",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "0",
         "Description": "If set, voting will be allowed",
-        "Keywords": "voting,vote,allow,g_allowVote",
+        "DisplayName": "Allow Voting (Multiplayer)",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "g_allowVote",
         "InputType": "checkbox",
-        "ParamFieldName": "g_allowVote",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "voting,vote,allow,g_allowVote",
+        "ParamFieldName": "g_allowVote"
     },
     {
-        "DisplayName": "Abstain Vote Weight (Multiplayer)",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "0.5",
         "Description": "Sets the weight of abstain votes in voting",
-        "Keywords": "vote,abstain,weight,g_voteAbstainWeight",
+        "DisplayName": "Abstain Vote Weight (Multiplayer)",
+        "EnumValues": {},
         "FieldName": "g_voteAbstainWeight",
         "InputType": "number",
-        "MinValue": 0,
+        "Keywords": "vote,abstain,weight,g_voteAbstainWeight",
         "MaxValue": 1,
+        "MinValue": 0,
         "ParamFieldName": "g_voteAbstainWeight",
-        "DefaultValue": "0.5",
-        "Placeholder": "0.5",
-        "EnumValues": {}
+        "Placeholder": "0.5"
     },
     {
-        "DisplayName": "Allow Client-Side Features",
         "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "0",
         "Description": "If set, allows various client-side features to be enabled",
-        "Keywords": "client,side,features,sv_clientside",
+        "DisplayName": "Allow Client-Side Features",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        },
         "FieldName": "sv_clientside",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_clientside",
-        "DefaultValue": "0",
+        "Keywords": "client,side,features,sv_clientside",
+        "ParamFieldName": "sv_clientside"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
+        "DefaultValue": "1",
+        "Description": "If set, clients will archive data to save bandwidth on the server. Requires Client-Side Features to be enabled",
+        "DisplayName": "Enable Client Archive (Multiplayer)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Client Archive (Multiplayer)",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, clients will archive data to save bandwidth on the server. Requires Client-Side Features to be enabled",
-        "Keywords": "client,archive,sv_clientArchive",
+        },
         "FieldName": "sv_clientArchive",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_clientArchive",
+        "Keywords": "client,archive,sv_clientArchive",
+        "ParamFieldName": "sv_clientArchive"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, clients will handle bullet holes and tracers. Requires Client-Side Features to be enabled",
+        "DisplayName": "Enable Client-Side Bullets",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Client-Side Bullets",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, clients will handle bullet holes and tracers. Requires Client-Side Features to be enabled",
-        "Keywords": "client,side,bullets,sv_clientSideBullets",
+        },
         "FieldName": "sv_clientSideBullets",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_clientSideBullets",
+        "Keywords": "client,side,bullets,sv_clientSideBullets",
+        "ParamFieldName": "sv_clientSideBullets"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, vehicles will be predicted on the client, reducing response time. Requires Client-Side Features to be enabled",
+        "DisplayName": "Enable Client-Side Vehicles",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Client-Side Vehicles",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, vehicles will be predicted on the client, reducing response time. Requires Client-Side Features to be enabled",
-        "Keywords": "client,side,vehicles,sv_clientSideVehicles",
+        },
         "FieldName": "sv_clientSideVehicles",
         "InputType": "checkbox",
-        "ParamFieldName": "sv_clientSideVehicles",
+        "Keywords": "client,side,vehicles,sv_clientSideVehicles",
+        "ParamFieldName": "sv_clientSideVehicles"
+    },
+    {
+        "Category": "CoD WaW Gameplay Settings",
         "DefaultValue": "1",
+        "Description": "If set, clients will handle lighting. Requires Client-Side Features to be enabled",
+        "DisplayName": "Enable Client-Side Lights (Multiplayer)",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
-    },
-    {
-        "DisplayName": "Enable Client-Side Lights (Multiplayer)",
-        "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, clients will handle lighting. Requires Client-Side Features to be enabled",
-        "Keywords": "client,side,lights,lighting,g_client_side_lights",
+        },
         "FieldName": "g_client_side_lights",
         "InputType": "checkbox",
-        "ParamFieldName": "g_client_side_lights",
-        "DefaultValue": "1",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
-        }
+        "Keywords": "client,side,lights,lighting,g_client_side_lights",
+        "ParamFieldName": "g_client_side_lights"
     },
     {
-        "DisplayName": "Enhance Weapon Rate (Zombies)",
         "Category": "CoD WaW Gameplay Settings",
-        "Description": "If set, Double Tap 2.0 will be enabled, enhancing both the rate of fire of weapons and the number of bullets per shot",
-        "Keywords": "enhance,weapon,rate,doubletap,perk_weapRateEnhanced",
-        "FieldName": "perk_weapRateEnhanced",
-        "InputType": "checkbox",
-        "ParamFieldName": "perk_weapRateEnhanced",
         "DefaultValue": "false",
+        "Description": "If set, Double Tap 2.0 will be enabled, enhancing both the rate of fire of weapons and the number of bullets per shot",
+        "DisplayName": "Enhance Weapon Rate (Zombies)",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
+        },
+        "FieldName": "perk_weapRateEnhanced",
+        "InputType": "checkbox",
+        "Keywords": "enhance,weapon,rate,doubletap,perk_weapRateEnhanced",
+        "ParamFieldName": "perk_weapRateEnhanced"
     }
 ]

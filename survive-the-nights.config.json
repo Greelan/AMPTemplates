@@ -1,202 +1,202 @@
 [
     {
+        "Category": "STN Server Settings",
+        "Description": "",
         "DisplayName": "Server Port",
-        "Category": "STN Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$ServerPort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "serverPort",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "serverPort"
     },
     {
+        "Category": "STN Server Settings",
+        "Description": "",
         "DisplayName": "Query Port",
-        "Category": "STN Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$QueryPort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "queryPort",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "queryPort"
     },
     {
+        "Category": "STN Server Settings",
+        "Description": "",
         "DisplayName": "Server IP",
-        "Category": "STN Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$ApplicationIPBinding",
+        "Hidden": true,
         "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "serverIP",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Allow Multiplayer",
-        "Category": "STN Server Settings",
-        "Description": "",
         "Keywords": "",
-        "FieldName": "allowMultiplayer",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "allowMultiplayer",
-        "ExcludeFromImport": true,
-        "DefaultValue": "True",
-        "EnumValues": {}
+        "ParamFieldName": "serverIP"
     },
     {
-        "DisplayName": "Server Owner",
         "Category": "STN Server Settings",
+        "DefaultValue": "True",
+        "Description": "",
+        "DisplayName": "Allow Multiplayer",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
+        "FieldName": "allowMultiplayer",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "allowMultiplayer"
+    },
+    {
+        "Category": "STN Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [Steam64 ID](https://steamid.io/) of the server owner",
-        "Keywords": "server,owner,steam64,serverOwner",
+        "DisplayName": "Server Owner",
+        "EnumValues": {},
         "FieldName": "serverOwner",
         "InputType": "text",
+        "Keywords": "server,owner,steam64,serverOwner",
         "ParamFieldName": "serverOwner",
-        "DefaultValue": "",
-        "Placeholder": "67583675893526711",
-        "EnumValues": {}
+        "Placeholder": "67583675893526711"
     },
     {
-        "DisplayName": "Server Name",
         "Category": "STN Server Settings",
+        "DefaultValue": "AMP Powered Survive the Nights Server",
         "Description": "Sets the name of the server that is shown in the server browser",
-        "Keywords": "server,name,serverName",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
         "FieldName": "serverName",
         "InputType": "text",
-        "ParamFieldName": "serverName",
-        "DefaultValue": "AMP Powered Survive the Nights Server",
-        "EnumValues": {}
+        "Keywords": "server,name,serverName",
+        "ParamFieldName": "serverName"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "STN Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password to join the server. Must not contain any spaces. Default is no password",
-        "Keywords": "server,password,serverPassword",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "serverPassword",
         "InputType": "password",
-        "ParamFieldName": "serverPassword",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,password,serverPassword",
+        "ParamFieldName": "serverPassword"
     },
     {
-        "DisplayName": "Use Steam Relays",
         "Category": "STN Server Settings",
+        "DefaultValue": "False",
         "Description": "If set, the server will use the Steam relay network for players to connect",
-        "Keywords": "steam,relays,network,UseSteamRelays",
+        "DisplayName": "Use Steam Relays",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        },
         "FieldName": "UseSteamRelays",
         "InputType": "checkbox",
-        "ParamFieldName": "UseSteamRelays",
+        "Keywords": "steam,relays,network,UseSteamRelays",
+        "ParamFieldName": "UseSteamRelays"
+    },
+    {
+        "Category": "STN Server Settings",
         "DefaultValue": "False",
+        "Description": "If set, the server will use UPnP on compatible routers",
+        "DisplayName": "Enable UPnP",
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Enable UPnP",
-        "Category": "STN Server Settings",
-        "Description": "If set, the server will use UPnP on compatible routers",
-        "Keywords": "useUpnp,upnp",
+        },
         "FieldName": "useUpnp",
         "InputType": "checkbox",
-        "ParamFieldName": "useUpnp",
-        "DefaultValue": "False",
+        "Keywords": "useUpnp,upnp",
+        "ParamFieldName": "useUpnp"
+    },
+    {
+        "Category": "STN Server Settings",
+        "DefaultValue": "True",
+        "Description": "If set, the server will be shown in the public server lobby",
+        "DisplayName": "Show In Public Lobby",
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Show In Public Lobby",
-        "Category": "STN Server Settings",
-        "Description": "If set, the server will be shown in the public server lobby",
-        "Keywords": "show,lobby,browser,public,showInPublicLobby",
+        },
         "FieldName": "showInPublicLobby",
         "InputType": "checkbox",
-        "ParamFieldName": "showInPublicLobby",
-        "DefaultValue": "True",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
+        "Keywords": "show,lobby,browser,public,showInPublicLobby",
+        "ParamFieldName": "showInPublicLobby"
     },
     {
-        "DisplayName": "World Name",
         "Category": "STN Server Settings",
+        "DefaultValue": "DedicatedServer",
         "Description": "Sets the world save name",
-        "Keywords": "world,name,worldName",
+        "DisplayName": "World Name",
+        "EnumValues": {},
         "FieldName": "worldName",
         "InputType": "text",
+        "Keywords": "world,name,worldName",
         "ParamFieldName": "worldName",
-        "DefaultValue": "DedicatedServer",
-        "Placeholder": "DedicatedServer",
-        "EnumValues": {}
+        "Placeholder": "DedicatedServer"
     },
     {
-        "DisplayName": "Initial Welcome Message",
         "Category": "STN Server Settings",
+        "DefaultValue": "Welcome to the server.",
         "Description": "Sets the message displayed to players when joining the server for the first time",
-        "Keywords": "first,join,welcome,message,welcomeMessage",
+        "DisplayName": "Initial Welcome Message",
+        "EnumValues": {},
         "FieldName": "welcomeMessage",
         "InputType": "text",
-        "ParamFieldName": "welcomeMessage",
-        "DefaultValue": "Welcome to the server.",
-        "EnumValues": {}
+        "Keywords": "first,join,welcome,message,welcomeMessage",
+        "ParamFieldName": "welcomeMessage"
     },
     {
-        "DisplayName": "Recurring Welcome Message",
         "Category": "STN Server Settings",
+        "DefaultValue": "Welcome to the server.",
         "Description": "Sets the message displayed to players when rejoining the server",
-        "Keywords": "recurring,welcome,message,recurringWelcomeMessage",
+        "DisplayName": "Recurring Welcome Message",
+        "EnumValues": {},
         "FieldName": "RecurringWelcomeMessage",
         "InputType": "text",
-        "ParamFieldName": "recurringWelcomeMessage",
-        "DefaultValue": "Welcome to the server.",
-        "EnumValues": {}
+        "Keywords": "recurring,welcome,message,recurringWelcomeMessage",
+        "ParamFieldName": "recurringWelcomeMessage"
     },
     {
-        "DisplayName": "Show Login Messages",
         "Category": "STN Server Settings",
+        "DefaultValue": "True",
         "Description": "If set, login messages will be shown when a new player enters or leaves the server",
-        "Keywords": "show,login,messages,showLoginMessages",
+        "DisplayName": "Show Login Messages",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        },
         "FieldName": "showLoginMessages",
         "InputType": "checkbox",
-        "ParamFieldName": "showLoginMessages",
+        "Keywords": "show,login,messages,showLoginMessages",
+        "ParamFieldName": "showLoginMessages"
+    },
+    {
+        "Category": "STN Server Settings",
         "DefaultValue": "True",
+        "Description": "If set, death messages will be shown when a player dies",
+        "DisplayName": "Show Death Messages",
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Show Death Messages",
-        "Category": "STN Server Settings",
-        "Description": "If set, death messages will be shown when a player dies",
-        "Keywords": "show,death,messages,showDeathMessages",
+        },
         "FieldName": "showDeathMessages",
         "InputType": "checkbox",
-        "ParamFieldName": "showDeathMessages",
-        "DefaultValue": "True",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
+        "Keywords": "show,death,messages,showDeathMessages",
+        "ParamFieldName": "showDeathMessages"
     },
     {
-        "DisplayName": "Forced Spawn Point",
         "Category": "STN Server Settings",
+        "DefaultValue": "-1",
         "Description": "Sets the default spawn point. -1 = disabled",
-        "Keywords": "forced,spawn,point,forcedSpawnPoint",
+        "DisplayName": "Forced Spawn Point",
+        "EnumValues": {},
         "FieldName": "forcedSpawnPoint",
         "InputType": "number",
+        "Keywords": "forced,spawn,point,forcedSpawnPoint",
         "MinValue": -1,
         "ParamFieldName": "forcedSpawnPoint",
-        "DefaultValue": "-1",
-        "Placeholder": "-1",
-        "EnumValues": {}
+        "Placeholder": "-1"
     }
 ]

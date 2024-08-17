@@ -1,27 +1,22 @@
 [
     {
-        "DisplayName": "Session Name",
         "Category": "Server Settings",
-        "Description": "Sets the server name displayed in the server browser. Use underscores (_) instead of spaces!",
-        "Keywords": "session,name,sessionname",
-        "FieldName": "SessionName",
-        "InputType": "text",
-        "ParamFieldName": "SessionName",
-        "IncludeInCommandLine": true,
         "DefaultValue": "Attoric_Powered_Beasts_of_Bermuda_Server",
-        "Placeholder": "Attoric_Powered_Beasts_of_Bermuda_Server",
-        "EnumValues": {}
+        "Description": "Sets the server name displayed in the server browser. Use underscores (_) instead of spaces!",
+        "DisplayName": "Session Name",
+        "EnumValues": {},
+        "FieldName": "SessionName",
+        "IncludeInCommandLine": true,
+        "InputType": "text",
+        "Keywords": "session,name,sessionname",
+        "ParamFieldName": "SessionName",
+        "Placeholder": "Attoric_Powered_Beasts_of_Bermuda_Server"
     },
     {
-        "DisplayName": "Map Name",
         "Category": "Server Settings",
-        "Description": "Sets the initial map to load on the server",
-        "Keywords": "map,name,mapname",
-        "FieldName": "MapName",
-        "InputType": "enum",
-        "ParamFieldName": "MapName",
-        "IncludeInCommandLine": true,
         "DefaultValue": "Forest_Island",
+        "Description": "Sets the initial map to load on the server",
+        "DisplayName": "Map Name",
         "EnumValues": {
             "Ancestral_Plains": "Ancestral Plains",
             "Ancestral_Plains_Canvas": "Ancestral Plains Canvas",
@@ -37,106 +32,111 @@
             "Test_Map": "Test Map (Debug)",
             "Test_Performance": "Test Performance",
             "Volcano_Bay": "Volcano Bay"
-        }
-    },
-    {
-        "DisplayName": "Map Name",
-        "Category": "Server Settings",
-        "Description": "",
-        "Keywords": "",
+        },
         "FieldName": "MapName",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "/Script/BeastsOfBermuda.ServerGameInstance.MapNameOverride",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Game Mode",
-        "Category": "Server Settings",
-        "Description": "Sets the game mode for the server",
-        "Keywords": "game,mode,gamemode",
-        "FieldName": "GameMode",
-        "InputType": "enum",
-        "ParamFieldName": "GameMode",
         "IncludeInCommandLine": true,
-        "DefaultValue": "Free_Roam",
-        "EnumValues": {
-            "Free_Roam": "Free Roam (default)",
-            "Life_Cycle": "Life Cycle",
-            "Combat": "Combat"
-        }
+        "InputType": "enum",
+        "Keywords": "map,name,mapname",
+        "ParamFieldName": "MapName"
     },
     {
-        "DisplayName": "Game Mode",
         "Category": "Server Settings",
         "Description": "",
-        "Keywords": "",
-        "FieldName": "GameMode",
-        "InputType": "text",
+        "DisplayName": "Map Name",
+        "EnumValues": {},
+        "FieldName": "MapName",
         "Hidden": true,
-        "ParamFieldName": "/Script/BeastsOfBermuda.ServerGameInstance.GameMode",
-        "EnumValues": {}
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "/Script/BeastsOfBermuda.ServerGameInstance.MapNameOverride"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "Server Settings",
-        "Description": "Sets the password required for players to join the server",
-        "Keywords": "server,password,serverpassword",
-        "FieldName": "ServerPassword",
-        "InputType": "password",
-        "ParamFieldName": "ServerPassword",
+        "DefaultValue": "Free_Roam",
+        "Description": "Sets the game mode for the server",
+        "DisplayName": "Game Mode",
+        "EnumValues": {
+            "Combat": "Combat",
+            "Free_Roam": "Free Roam (default)",
+            "Life_Cycle": "Life Cycle"
+        },
+        "FieldName": "GameMode",
         "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "game,mode,gamemode",
+        "ParamFieldName": "GameMode"
+    },
+    {
+        "Category": "Server Settings",
+        "Description": "",
+        "DisplayName": "Game Mode",
+        "EnumValues": {},
+        "FieldName": "GameMode",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "/Script/BeastsOfBermuda.ServerGameInstance.GameMode"
+    },
+    {
+        "Category": "Server Settings",
         "DefaultValue": "",
-        "SkipIfEmpty": true,
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Admin Password",
-        "Category": "Server Settings",
-        "Description": "Sets the admin password. Default is a strong random password",
-        "Keywords": "admin,password,adminpassword",
-        "FieldName": "AdminPassword",
+        "Description": "Sets the password required for players to join the server",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
+        "FieldName": "ServerPassword",
+        "IncludeInCommandLine": true,
         "InputType": "password",
-        "ParamFieldName": "AdminPassword",
-        "IncludeInCommandLine": true,
+        "Keywords": "server,password,serverpassword",
+        "ParamFieldName": "ServerPassword",
+        "SkipIfEmpty": true
+    },
+    {
+        "Category": "Server Settings",
         "DefaultValue": "{{newguid()}}",
-        "SkipIfEmpty": true,
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Player Limit",
-        "Category": "Server Settings",
-        "Description": "Sets the maximum number of players that can connect to the server at one time",
-        "Keywords": "maximum,player,limit,numplayers",
-        "FieldName": "$MaxUsers",
-        "InputType": "number",
-        "ParamFieldName": "NumPlayers",
+        "Description": "Sets the admin password. Default is a strong random password",
+        "DisplayName": "Admin Password",
+        "EnumValues": {},
+        "FieldName": "AdminPassword",
         "IncludeInCommandLine": true,
-        "DefaultValue": "32",
-        "Placeholder": "32",
-        "Suffix": "players",
-        "EnumValues": {}
+        "InputType": "password",
+        "Keywords": "admin,password,adminpassword",
+        "ParamFieldName": "AdminPassword",
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Discord Link",
         "Category": "Server Settings",
+        "DefaultValue": "32",
+        "Description": "Sets the maximum number of players that can connect to the server at one time",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
+        "FieldName": "$MaxUsers",
+        "IncludeInCommandLine": true,
+        "InputType": "number",
+        "Keywords": "maximum,player,limit,numplayers",
+        "ParamFieldName": "NumPlayers",
+        "Placeholder": "32",
+        "Suffix": "players"
+    },
+    {
+        "Category": "Server Settings",
+        "DefaultValue": "",
         "Description": "Sets a link for players to click in-game to join a Discord server. Only include the invite code, not the full URL",
-        "Keywords": "discord,link,discordlink",
+        "DisplayName": "Discord Link",
+        "EnumValues": {},
         "FieldName": "DiscordLink",
         "InputType": "text",
+        "Keywords": "discord,link,discordlink",
         "ParamFieldName": "/Script/BeastsOfBermuda.ServerGameInstance.DiscordLink",
-        "DefaultValue": "",
-        "Placeholder": "yubWudJZpb",
-        "EnumValues": {}
+        "Placeholder": "yubWudJZpb"
     },
     {
-        "DisplayName": "Custom Settings",
         "Category": "Server Settings",
         "Description": "To configure other settings for the server, [generate](https://cleafspear.github.io/) a configuration file and paste the contents into WindowsServer/BeastsOfBermuda/Saved/Config/WindowsServer/Game.ini",
-        "Keywords": "custom,settings",
+        "DisplayName": "Custom Settings",
+        "EnumValues": {},
         "FieldName": "CustomSettings",
         "InputType": "hidden",
-        "ParamFieldName": "CustomSettings",
-        "EnumValues": {}
+        "Keywords": "custom,settings",
+        "ParamFieldName": "CustomSettings"
     }
 ]

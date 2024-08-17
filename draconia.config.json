@@ -1,25 +1,20 @@
 [
     {
-        "DisplayName": "Server Name",
         "Category": "Draconia Server Settings",
+        "DefaultValue": "AMP Powered Draconia Server",
         "Description": "Sets the name of the server that is shown in the server browser",
-        "Keywords": "name,ServerName",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
         "FieldName": "ServerName",
         "InputType": "text",
-        "ParamFieldName": "ServerName",
-        "DefaultValue": "AMP Powered Draconia Server",
-        "EnumValues": {}
+        "Keywords": "name,ServerName",
+        "ParamFieldName": "ServerName"
     },
     {
-        "DisplayName": "Server Type",
         "Category": "Draconia Server Settings",
-        "Description": "Sets the server type",
-        "Keywords": "type,server,pve,pvp,roleplay,servertype",
-        "FieldName": "ServerType",
-        "InputType": "enum",
-        "ParamFieldName": "ServerType",
-        "IncludeInCommandLine": true,
         "DefaultValue": "3",
+        "Description": "Sets the server type",
+        "DisplayName": "Server Type",
         "EnumValues": {
             "0": "None",
             "1": "PvE",
@@ -28,76 +23,81 @@
             "4": "RP PvE",
             "5": "RP PvP",
             "6": "RP PvP-PvE"
-        }
+        },
+        "FieldName": "ServerType",
+        "IncludeInCommandLine": true,
+        "InputType": "enum",
+        "Keywords": "type,server,pve,pvp,roleplay,servertype",
+        "ParamFieldName": "ServerType"
     },
     {
-        "DisplayName": "Initial Server Map",
         "Category": "Draconia Server Settings",
-        "Description": "Sets the initial map for the server",
-        "Keywords": "map",
-        "FieldName": "Map",
-        "InputType": "enum",
-        "ParamFieldName": "Map",
         "DefaultValue": "Altuis",
+        "Description": "Sets the initial map for the server",
+        "DisplayName": "Initial Server Map",
         "EnumValues": {
             "Altuis": "Altuis"
-        }
+        },
+        "FieldName": "Map",
+        "InputType": "enum",
+        "Keywords": "map",
+        "ParamFieldName": "Map"
     },
     {
-        "DisplayName": "Server ID",
         "Category": "Draconia Server Settings",
+        "DefaultValue": "1",
         "Description": "Sets the ID of the server files to be used, allowing different server configurations and saves to be loaded",
-        "Keywords": "server,id,ServerID",
+        "DisplayName": "Server ID",
+        "EnumValues": {},
         "FieldName": "ServerID",
         "InputType": "number",
+        "Keywords": "server,id,ServerID",
         "MinValue": 1,
         "ParamFieldName": "ServerID",
-        "DefaultValue": "1",
-        "Required": true,
-        "EnumValues": {}
+        "Required": true
     },
     {
-        "DisplayName": "Server Location",
         "Category": "Draconia Server Settings",
-        "Description": "Sets an optional location for the server that is shown in the server browser",
-        "Keywords": "location",
-        "FieldName": "Location",
-        "InputType": "text",
-        "ParamFieldName": "Location",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "",
+        "Description": "Sets an optional location for the server that is shown in the server browser",
+        "DisplayName": "Server Location",
+        "EnumValues": {},
+        "FieldName": "Location",
+        "IncludeInCommandLine": true,
+        "InputType": "text",
+        "Keywords": "location",
+        "ParamFieldName": "Location",
         "Placeholder": "NA",
-        "EnumValues": {}
+        "SkipIfEmpty": true
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "Draconia Server Settings",
+        "DefaultValue": "65",
         "Description": "Sets the maximum number of players that may connect to the server at one time",
-        "Keywords": "maximum,players,limit,MaxPlayerCount",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
+        "IncludeInCommandLine": true,
         "InputType": "number",
+        "Keywords": "maximum,players,limit,MaxPlayerCount",
         "MinValue": 1,
         "ParamFieldName": "MaxPlayers",
-        "IncludeInCommandLine": true,
-        "DefaultValue": "65",
         "Placeholder": "65",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Log Chat",
         "Category": "Draconia Server Settings",
-        "Description": "If set, logging of global chat channels will be enabled",
-        "Keywords": "log,chat,global,LogChat",
-        "FieldName": "LogChat",
-        "InputType": "checkbox",
-        "ParamFieldName": "LogChat",
-        "IncludeInCommandLine": true,
         "DefaultValue": "1",
+        "Description": "If set, logging of global chat channels will be enabled",
+        "DisplayName": "Log Chat",
         "EnumValues": {
             "False": "0",
             "True": "1"
-        }
+        },
+        "FieldName": "LogChat",
+        "IncludeInCommandLine": true,
+        "InputType": "checkbox",
+        "Keywords": "log,chat,global,LogChat",
+        "ParamFieldName": "LogChat"
     }
 ]

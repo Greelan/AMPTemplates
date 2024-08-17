@@ -1,249 +1,249 @@
 [
     {
+        "Category": "Rising World Server Settings",
+        "Description": "",
         "DisplayName": "Server Port",
-        "Category": "Rising World Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$ServerPort",
-        "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "Server_Port",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "Server_Port"
     },
     {
+        "Category": "Rising World Server Settings",
+        "Description": "",
         "DisplayName": "RCON Port",
-        "Category": "Rising World Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$RCONPort",
+        "Hidden": true,
         "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "RCON_Port",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "Keywords": "",
+        "ParamFieldName": "RCON_Port"
     },
     {
+        "Category": "Rising World Server Settings",
+        "Description": "",
         "DisplayName": "IP Binding",
-        "Category": "Rising World Server Settings",
-        "Description": "",
-        "Keywords": "",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
         "FieldName": "$ApplicationIPBinding",
-        "InputType": "text",
         "Hidden": true,
-        "ParamFieldName": "Server_IP",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Disable Restart",
-        "Category": "Rising World Server Settings",
-        "Description": "",
+        "InputType": "text",
         "Keywords": "",
-        "FieldName": "Server_RestartEnabled",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "Server_RestartEnabled",
-        "DefaultValue": "False",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
+        "ParamFieldName": "Server_IP"
     },
     {
-        "DisplayName": "Server Name",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "False",
+        "Description": "",
+        "DisplayName": "Disable Restart",
+        "EnumValues": {},
+        "ExcludeFromImport": true,
+        "FieldName": "Server_RestartEnabled",
+        "Hidden": true,
+        "InputType": "text",
+        "Keywords": "",
+        "ParamFieldName": "Server_RestartEnabled"
+    },
+    {
+        "Category": "Rising World Server Settings",
+        "DefaultValue": "AMP Powered Rising World Server",
         "Description": "Sets the name of the server that is shown in the server list",
-        "Keywords": "server,name,Server_Name",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
         "FieldName": "Server_Name",
         "InputType": "text",
-        "ParamFieldName": "Server_Name",
-        "DefaultValue": "AMP Powered Rising World Server",
-        "EnumValues": {}
+        "Keywords": "server,name,Server_Name",
+        "ParamFieldName": "Server_Name"
     },
     {
-        "DisplayName": "Server Short Name",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "",
         "Description": "Sets an optional short name for the server. Maximum 32 characters",
-        "Keywords": "server,short,name,Server_ShortName",
+        "DisplayName": "Server Short Name",
+        "EnumValues": {},
         "FieldName": "Server_ShortName",
         "InputType": "text",
-        "ParamFieldName": "Server_ShortName",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,short,name,Server_ShortName",
+        "ParamFieldName": "Server_ShortName"
     },
     {
-        "DisplayName": "Server Description",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "",
         "Description": "Sets an optional description for the server that is visible in the server browser when the server is selected. Maximum 4096 characters",
-        "Keywords": "server,description,Server_Description",
+        "DisplayName": "Server Description",
+        "EnumValues": {},
         "FieldName": "Server_Description",
         "InputType": "text",
-        "ParamFieldName": "Server_Description",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,description,Server_Description",
+        "ParamFieldName": "Server_Description"
     },
     {
-        "DisplayName": "Show In Server List",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "True",
         "Description": "If set, the server will be visible in the server list",
-        "Keywords": "visible,public,Server_Visible",
+        "DisplayName": "Show In Server List",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        },
         "FieldName": "Server_Visible",
         "InputType": "checkbox",
-        "ParamFieldName": "Server_Visible",
-        "DefaultValue": "True",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
+        "Keywords": "visible,public,Server_Visible",
+        "ParamFieldName": "Server_Visible"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password to join the server. Default is no password",
-        "Keywords": "server,password,Server_Password",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "Server_Password",
         "InputType": "password",
-        "ParamFieldName": "Server_Password",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,password,Server_Password",
+        "ParamFieldName": "Server_Password"
     },
     {
-        "DisplayName": "Server Admins",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "",
         "Description": "Semi-colon separated list of UIDs of server admins",
-        "Keywords": "server,admins,Server_Admins",
+        "DisplayName": "Server Admins",
+        "EnumValues": {},
         "FieldName": "Server_Admins",
         "InputType": "text",
-        "ParamFieldName": "Server_Admins",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,admins,Server_Admins",
+        "ParamFieldName": "Server_Admins"
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "Rising World Server Settings",
-        "Description": "Sets the maximum number of players allowed on the server at one time",
-        "Keywords": "max,players,slots,limit,Settings_MaxPlayers",
-        "FieldName": "$MaxUsers",
-        "InputType": "number",
-        "MinValue": 1,
-        "MaxValue": 64,
-        "ParamFieldName": "Settings_MaxPlayers",
-        "IncludeInCommandLine": true,
         "DefaultValue": "64",
+        "Description": "Sets the maximum number of players allowed on the server at one time",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
+        "FieldName": "$MaxUsers",
+        "IncludeInCommandLine": true,
+        "InputType": "number",
+        "Keywords": "max,players,slots,limit,Settings_MaxPlayers",
+        "MaxValue": 64,
+        "MinValue": 1,
+        "ParamFieldName": "Settings_MaxPlayers",
         "Placeholder": "64",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Enable Whitelist",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "False",
         "Description": "If set, the server will only accept players whose UIDs are in the 'whitelist' file",
-        "Keywords": "whitelist,Server_UseWhitelist",
+        "DisplayName": "Enable Whitelist",
+        "EnumValues": {
+            "False": "False",
+            "True": "True"
+        },
         "FieldName": "Server_UseWhitelist",
         "InputType": "checkbox",
-        "ParamFieldName": "Server_UseWhitelist",
+        "Keywords": "whitelist,Server_UseWhitelist",
+        "ParamFieldName": "Server_UseWhitelist"
+    },
+    {
+        "Category": "Rising World Server Settings",
         "DefaultValue": "False",
+        "Description": "If set, the server will block all players whose UIDs are in the 'blacklist' file",
+        "DisplayName": "Enable Blacklist",
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Enable Blacklist",
-        "Category": "Rising World Server Settings",
-        "Description": "If set, the server will block all players whose UIDs are in the 'blacklist' file",
-        "Keywords": "blacklist,Server_UseBlacklist",
+        },
         "FieldName": "Server_UseBlacklist",
         "InputType": "checkbox",
-        "ParamFieldName": "Server_UseBlacklist",
-        "DefaultValue": "False",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
+        "Keywords": "blacklist,Server_UseBlacklist",
+        "ParamFieldName": "Server_UseBlacklist"
     },
     {
-        "DisplayName": "World Name",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "New World",
         "Description": "Sets the name of the world to load, or to create if it does not exist",
-        "Keywords": "world,name,World_Name",
+        "DisplayName": "World Name",
+        "EnumValues": {},
         "FieldName": "World_Name",
         "InputType": "text",
+        "Keywords": "world,name,World_Name",
         "ParamFieldName": "World_Name",
-        "DefaultValue": "New World",
-        "Placeholder": "New World",
-        "EnumValues": {}
+        "Placeholder": "New World"
     },
     {
-        "DisplayName": "World Seed",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the seed used to create a new world. Blank = random seed",
-        "Keywords": "world,seed,World_Seed",
+        "DisplayName": "World Seed",
+        "EnumValues": {},
         "FieldName": "World_Seed",
         "InputType": "text",
-        "ParamFieldName": "World_Seed",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "world,seed,World_Seed",
+        "ParamFieldName": "World_Seed"
     },
     {
-        "DisplayName": "World Creation Game Mode",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "Survival",
         "Description": "Sets the world game mode",
-        "Keywords": "game,mode,World_GameMode",
+        "DisplayName": "World Creation Game Mode",
+        "EnumValues": {
+            "Creative": "Creative",
+            "Survival": "Survival (default)"
+        },
         "FieldName": "World_GameMode",
         "InputType": "enum",
-        "ParamFieldName": "World_GameMode",
-        "DefaultValue": "Survival",
-        "EnumValues": {
-            "Survival": "Survival (default)",
-            "Creative": "Creative"
-        }
+        "Keywords": "game,mode,World_GameMode",
+        "ParamFieldName": "World_GameMode"
     },
     {
-        "DisplayName": "World Flatness Factor",
         "Category": "Rising World Server Settings",
+        "DefaultValue": "Default",
         "Description": "Sets the world flatness factor when creating a new world",
-        "Keywords": "world,flatness,factor,World_Flatness",
+        "DisplayName": "World Flatness Factor",
+        "EnumValues": {
+            "Default": "Default",
+            "Flat": "Flat",
+            "Steep": "Steep",
+            "VeryFlat": "Very flat",
+            "VerySteep": "Very steep"
+        },
         "FieldName": "World_Flatness",
         "InputType": "enum",
-        "ParamFieldName": "World_Flatness",
-        "DefaultValue": "Default",
-        "EnumValues": {
-            "VeryFlat": "Very flat",
-            "Flat": "Flat",
-            "Default": "Default",
-            "Steep": "Steep",
-            "VerySteep": "Very steep"
-        }
+        "Keywords": "world,flatness,factor,World_Flatness",
+        "ParamFieldName": "World_Flatness"
     },
     {
-        "DisplayName": "World Ore Amount",
         "Category": "Rising World Server Settings",
-        "Description": "Sets the world ore amount when creating a new world",
-        "Keywords": "world,ore,amount,World_OreAmount",
-        "FieldName": "World_OreAmount",
-        "InputType": "enum",
-        "ParamFieldName": "World_OreAmount",
         "DefaultValue": "Default",
+        "Description": "Sets the world ore amount when creating a new world",
+        "DisplayName": "World Ore Amount",
         "EnumValues": {
-            "Off": "Off",
-            "Low": "Low",
             "Default": "Default",
             "High": "High",
+            "Low": "Low",
+            "Off": "Off",
             "VeryHigh": "Very high"
-        }
+        },
+        "FieldName": "World_OreAmount",
+        "InputType": "enum",
+        "Keywords": "world,ore,amount,World_OreAmount",
+        "ParamFieldName": "World_OreAmount"
     },
     {
-        "DisplayName": "Game Mode",
         "Category": "Rising World Server Settings",
-        "Description": "Sets the game mode to run the server with",
-        "Keywords": "game,mode,Settings_GameMode",
-        "FieldName": "Settings_GameMode",
-        "InputType": "enum",
-        "ParamFieldName": "Settings_GameMode",
         "DefaultValue": "0",
+        "Description": "Sets the game mode to run the server with",
+        "DisplayName": "Game Mode",
         "EnumValues": {
             "0": "Survival (default)",
             "1": "Creative"
-        }
+        },
+        "FieldName": "Settings_GameMode",
+        "InputType": "enum",
+        "Keywords": "game,mode,Settings_GameMode",
+        "ParamFieldName": "Settings_GameMode"
     }
 ]

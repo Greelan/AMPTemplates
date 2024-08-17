@@ -1,152 +1,152 @@
 [
     {
-        "DisplayName": "Console Port",
         "Category": "Raft Server Settings",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$ConsolePort",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "Networking.ConsolePort",
         "DefaultValue": "6912",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "RTCP Port",
-        "Category": "Raft Server Settings",
         "Description": "",
-        "Keywords": "",
-        "FieldName": "$RTCPPort",
-        "InputType": "number",
+        "DisplayName": "Console Port",
+        "EnumValues": {},
+        "FieldName": "$ConsolePort",
         "Hidden": true,
-        "ParamFieldName": "Networking.RTCPPort",
-        "DefaultValue": "6969",
-        "EnumValues": {}
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "Networking.ConsolePort"
     },
     {
-        "DisplayName": "Master Private Key",
         "Category": "Raft Server Settings",
+        "DefaultValue": "6969",
+        "Description": "",
+        "DisplayName": "RTCP Port",
+        "EnumValues": {},
+        "FieldName": "$RTCPPort",
+        "Hidden": true,
+        "InputType": "number",
+        "Keywords": "",
+        "ParamFieldName": "Networking.RTCPPort"
+    },
+    {
+        "Category": "Raft Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [master private key](https://master.raftmodding.com/keys) that is required for the server to work",
-        "Keywords": "private,key,authentication,MasterPrivateKey",
+        "DisplayName": "Master Private Key",
+        "EnumValues": {},
         "FieldName": "MasterPrivateKey",
         "InputType": "password",
+        "Keywords": "private,key,authentication,MasterPrivateKey",
         "ParamFieldName": "Authentication.MasterPrivateKey",
-        "DefaultValue": "",
-        "Required": true,
-        "EnumValues": {}
+        "Required": true
     },
     {
-        "DisplayName": "Steam Web API Key",
         "Category": "Raft Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the [Steam Web API key](https://steamcommunity.com/dev/apikey) for the server. The Steam API will be used to verify user sessions when using the RaftTCP networking layer",
-        "Keywords": "steam,api,key,SteamAPIKey",
+        "DisplayName": "Steam Web API Key",
+        "EnumValues": {},
         "FieldName": "SteamAPIKey",
         "InputType": "password",
-        "ParamFieldName": "Authentication.SteamAPIKey",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "steam,api,key,SteamAPIKey",
+        "ParamFieldName": "Authentication.SteamAPIKey"
     },
     {
-        "DisplayName": "Server Name",
         "Category": "Raft Server Settings",
+        "DefaultValue": "AMP Powered Raft Server",
         "Description": "Sets the name of the server to display in the server list",
-        "Keywords": "server,name,ServerName",
+        "DisplayName": "Server Name",
+        "EnumValues": {},
         "FieldName": "ServerName",
         "InputType": "text",
+        "Keywords": "server,name,ServerName",
         "ParamFieldName": "General.ServerName",
-        "DefaultValue": "AMP Powered Raft Server",
-        "Placeholder": "AMP Powered Raft Server",
-        "EnumValues": {}
+        "Placeholder": "AMP Powered Raft Server"
     },
     {
-        "DisplayName": "Show In Server List",
         "Category": "Raft Server Settings",
+        "DefaultValue": "true",
         "Description": "If enabled, the server will be shown in the server list",
-        "Keywords": "server,list,show,display,ShownInServerlist",
+        "DisplayName": "Show In Server List",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        },
         "FieldName": "ShownInServerlist",
         "InputType": "checkbox",
-        "ParamFieldName": "General.ShownInServerlist",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
+        "Keywords": "server,list,show,display,ShownInServerlist",
+        "ParamFieldName": "General.ShownInServerlist"
     },
     {
-        "DisplayName": "Server Password",
         "Category": "Raft Server Settings",
+        "DefaultValue": "",
         "Description": "Sets the password required to join the server. Default is no password",
-        "Keywords": "server,password,ServerPassword",
+        "DisplayName": "Server Password",
+        "EnumValues": {},
         "FieldName": "ServerPassword",
         "InputType": "password",
-        "ParamFieldName": "General.ServerPassword",
-        "DefaultValue": "",
-        "EnumValues": {}
+        "Keywords": "server,password,ServerPassword",
+        "ParamFieldName": "General.ServerPassword"
     },
     {
-        "DisplayName": "Player Limit",
         "Category": "Raft Server Settings",
+        "DefaultValue": "10",
         "Description": "Sets the maximum number of players that can connect to the server at one time",
-        "Keywords": "max,maximum,players,limit,MaxPlayers",
+        "DisplayName": "Player Limit",
+        "EnumValues": {},
         "FieldName": "$MaxUsers",
         "InputType": "number",
+        "Keywords": "max,maximum,players,limit,MaxPlayers",
         "MinValue": 1,
         "ParamFieldName": "General.MaxPlayers",
-        "DefaultValue": "10",
         "Placeholder": "10",
-        "Suffix": "players",
-        "EnumValues": {}
+        "Suffix": "players"
     },
     {
-        "DisplayName": "Enable PvP",
         "Category": "Raft Server Settings",
-        "Description": "If enabled, players will be able to attack each other",
-        "Keywords": "pvp",
-        "FieldName": "PVP",
-        "InputType": "checkbox",
-        "ParamFieldName": "General.PVP",
         "DefaultValue": "true",
+        "Description": "If enabled, players will be able to attack each other",
+        "DisplayName": "Enable PvP",
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
+        },
+        "FieldName": "PVP",
+        "InputType": "checkbox",
+        "Keywords": "pvp",
+        "ParamFieldName": "General.PVP"
     },
     {
-        "DisplayName": "Server Icon URL",
         "Category": "Raft Server Settings",
+        "DefaultValue": "https://i.imgur.com/ds0pCRI.jpeg",
         "Description": "Sets a URL to a png/jpg file to show in the server list as the server icon",
-        "Keywords": "server,icon,url,IconUrl",
+        "DisplayName": "Server Icon URL",
+        "EnumValues": {},
         "FieldName": "IconUrl",
         "InputType": "text",
+        "Keywords": "server,icon,url,IconUrl",
         "ParamFieldName": "General.IconUrl",
-        "DefaultValue": "https://i.imgur.com/ds0pCRI.jpeg",
-        "Placeholder": "https://i.imgur.com/ds0pCRI.jpeg",
-        "EnumValues": {}
+        "Placeholder": "https://i.imgur.com/ds0pCRI.jpeg"
     },
     {
-        "DisplayName": "Banner URL",
         "Category": "Raft Server Settings",
+        "DefaultValue": "https://i.imgur.com/v5vyRMS.jpeg",
         "Description": "Sets a URL to a png/jpg file to show when connecting to the server or clicking more info",
-        "Keywords": "banner,url,BannerUrl",
+        "DisplayName": "Banner URL",
+        "EnumValues": {},
         "FieldName": "BannerUrl",
         "InputType": "text",
+        "Keywords": "banner,url,BannerUrl",
         "ParamFieldName": "General.BannerUrl",
-        "DefaultValue": "https://i.imgur.com/v5vyRMS.jpeg",
-        "Placeholder": "https://i.imgur.com/v5vyRMS.jpeg",
-        "EnumValues": {}
+        "Placeholder": "https://i.imgur.com/v5vyRMS.jpeg"
     },
     {
-        "DisplayName": "Networking Layer",
         "Category": "Raft Server Settings",
-        "Description": "Sets the networking communication layer used by the server. RaftTCP will use the TCP/IP protocol - note that vanilla users (without the mod loader) won't be able to connect. Steam will use Raft original networking",
-        "Keywords": "communication,networking,layer,NetworkingLayer",
-        "FieldName": "NetworkingLayer",
-        "InputType": "enum",
-        "ParamFieldName": "Networking.NetworkingLayer",
         "DefaultValue": "1",
+        "Description": "Sets the networking communication layer used by the server. RaftTCP will use the TCP/IP protocol - note that vanilla users (without the mod loader) won't be able to connect. Steam will use Raft original networking",
+        "DisplayName": "Networking Layer",
         "EnumValues": {
             "1": "RaftTCP (default)",
             "2": "Steam"
-        }
+        },
+        "FieldName": "NetworkingLayer",
+        "InputType": "enum",
+        "Keywords": "communication,networking,layer,NetworkingLayer",
+        "ParamFieldName": "Networking.NetworkingLayer"
     }
 ]
