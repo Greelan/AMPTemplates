@@ -193,7 +193,7 @@
         "Keywords": "forced,spawn,point,forcedSpawnPoint",
         "FieldName": "forcedSpawnPoint",
         "InputType": "number",
-        "MinValue": "-1",
+        "MinValue": -1,
         "ParamFieldName": "forcedSpawnPoint",
         "DefaultValue": "-1",
         "Placeholder": "-1",

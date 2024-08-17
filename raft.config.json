@@ -90,7 +90,7 @@
         "Keywords": "max,maximum,players,limit,MaxPlayers",
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": "1",
+        "MinValue": 1,
         "ParamFieldName": "General.MaxPlayers",
         "DefaultValue": "10",
         "Placeholder": "10",

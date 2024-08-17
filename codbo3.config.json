@@ -80,7 +80,7 @@
         "Keywords": "playlist,sv_playlist",
         "FieldName": "sv_playlist",
         "InputType": "number",
-        "MinValue": "1",
+        "MinValue": 1,
         "ParamFieldName": "set sv_playlist",
         "IncludeInCommandLine": true,
         "DefaultValue": "1",

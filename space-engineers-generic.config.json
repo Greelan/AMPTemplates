@@ -94,8 +94,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Blocks",
         "EnumValues": {}
     },
@@ -111,8 +111,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Factions",
         "EnumValues": {}
     },
@@ -128,8 +128,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Blocks",
         "EnumValues": {}
     },
@@ -145,8 +145,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "50000",
         "Placeholder": "50000",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Units",
         "EnumValues": {}
     },
@@ -162,8 +162,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "100000",
         "Placeholder": "100000",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Units",
         "EnumValues": {}
     },
@@ -309,8 +309,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "56",
         "Placeholder": "56",
-        "MinValue": "2",
-        "MaxValue": "1024",
+        "MinValue": 2,
+        "MaxValue": 1024,
         "Suffix": "Objects",
         "EnumValues": {}
     },
@@ -326,8 +326,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "8",
         "Placeholder": "8",
-        "MinValue": "2",
-        "MaxValue": "32",
+        "MinValue": 2,
+        "MaxValue": 32,
         "Suffix": "Iterations",
         "EnumValues": {}
     },
@@ -375,8 +375,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "119.999992",
         "Placeholder": "119.999992",
-        "MinValue": "0",
-        "MaxValue": "1440",
+        "MinValue": 0,
+        "MaxValue": 1440,
         "Suffix": "Minutes",
         "EnumValues": {}
     },
@@ -392,8 +392,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "3000",
         "Placeholder": "3000",
-        "MinValue": "1000",
-        "MaxValue": "20000",
+        "MinValue": 1000,
+        "MaxValue": 20000,
         "Suffix": "Meters",
         "EnumValues": {}
     },
@@ -409,8 +409,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "32",
         "Placeholder": "32",
-        "MinValue": "16",
-        "MaxValue": "1024",
+        "MinValue": 16,
+        "MaxValue": 1024,
         "Suffix": "Bots",
         "EnumValues": {}
     },
@@ -461,8 +461,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "2147483647",
+        "MinValue": 0,
+        "MaxValue": 2147483647,
         "Suffix": "Kilometers",
         "EnumValues": {}
     },
@@ -1088,8 +1088,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "3",
         "Placeholder": "3",
-        "MinValue": "1",
-        "MaxValue": "100",
+        "MinValue": 1,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1104,8 +1104,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "3",
         "Placeholder": "3",
-        "MinValue": "1",
-        "MaxValue": "100",
+        "MinValue": 1,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1120,8 +1120,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "1",
         "Placeholder": "1",
-        "MinValue": "1",
-        "MaxValue": "100",
+        "MinValue": 1,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1136,8 +1136,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "2",
         "Placeholder": "2",
-        "MinValue": "0",
-        "MaxValue": "100",
+        "MinValue": 0,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1152,8 +1152,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0.33",
         "Placeholder": "0.33",
-        "MinValue": "0",
-        "MaxValue": "100",
+        "MinValue": 0,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1168,8 +1168,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "1",
         "Placeholder": "1",
-        "MinValue": "0",
-        "MaxValue": "100",
+        "MinValue": 0,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1184,8 +1184,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "3",
         "Placeholder": "3",
-        "MinValue": "1",
-        "MaxValue": "100",
+        "MinValue": 1,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1200,8 +1200,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "3",
         "Placeholder": "3",
-        "MinValue": "1",
-        "MaxValue": "100",
+        "MinValue": 1,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1216,8 +1216,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "2",
         "Placeholder": "2",
-        "MinValue": "0",
-        "MaxValue": "100",
+        "MinValue": 0,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {
@@ -1248,8 +1248,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "1200",
         "Placeholder": "1200",
-        "MinValue": "300",
-        "MaxValue": "3600",
+        "MinValue": 300,
+        "MaxValue": 3600,
         "Suffix": "Seconds",
         "EnumValues": {}
     },
@@ -1360,7 +1360,7 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "10000000",
         "Placeholder": "10000000",
-        "MinValue": "200000",
+        "MinValue": 200000,
         "Suffix": "Meters",
         "EnumValues": {}
     },
@@ -1376,7 +1376,7 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "10000000",
         "Placeholder": "10000000",
-        "MinValue": "500000",
+        "MinValue": 500000,
         "Suffix": "Meters",
         "EnumValues": {}
     },
@@ -1392,7 +1392,7 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "30000000",
         "Placeholder": "30000000",
-        "MinValue": "1000000",
+        "MinValue": 1000000,
         "Suffix": "Meters",
         "EnumValues": {}
     },
@@ -1408,8 +1408,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "15",
         "Placeholder": "15",
-        "MinValue": "8",
-        "MaxValue": "100",
+        "MinValue": 8,
+        "MaxValue": 100,
         "Suffix": "Factions",
         "EnumValues": {}
     },
@@ -1744,8 +1744,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "60000",
+        "MinValue": 0,
+        "MaxValue": 60000,
         "Suffix": "Minutes",
         "EnumValues": {}
     },
@@ -1761,8 +1761,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "60000",
+        "MinValue": 0,
+        "MaxValue": 60000,
         "Suffix": "Minutes",
         "EnumValues": {}
     },
@@ -1778,8 +1778,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "60000",
+        "MinValue": 0,
+        "MaxValue": 60000,
         "Suffix": "Minutes",
         "EnumValues": {}
     },
@@ -1967,8 +1967,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "5",
         "Placeholder": "5",
-        "MinValue": "0",
-        "MaxValue": "10",
+        "MinValue": 0,
+        "MaxValue": 10,
         "Suffix": "Minutes",
         "EnumValues": {}
     },
@@ -1984,8 +1984,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "1",
         "Placeholder": "1",
-        "MinValue": "0",
-        "MaxValue": "1",
+        "MinValue": 0,
+        "MaxValue": 1,
         "EnumValues": {}
     },
     {
@@ -2143,7 +2143,7 @@
         "ParamFieldName": "/MyConfigDedicated/SessionSettings/EnvironmentDamageMultiplier | /MyObjectBuilder_WorldConfiguration/Settings/EnvironmentDamageMultiplier",
         "IncludeInCommandLine": false,
         "DefaultValue": "1",
-        "MaxValue": "2",
+        "MaxValue": 2,
         "EnumValues": {}
     },
     {
@@ -2174,8 +2174,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "4",
         "Placeholder": "4",
-        "MinValue": "2",
-        "MaxValue": "64",
+        "MinValue": 2,
+        "MaxValue": 64,
         "Suffix": "Players",
         "EnumValues": {}
     },
@@ -2254,8 +2254,8 @@
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
         "Placeholder": "0",
-        "MinValue": "0",
-        "MaxValue": "100",
+        "MinValue": 0,
+        "MaxValue": 100,
         "EnumValues": {}
     },
     {

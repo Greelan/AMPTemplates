@@ -74,7 +74,7 @@
         "Keywords": "maximum,players,limit,MaxPlayerCount",
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": "1",
+        "MinValue": 1,
         "ParamFieldName": "/Game/SCPPandemic/Blueprints/GI_PandemicGameInstance.GI_PandemicGameInstance_C.MaxPlayerCount",
         "DefaultValue": "4",
         "Placeholder": "4",

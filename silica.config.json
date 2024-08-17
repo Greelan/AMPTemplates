@@ -58,7 +58,7 @@
         "Keywords": "maximum,players,limit,MaxPlayerCount",
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": "1",
+        "MinValue": 1,
         "ParamFieldName": "/NetworkServerSettings/@MaxPlayers",
         "DefaultValue": "12",
         "Placeholder": "12",

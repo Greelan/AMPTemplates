@@ -38,7 +38,7 @@
         "Keywords": "request,queue,limit,request-queue-limit",
         "FieldName": "request-queue-limit",
         "InputType": "number",
-        "MinValue": "0",
+        "MinValue": 0,
         "ParamFieldName": "request-queue-limit",
         "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
