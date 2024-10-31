@@ -1,0 +1,33 @@
+[
+    {
+        "UpdateStageName":"SteamCMD Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"3093190",
+        "UpdateSourceArgs":"860020"
+    },
+    {
+        "UpdateStageName":"SteamCMD Component Download",
+        "UpdateSourcePlatform":"Windows",
+        "UpdateSource":"SteamCMD",
+        "UpdateSourceData":"1007",
+        "UpdateSourceTarget":"{{$FullBaseDir}}Exfil/Binaries/Win64",
+        "UpdateSourceArgs":"860020"
+    },
+    {
+        "UpdateStageName":"Config Directory Creation",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"CreateDirectory",
+        "UpdateSourceArgs":"{{$FullBaseDir}}Exfil/Saved/ServerSettings",
+        "OverwriteExistingFiles":false
+    },
+    {
+        "UpdateStageName":"DedicatedSettings.JSON File Download",
+        "UpdateSourcePlatform":"All",
+        "UpdateSource":"FetchURL",
+        "UpdateSourceData":"https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/exfildedicatedsettings.json",
+        "UpdateSourceTarget":"{{$FullBaseDir}}Exfil/Saved/ServerSettings",
+        "UpdateSourceArgs":"DedicatedSettings.JSON",
+        "OverwriteExistingFiles":false
+    }
+]

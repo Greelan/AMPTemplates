@@ -3,8 +3,8 @@
         "UpdateStageName":"SteamCMD Download",
         "UpdateSourcePlatform":"All",
         "UpdateSource":"SteamCMD",
-        "UpdateSourceData":"400300",
-        "UpdateSourceArgs":"365960",
+        "UpdateSourceData":"1801280",
+        "UpdateSourceArgs":"1782380",
         "ForceDownloadPlatform":"Windows"
     },
     {
@@ -15,19 +15,11 @@
         "UpdateSourceArgs":"-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update\""
     },
     {
-        "UpdateStageName":"Winescript Download",
-        "UpdateSourcePlatform":"Linux",
-        "UpdateSource":"FetchURL",
-        "UpdateSourceData":"https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/rfactor2winescript.sh",
-        "UpdateSourceArgs":"winescript.sh",
-        "UpdateSourceTarget":"{{$FullInstanceDir}}",
-        "OverwriteExistingFiles":true
-    },
-    {
-        "UpdateStageName":"Install Windows Components",
+        "UpdateStageName":"Disable Prefix Sound",
         "UpdateSourcePlatform":"Linux",
         "UpdateSource":"Executable",
         "UpdateSourceData":"/bin/bash",
-        "UpdateSourceArgs":"./winescript.sh"
+        "UpdateSourceArgs":"-c \"cd scpcb && wget -q -N https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks && chmod +x winetricks; export WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\"; export WINEARCH=win64; ./winetricks sound=disabled > winescript_log.txt 2>&1\"",
+        "SkipOnFailure":true
     }
 ]
