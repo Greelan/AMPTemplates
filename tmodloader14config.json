@@ -134,7 +134,7 @@
         "DisplayName": "Dotnet Release Stream",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
-        "Description": "Sets the .NET release stream from which to install the latest .NET Runtime version, unless a specific version is specified under Dotnet Version. Update the server after changing this setting",
+        "Description": "Sets the .NET release stream from which to install the latest .NET Runtime version, as approopriate to the server version, unless a specific version is specified under Dotnet Version. Update the server after changing this setting",
         "Keywords": "dotnet,release,stream",
         "FieldName": "DotnetRelease",
         "InputType": "enum",
