@@ -2317,7 +2317,7 @@
         "ParamFieldName": "BepInExVersion",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "Placeholder": "5.4.2109",
+        "Placeholder": "1.691.3",
         "EnumValues": {}
     }
 ]
