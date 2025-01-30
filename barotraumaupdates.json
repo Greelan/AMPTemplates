@@ -28,5 +28,29 @@
         "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/barotraumaserversettings.xml",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UpdateSourceArgs": "serversettings.xml"
+    },
+    {
+        "UpdateStageName": "Download LUA",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_linux_client.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "LUA",
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true
+    },
+    {
+        "UpdateStageName": "Download LUA",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://github.com/evilfactory/LuaCsForBarotrauma/releases/download/latest/luacsforbarotrauma_patch_windows_client.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "UpdateSourceConditionSetting": "LUA",
+        "UpdateSourceConditionValue": "true",
+        "DeleteAfterExtract": true
     }
 ]

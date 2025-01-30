@@ -1235,5 +1235,22 @@
             "strict": "Strict",
             "custom": "Custom"
         }
+    },
+    {
+        "DisplayName": "Install LUA",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:system_update_alt:-1",
+        "Description": "Auto-installs Lua when the server is updated.",
+        "Keywords": "install,lua",
+        "FieldName": "LUA",
+        "InputType": "checkbox",
+        "IsFlagArgument": false,
+        "ParamFieldName": "LUA",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     }
 ]
