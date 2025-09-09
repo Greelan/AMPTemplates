@@ -5,13 +5,15 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2208380",
         "UpdateSourceArgs": "1621070",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Config Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}DeadPoly/Saved/Config/WindowsServer"
+        "UpdateSourceArgs": "{{$FullBaseDir}}DeadPoly/Saved/Config/WindowsServer",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Default Engine.ini Copy",
@@ -19,7 +21,8 @@
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "{{$FullBaseDir}}DeadPoly/Saved/Config/WindowsServer/Engine.ini",
         "UpdateSourceArgs": "{{$FullBaseDir}}DeadPoly/Saved/1 RENAME Config/WindowsServer/Engine.ini",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Default Game.ini Copy",
@@ -27,7 +30,8 @@
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "{{$FullBaseDir}}DeadPoly/Saved/Config/WindowsServer/Game.ini",
         "UpdateSourceArgs": "{{$FullBaseDir}}DeadPoly/Saved/1 RENAME Config/WindowsServer/Game.ini",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Default GameUserSettings.ini Copy",
@@ -35,13 +39,15 @@
         "UpdateSource": "CopyFilePath",
         "UpdateSourceData": "{{$FullBaseDir}}DeadPoly/Saved/Config/WindowsServer/GameUserSettings.ini",
         "UpdateSourceArgs": "{{$FullBaseDir}}DeadPoly/Saved/1 RENAME Config/WindowsServer/GameUserSettings.ini",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Initialise Wine",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wineboot --init --update\""
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullRootDir}}.wine\\\" >/dev/null 2>&1; WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all XDG_RUNTIME_DIR=/tmp /usr/bin/wineboot --init\"",
+        "SkipOnFailure": false
     }
 ]
