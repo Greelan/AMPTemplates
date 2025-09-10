@@ -36,7 +36,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=2208380
 App.LinuxCommandLineArgs="./DeadPoly/Binaries/Win64/DeadPolyServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} DeadPoly Port={{$GamePort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput -nosteam
+App.CommandLineArgs={{$PlatformArgs}} DeadPoly -Port={{$GamePort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput -nosteam
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"1621070","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","XDG_RUNTIME_DIR":"/tmp"}
