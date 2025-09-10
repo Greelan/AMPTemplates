@@ -97,9 +97,9 @@ App.ApplicationReadyMode=RegexMatch
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=
-Console.AppReadyRegex=^\[[\d.]+-[\d.:]+\]\[[\d ]+\]LogRedpointEOS: Verbose: CreateSession: Successfully created session '.*' with ID '.*'$
-Console.UserJoinRegex=^$
-Console.UserLeaveRegex=^$
+Console.AppReadyRegex=^\[[\d.]+-[\d\.:]+\]\[[\d ]+\]LogRedpointEOS: Verbose: CreateSession: Successfully created session '.*' with ID '.*'$
+Console.UserJoinRegex=^\[[\d\.]+-[\d\.:]+\]\[[\d ]+\]LogNet: Login request: \?Name=(?<username>.+?) userId: RedpointEOS:(?<userid>.+?) platform: RedpointEOS$
+Console.UserLeaveRegex=^\[[\d\.]+-[\d\.:]+\]\[[\d ]+\]LogNet: UChannel::Close: Sending CloseBunch\.(?:.+?) UniqueId: RedpointEOS:(?<userid>.+?)$
 Console.UserChatRegex=^$
 Console.UpdateAvailableRegex=^\[\d\d:\d\d:\d\d\] \[INFO\] A new server update is available! v[\d\.]+.$
 Console.PreConnectRegex=
