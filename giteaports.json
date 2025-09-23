@@ -5,5 +5,13 @@
         "Name": "Server Port",
         "Description": "Port for server web traffic",
         "Ref": "ServerPort"
+    },
+    
+    {
+        "Protocol": "TCP",
+        "Port": 3001,
+        "Name": "SSH Port",
+        "Description": "Port for server SSH traffic",
+        "Ref": "SSHPort"
     }
 ]
