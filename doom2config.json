@@ -1,0 +1,57 @@
+[
+    {
+        "DisplayName": "IWAD Path",
+        "Category": "Doom II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the path to the Doom II IWAD file to use. 'Default' assumes that AMP manages the download from Steam of the client files. If that is disabled under Updates, select 'Custom' and specify Custom IWAD Path accordingly",
+        "Keywords": "iwad,path",
+        "FieldName": "IWADPath",
+        "InputType": "enum",
+        "ParamFieldName": "IWADPath",
+        "DefaultValue": "client/base/doom2/doom2.wad",
+        "EnumValues": {
+            "client/base/doom2/doom2.wad": "Default",
+            "{{CustomIWADPath}}": "Custom"
+        }
+    },
+    {
+        "DisplayName": "Custom IWAD Path",
+        "Category": "Doom II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a custom path to use for the IWAD Path, if 'Custom' is selected",
+        "Keywords": "custom,iwad,path",
+        "FieldName": "CustomIWADPath",
+        "InputType": "text",
+        "ParamFieldName": "CustomIWADPath",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Command Line Arguments",
+        "Category": "Doom II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional command line arguments (anything that begins with a - ) that are not otherwise set by AMP. Use with care",
+        "Keywords": "custom,server,arguments,parameters",
+        "FieldName": "CustomArgs",
+        "InputType": "text",
+        "ParamFieldName": "CustomArgs",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Disable Doom II Download",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "If set, Doom II client files (Steam App ID 2280) will not be downloaded from Steam when the server is updated. The Doom II IWAD file must be provided manually, and the IWAD Path set accordingly",
+        "Keywords": "client,download,steam",
+        "FieldName": "DisableClientDownload",
+        "InputType": "checkbox",
+        "ParamFieldName": "DisableClientDownload",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    }
+]

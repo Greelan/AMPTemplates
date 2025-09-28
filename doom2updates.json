@@ -1,0 +1,43 @@
+[
+    {
+        "UpdateStageName": "Zandronum Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://zandronum.com/downloads/zandronum3.2.1-win64-base.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Zandronum Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://zandronum.com/downloads/zandronum3.2.1-linux-x86_64.tar.bz2",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Client Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}client",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Doom II Client Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "2280",
+        "UpdateSourceTarget": "{{$FullBaseDir}}client",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    }
+]
