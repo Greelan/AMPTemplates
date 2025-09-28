@@ -40,7 +40,7 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Server Download",
+        "UpdateStageName": "Gitea Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
