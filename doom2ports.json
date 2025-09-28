@@ -1,7 +1,7 @@
 [
     {
         "Protocol": "UDP",
-        "Port": 10667,
+        "Port": 10666,
         "Ref": "ServerPort",
         "Name": "Server Port",
         "Description": "Port for game traffic"
