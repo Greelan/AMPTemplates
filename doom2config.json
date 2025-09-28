@@ -8,9 +8,9 @@
         "FieldName": "IWADPath",
         "InputType": "enum",
         "ParamFieldName": "IWADPath",
-        "DefaultValue": "client/base/doom2/doom2.wad",
+        "DefaultValue": "client/base/doom2/DOOM2.WAD",
         "EnumValues": {
-            "client/base/doom2/doom2.wad": "Default",
+            "client/base/doom2/DOOM2.WAD": "Default",
             "{{CustomIWADPath}}": "Custom"
         }
     },

@@ -39,5 +39,13 @@
         "UpdateSourceConditionSetting": "DisableClientDownload",
         "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Shared Library Symlink Creation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/ln",
+        "UpdateSourceArgs": "-sf /usr/lib/x86_64-linux-gnu/libjpeg.so.62 \"{{$FullBaseDir}}libjpeg.so.8\"",
+        "SkipOnFailure": false
     }
 ]
