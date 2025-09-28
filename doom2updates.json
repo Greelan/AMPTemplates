@@ -39,5 +39,14 @@
         "UpdateSourceConditionSetting": "DisableClientDownload",
         "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server.cfg Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/doom2server.cfg",
+        "UpdateSourceArgs": "server.cfg",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": false
     }
 ]
