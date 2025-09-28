@@ -1,6 +1,6 @@
 [
     {
-        "Protocol": "Both",
+        "Protocol": "UDP",
         "Port": 10667,
         "Ref": "ServerPort",
         "Name": "Server Port",
