@@ -48,7 +48,7 @@
         "FieldName": "DisableClientDownload",
         "InputType": "checkbox",
         "ParamFieldName": "DisableClientDownload",
-        "DefaultValue": "true",
+        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
