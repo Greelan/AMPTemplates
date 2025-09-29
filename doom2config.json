@@ -28,6 +28,22 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Player Limit",
+        "Category": "Doom II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players that may connect to the server at one time",
+        "Keywords": "maximum,players,limit,sv_maxclients",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "sv_maxclients",
+        "DefaultValue": "32",
+        "Placeholder": "32",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Additional Command Line Arguments",
         "Category": "Doom II:stadia_controller",
         "Subcategory": "Server:dns:1",
