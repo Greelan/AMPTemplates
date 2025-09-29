@@ -55,7 +55,7 @@
         "Suffix": "seconds",
         "EnumValues": {}
     },
-     {
+    {
         "DisplayName": "Additional Command Line Arguments",
         "Category": "Voyagers of Nera:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -111,80 +111,6 @@
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "XP Gain Rate Modifier",
-        "Category": "Voyagers of Nera:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the XP gain rate multiplier, which determines how quickly players earn experience points",
-        "Keywords": "xp,gain,rate,modifier,XPGainRateModifier",
-        "FieldName": "XPGainRateModifier",
-        "InputType": "number",
-        "MinValue": "0.01",
-        "MaxValue": "10.0",
-        "ParamFieldName": "/Script/BoatGame.BGCustomGameSettings.XPGainRateModifier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Attrition Rate Modifier",
-        "Category": "Voyagers of Nera:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the attrition rate multiplier, which determines how quickly resources or durability are consumed",
-        "Keywords": "attrition,rate,modifier,AttritionRateModifier",
-        "FieldName": "AttritionRateModifier",
-        "InputType": "number",
-        "MinValue": "0.01",
-        "MaxValue": "10.0",
-        "ParamFieldName": "/Script/BoatGame.BGCustomGameSettings.AttritionRateModifier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Resource Spawn Rate Modifier",
-        "Category": "Voyagers of Nera:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the resource spawn rate multiplier, which determines how quickly resources respawn in the world",
-        "Keywords": "resource,spawn,rate,modifier,ResourceSpawnRateModifier",
-        "FieldName": "ResourceSpawnRateModifier",
-        "InputType": "number",
-        "MinValue": "0.01",
-        "MaxValue": "10.0",
-        "ParamFieldName": "/Script/BoatGame.BGCustomGameSettings.ResourceSpawnRateModifier",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Maximum Concurrent Attackers",
-        "Category": "Voyagers of Nera:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "Sets the maximum number of attackers that can target a player at the same time",
-        "Keywords": "max,concurrent,attackers,MaxConcurrentAttackers",
-        "FieldName": "MaxConcurrentAttackers",
-        "InputType": "number",
-        "MinValue": "0",
-        "ParamFieldName": "/Script/BoatGame.BGCustomGameSettings.MaxConcurrentAttackers",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Disable Construction Requirements",
-        "Category": "Voyagers of Nera:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
-        "Description": "If set, construction requirements will be disabled, allowing players to build without resource constraints",
-        "Keywords": "disable,construction,requirements,DisableConstructionRequirements",
-        "FieldName": "DisableConstructionRequirements",
-        "InputType": "checkbox",
-        "ParamFieldName": "/Script/BoatGame.BGCustomGameSettings.DisableConstructionRequirements",
-        "DefaultValue": "False",
-        "EnumValues": {
-            "True": "True",
-            "False": "False"
-        }
     },
     {
         "DisplayName": "Disable Equipment Durability",
