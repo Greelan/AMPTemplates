@@ -1,5 +1,5 @@
-Meta.DisplayName=Doom II (Zandronum Mod)
-Meta.Description=Doom II Dedicated Server using Zandronum Mod
+Meta.DisplayName=DOOM II (Zandronum Mod)
+Meta.Description=DOOM II Dedicated Server using Zandronum Mod
 Meta.OS=Windows, Linux
 Meta.AarchSupport=NotSupported
 Meta.Arch=x86_64
@@ -27,7 +27,7 @@ Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.ImportableExtensions=[]
 Meta.AppIsMultiIPAware=False
-App.DisplayName=Doom II
+App.DisplayName=DOOM II
 App.RootDir=./doom2/
 App.BaseDirectory=./doom2/server/
 App.SteamWorkshopDownloadLocation=
