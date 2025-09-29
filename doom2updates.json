@@ -41,21 +41,12 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Server.cfg Download",
+        "UpdateStageName": "Server.cfg Template Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/doom2server.cfg",
-        "UpdateSourceArgs": "server.cfg",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "OverwriteExistingFiles": false
-    },
-    {
-        "UpdateStageName": "Maps.cfg Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/doom2maps.cfg",
-        "UpdateSourceArgs": "maps.cfg",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UpdateSourceArgs": "AMP_server.cfg",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
         "OverwriteExistingFiles": false
     }
 ]

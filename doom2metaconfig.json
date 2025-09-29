@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "ConfigFile": "server.cfg",
+        "AutoMap": true,
+        "ConfigType": "template",
+        "ConfigFileTemplate": "doom2/AMP_server.cfg"
+    }
+]
