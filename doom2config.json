@@ -1,5 +1,18 @@
 [
     {
+        "DisplayName": "Admin List File",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "sv_adminlistfile",
+        "InputType": "text",
+        "ParamFieldName": "sv_adminlistfile",
+        "Hidden": true,
+        "DefaultValue": "adminlist.txt",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "IWAD Path",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -28,10 +41,117 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Player Limit",
+        "DisplayName": "Server Hostname",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the maximum number of players that may connect to the server at one time",
+        "Description": "Sets the display name the server has on the master server list",
+        "Keywords": "hostname,server,name,sv_hostname",
+        "FieldName": "sv_hostname",
+        "InputType": "text",
+        "ParamFieldName": "sv_hostname",
+        "DefaultValue": "AMP Powered DOOM II server",
+        "Placeholder": "AMP Powered DOOM II server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Force Join Password",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, clients must supply the Join Password in order to join the gam. Clients without the proper join password may still spectate freely",
+        "Keywords": "force,join,password,sv_forcejoinpassword",
+        "FieldName": "sv_forcejoinpassword",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_forcejoinpassword",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Join Password",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the join password clients must supply in order to join the game, if Force Join Password is enabled",
+        "Keywords": "join,password,sv_joinpassword",
+        "FieldName": "sv_joinpassword",
+        "InputType": "password",
+        "ParamFieldName": "sv_joinpassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Force Server Password",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, clients must supply the Server Password in order to connect to the server. Clients without the proper password may not connect at all",
+        "Keywords": "force,password,sv_forcepassword",
+        "FieldName": "sv_forcepassword",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_forcepassword",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password clients must supply to connect to the server, if Force Server Password is enabled",
+        "Keywords": "server,password,sv_password",
+        "FieldName": "sv_password",
+        "InputType": "password",
+        "ParamFieldName": "sv_password",
+        "DefaultValue": "",
+        "Placeholder": "password",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Host Email",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets an e-mail address for clients to send an email to the administrator of the server",
+        "Keywords": "host,email,sv_hostemail",
+        "FieldName": "sv_hostemail",
+        "InputType": "text",
+        "ParamFieldName": "sv_hostemail",
+        "DefaultValue": "",
+        "Placeholder": "admin@example.com",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server MOTD",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a message of the day (MOTD) on the server, a welcome message printed on clients upon connection",
+        "Keywords": "motd,message,day,sv_motd",
+        "FieldName": "sv_motd",
+        "InputType": "text",
+        "ParamFieldName": "sv_motd",
+        "DefaultValue": "",
+        "Placeholder": "Welcome to the server!",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Website",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a website for the server. Used as the primary download location for any PWADs",
+        "Keywords": "website,sv_website",
+        "FieldName": "sv_website",
+        "InputType": "text",
+        "ParamFieldName": "sv_website",
+        "DefaultValue": "",
+        "Placeholder": "https://example.com/wads",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Client Limit",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of clients (players and spectators) that may connect to the server at one time",
         "Keywords": "maximum,players,limit,sv_maxclients",
         "FieldName": "$MaxUsers",
         "InputType": "number",
@@ -40,20 +160,76 @@
         "ParamFieldName": "sv_maxclients",
         "DefaultValue": "32",
         "Placeholder": "32",
+        "Suffix": "clients",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players that can join the game at one time. Others clients will be forced to spectate",
+        "Keywords": "max,players,sv_maxplayers",
+        "FieldName": "sv_maxplayers",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "64",
+        "ParamFieldName": "sv_maxplayers",
+        "DefaultValue": "32",
+        "Placeholder": "32",
         "Suffix": "players",
         "EnumValues": {}
     },
     {
-        "DisplayName": "Admin List File",
+        "DisplayName": "Client Limit Per IP",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "The admin list contains a list of IPs who are considered to be administrators on the server. Administrators can bypass the Player Limit and cannot be votekicked",
-        "Keywords": "admin,list,file,sv_adminlistfile",
-        "FieldName": "sv_adminlistfile",
+        "Description": "Sets how many clients with the same IP can enter the server at one time",
+        "Keywords": "max,clients,per,ip,sv_maxclientsperip",
+        "FieldName": "sv_maxclientsperip",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "sv_maxclientsperip",
+        "DefaultValue": "2",
+        "Placeholder": "2",
+        "Suffix": "clients",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin List",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "List of IPs of clients who are considered to be administrators on the server. Administrators can bypass the Client Limit and cannot be votekicked",
+        "Keywords": "admin,list",
+        "FieldName": "AdminList",
+        "InputType": "list",
+        "ParamFieldName": "",
+        "Special": "listfile:./doom2/server/adminlist.txt",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Ban Exemption (Whitelist) Files",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the names of the file or files that define a whitelist of IPs that are exempt from bans and votekicks. Use a semicolon to separate multiple file names",
+        "Keywords": "ban,exemption,whitelist,file,sv_banexemptionfile",
+        "FieldName": "sv_banexemptionfile",
         "InputType": "text",
-        "ParamFieldName": "sv_adminlistfile",
-        "DefaultValue": "adminlist.txt",
-        "Placeholder": "adminlist.txt",
+        "ParamFieldName": "sv_banexemptionfile",
+        "DefaultValue": "whitelist.txt",
+        "Placeholder": "whitelist.txt; whitelistfile_1.txt",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Ban Files",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the names of the file or files that define a blacklist of banned IPs. Use a semicolon to separate multiple file names",
+        "Keywords": "ban,blacklist,file,sv_banfile",
+        "FieldName": "sv_banfile",
+        "InputType": "text",
+        "ParamFieldName": "sv_banfile",
+        "DefaultValue": "banlist.txt",
+        "Placeholder": "banlist.txt; banlistfile_1.txt",
         "EnumValues": {}
     },
     {
@@ -128,32 +304,6 @@
         "DefaultValue": "30",
         "Placeholder": "30",
         "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Ban Exemption File",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Defines a whitelist of IPs exempt from bans and votekicks. Use a semicolon to separate multiple files",
-        "Keywords": "ban,exemption,whitelist,file,sv_banexemptionfile",
-        "FieldName": "sv_banexemptionfile",
-        "InputType": "text",
-        "ParamFieldName": "sv_banexemptionfile",
-        "DefaultValue": "whitelist.txt",
-        "Placeholder": "whitelist.txt; whitelistfile_1.txt",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Ban File",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Defines a blacklist of banned IPs. Use a semicolon to separate multiple files",
-        "Keywords": "ban,blacklist,file,sv_banfile",
-        "FieldName": "sv_banfile",
-        "InputType": "text",
-        "ParamFieldName": "sv_banfile",
-        "DefaultValue": "banlist.txt",
-        "Placeholder": "banlist.txt; banlistfile_1.txt",
         "EnumValues": {}
     },
     {
@@ -464,21 +614,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Force Join Password",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets whether clients must supply a join password in order to join the game",
-        "Keywords": "force,join,password,sv_forcejoinpassword",
-        "FieldName": "sv_forcejoinpassword",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_forcejoinpassword",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "Force Login To Join",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -491,21 +626,6 @@
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Force Password",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets whether clients must supply the correct password in order to connect to the server",
-        "Keywords": "force,password,sv_forcepassword",
-        "FieldName": "sv_forcepassword",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_forcepassword",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
         }
     },
     {
@@ -535,32 +655,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Host Email",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, allows clients to send an e-mail to the administrator of the server",
-        "Keywords": "host,email,sv_hostemail",
-        "FieldName": "sv_hostemail",
-        "InputType": "text",
-        "ParamFieldName": "sv_hostemail",
-        "DefaultValue": "",
-        "Placeholder": "admin@example.com",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Server Hostname",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the display name the server has on the master server list",
-        "Keywords": "hostname,server,name,sv_hostname",
-        "FieldName": "sv_hostname",
-        "InputType": "text",
-        "ParamFieldName": "sv_hostname",
-        "DefaultValue": "AMP Powered DOOM II server",
-        "Placeholder": "AMP Powered DOOM II server",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Invasion Countdown Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -572,19 +666,6 @@
         "DefaultValue": "10",
         "Placeholder": "10",
         "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Join Password",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the join password string the clients must supply in order to join the game",
-        "Keywords": "join,password,sv_joinpassword",
-        "FieldName": "sv_joinpassword",
-        "InputType": "password",
-        "ParamFieldName": "sv_joinpassword",
-        "DefaultValue": "",
-        "Placeholder": "password",
         "EnumValues": {}
     },
     {
@@ -749,20 +830,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Max Clients Per IP",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how many players with the same IP can enter the server at one time",
-        "Keywords": "max,clients,per,ip,sv_maxclientsperip",
-        "FieldName": "sv_maxclientsperip",
-        "InputType": "number",
-        "ParamFieldName": "sv_maxclientsperip",
-        "DefaultValue": "2",
-        "Placeholder": "2",
-        "Suffix": "players",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Max Lives",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -788,19 +855,6 @@
         "DefaultValue": "1024",
         "Placeholder": "1024",
         "Suffix": "bytes",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Max Players",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Maximum number of players that can join the game. Others are forced to spectate",
-        "Keywords": "max,players,sv_maxplayers",
-        "FieldName": "sv_maxplayers",
-        "InputType": "number",
-        "ParamFieldName": "sv_maxplayers",
-        "DefaultValue": "32",
-        "Suffix": "players",
         "EnumValues": {}
     },
     {
@@ -869,19 +923,6 @@
         "ParamFieldName": "sv_minvoters",
         "DefaultValue": "1",
         "Placeholder": "1",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Message of the Day",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets a message of the day on the server, a welcome message printed on clients upon connection",
-        "Keywords": "motd,message,day,sv_motd",
-        "FieldName": "sv_motd",
-        "InputType": "text",
-        "ParamFieldName": "sv_motd",
-        "DefaultValue": "",
-        "Placeholder": "Welcome to the server!",
         "EnumValues": {}
     },
     {
@@ -1094,19 +1135,6 @@
             "False": "false",
             "True": "true"
         }
-    },
-    {
-        "DisplayName": "Server Password",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "The password string clients must give to the server if they desire to connect. Only meaningful if sv_forcepassword is set",
-        "Keywords": "server,password,sv_password",
-        "FieldName": "sv_password",
-        "InputType": "password",
-        "ParamFieldName": "sv_password",
-        "DefaultValue": "",
-        "Placeholder": "password",
-        "EnumValues": {}
     },
     {
         "DisplayName": "Possession Countdown Time",
@@ -1503,19 +1531,6 @@
         "DefaultValue": "5",
         "Placeholder": "5",
         "Suffix": "minutes",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Website",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets a website for the server. Used as the primary download location for any PWADs",
-        "Keywords": "website,sv_website",
-        "FieldName": "sv_website",
-        "InputType": "text",
-        "ParamFieldName": "sv_website",
-        "DefaultValue": "",
-        "Placeholder": "https://example.com/wads",
         "EnumValues": {}
     },
     {
