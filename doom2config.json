@@ -300,7 +300,7 @@
         "DefaultValue": "1",
         "EnumValues": {
             "0": "Disabled",
-            "1": "Allow all",
+            "1": "Allow all (default)",
             "2": "Allow teammates only"
         }
     },
@@ -316,7 +316,7 @@
         "DefaultValue": "1",
         "EnumValues": {
             "0": "Disabled",
-            "1": "Allow everyone",
+            "1": "Allow everyone (default)",
             "2": "Allow teammates only",
             "3": "Players and spectators chat separately"
         }
@@ -552,7 +552,7 @@
         "ParamFieldName": "sv_dropstyle",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Game vanilla",
+            "0": "Game vanilla (default)",
             "1": "Standard style",
             "2": "Strife style"
         }
@@ -598,7 +598,7 @@
         "ParamFieldName": "sv_fastweapons",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Game vanilla",
+            "0": "Game vanilla (default)",
             "1": "1 tic per frame",
             "2": "1 tic per frame (skip codepointers)"
         }
@@ -707,6 +707,437 @@
         }
     },
     {
+        "DisplayName": "Measure Outbound Traffic",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server measures how much bandwidth is used for both ACS scripts and actor classes. The result can be printed with the command 'dumptrafficmeasure'",
+        "Keywords": "measure,outbound,traffic,sv_measureoutboundtraffic",
+        "FieldName": "sv_measureoutboundtraffic",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_measureoutboundtraffic",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Mark Chat Lines",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, all chat messages within the server console contain a 'CHAT' tag before the typed message",
+        "Keywords": "mark,chat,lines,sv_markchatlines",
+        "FieldName": "sv_markchatlines",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_markchatlines",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Maximum Packet Size",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets how much data can be stored in a UDP packet",
+        "Keywords": "max,packet,size,udp,sv_maxpacketsize",
+        "FieldName": "sv_maxpacketsize",
+        "InputType": "number",
+        "ParamFieldName": "sv_maxpacketsize",
+        "DefaultValue": "1024",
+        "Placeholder": "1024",
+        "Suffix": "bytes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Use Map Settings Possession Hold Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the hold time set in a map definition takes precedence over sv_possessionholdtime",
+        "Keywords": "use,map,settings,hold,time,sv_usemapsettingspossessionholdtime",
+        "FieldName": "sv_usemapsettingspossessionholdtime",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_usemapsettingspossessionholdtime",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Enable Pure Server",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server uses an authentication mechanism to ensure clients have the correct WADs",
+        "Keywords": "pure,server,sv_pure",
+        "FieldName": "sv_pure",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_pure",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Master Server Query Timer",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Flood throttle for server browser queries",
+        "Keywords": "query,ignore,time,sv_queryignoretime",
+        "FieldName": "sv_queryignoretime",
+        "InputType": "number",
+        "ParamFieldName": "sv_queryignoretime",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "Suffix": "seconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Random Coop Starts",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, in cooperative game modes, players will be spawned at random player starts",
+        "Keywords": "random,coop,starts,sv_randomcoopstarts",
+        "FieldName": "sv_randomcoopstarts",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_randomcoopstarts",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Random Map Rotation",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will randomize the map rotation list instead of advancing through maps in sequence",
+        "Keywords": "random,map,rotation,sv_randommaprotation",
+        "FieldName": "sv_randommaprotation",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_randommaprotation",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Respawn Delay Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets how long a player must wait after dying before they can respawn",
+        "Keywords": "respawn,delay,time,sv_respawndelaytime",
+        "FieldName": "sv_respawndelaytime",
+        "InputType": "number",
+        "ParamFieldName": "sv_respawndelaytime",
+        "DefaultValue": "1.0",
+        "Placeholder": "1.0",
+        "Suffix": "seconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Show Launcher Queries",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, displays the IPs of clients querying the server (for debugging)",
+        "Keywords": "show,launcher,queries,sv_showlauncherqueries",
+        "FieldName": "sv_showlauncherqueries",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_showlauncherqueries",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Show Warnings",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, shows certain warning messages (for debugging)",
+        "Keywords": "show,warnings,sv_showwarnings",
+        "FieldName": "sv_showwarnings",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_showwarnings",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Console Timestamp",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server console will contain a timestamp for all messages",
+        "Keywords": "timestamp,console,sv_timestamp",
+        "FieldName": "sv_timestamp",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_timestamp",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Timestamp Format",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the format for console timestamps",
+        "Keywords": "timestamp,format,sv_timestampformat",
+        "FieldName": "sv_timestampformat",
+        "InputType": "enum",
+        "ParamFieldName": "sv_timestampformat",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "0": "24h HMS (default)",
+            "1": "12h HMS AM/PM",
+            "2": "12h HMS am/pm",
+            "3": "24h HM",
+            "4": "12h HM AM/PM",
+            "5": "12h HM am/pm"
+        }
+    },
+    {
+        "DisplayName": "Additional Command Line Arguments",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional command line arguments (anything that begins with a - ) that are not otherwise set by AMP. Use with care",
+        "Keywords": "custom,server,arguments,parameters",
+        "FieldName": "CustomArgs",
+        "InputType": "text",
+        "ParamFieldName": "CustomArgs",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Minimum Voters",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "Sets how many players are needed in the server in order to call a vote",
+        "Keywords": "min,voters,sv_minvoters",
+        "FieldName": "sv_minvoters",
+        "InputType": "number",
+        "ParamFieldName": "sv_minvoters",
+        "DefaultValue": "1",
+        "Placeholder": "1",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Vote Cooldown",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "Sets the cooldown between votes. 0 = cooldown disabled",
+        "Keywords": "vote,cooldown,sv_votecooldown",
+        "FieldName": "sv_votecooldown",
+        "InputType": "number",
+        "ParamFieldName": "sv_votecooldown",
+        "DefaultValue": "5",
+        "Placeholder": "5",
+        "Suffix": "minutes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Voting Mode",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "Manages how votes take place",
+        "Keywords": "no,call,vote,sv_nocallvote",
+        "FieldName": "sv_nocallvote",
+        "InputType": "enum",
+        "ParamFieldName": "sv_nocallvote",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "0": "Voting enabled",
+            "1": "Voting disabled",
+            "2": "Players only can vote"
+        }
+    },
+    {
+        "DisplayName": "No Change Map Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all Z changemap votes. However, map votes may still be called unless No Map Vote is set",
+        "Keywords": "no,change,map,vote,sv_nochangemapvote",
+        "FieldName": "sv_nochangemapvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nochangemapvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Duel Limit Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to change the duel limit",
+        "Keywords": "no,duel,limit,vote,sv_noduellimitvote",
+        "FieldName": "sv_noduellimitvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_noduellimitvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No DMFlag Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all DMFlag votes",
+        "Keywords": "no,flag,vote,sv_noflagvote",
+        "FieldName": "sv_noflagvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_noflagvote",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Force Spec Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to force players to Spec by voting",
+        "Keywords": "no,force,spec,vote,sv_noforcespecvote",
+        "FieldName": "sv_noforcespecvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_noforcespecvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Frag Limit Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to change the frag limit",
+        "Keywords": "no,frag,limit,vote,sv_nofraglimitvote",
+        "FieldName": "sv_nofraglimitvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nofraglimitvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Kick Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to kick players",
+        "Keywords": "no,kick,vote,sv_nokickvote",
+        "FieldName": "sv_nokickvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nokickvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Map Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all Z map votes. However, changemap votes may still be called unless No Change Map Vote is set",
+        "Keywords": "no,map,vote,sv_nomapvote",
+        "FieldName": "sv_nomapvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nomapvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Next Map Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all Z nextmap votes. However, nextsecret votes may still be called unless No Next Secret Vote is set",
+        "Keywords": "no,nextmap,vote,sv_nonextmapvote",
+        "FieldName": "sv_nonextmapvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nonextmapvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Next Secret Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all Z nextsecret votes",
+        "Keywords": "no,nextsecret,vote,sv_nonextsecretvote",
+        "FieldName": "sv_nonextsecretvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nonextsecretvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Point Limit Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to change the point limit",
+        "Keywords": "no,point,limit,vote,sv_nopointlimitvote",
+        "FieldName": "sv_nopointlimitvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nopointlimitvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Time Limit Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to change the time limit",
+        "Keywords": "no,time,limit,vote,sv_notimelimitvote",
+        "FieldName": "sv_notimelimitvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_notimelimitvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "No Win Limit Vote",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Voting:how_to_vote:2",
+        "Description": "If set, disables all votes to change the LMS win limit",
+        "Keywords": "no,win,limit,vote,sv_nowinlimitvote",
+        "FieldName": "sv_nowinlimitvote",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nowinlimitvote",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
         "DisplayName": "Artifact Return Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -763,47 +1194,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Forbid Vote Flags",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Combines all native vote forbidding CVars",
-        "Keywords": "forbid,vote,flags,SV_ForbidVoteFlags",
-        "FieldName": "SV_ForbidVoteFlags",
-        "InputType": "number",
-        "ParamFieldName": "SV_ForbidVoteFlags",
-        "DefaultValue": "512",
-        "Placeholder": "512",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Force Login To Join",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, clients must be authenticated to the account-server to play",
-        "Keywords": "force,login,join,SV_ForceLoginToJoin",
-        "FieldName": "SV_ForceLoginToJoin",
-        "InputType": "checkbox",
-        "ParamFieldName": "SV_ForceLoginToJoin",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Force Respawn Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the amount of time that needs to pass before the player is forced to respawn",
-        "Keywords": "force,respawn,time,SV_ForceRespawnTime",
-        "FieldName": "SV_ForceRespawnTime",
-        "InputType": "number",
-        "ParamFieldName": "SV_ForceRespawnTime",
-        "DefaultValue": "0",
-        "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Invasion Countdown Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -845,21 +1235,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Measure Outbound Traffic",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Measures how much bandwidth is used for both ACS scripts and actor classes",
-        "Keywords": "measure,outbound,traffic,sv_measureoutboundtraffic",
-        "FieldName": "sv_measureoutboundtraffic",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_measureoutboundtraffic",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "Map Rotation",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -869,21 +1244,6 @@
         "InputType": "checkbox",
         "ParamFieldName": "sv_maprotation",
         "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Mark Chat Lines",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, all chat messages within the server console contain a 'CHAT' tag before the typed message",
-        "Keywords": "mark,chat,lines,sv_markchatlines",
-        "FieldName": "sv_markchatlines",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_markchatlines",
-        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
@@ -918,20 +1278,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Max Packet Size",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how much data, in bytes, can be stored in a UDP packet",
-        "Keywords": "max,packet,size,udp,sv_maxpacketsize",
-        "FieldName": "sv_maxpacketsize",
-        "InputType": "number",
-        "ParamFieldName": "sv_maxpacketsize",
-        "DefaultValue": "1024",
-        "Placeholder": "1024",
-        "Suffix": "bytes",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Max Packets Per Tick",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -957,215 +1303,6 @@
         "Placeholder": "2",
         "Suffix": "teams",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Min Voters",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how many players are needed in the server in order to call a vote",
-        "Keywords": "min,voters,sv_minvoters",
-        "FieldName": "sv_minvoters",
-        "InputType": "number",
-        "ParamFieldName": "sv_minvoters",
-        "DefaultValue": "1",
-        "Placeholder": "1",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "No Call Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Manages how votes take place",
-        "Keywords": "no,call,vote,sv_nocallvote",
-        "FieldName": "sv_nocallvote",
-        "InputType": "enum",
-        "ParamFieldName": "sv_nocallvote",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "0": "Enabled",
-            "1": "No votes",
-            "2": "Players only can vote"
-        }
-    },
-    {
-        "DisplayName": "No Change Map Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all changemap votes",
-        "Keywords": "no,change,map,vote,sv_nochangemapvote",
-        "FieldName": "sv_nochangemapvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nochangemapvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Duel Limit Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to change the duel limit",
-        "Keywords": "no,duel,limit,vote,sv_noduellimitvote",
-        "FieldName": "sv_noduellimitvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_noduellimitvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Flag Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all DMFlag votes",
-        "Keywords": "no,flag,vote,sv_noflagvote",
-        "FieldName": "sv_noflagvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_noflagvote",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Force Spec Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to force players to Spec by voting",
-        "Keywords": "no,force,spec,vote,sv_noforcespecvote",
-        "FieldName": "sv_noforcespecvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_noforcespecvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Frag Limit Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to change the frag limit",
-        "Keywords": "no,frag,limit,vote,sv_nofraglimitvote",
-        "FieldName": "sv_nofraglimitvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nofraglimitvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Kick Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to kick players",
-        "Keywords": "no,kick,vote,sv_nokickvote",
-        "FieldName": "sv_nokickvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nokickvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Map Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all map votes",
-        "Keywords": "no,map,vote,sv_nomapvote",
-        "FieldName": "sv_nomapvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nomapvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Next Map Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all nextmap votes",
-        "Keywords": "no,nextmap,vote,sv_nonextmapvote",
-        "FieldName": "sv_nonextmapvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nonextmapvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Next Secret Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all nextsecret votes",
-        "Keywords": "no,nextsecret,vote,sv_nonextsecretvote",
-        "FieldName": "sv_nonextsecretvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nonextsecretvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Point Limit Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to change the point limit",
-        "Keywords": "no,point,limit,vote,sv_nopointlimitvote",
-        "FieldName": "sv_nopointlimitvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nopointlimitvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Time Limit Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to change the time limit",
-        "Keywords": "no,time,limit,vote,sv_notimelimitvote",
-        "FieldName": "sv_notimelimitvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_notimelimitvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Win Limit Vote",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, disables all votes to change the LMS win limit",
-        "Keywords": "no,win,limit,vote,sv_nowinlimitvote",
-        "FieldName": "sv_nowinlimitvote",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nowinlimitvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
     },
     {
         "DisplayName": "Possession Countdown Time",
@@ -1207,136 +1344,6 @@
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Pure Server",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the server uses an authentication mechanism to ensure clients have the correct WADs",
-        "Keywords": "pure,server,sv_pure",
-        "FieldName": "sv_pure",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_pure",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Query Ignore Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Flood throttle for server browser queries (in seconds)",
-        "Keywords": "query,ignore,time,sv_queryignoretime",
-        "FieldName": "sv_queryignoretime",
-        "InputType": "number",
-        "ParamFieldName": "sv_queryignoretime",
-        "DefaultValue": "10",
-        "Placeholder": "10",
-        "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Random Coop Starts",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "In cooperative game modes, players are spawned at random player starts",
-        "Keywords": "random,coop,starts,sv_randomcoopstarts",
-        "FieldName": "sv_randomcoopstarts",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_randomcoopstarts",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Random Map Rotation",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, randomizes the map rotation list instead of advancing through maps in sequence",
-        "Keywords": "random,map,rotation,sv_randommaprotation",
-        "FieldName": "sv_randommaprotation",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_randommaprotation",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "RCON Password",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the password for RCON access on the server. Empty = RCON disabled",
-        "Keywords": "rcon,password,sv_rconpassword",
-        "FieldName": "sv_rconpassword",
-        "InputType": "password",
-        "ParamFieldName": "sv_rconpassword",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Respawn Delay Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how long a player must wait after dying before they can respawn",
-        "Keywords": "respawn,delay,time,sv_respawndelaytime",
-        "FieldName": "sv_respawndelaytime",
-        "InputType": "number",
-        "ParamFieldName": "sv_respawndelaytime",
-        "DefaultValue": "1.0",
-        "Placeholder": "1.0",
-        "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Respawn in Survival Invasion",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, allows dead spectators to spawn at the start of a new wave in survival invasion",
-        "Keywords": "respawn,survival,invasion,SV_RespawnInSurvivalInvasion",
-        "FieldName": "SV_RespawnInSurvivalInvasion",
-        "InputType": "checkbox",
-        "ParamFieldName": "SV_RespawnInSurvivalInvasion",
-        "DefaultValue": "False",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Show Launcher Queries",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, displays the IPs of clients querying the server (for debugging)",
-        "Keywords": "show,launcher,queries,sv_showlauncherqueries",
-        "FieldName": "sv_showlauncherqueries",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_showlauncherqueries",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Show Warnings",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, shows certain warning messages (for debugging)",
-        "Keywords": "show,warnings,sv_showwarnings",
-        "FieldName": "sv_showwarnings",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_showwarnings",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
         }
     },
     {
@@ -1399,40 +1406,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Console Timestamp",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the server console will contain a timestamp for all messages",
-        "Keywords": "timestamp,console,sv_timestamp",
-        "FieldName": "sv_timestamp",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_timestamp",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Timestamp Format",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the format for console timestamps",
-        "Keywords": "timestamp,format,sv_timestampformat",
-        "FieldName": "sv_timestampformat",
-        "InputType": "enum",
-        "ParamFieldName": "sv_timestampformat",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "0": "24h HMS",
-            "1": "12h HMS AM/PM",
-            "2": "12h HMS am/pm",
-            "3": "24h HM",
-            "4": "12h HM AM/PM",
-            "5": "12h HM am/pm"
-        }
-    },
-    {
         "DisplayName": "Unlimited Pickup",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -1456,21 +1429,6 @@
         "FieldName": "sv_updatemaster",
         "InputType": "checkbox",
         "ParamFieldName": "sv_updatemaster",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Use Map Settings Possession Hold Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the hold time set in a map definition takes precedence over sv_possessionholdtime",
-        "Keywords": "use,map,settings,hold,time,sv_usemapsettingspossessionholdtime",
-        "FieldName": "sv_usemapsettingspossessionholdtime",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_usemapsettingspossessionholdtime",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -1521,45 +1479,6 @@
             "False": "false",
             "True": "true"
         }
-    },
-    {
-        "DisplayName": "Vote Connect Wait",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how many seconds must pass after a client joins before they can call a vote",
-        "Keywords": "vote,connect,wait,SV_VoteConnectWait",
-        "FieldName": "SV_VoteConnectWait",
-        "InputType": "number",
-        "ParamFieldName": "SV_VoteConnectWait",
-        "DefaultValue": "0",
-        "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Vote Cooldown",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the cooldown between votes. 0 = cooldown disabled",
-        "Keywords": "vote,cooldown,sv_votecooldown",
-        "FieldName": "sv_votecooldown",
-        "InputType": "number",
-        "ParamFieldName": "sv_votecooldown",
-        "DefaultValue": "5",
-        "Placeholder": "5",
-        "Suffix": "minutes",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Additional Command Line Arguments",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies additional command line arguments (anything that begins with a - ) that are not otherwise set by AMP. Use with care",
-        "Keywords": "custom,server,arguments,parameters",
-        "FieldName": "CustomArgs",
-        "InputType": "text",
-        "ParamFieldName": "CustomArgs",
-        "DefaultValue": "",
-        "EnumValues": {}
     },
     {
         "DisplayName": "Disable DOOM II Download",
