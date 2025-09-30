@@ -65,7 +65,7 @@
         "InputType": "text",
         "ParamFieldName": "file",
         "IncludeInCommandLine": true,
-        "SkipOnEmpty": true,
+        "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "Eviternity.wad",
         "EnumValues": {}
