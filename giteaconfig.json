@@ -1,5 +1,17 @@
 [
     {
+        "DisplayName": "SSH Listen Port",
+        "Category": "Gitea:code",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$SSHListenPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "server.SSH_LISTEN_PORT",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Additional Command Line Options",
         "Category": "Gitea:code",
         "Subcategory": "Server:dns:1",
