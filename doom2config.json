@@ -647,7 +647,7 @@
         }
     },
     {
-        "DisplayName": "Log File Append",
+        "DisplayName": "Enable Log File Append",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, and a logfile with the same name is present, the server will add to the log file instead of overwriting",
@@ -662,7 +662,7 @@
         }
     },
     {
-        "DisplayName": "Log File Name Timestamp",
+        "DisplayName": "Enable Log File Name Timestamp",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, when generating a new log file, the server will append the time and date to the end of the logfile name",
@@ -677,7 +677,7 @@
         }
     },
     {
-        "DisplayName": "Log File Timestamp",
+        "DisplayName": "Enable Log File Timestamp",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the server logfile is written containing time stamps at every new line",
@@ -795,7 +795,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Random Coop Starts",
+        "DisplayName": "Enable Random Coop Starts",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, in cooperative game modes, players will be spawned at random player starts",
@@ -810,7 +810,7 @@
         }
     },
     {
-        "DisplayName": "Random Map Rotation",
+        "DisplayName": "Enable Random Map Rotation",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the server will randomize the map rotation list instead of advancing through maps in sequence",
@@ -869,7 +869,7 @@
         }
     },
     {
-        "DisplayName": "Console Timestamp",
+        "DisplayName": "Enable Console Timestamp",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the server console will contain a timestamp for all messages",
@@ -900,6 +900,111 @@
             "3": "24h HM",
             "4": "12h HM AM/PM",
             "5": "12h HM am/pm"
+        }
+    },
+    {
+        "DisplayName": "Smart Aim Mode",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Affects the behaviour of auto-aiming",
+        "Keywords": "smart,aim,sv_smartaim",
+        "FieldName": "sv_smartaim",
+        "InputType": "enum",
+        "ParamFieldName": "sv_smartaim",
+        "DefaultValue": "0",
+        "EnumValues": {
+            "0": "Target nearest thing (default)",
+            "1": "Avoid allies and non-monster things",
+            "2": "Never aim at friends",
+            "3": "Aim at hostile monsters only"
+        }
+    },
+    {
+        "DisplayName": "Smooth Players",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Enables the skip correction which tries to smooth the movement of lagging players. 0 = disabled",
+        "Keywords": "smooth,players,sv_smoothplayers",
+        "FieldName": "sv_smoothplayers",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "sv_smoothplayers",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable Sudden Death",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, when the time limit is hit and all teams have the same score, sudden death commences. The first team to score wins",
+        "Keywords": "sudden,death,sv_suddendeath",
+        "FieldName": "sv_suddendeath",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_suddendeath",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Survival Countdown Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the warm-up duration in survival games",
+        "Keywords": "survival,countdown,time,sv_survivalcountdowntime",
+        "FieldName": "sv_survivalcountdowntime",
+        "InputType": "number",
+        "ParamFieldName": "sv_survivalcountdowntime",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "Suffix": "seconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Unlimited Pickup",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, allows players to pickup ammunition past maximum amounts",
+        "Keywords": "unlimited,pickup,sv_unlimited_pickup",
+        "FieldName": "sv_unlimited_pickup",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_unlimited_pickup",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Make Server Public",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will identify itself to the master server and will be broadcasted in the server list",
+        "Keywords": "update,master,sv_updatemaster",
+        "FieldName": "sv_updatemaster",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_updatemaster",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Use Tic Buffering",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, instead of processing all commands of a client immediately, they are stored in a 'ticbuffer', and processed up to two sets per server tic. Changeable on experimental builds only",
+        "Keywords": "use,tic,buffer,sv_useticbuffer",
+        "FieldName": "sv_useticbuffer",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_useticbuffer",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
         }
     },
     {
@@ -1278,19 +1383,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Max Packets Per Tick",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Limit the number of packets sent from the server to clients per tick",
-        "Keywords": "max,packets,tick,SV_MaxPacketsPerTick",
-        "FieldName": "SV_MaxPacketsPerTick",
-        "InputType": "number",
-        "ParamFieldName": "SV_MaxPacketsPerTick",
-        "DefaultValue": "64",
-        "Placeholder": "64",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Max Teams",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -1332,110 +1424,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Print Connection Messages",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Show messages and errors for clients not completely connected to the server in the server console",
-        "Keywords": "print,connection,messages,SV_PrintConnectionMessages",
-        "FieldName": "SV_PrintConnectionMessages",
-        "InputType": "checkbox",
-        "ParamFieldName": "SV_PrintConnectionMessages",
-        "DefaultValue": "True",
-        "EnumValues": {
-            "False": "False",
-            "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Smart Aim",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Affects the behaviour of auto-aiming",
-        "Keywords": "smart,aim,sv_smartaim",
-        "FieldName": "sv_smartaim",
-        "InputType": "enum",
-        "ParamFieldName": "sv_smartaim",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "0": "Nearest",
-            "1": "Avoid allies",
-            "2": "Never friends",
-            "3": "Hostile monsters only"
-        }
-    },
-    {
-        "DisplayName": "Smooth Players",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Enables the skip correction which tries to smooth the movement of lagging players (temporarily disabled in Zandronum 3.1+)",
-        "Keywords": "smooth,players,sv_smoothplayers",
-        "FieldName": "sv_smoothplayers",
-        "InputType": "number",
-        "ParamFieldName": "sv_smoothplayers",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Sudden Death",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "When the time limit is hit and all teams have the same score, sudden death commences. The first team to score wins",
-        "Keywords": "sudden,death,sv_suddendeath",
-        "FieldName": "sv_suddendeath",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_suddendeath",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Survival Countdown Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Amount of warm-up in seconds in survival games",
-        "Keywords": "survival,countdown,time,sv_survivalcountdowntime",
-        "FieldName": "sv_survivalcountdowntime",
-        "InputType": "number",
-        "ParamFieldName": "sv_survivalcountdowntime",
-        "DefaultValue": "10",
-        "Placeholder": "10",
-        "Suffix": "seconds",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Unlimited Pickup",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, allows players to pickup ammunition past maximum amounts",
-        "Keywords": "unlimited,pickup,sv_unlimited_pickup",
-        "FieldName": "sv_unlimited_pickup",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_unlimited_pickup",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Update Master",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the server will identify itself to the master server and is broadcasted in the server list",
-        "Keywords": "update,master,sv_updatemaster",
-        "FieldName": "sv_updatemaster",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_updatemaster",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "Use Map Settings Wave Limit",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -1460,21 +1448,6 @@
         "InputType": "checkbox",
         "ParamFieldName": "sv_useteamstartsindm",
         "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Use Tic Buffer",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Store client commands in a ticbuffer and process up to two sets per server tic. Testing binaries only",
-        "Keywords": "use,tic,buffer,sv_useticbuffer",
-        "FieldName": "sv_useticbuffer",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_useticbuffer",
-        "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
             "True": "true"
