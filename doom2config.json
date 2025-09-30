@@ -233,6 +233,7 @@
         "FieldName": "AdminList",
         "InputType": "list",
         "ParamFieldName": "AdminList",
+        "DefaultValue": "",
         "Special": "listfile:./doom2/server/adminlist.txt",
         "EnumValues": {}
     },
