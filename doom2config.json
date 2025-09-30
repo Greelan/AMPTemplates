@@ -13,6 +13,19 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Color Strip Method",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "sv_colorstripmethod",
+        "InputType": "text",
+        "ParamFieldName": "sv_colorstripmethod",
+        "Hidden": true,
+        "DefaultValue": "0",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "IWAD Path",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -210,7 +223,7 @@
         "DisplayName": "Ban Exemption (Whitelist) Files",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the names of the file or files that define a whitelist of IPs that are exempt from bans and votekicks. Use a semicolon to separate multiple file names",
+        "Description": "Semi-colon seaprated list of files that define a whitelist of IPs that are exempt from bans and votekicks",
         "Keywords": "ban,exemption,whitelist,file,sv_banexemptionfile",
         "FieldName": "sv_banexemptionfile",
         "InputType": "text",
@@ -223,7 +236,7 @@
         "DisplayName": "Ban Files",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the names of the file or files that define a blacklist of banned IPs. Use a semicolon to separate multiple file names",
+        "Description": "Semi-colon seaprated list of files that define a blacklist of banned IPs",
         "Keywords": "ban,blacklist,file,sv_banfile",
         "FieldName": "sv_banfile",
         "InputType": "text",
@@ -233,13 +246,14 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AFK to Spectator Time",
+        "DisplayName": "AFK To Spectator Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Inactive (AFK) players will be forced to spectators after the specified time period. 0 = disabled",
         "Keywords": "afk,spectator,time,sv_afk2spec",
         "FieldName": "sv_afk2spec",
         "InputType": "number",
+        "MinValue": "0",
         "ParamFieldName": "sv_afk2spec",
         "DefaultValue": "0",
         "Placeholder": "0",
@@ -250,7 +264,7 @@
         "DisplayName": "Air Control",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the control a player has over their direction while in the air",
+        "Description": "Sets the [control](https://wiki.zandronum.com/Air_Control) a player has over their direction while in the air",
         "Keywords": "air,control,sv_aircontrol",
         "FieldName": "sv_aircontrol",
         "InputType": "number",
@@ -258,6 +272,21 @@
         "DefaultValue": "0.00390625",
         "Placeholder": "0.00390625",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Allow ACS Ban Function",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, allows mods to ban players using the [BanFromGame](https://wiki.zandronum.com/BanFromGame) ACS function. Requires development version 3.2-alpha and above",
+        "Keywords": "acs,ban,function,sv_allowacsbanfunction",
+        "FieldName": "sv_allowacsbanfunction",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_allowacsbanfunction",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     },
     {
         "DisplayName": "Allow Private Chat",
@@ -271,15 +300,15 @@
         "DefaultValue": "1",
         "EnumValues": {
             "0": "Disabled",
-            "1": "All",
-            "2": "Teammates only"
+            "1": "Allow all",
+            "2": "Allow teammates only"
         }
     },
     {
         "DisplayName": "Allow Voice Chat",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Controls whether voice chat is enabled and who can use it",
+        "Description": "Controls whether voice chat is enabled and who can use it. Requires development version 3.2-alpha and above",
         "Keywords": "voice,chat,allow,sv_allowvoicechat",
         "FieldName": "sv_allowvoicechat",
         "InputType": "enum",
@@ -287,44 +316,59 @@
         "DefaultValue": "1",
         "EnumValues": {
             "0": "Disabled",
-            "1": "Everyone",
-            "2": "Teammates only",
-            "3": "Players and spectators separate"
+            "1": "Allow everyone",
+            "2": "Allow teammates only",
+            "3": "Players and spectators chat separately"
         }
     },
     {
-        "DisplayName": "Artifact Return Time",
+        "DisplayName": "Proximity Voice Chat",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the amount of time the Terminator sphere or Hellstone remains dropped before being moved to a random map spot. 0 = disabled",
-        "Keywords": "artifact,return,time,sv_artifactreturntime",
-        "FieldName": "sv_artifactreturntime",
+        "Description": "If set, enables proximity-based voice chat. Requires development version 3.2-alpha and above",
+        "Keywords": "proximity,voice,chat,sv_proximityvoicechat",
+        "FieldName": "sv_proximityvoicechat",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_proximityvoicechat",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Maximum Proximity Rolloff Distance",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Controls the distance at which proximity voice chat is no longer audible. Requires development version 3.2-alpha and above",
+        "Keywords": "max,proximity,rolloff,distance,sv_maxproximityrolloffdist",
+        "FieldName": "sv_maxproximityrolloffdist",
         "InputType": "number",
-        "ParamFieldName": "sv_artifactreturntime",
-        "DefaultValue": "30",
-        "Placeholder": "30",
-        "Suffix": "seconds",
+        "ParamFieldName": "sv_maxproximityrolloffdist",
+        "DefaultValue": "200",
+        "Placeholder": "200",
+        "Suffix": "units",
         "EnumValues": {}
     },
     {
-        "DisplayName": "Ban File Reparse Time",
+        "DisplayName": "Minimum Proximity Rolloff Distance",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets how often (in seconds) to reparse the banlist, whitelist, and adminlist files. 0 = only at startup or manually",
-        "Keywords": "ban,file,reparse,time,sv_banfilereparsetime",
-        "FieldName": "sv_banfilereparsetime",
+        "Description": "Controls the distance at which proximity voice chat will begin rolling off (becoming quieter). Requires development version 3.2-alpha and above",
+        "Keywords": "min,proximity,rolloff,distance,sv_minproximityrolloffdist",
+        "FieldName": "sv_minproximityrolloffdist",
         "InputType": "number",
-        "ParamFieldName": "sv_banfilereparsetime",
-        "DefaultValue": "0",
-        "Placeholder": "0",
-        "Suffix": "seconds",
+        "ParamFieldName": "sv_minproximityrolloffdist",
+        "DefaultValue": "200",
+        "Placeholder": "200",
+        "Suffix": "units",
         "EnumValues": {}
     },
     {
-        "DisplayName": "Broadcast to LAN",
+        "DisplayName": "Broadcast To LAN",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets whether the server will broadcast to the local area network",
+        "Description": "If set, the server will broadcast to the local area network",
         "Keywords": "broadcast,lan,sv_broadcast",
         "FieldName": "sv_broadcast",
         "InputType": "checkbox",
@@ -339,7 +383,7 @@
         "DisplayName": "Enable Cheats",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets whether clients can use cheat commands on the server. Use with care!",
+        "Description": "If set, clients can use cheat commands on the server. Use with care!",
         "Keywords": "cheats,enable,sv_cheats",
         "FieldName": "sv_cheats",
         "InputType": "checkbox",
@@ -351,29 +395,14 @@
         }
     },
     {
-        "DisplayName": "Color Strip Method",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets whether color codes are stripped in the server console",
-        "Keywords": "color,strip,method,sv_colorstripmethod",
-        "FieldName": "sv_colorstripmethod",
-        "InputType": "enum",
-        "ParamFieldName": "sv_colorstripmethod",
-        "DefaultValue": "0",
-        "EnumValues": {
-            "0": "Strip",
-            "1": "Allow",
-            "2": "Keep format"
-        }
-    },
-    {
-        "DisplayName": "Coop Damage Factor",
+        "DisplayName": "Coop Damage Multiplier",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets the damage multiplier applied to all damage players receive from monsters",
         "Keywords": "coop,damage,factor,sv_coop_damagefactor",
         "FieldName": "sv_coop_damagefactor",
         "InputType": "number",
+        "MinValue": "0",
         "ParamFieldName": "sv_coop_damagefactor",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
@@ -383,7 +412,7 @@
         "DisplayName": "Coop Spawn Voodoo Dolls",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets whether Voodoo dolls are supported online",
+        "Description": "If set, [Voodoo dolls](https://doomwiki.org/wiki/Voodoo_doll) will be supported online",
         "Keywords": "coop,voodoo,dolls,spawn,sv_coopspawnvoodoodolls",
         "FieldName": "sv_coopspawnvoodoodolls",
         "InputType": "checkbox",
@@ -398,7 +427,7 @@
         "DisplayName": "Coop Unassigned Voodoo Dolls",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, all voodoo dolls are spawned when the map is loaded, no matter if the corresponding player is in the server or not",
+        "Description": "If set, all voodoo dolls are spawned when the map is loaded, regardless of whether the corresponding player is in the server. Dolls will also not be assigned to any player",
         "Keywords": "coop,voodoo,dolls,unassigned,sv_coopunassignedvoodoodolls",
         "FieldName": "sv_coopunassignedvoodoodolls",
         "InputType": "checkbox",
@@ -413,7 +442,7 @@
         "DisplayName": "Coop Unassigned Voodoo Dolls For Specified Players",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Controls how many players the voodoo doll caters for. Dolls are spawned for players 1 to the number specified",
+        "Description": "Controls how many players a voodoo doll caters for. Dolls are spawned for players 1 to the number specified",
         "Keywords": "coop,voodoo,dolls,players,sv_coopunassignedvoodoodollsfornplayers",
         "FieldName": "sv_coopunassignedvoodoodollsfornplayers",
         "InputType": "number",
@@ -425,10 +454,10 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Country",
+        "DisplayName": "Server Country",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the country of the server. Use an ISO 3166-1 alpha-3 code, 'automatic', or 'unknown'",
+        "Description": "Sets the country of the server as shown in server browsers (though not all browsers support this feature). Use an [ISO 3166-1 alpha-3 code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3), 'automatic', or 'unknown'",
         "Keywords": "country,iso,sv_country",
         "FieldName": "sv_country",
         "InputType": "text",
@@ -441,7 +470,7 @@
         "DisplayName": "Default DM Flags",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, the server will automatically set certain dmflags for certain game modes",
+        "Description": "If set, the server will automatically set certain dmflags for certain game modes. In coop they will be cleared",
         "Keywords": "dmflags,default,sv_defaultdmflags",
         "FieldName": "sv_defaultdmflags",
         "InputType": "checkbox",
@@ -450,21 +479,6 @@
         "EnumValues": {
             "False": "false",
             "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Distinguish Team Chat Lines",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, distinguishes team chat messages from normal chat messages in the server console/logfile",
-        "Keywords": "team,chat,lines,distinguish,SV_DistinguishTeamChatLines",
-        "FieldName": "SV_DistinguishTeamChatLines",
-        "InputType": "checkbox",
-        "ParamFieldName": "SV_DistinguishTeamChatLines",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "0",
-            "True": "1"
         }
     },
     {
@@ -498,17 +512,34 @@
         }
     },
     {
-        "DisplayName": "Domination Score Rate",
+        "DisplayName": "Disallow Suicide",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Customize how often points are obtained in the Domination gamemode",
-        "Keywords": "domination,score,rate,SV_DominationScoreRate",
-        "FieldName": "SV_DominationScoreRate",
-        "InputType": "number",
-        "ParamFieldName": "SV_DominationScoreRate",
-        "DefaultValue": "3",
-        "Placeholder": "3",
-        "EnumValues": {}
+        "Description": "If set, players cannot kill themselves with the Z kill command",
+        "Keywords": "disallow,suicide,sv_disallowsuicide",
+        "FieldName": "sv_disallowsuicide",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_disallowsuicide",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Disable Kill",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, players may not Z kill themselves",
+        "Keywords": "no,kill,sv_nokill",
+        "FieldName": "sv_nokill",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nokill",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     },
     {
         "DisplayName": "Drop Style",
@@ -521,30 +552,16 @@
         "ParamFieldName": "sv_dropstyle",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Default",
-            "1": "Standard",
-            "2": "Strife"
+            "0": "Game vanilla",
+            "1": "Standard style",
+            "2": "Strife style"
         }
-    },
-    {
-        "DisplayName": "Duel Countdown Time",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how many seconds the 'warm up' lasts before a duel starts",
-        "Keywords": "duel,countdown,time,sv_duelcountdowntime",
-        "FieldName": "sv_duelcountdowntime",
-        "InputType": "number",
-        "ParamFieldName": "sv_duelcountdowntime",
-        "DefaultValue": "10",
-        "Placeholder": "10",
-        "Suffix": "seconds",
-        "EnumValues": {}
     },
     {
         "DisplayName": "Enforce Bans",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets whether the banlist is actually enforced or not",
+        "Description": "If set, the banlist will be actually enforced",
         "Keywords": "enforce,bans,sv_enforcebans",
         "FieldName": "sv_enforcebans",
         "InputType": "checkbox",
@@ -559,7 +576,7 @@
         "DisplayName": "Enforce Master Banlist",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets whether the server enforces the master server's banlist",
+        "Description": "If set, the server will enforce the master server's banlist",
         "Keywords": "enforce,master,banlist,sv_enforcemasterbanlist",
         "FieldName": "sv_enforcemasterbanlist",
         "InputType": "checkbox",
@@ -581,10 +598,155 @@
         "ParamFieldName": "sv_fastweapons",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Normal",
+            "0": "Game vanilla",
             "1": "1 tic per frame",
             "2": "1 tic per frame (skip codepointers)"
         }
+    },
+    {
+        "DisplayName": "Gravity",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets how strong gravity is present in the game world. Higher values create stronger gravity",
+        "Keywords": "gravity,sv_gravity",
+        "FieldName": "sv_gravity",
+        "InputType": "number",
+        "ParamFieldName": "sv_gravity",
+        "DefaultValue": "800",
+        "Placeholder": "800",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Prevent Player Item Drops",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, players may not drop items. Items may never be dropped in duels",
+        "Keywords": "prevent,drop,items,sv_nodrop",
+        "FieldName": "sv_nodrop",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_nodrop",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Limit Commands",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, enables client commands flooding protection",
+        "Keywords": "limit,commands,sv_limitcommands",
+        "FieldName": "sv_limitcommands",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_limitcommands",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Log File Append",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, and a logfile with the same name is present, the server will add to the log file instead of overwriting",
+        "Keywords": "log,file,append,sv_logfile_append",
+        "FieldName": "sv_logfile_append",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_logfile_append",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Log File Name Timestamp",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, when generating a new log file, the server will append the time and date to the end of the logfile name",
+        "Keywords": "log,file,name,timestamp,sv_logfilenametimestamp",
+        "FieldName": "sv_logfilenametimestamp",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_logfilenametimestamp",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Log File Timestamp",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server logfile is written containing time stamps at every new line",
+        "Keywords": "log,file,timestamp,sv_logfiletimestamp",
+        "FieldName": "sv_logfiletimestamp",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_logfiletimestamp",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Log File Timestamp Use Date",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the current date will be prepended to the per-line timestamp of the logfile",
+        "Keywords": "log,file,timestamp,date,sv_logfiletimestamp_usedate",
+        "FieldName": "sv_logfiletimestamp_usedate",
+        "InputType": "checkbox",
+        "ParamFieldName": "sv_logfiletimestamp_usedate",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Artifact Return Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the amount of time the Terminator sphere or Hellstone remains dropped before being moved to a random map spot. 0 = disabled",
+        "Keywords": "artifact,return,time,sv_artifactreturntime",
+        "FieldName": "sv_artifactreturntime",
+        "InputType": "number",
+        "ParamFieldName": "sv_artifactreturntime",
+        "DefaultValue": "30",
+        "Placeholder": "30",
+        "Suffix": "seconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Ban File Reparse Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets how often (in seconds) to reparse the banlist, whitelist, and adminlist files. 0 = only at startup or manually",
+        "Keywords": "ban,file,reparse,time,sv_banfilereparsetime",
+        "FieldName": "sv_banfilereparsetime",
+        "InputType": "number",
+        "ParamFieldName": "sv_banfilereparsetime",
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "seconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Duel Countdown Time",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets how many seconds the 'warm up' lasts before a duel starts",
+        "Keywords": "duel,countdown,time,sv_duelcountdowntime",
+        "FieldName": "sv_duelcountdowntime",
+        "InputType": "number",
+        "ParamFieldName": "sv_duelcountdowntime",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "Suffix": "seconds",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Flag Return Time",
@@ -642,19 +804,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Gravity",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets how strong gravity is present in the game world. Higher values create stronger gravity",
-        "Keywords": "gravity,sv_gravity",
-        "FieldName": "sv_gravity",
-        "InputType": "number",
-        "ParamFieldName": "sv_gravity",
-        "DefaultValue": "800",
-        "Placeholder": "800",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Invasion Countdown Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -683,21 +832,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Limit Commands",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, enables client commands flooding protection",
-        "Keywords": "limit,commands,sv_limitcommands",
-        "FieldName": "sv_limitcommands",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_limitcommands",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "LMS Countdown Time",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -709,66 +843,6 @@
         "DefaultValue": "10",
         "Suffix": "seconds",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Log File Append",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If a logfile with the same name is present, the server will add to the log file instead of overwriting",
-        "Keywords": "log,file,append,sv_logfile_append",
-        "FieldName": "sv_logfile_append",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_logfile_append",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Log File Name Timestamp",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "When generating a new log file, append the time and date to the end of the logfile name",
-        "Keywords": "log,file,name,timestamp,sv_logfilenametimestamp",
-        "FieldName": "sv_logfilenametimestamp",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_logfilenametimestamp",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Log File Timestamp",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "The server logfile is written containing time stamps at every new line",
-        "Keywords": "log,file,timestamp,sv_logfiletimestamp",
-        "FieldName": "sv_logfiletimestamp",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_logfiletimestamp",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Log File Timestamp Use Date",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "The current date will be prepended to the per-line timestamp of the logfile",
-        "Keywords": "log,file,timestamp,date,sv_logfiletimestamp_usedate",
-        "FieldName": "sv_logfiletimestamp_usedate",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_logfiletimestamp_usedate",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
     },
     {
         "DisplayName": "Measure Outbound Traffic",
@@ -871,20 +945,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Max Proximity Rolloff Distance",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Controls the distance at which proximity voice chat is no longer audible",
-        "Keywords": "max,proximity,rolloff,distance,sv_maxproximityrolloffdist",
-        "FieldName": "sv_maxproximityrolloffdist",
-        "InputType": "number",
-        "ParamFieldName": "sv_maxproximityrolloffdist",
-        "DefaultValue": "200",
-        "Placeholder": "200",
-        "Suffix": "units",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Max Teams",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -896,20 +956,6 @@
         "DefaultValue": "2",
         "Placeholder": "2",
         "Suffix": "teams",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Minimum Proximity Rolloff Distance",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Controls the distance at which proximity voice chat will begin rolling off (becoming quieter)",
-        "Keywords": "min,proximity,rolloff,distance,sv_minproximityrolloffdist",
-        "FieldName": "sv_minproximityrolloffdist",
-        "InputType": "number",
-        "ParamFieldName": "sv_minproximityrolloffdist",
-        "DefaultValue": "200",
-        "Placeholder": "200",
-        "Suffix": "units",
         "EnumValues": {}
     },
     {
@@ -1025,21 +1071,6 @@
         "FieldName": "sv_nokickvote",
         "InputType": "checkbox",
         "ParamFieldName": "sv_nokickvote",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "No Kill",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Players may not kill themselves",
-        "Keywords": "no,kill,sv_nokill",
-        "FieldName": "sv_nokill",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_nokill",
         "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
@@ -1176,21 +1207,6 @@
         "EnumValues": {
             "False": "False",
             "True": "True"
-        }
-    },
-    {
-        "DisplayName": "Proximity Voice Chat",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Enables proximity-based voice chat",
-        "Keywords": "proximity,voice,chat,sv_proximityvoicechat",
-        "FieldName": "sv_proximityvoicechat",
-        "InputType": "checkbox",
-        "ParamFieldName": "sv_proximityvoicechat",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
         }
     },
     {
