@@ -135,7 +135,6 @@
         "InputType": "password",
         "ParamFieldName": "sv_password",
         "DefaultValue": "",
-        "Placeholder": "password",
         "EnumValues": {}
     },
     {
