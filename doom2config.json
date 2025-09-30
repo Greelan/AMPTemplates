@@ -54,6 +54,21 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Load Files",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a space-separated list of files to load with the server. The files can be WAD, PK3, PK7, ZIP, 7z, BEX, BEH, DEH or CLD files",
+        "Keywords": "file",
+        "FieldName": "file",
+        "InputType": "text",
+        "ParamFieldName": "file",
+        "IncludeInCommandLine": true,
+        "SkipOnEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "Eviternity.wad",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Server Hostname",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -825,10 +840,23 @@
         }
     },
     {
+        "DisplayName": "Map Rotation List",
+        "Category": "DOOM II:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the map rotation list. Format: addmap <mapname>. One line per map. Requires Map Rotation to be enabled. Will be overridden if Random Map Rotation is enabled",
+        "Keywords": "map,rotation,list,maplist",
+        "FieldName": "maplist",
+        "InputType": "list",
+        "ParamFieldName": "maplist",
+        "DefaultValue": "[\"addmap MAP01\",\"addmap MAP02\",\"addmap MAP03\",\"addmap MAP04\",\"addmap MAP05\",\"addmap MAP06\",\"addmap MAP07\",\"addmap MAP08\",\"addmap MAP09\",\"addmap MAP10\",\"addmap MAP11\",\"addmap MAP12\",\"addmap MAP13\",\"addmap MAP14\",\"addmap MAP15\",\"addmap MAP16\",\"addmap MAP17\",\"addmap MAP18\",\"addmap MAP19\",\"addmap MAP20\",\"addmap MAP21\",\"addmap MAP22\",\"addmap MAP23\",\"addmap MAP24\",\"addmap MAP25\",\"addmap MAP26\",\"addmap MAP27\",\"addmap MAP28\",\"addmap MAP29\",\"addmap MAP30\",\"addmap MAP31\"]",
+        "Special": "listfile:./doom2/server/maps.cfg",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Enable Random Map Rotation",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, the server will randomize the map rotation list instead of advancing through maps in sequence",
+        "Description": "If set, the server will randomize the map rotation list instead of advancing through maps in sequence. Requires Map Rotation to be enabled",
         "Keywords": "random,map,rotation,sv_randommaprotation",
         "FieldName": "sv_randommaprotation",
         "InputType": "checkbox",
@@ -978,7 +1006,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Unlimited Pickup",
+        "DisplayName": "Allow Unlimited Pickup",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, allows players to pickup ammunition past maximum amounts",
@@ -1072,7 +1100,7 @@
         "ParamFieldName": "sv_nocallvote",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Voting enabled",
+            "0": "Voting enabled (default)",
             "1": "Voting disabled",
             "2": "Players only can vote"
         }
