@@ -2,6 +2,26 @@
     {
         "UpdateStageName": "Zandronum Download",
         "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'doom2/server'; $ServerVersion='{{ServerVersion}}'; if ([string]::IsNullOrWhiteSpace($ServerVersion)) { $ServerVersion = (Invoke-WebRequest 'https://zandronum.com/downloads/').Links.href | Where-Object { $_ -match 'zandronum([\\d\\.]+)-win64-base\\.zip'} | ForEach-Object { [version]($Matches[1]) } | Sort-Object | Select-Object -Last 1 }; if ($ServerVersion -notmatch '^v\\d+\\.\\d+(-rc\\d+)?$') { Write-Output \\\"Invalid server version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://zandronum.com/downloads/zandronum${ServerVersion}-win64-base.zip -OutFile 'zandronum.zip'; Expand-Archive -Path 'zandronum.zip' -DestinationPath '.' -Force *> $null; Remove-Item -Path 'zandronum.zip' -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceConditionSetting": "ServerVersion",
+        "UpdateSourceConditionValue": "testing",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Zandronum Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd doom2/server && ServerVersion=\\\"{{ServerVersion}}\\\" && if [[ -z \\\"$ServerVersion\\\" ]]; then ServerVersion=$(wget -qO- https://zandronum.com/downloads/ | grep \\\"zandronum.*-linux-x86_64\\.tar\\.bz2\\\" | sed -n \\\"s/.*href=\\\\\\\"\\([^\\\\\\\"]\\+\\)\\\\\\\".*/\\1/p\\\" | sort -V | tail -n1); fi && if [[ ! \\\"$ServerVersion\\\" =~ ^[0-9]+\\.[0-9]+(\\.[0-9]+)?$ ]]; then echo \\\"Invalid server version format specified\\\" && exit 1; fi && wget -qO zandronum.tar.bz2 https://zandronum.com/downloads/zandronum${ServerVersion}-linux-x86_64.tar.bz2 && tar -xjf zandronum.tar.bz2 >/dev/null 2>&1 && rm -f zandronum.tar.bz2 >/dev/null 2>&1\"",
+        "UpdateSourceConditionSetting": "ServerVersion",
+        "UpdateSourceConditionValue": "testing",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Zandronum Download",
+        "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://zandronum.com/downloads/zandronum3.2.1-win64-base.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",

@@ -35,7 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ring-racers/server && ServerVersion=\\\"{{ServerVersion}}\\\" &&if [[ -z \\\"$ServerVersion\\\" ]]; then ServerVersion=$(wget -qO- https://api.github.com/repos/KartKrewDev/RingRacers/releases/latest | jq -r .tag_name); fi && if [[ ! \\\"$ServerVersion\\\" =~ ^v[0-9]+\\.[0-9]+(-rc[0-9]+)?$ ]]; then echo \\\"Invalid server version format specified\\\" && exit 1; fi && wget -qO rrinstaller.exe https://github.com/KartKrewDev/RingRacers/releases/download/$ServerVersion/Dr.Robotnik.s-Ring-Racers-$ServerVersion-Installer.exe && ../7-Zip/7zzs x -y -aoa rrinstaller.exe >/dev/null 2>&1 && rm -f rrinstaller.exe >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd ring-racers/server && ServerVersion=\\\"{{ServerVersion}}\\\" && if [[ -z \\\"$ServerVersion\\\" ]]; then ServerVersion=$(wget -qO- https://api.github.com/repos/KartKrewDev/RingRacers/releases/latest | jq -r .tag_name); fi && if [[ ! \\\"$ServerVersion\\\" =~ ^v[0-9]+\\.[0-9]+(-rc[0-9]+)?$ ]]; then echo \\\"Invalid server version format specified\\\" && exit 1; fi && wget -qO rrinstaller.exe https://github.com/KartKrewDev/RingRacers/releases/download/$ServerVersion/Dr.Robotnik.s-Ring-Racers-$ServerVersion-Installer.exe && ../7-Zip/7zzs x -y -aoa rrinstaller.exe >/dev/null 2>&1 && rm -f rrinstaller.exe >/dev/null 2>&1\"",
         "SkipOnFailure": false
     },
     {

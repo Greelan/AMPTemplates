@@ -1288,6 +1288,19 @@
         }
     },
     {
+        "DisplayName": "Server Version",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the [2 or 3 digit version number](https://zandronum.com/downloads/) for a specific server version to install. Empty = latest version. Update the server after changing this setting",
+        "Keywords": "server,specific,version",
+        "FieldName": "ServerVersion",
+        "InputType": "text",
+        "ParamFieldName": "ServerVersion",
+        "DefaultValue": "",
+        "Placeholder": "3.2.1",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Disable DOOM II Download",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
