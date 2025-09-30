@@ -8,6 +8,7 @@
         "FieldName": "sv_adminlistfile",
         "InputType": "text",
         "ParamFieldName": "sv_adminlistfile",
+        "ExcludeFromImport": true,
         "Hidden": true,
         "DefaultValue": "adminlist.txt",
         "EnumValues": {}
@@ -21,6 +22,7 @@
         "FieldName": "sv_colorstripmethod",
         "InputType": "text",
         "ParamFieldName": "sv_colorstripmethod",
+        "ExcludeFromImport": true,
         "Hidden": true,
         "DefaultValue": "0",
         "EnumValues": {}
@@ -230,7 +232,7 @@
         "Keywords": "admin,list",
         "FieldName": "AdminList",
         "InputType": "list",
-        "ParamFieldName": "",
+        "ParamFieldName": "AdminList",
         "Special": "listfile:./doom2/server/adminlist.txt",
         "EnumValues": {}
     },
@@ -828,7 +830,7 @@
         "DisplayName": "Enable Map Rotation",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "The server will use a map rotation list to determine the campaign",
+        "Description": "If set, the server will use a map rotation list to determine the campaign",
         "Keywords": "map,rotation,sv_maprotation",
         "FieldName": "sv_maprotation",
         "InputType": "checkbox",
@@ -845,9 +847,9 @@
         "Subcategory": "Server:dns:1",
         "Description": "Sets the map rotation list. Format: addmap <mapname>. One line per map. Requires Map Rotation to be enabled. Will be overridden if Random Map Rotation is enabled",
         "Keywords": "map,rotation,list,maplist",
-        "FieldName": "maplist",
+        "FieldName": "MapList",
         "InputType": "list",
-        "ParamFieldName": "maplist",
+        "ParamFieldName": "MapList",
         "DefaultValue": "[\"addmap MAP01\",\"addmap MAP02\",\"addmap MAP03\",\"addmap MAP04\",\"addmap MAP05\",\"addmap MAP06\",\"addmap MAP07\",\"addmap MAP08\",\"addmap MAP09\",\"addmap MAP10\",\"addmap MAP11\",\"addmap MAP12\",\"addmap MAP13\",\"addmap MAP14\",\"addmap MAP15\",\"addmap MAP16\",\"addmap MAP17\",\"addmap MAP18\",\"addmap MAP19\",\"addmap MAP20\",\"addmap MAP21\",\"addmap MAP22\",\"addmap MAP23\",\"addmap MAP24\",\"addmap MAP25\",\"addmap MAP26\",\"addmap MAP27\",\"addmap MAP28\",\"addmap MAP29\",\"addmap MAP30\",\"addmap MAP31\"]",
         "Special": "listfile:./doom2/server/maps.cfg",
         "EnumValues": {}

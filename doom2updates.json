@@ -50,14 +50,6 @@
         "OverwriteExistingFiles": false
     },
     {
-        "UpdateStageName": "Create adminlist.txt",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateFile",
-        "UpdateSourceArgs": "{{$FullBaseDir}}adminlist.txt",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Create whitelist.txt",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateFile",
