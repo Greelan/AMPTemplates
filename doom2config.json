@@ -720,19 +720,6 @@
         }
     },
     {
-        "DisplayName": "Map Rotation List",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the map rotation list. Format: addmap <mapname>. One line per map",
-        "Keywords": "map,rotation,list,maplist",
-        "FieldName": "maplist",
-        "InputType": "Textarea",
-        "ParamFieldName": "maplist",
-        "DefaultValue": "addmap MAP01\naddmap MAP02\naddmap MAP03\naddmap MAP04\naddmap MAP05\naddmap MAP06\naddmap MAP07\naddmap MAP08\naddmap MAP09\naddmap MAP10\naddmap MAP11\naddmap MAP12\naddmap MAP13\naddmap MAP14\naddmap MAP15\naddmap MAP16\naddmap MAP17\naddmap MAP18\naddmap MAP19\naddmap MAP20\naddmap MAP21\naddmap MAP22\naddmap MAP23\naddmap MAP24\naddmap MAP25\naddmap MAP26\naddmap MAP27\naddmap MAP28\naddmap MAP29\naddmap MAP30\naddmap MAP31",
-        "Placeholder": "addmap MAP01\naddmap MAP02\naddmap MAP03\naddmap MAP04\naddmap MAP05\naddmap MAP06\naddmap MAP07\naddmap MAP08\naddmap MAP09\naddmap MAP10\naddmap MAP11\naddmap MAP12\naddmap MAP13\naddmap MAP14\naddmap MAP15\naddmap MAP16\naddmap MAP17\naddmap MAP18\naddmap MAP19\naddmap MAP20\naddmap MAP21\naddmap MAP22\naddmap MAP23\naddmap MAP24\naddmap MAP25\naddmap MAP26\naddmap MAP27\naddmap MAP28\naddmap MAP29\naddmap MAP30\naddmap MAP31",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Mark Chat Lines",
         "Category": "DOOM II:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -1540,20 +1527,6 @@
         "FieldName": "CustomArgs",
         "InputType": "text",
         "ParamFieldName": "CustomArgs",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Additional Server Settings",
-        "Category": "DOOM II:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Specifies additional settings to include in 'server.cfg' that are not otherwise set by AMP. One setting per line",
-        "Keywords": "additional,settings,custom",
-        "FieldName": "UserSettings",
-        "InputType": "Textarea",
-        "IsFlagArgument": false,
-        "ParamFieldName": "UserSettings",
-        "IncludeInCommandLine": false,
         "DefaultValue": "",
         "EnumValues": {}
     },
