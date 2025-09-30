@@ -2,8 +2,15 @@
     {
         "Protocol": "TCP",
         "Port": 3000,
+        "Ref": "ServerPort",
         "Name": "Server Port",
-        "Description": "Port for server web traffic",
-        "Ref": "ServerPort"
+        "Description": "Port for server web traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 3022,
+        "Ref": "SSHListenPort",
+        "Name": "SSH Listen Port",
+        "Description": "Port for SSH traffic"
     }
 ]
