@@ -1,0 +1,30 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 8766,
+        "Ref": "AuthPort",
+        "Name": "Auth Port",
+        "Description": "Port used for Steam authentication traffic"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 3658,
+        "Ref": "UpdatePort",
+        "Name": "Update Port",
+        "Description": "Port used for Steam master server traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 27015,
+        "Ref": "LobbyPort",
+        "Name": "Lobby Port",
+        "Description": "Port used for lobby traffic"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27016,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Port used for main game traffic"
+    }
+]
