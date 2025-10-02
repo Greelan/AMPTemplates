@@ -1,6 +1,6 @@
 Meta.DisplayName=PostgreSQL
 Meta.Description=PostgreSQL Service Instance
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=Native
 Meta.Arch=All
 Meta.Author=Greelan
