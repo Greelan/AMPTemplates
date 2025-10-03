@@ -169,5 +169,20 @@
         "Placeholder": "30",
         "Suffix": "FPS",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Install BepInEx",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "If set, the latest [BepInEx release](https://github.com/BepInEx/BepInEx/releases) will be installed when the server is updated",
+        "Keywords": "install,BepInEx,InstallBepInEx",
+        "FieldName": "InstallBepInEx",
+        "InputType": "checkbox",
+        "ParamFieldName": "InstallBepInEx",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     }
 ]
