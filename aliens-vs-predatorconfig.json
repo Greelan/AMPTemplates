@@ -117,7 +117,7 @@
         "DisplayName": "Map Rotation List",
         "Category": "Aliens vs Predator:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the map rotation list. Format: addmap [mapname] [gametype] <tl=timelimit> <sl=scorelimit>. Valid gametypes: DM, PH, TDM, IN, MSTDM, DOM. One map per line",
+        "Description": "Sets the map rotation list. Format: addmap <mapname> <gametype> [tl=timelimit] [sl=scorelimit]. Valid mapnames: see 'envs/MP' directory. Valid gametypes: DM, PH, TDM, IN, MSTDM, DOM. One map per line",
         "Keywords": "map,rotation,addmap",
         "FieldName": "maprotation",
         "InputType": "Textarea",
