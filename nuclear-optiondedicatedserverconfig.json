@@ -1,0 +1,40 @@
+{
+    "MissionDirectory": "/home/steam/NuclearOption-Missions",
+    "ModdedServer": false,
+    "ServerName": "Nuclear Option Server",
+    "Port": {
+        "IsOverride": false,
+        "Value": 0
+    },
+    "QueryPort": {
+        "IsOverride": false,
+        "Value": 0
+    },
+    "Password": "",
+    "MaxPlayers": 16,
+    "NoPlayerStopTime": 30.0,
+    "RotationType": 0,
+    "MissionRotation": [
+        {
+            "Key": {
+                "Group": "BuiltIn",
+                "Name": "Escalation"
+            },
+            "MaxTime": 7200.0
+        },
+        {
+            "Key": {
+                "Group": "BuiltIn",
+                "Name": "Terminal Control"
+            },
+            "MaxTime": 7200.0
+        },
+        {
+            "Key": {
+                "Group": "User",
+                "Name": "Custom Mission"
+            },
+            "MaxTime": 7200.0
+        }
+    ]
+}
