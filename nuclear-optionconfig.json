@@ -148,9 +148,8 @@
         "ParamFieldName": "$.RotationType",
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Random (default)",
-            "1": "Random, with no repeat",
-            "2": "Sequential"
+            "0": "Sequential (default)",
+            "1": "Random"
         }
     },
     {
