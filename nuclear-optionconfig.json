@@ -77,7 +77,7 @@
         "InputType": "text",
         "ParamFieldName": "$.ServerName",
         "DefaultValue": "AMP Powered Nuclear Option Server",
-        "Placeholder": "AMP Powered  Nuclear Option Server",
+        "Placeholder": "AMP Powered Nuclear Option Server",
         "EnumValues": {}
     },
     {
