@@ -5,7 +5,7 @@
         "ConfigType": "json"
     },
     {
-        "ConfigFile": "SPT/user/mods/fika-server/assets/configs/fika.jsonc",
+        "ConfigFile": "user/mods/fika-server/assets/configs/fika.jsonc",
         "AutoMap": true,
         "ConfigType": "json"
     }
