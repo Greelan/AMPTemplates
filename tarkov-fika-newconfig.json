@@ -156,12 +156,27 @@
         "DisplayName": "Allow Free Camera",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, the free camera can be toggled freely",
+        "Description": "If set, players can use the free camera while still alive",
         "Keywords": "client,free,camera,toggle,allowFreeCam",
         "FieldName": "allowFreeCam",
         "InputType": "checkbox",
         "ParamFieldName": "$.client.allowFreeCam",
-        "DefaultValue": "false",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Allow Spectate Free Camera",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, players will be forced to spectate other players rather than be able to move freely",
+        "Keywords": "client,spectate,free,camera,toggle,allowSpectateFreeCam",
+        "FieldName": "allowSpectateFreeCam",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.client.allowSpectateFreeCam",
+        "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
             "True": "true"
