@@ -447,6 +447,59 @@
         }
     },
     {
+        "DisplayName": "Enable Webhook",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, enables the webhook functionality",
+        "Keywords": "webhook,enable,enabled,webhook_enabled",
+        "FieldName": "webhook_enabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.webhook.enabled",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Webhook Name",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the webhook",
+        "Keywords": "webhook,name,webhook_name",
+        "FieldName": "webhook_name",
+        "InputType": "text",
+        "ParamFieldName": "$.webhook.name",
+        "DefaultValue": "Fika Server",
+        "Placeholder": "Fika Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Webhook Avatar URL",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the avatar URL for the webhook",
+        "Keywords": "webhook,avatar,url,webhook_avatarUrl",
+        "FieldName": "webhook_avatarUrl",
+        "InputType": "text",
+        "ParamFieldName": "$.webhook.avatarUrl",
+        "DefaultValue": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
+        "Placeholder": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Webhook URL",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the URL for the webhook",
+        "Keywords": "webhook,url,webhook_url",
+        "FieldName": "webhook_url",
+        "InputType": "text",
+        "ParamFieldName": "$.webhook.url",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Enable NAT Punching",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
