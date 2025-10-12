@@ -454,7 +454,7 @@
         "Keywords": "webhook,enable,enabled,webhook_enabled",
         "FieldName": "webhook_enabled",
         "InputType": "checkbox",
-        "ParamFieldName": "$.webhook.enabled",
+        "ParamFieldName": "$.server.webhook.enabled",
         "DefaultValue": "false",
         "EnumValues": {
             "True": "true",
@@ -469,7 +469,7 @@
         "Keywords": "webhook,name,webhook_name",
         "FieldName": "webhook_name",
         "InputType": "text",
-        "ParamFieldName": "$.webhook.name",
+        "ParamFieldName": "$.server.webhook.name",
         "DefaultValue": "Fika Server",
         "Placeholder": "Fika Server",
         "EnumValues": {}
@@ -482,7 +482,7 @@
         "Keywords": "webhook,avatar,url,webhook_avatarUrl",
         "FieldName": "webhook_avatarUrl",
         "InputType": "text",
-        "ParamFieldName": "$.webhook.avatarUrl",
+        "ParamFieldName": "$.server.webhook.avatarUrl",
         "DefaultValue": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
         "Placeholder": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
         "EnumValues": {}
@@ -495,7 +495,7 @@
         "Keywords": "webhook,url,webhook_url",
         "FieldName": "webhook_url",
         "InputType": "text",
-        "ParamFieldName": "$.webhook.url",
+        "ParamFieldName": "$.server.webhook.url",
         "DefaultValue": "",
         "EnumValues": {}
     },
