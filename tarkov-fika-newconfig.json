@@ -342,6 +342,19 @@
         }
     },
     {
+        "DisplayName": "Item Sending Storage Time",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the time that sent items will be stored before expiring",
+        "Keywords": "item,sending,storage,time,itemSendingStorageTime",
+        "FieldName": "itemSendingStorageTime",
+        "InputType": "number",
+        "ParamFieldName": "$.server.itemSendingStorageTime",
+        "DefaultValue": "7",
+        "Placeholder": "7",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Allow Editing Raid Settings",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -445,6 +458,19 @@
             "False": "false",
             "True": "true"
         }
+    },
+    {
+        "DisplayName": "Admin IDs",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a list of admin IDS",
+        "Keywords": "admin,ids,adminIds",
+        "FieldName": "adminIds",
+        "InputType": "list",
+        "ParamFieldName": "$.server.adminIds",
+        "DefaultValue": "[]",
+        "Special": "array:text",
+        "EnumValues": {}
     },
     {
         "DisplayName": "Enable Webhook",
