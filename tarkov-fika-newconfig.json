@@ -327,6 +327,59 @@
         }
     },
     {
+        "DisplayName": "Enable Webhook",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, enables the webhook functionality",
+        "Keywords": "webhook,enable,enabled,webhook_enabled",
+        "FieldName": "webhook_enabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.server.webhook.enabled",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "Webhook Name",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the webhook",
+        "Keywords": "webhook,name,webhook_name",
+        "FieldName": "webhook_name",
+        "InputType": "text",
+        "ParamFieldName": "$.server.webhook.name",
+        "DefaultValue": "Fika Server",
+        "Placeholder": "Fika Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Webhook Avatar URL",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the avatar URL for the webhook",
+        "Keywords": "webhook,avatar,url,webhook_avatarUrl",
+        "FieldName": "webhook_avatarUrl",
+        "InputType": "text",
+        "ParamFieldName": "$.server.webhook.avatarUrl",
+        "DefaultValue": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
+        "Placeholder": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Webhook URL",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the URL for the webhook",
+        "Keywords": "webhook,url,webhook_url",
+        "FieldName": "webhook_url",
+        "InputType": "text",
+        "ParamFieldName": "$.server.webhook.url",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Enable Item Sending",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -334,7 +387,7 @@
         "Keywords": "client,item,sending,allowItemSending",
         "FieldName": "allowItemSending",
         "InputType": "checkbox",
-        "ParamFieldName": "$.client.allowItemSending",
+        "ParamFieldName": "$.server.allowItemSending",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -355,29 +408,14 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Allow Editing Raid Settings",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, raid settings can be edited",
-        "Keywords": "client,edit,raid,settings,canEditRaidSettings",
-        "FieldName": "canEditRaidSettings",
-        "InputType": "checkbox",
-        "ParamFieldName": "$.client.canEditRaidSettings",
-        "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Gifted Items Lose FiR Status",
+        "DisplayName": "Sent Items Lose FiR Status",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, sent items will lose their FiR status",
-        "Keywords": "server,gifted,sent,items,lose,FIR,status,giftedItemsLoseFIR",
-        "FieldName": "giftedItemsLoseFIR",
+        "Keywords": "server,sent,items,lose,FIR,status,sentItemsLoseFIR",
+        "FieldName": "sentItemsLoseFIR",
         "InputType": "checkbox",
-        "ParamFieldName": "$.server.giftedItemsLoseFIR",
+        "ParamFieldName": "$.server.sentItemsLoseFIR",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -445,21 +483,6 @@
         }
     },
     {
-        "DisplayName": "Log Client Mods In Console",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, all mods of a client connecting will be printed in the console",
-        "Keywords": "log,client,mods,console,logClientModsInConsole",
-        "FieldName": "logClientModsInConsole",
-        "InputType": "checkbox",
-        "ParamFieldName": "$.server.logClientModsInConsole",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "Admin IDs",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -470,59 +493,6 @@
         "ParamFieldName": "$.server.adminIds",
         "DefaultValue": "[]",
         "Special": "array:text",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Enable Webhook",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, enables the webhook functionality",
-        "Keywords": "webhook,enable,enabled,webhook_enabled",
-        "FieldName": "webhook_enabled",
-        "InputType": "checkbox",
-        "ParamFieldName": "$.server.webhook.enabled",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "True": "true",
-            "False": "false"
-        }
-    },
-    {
-        "DisplayName": "Webhook Name",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the name of the webhook",
-        "Keywords": "webhook,name,webhook_name",
-        "FieldName": "webhook_name",
-        "InputType": "text",
-        "ParamFieldName": "$.server.webhook.name",
-        "DefaultValue": "Fika Server",
-        "Placeholder": "Fika Server",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Webhook Avatar URL",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the avatar URL for the webhook",
-        "Keywords": "webhook,avatar,url,webhook_avatarUrl",
-        "FieldName": "webhook_avatarUrl",
-        "InputType": "text",
-        "ParamFieldName": "$.server.webhook.avatarUrl",
-        "DefaultValue": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
-        "Placeholder": "https://github.com/project-fika/Fika-Server-CSharp/blob/main/FikaWebApp/wwwroot/images/FIKA_LOGO.png?raw=true",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Webhook URL",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the URL for the webhook",
-        "Keywords": "webhook,url,webhook_url",
-        "FieldName": "webhook_url",
-        "InputType": "text",
-        "ParamFieldName": "$.server.webhook.url",
-        "DefaultValue": "",
         "EnumValues": {}
     },
     {
@@ -634,21 +604,6 @@
         "InputType": "checkbox",
         "ParamFieldName": "$.background.enable",
         "DefaultValue": "true",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
-        "DisplayName": "Enable Launcher Background Easter Egg",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the launcher background easter egg will be enabled",
-        "Keywords": "background,launcher,easteregg",
-        "FieldName": "background_easteregg",
-        "InputType": "checkbox",
-        "ParamFieldName": "$.background.easteregg",
-        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
