@@ -432,6 +432,34 @@
         }
     },
     {
+        "DisplayName": "Enable NAT Punching",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the NAT punch server will be installed when the Tarkov server is updated and enabled when it is started",
+        "Keywords": "nat,punching,server,natPunchServer.enable",
+        "FieldName": "natPunchServer_enable",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.natPunchServer.enable",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "NAT Punching Amount",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the NAT punching amount",
+        "Keywords": "nat,punching,introduce,amount,natPunchServer.natIntroduceAmount",
+        "FieldName": "natPunchServer_natIntroduceAmount",
+        "InputType": "number",
+        "ParamFieldName": "$.natPunchServer.natIntroduceAmount",
+        "DefaultValue": "1",
+        "Placeholder": "1",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Headless Client Profiles Amount",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
