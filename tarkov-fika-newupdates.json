@@ -41,7 +41,7 @@
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
     },
-     {
+    {
         "UpdateStageName": ".NET Runtime Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
