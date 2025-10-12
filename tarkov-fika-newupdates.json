@@ -121,7 +121,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "project-fika/Fika-Server-CSharp",
-        "UpdateSourceTarget": "{{$FullBaseDir}}SPT",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
