@@ -65,7 +65,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'tarkov/server'; if (Test-Path 'SPT.bak') { Remove-Item 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null}; Copy-Item -Path 'SPT' -Destination 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'tarkov/server'; if (Test-Path 'SPT.bak') { Remove-Item 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null }; Copy-Item -Path 'SPT' -Destination 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
     },
     {
