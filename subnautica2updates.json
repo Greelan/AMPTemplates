@@ -91,7 +91,7 @@
         "UpdateSourceArch": "x86_64",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
         "SkipOnFailure": false
     },
     {
@@ -100,7 +100,7 @@
         "UpdateSourceArch": "aarch64",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
         "SkipOnFailure": false
     },
     {
