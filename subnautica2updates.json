@@ -86,6 +86,32 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Nitrox Installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Nitrox Installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/nitrox && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Nitrox Installation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'subnautica/264710/nitrox'; Copy-Item -Path 'win-x64/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'win-x64' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Server.cfg File Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
