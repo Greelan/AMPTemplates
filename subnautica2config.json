@@ -12,19 +12,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Save Name",
-        "Category": "Subnautica:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the save name",
-        "Keywords": "save,name,SaveName",
-        "FieldName": "SaveName",
-        "InputType": "text",
-        "ParamFieldName": "SaveName",
-        "DefaultValue": "MyWorld",
-        "Required": true,
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Seed",
         "Category": "Subnautica:stadia_controller",
         "Subcategory": "Server:dns:1",

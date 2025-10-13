@@ -39,7 +39,7 @@ App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SUBNAUTICA_INSTALLATION_PATH":"{{$FullBaseDir}}","NITROX_LAUNCHER_PATH":"{{$FullBaseDir}}nitrox","DOTNET_ROOT":"{{$FullBaseDir}}dotnet","SteamAppId":"264710"}
+App.EnvironmentVariables={"SUBNAUTICA_INSTALLATION_PATH":"{{$FullBaseDir}}","NITROX_LAUNCHER_PATH":"{{$FullBaseDir}}nitrox","XDG_CONFIG_HOME":"{{$FullBaseDir}}Nitrox","DOTNET_ROOT":"{{$FullBaseDir}}Dotnet","SteamAppId":"264710"}
 App.CommandLineParameterFormat={0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=String
