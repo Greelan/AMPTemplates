@@ -26,7 +26,7 @@ App.SteamWorkshopDownloadLocation=
 App.WorkingDir=629800
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}Mordhau/Binaries/Win64/MordhauServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} Mordhau {{map}} -Port={{$ApplicationPort1}} -QueryPort={{$ApplicationPort2}} -Beaconport={{$ApplicationPort3}} {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} Mordhau {{map}} -Port={{$ApplicationPort1}} -RconPort={{$RemoteAdminPort}} -QueryPort={{$ApplicationPort2}} -BeaconPort={{$ApplicationPort3}} {{$FormattedArgs}}
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"629760","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
 App.CommandLineParameterFormat=-{0}={1}
