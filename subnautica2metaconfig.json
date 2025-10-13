@@ -2,6 +2,7 @@
     {
         "ConfigFile": "Nitrox/saves/{{save}}/server.cfg",
         "AutoMap": true,
+        "Importable": true,
         "ConfigType": "kvp"
     }
 ]

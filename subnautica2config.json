@@ -9,6 +9,7 @@
         "InputType": "number",
         "Hidden": true,
         "ParamFieldName": "ServerPort",
+        "ExcludeFromImport": true,
         "EnumValues": {}
     },
     {
