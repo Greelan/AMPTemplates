@@ -115,8 +115,8 @@
         "UpdateStageName": "Data Directory Creation",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"New-Item -ItemType Directory -Force -Path \\\"$env:UserProfile\\AppData\\Roaming\\Nitrox\\\" -ErrorAction SilentlyContinue; if (Test-Path '{{$FullBaseDir}}Nitrox') { Remove-Item -Recurse -Force '{{$FullBaseDir}}Nitrox' -ErrorAction SilentlyContinue | Out-Null }; cmd /c \\\"mklink /J \\\\\\\"{{$FullBaseDir}}Nitrox\\\\\\\" \\\\\\\"%UserProfile%\\AppData\\Roaming\\Nitrox\\\\\\\" >NUL 2>&1\\\"\"",
+        "UpdateSourceData": "cmd.exe",
+        "UpdateSourceArgs": "/C mkdir \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1 & rd /S /Q \"{{$FullBaseDir}}Nitrox\" > NUL 2>&1 & mklink /J \"{{$FullBaseDir}}Nitrox\" \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1",
         "SkipOnFailure": false
     }
 ]
