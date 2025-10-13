@@ -128,6 +128,35 @@
         }
     },
     {
+        "DisplayName": "Maximum Backups",
+        "Category": "Subnautica:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of backups the server will keep",
+        "Keywords": "max,maximum,backups,MaxBackups",
+        "FieldName": "MaxBackups",
+        "InputType": "number",
+        "ParamFieldName": "MaxBackups",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "Suffix": "backups",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Disable Auto Backup",
+        "Category": "Subnautica:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server's automatic backup system will be disabled",
+        "Keywords": "disable,auto,backup,DisableAutoBackup",
+        "FieldName": "DisableAutoBackup",
+        "InputType": "checkbox",
+        "ParamFieldName": "DisableAutoBackup",
+        "DefaultValue": "False",
+        "EnumValues": {
+            "True": "True",
+            "False": "False"
+        }
+    },
+    {
         "DisplayName": "Create Full Entity Cache",
         "Category": "Subnautica:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -230,6 +259,21 @@
         }
     },
     {
+        "DisplayName": "Keep Inventory On Death",
+        "Category": "Subnautica:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, players will not lose items on death",
+        "Keywords": "keep,inventory,items,death,KeepInventoryOnDeath",
+        "FieldName": "KeepInventoryOnDeath",
+        "InputType": "checkbox",
+        "ParamFieldName": "KeepInventoryOnDeath",
+        "DefaultValue": "False",
+        "EnumValues": {
+            "True": "True",
+            "False": "False"
+        }
+    },
+    {
         "DisplayName": "Default Oxygen Value",
         "Category": "Subnautica:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -312,6 +356,36 @@
         "DefaultValue": "0.1",
         "Placeholder": "0.1",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable Safe Building",
+        "Category": "Subnautica:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, any build actions detected as desynced will be rejected",
+        "Keywords": "safe,building,desync,SafeBuilding",
+        "FieldName": "SafeBuilding",
+        "InputType": "checkbox",
+        "ParamFieldName": "SafeBuilding",
+        "DefaultValue": "True",
+        "EnumValues": {
+            "True": "True",
+            "False": "False"
+        }
+    },
+    {
+        "DisplayName": "Enable PvP",
+        "Category": "Subnautica:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, Player versus Player damage and interactions will be enabled",
+        "Keywords": "pvp,enabled,player,versus,player,PvPEnabled",
+        "FieldName": "PvPEnabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "PvPEnabled",
+        "DefaultValue": "True",
+        "EnumValues": {
+            "True": "True",
+            "False": "False"
+        }
     },
     {
         "DisplayName": "Dotnet Version",
