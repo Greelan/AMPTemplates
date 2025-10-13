@@ -61,6 +61,22 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "SPT Directory Backup",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'tarkov/server'; if (Test-Path 'SPT.bak') { Remove-Item 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null}; Copy-Item -Path 'SPT' -Destination 'SPT.bak' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SPT Directory Backup",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd tarkov/server && rm -rf SPT.bak >/dev/null 2>&1 && \\cp -rf SPT SPT.bak >/dev/null 2>&1\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "SPT Installation",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",

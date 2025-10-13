@@ -8,18 +8,6 @@
         "FieldName": "$ServerPort",
         "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "$.port",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "SPT Server Port",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$ServerPort",
-        "InputType": "number",
-        "Hidden": true,
         "ParamFieldName": "$.server.SPT.http.port",
         "EnumValues": {}
     },
@@ -36,19 +24,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AKI Backend Port",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$ServerPort",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "$.backendPort",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "AKI Backend Port",
+        "DisplayName": "SPT Backend Port",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "",
@@ -60,19 +36,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AKI Binding IP",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$ApplicationIPBinding",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "$.ip",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "AKI Binding IP",
+        "DisplayName": "SPT Binding IP",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "",
@@ -84,19 +48,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "AKI Backend IP",
-        "Category": "Tarkov:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$ApplicationIPBinding",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "$.backendIp",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "AKI Backend IP",
+        "DisplayName": "SPT Backend IP",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "",
@@ -486,7 +438,7 @@
         "DisplayName": "Admin IDs",
         "Category": "Tarkov:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets a list of admin IDS",
+        "Description": "Sets a list of admin IDs",
         "Keywords": "admin,ids,adminIds",
         "FieldName": "adminIds",
         "InputType": "list",
