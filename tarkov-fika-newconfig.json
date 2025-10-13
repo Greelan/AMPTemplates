@@ -8,6 +8,18 @@
         "FieldName": "$ServerPort",
         "InputType": "number",
         "Hidden": true,
+        "ParamFieldName": "$.port",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SPT Server Port",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
         "ParamFieldName": "$.server.SPT.http.port",
         "EnumValues": {}
     },
@@ -32,6 +44,18 @@
         "FieldName": "$ServerPort",
         "InputType": "number",
         "Hidden": true,
+        "ParamFieldName": "$.backendPort",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SPT Backend Port",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
         "ParamFieldName": "$.server.SPT.http.backendPort",
         "EnumValues": {}
     },
@@ -44,7 +68,31 @@
         "FieldName": "$ApplicationIPBinding",
         "InputType": "text",
         "Hidden": true,
+        "ParamFieldName": "$.ip",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SPT Binding IP",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ApplicationIPBinding",
+        "InputType": "text",
+        "Hidden": true,
         "ParamFieldName": "$.server.SPT.http.ip",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SPT Backend IP",
+        "Category": "Tarkov:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ApplicationIPBinding",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "$.backendIp",
         "EnumValues": {}
     },
     {
