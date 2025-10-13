@@ -118,5 +118,14 @@
         "UpdateSourceData": "cmd.exe",
         "UpdateSourceArgs": "/C mkdir \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1 & rd /S /Q \"{{$FullBaseDir}}Nitrox\" > NUL 2>&1 & mklink /J \"{{$FullBaseDir}}Nitrox\" \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Readme File",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CreateFile",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Nitrox/README.txt",
+        "UpdateSourceData": "WARNING: This directory will include the save and log data of multiple Subnautica servers\nrun on this system.\n\nTake care when managing files in this directory or its subdirectories!",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": true
     }
 ]
