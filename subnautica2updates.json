@@ -110,21 +110,5 @@
         "UpdateSourceData": "powershell.exe",
         "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'subnautica/264710/Nitrox'; Copy-Item -Path 'win-x64/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'win-x64' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Create Saves Directory",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Nitrox/saves/My World"
-    },
-    {
-        "UpdateStageName": "Server.cfg File Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/subnautica2server.cfg",
-        "UpdateSourceArgs": "server.cfg",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox/saves/My World",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
     }
 ]

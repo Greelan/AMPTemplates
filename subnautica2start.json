@@ -1,0 +1,18 @@
+[
+    {
+        "UpdateStageName": "Create Saves Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Nitrox/saves/{{save}}"
+    },
+    {
+        "UpdateStageName": "Server.cfg File Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/subnautica2server.cfg",
+        "UpdateSourceArgs": "server.cfg",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox/saves/{{save}}",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    }
+]

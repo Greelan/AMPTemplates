@@ -40,7 +40,7 @@ App.CommandLineArgs={{$PlatformArgs}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SUBNAUTICA_INSTALLATION_PATH":"{{$FullBaseDir}}","NITROX_LAUNCHER_PATH":"{{$FullBaseDir}}Nitrox","XDG_CONFIG_HOME":"{{$FullBaseDir}}","DOTNET_ROOT":"{{$FullBaseDir}}Dotnet","SteamAppId":"264710"}
-App.CommandLineParameterFormat={0}={1}
+App.CommandLineParameterFormat=--{0} "{1}"
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=String
 App.ExitMethodWindows=None
@@ -79,7 +79,7 @@ App.TelnetLoginFormat={0}
 App.TelnetNewLineType=Default
 App.TailLogFilePath=server.log
 App.UpdateSources=@IncludeJson[subnautica2updates.json]
-App.PreStartStages=[]
+App.PreStartStages=@IncludeJson[subnautica2start.json]
 App.UserActions=[]
 App.ForceUpdate=False
 App.ForceUpdateReason=
