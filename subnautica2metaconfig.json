@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "Nitrox/saves/My World/server.cfg",
+        "ConfigFile": "Nitrox/saves/{{save}}/server.cfg",
         "AutoMap": true,
         "ConfigType": "kvp"
     }
