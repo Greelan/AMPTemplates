@@ -73,7 +73,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd tarkov/server && rm -rf SPT.bak >/dev/null 2>&1 && \\cp -rf SPT SPT.bak >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd tarkov/server && [[ -d SPT.bak ]] && rm -rf SPT.bak >/dev/null 2>&1; [[ -d SPT ]] && \\cp -rf SPT SPT.bak >/dev/null 2>&1\"",
         "SkipOnFailure": false
     },
     {
