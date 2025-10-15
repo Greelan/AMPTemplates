@@ -43,7 +43,7 @@ App.EnvironmentVariables={"SteamAppId":"3400000","WINEPREFIX":"{{$FullRootDir}}.
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
-App.ExitMethodWindows=None
+App.ExitMethodWindows=CtrlC
 App.ExitTimeout=30
 App.ExitString=quit
 App.ExitFile=app_exit.lck
