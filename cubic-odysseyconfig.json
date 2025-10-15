@@ -108,6 +108,20 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Server Password",
+        "Category": "Cubic Odyssey:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "serverPassword",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "Password",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Enable Crash Dumps",
         "Category": "Cubic Odyssey:stadia_controller",
         "Subcategory": "Server:dns:1",
