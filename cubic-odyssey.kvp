@@ -91,7 +91,7 @@ App.SmartExcludeExemptions=["*.cfg","*.conf","*.config","*.ini","*.json","*.xml"
 App.SmartExcludeSupported=True
 App.DumpFullChildProcessTree=False
 App.MonitorChildProcessName=^{{$WineBaseDir}}server\\CubicOdysseyServer\.exe.*-Port={{$ServerPort}}.*$
-App.MonitorDirectChildOnly=True
+App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=Immediate
