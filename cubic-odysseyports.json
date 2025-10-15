@@ -1,7 +1,7 @@
 [
     {
-        "Protocol": "Both",
-        "Port": 27016,
+        "Protocol": "UDP",
+        "Port": 27000,
         "Ref": "ServerPort",
         "Name": "Server Port",
         "Description": "Port used for main game traffic"
