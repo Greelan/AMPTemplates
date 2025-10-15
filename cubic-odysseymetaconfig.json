@@ -1,0 +1,7 @@
+[
+    {
+        "ConfigFile": "config/server_config.txt",
+        "AutoMap": true,
+        "ConfigType": "kvp"
+    }
+]
