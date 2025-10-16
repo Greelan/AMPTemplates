@@ -9,7 +9,6 @@
         "InputType": "text",
         "ParamFieldName": "name",
         "Required": true,
-        "IncludeInCommandLine": true,
         "DefaultValue": "AMP Powered Clone Hero Server",
         "Placeholder": "AMP Powered Clone Hero Server",
         "EnumValues": {}
@@ -26,14 +25,14 @@
         "DefaultValue": "--nopass ",
         "EnumValues": {
             "False": "--nopass ",
-            "True": "--password {{password}} "
+            "True": "--password \"{{password}}\" "
         }
     },
     {
         "DisplayName": "Server Password",
         "Category": "Clone Hero:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets password required to join the server, if 'Enable Server Password' is set",
+        "Description": "Sets password required to join the server, if 'Enable Server Password' is set. Maximum 50 characters",
         "Keywords": "server,password",
         "FieldName": "password",
         "InputType": "password",
