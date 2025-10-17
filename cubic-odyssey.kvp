@@ -36,7 +36,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=3858450/server
 App.LinuxCommandLineArgs=CubicOdysseyServer.exe
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -Port={{$ServerPort}} -MaxPort={{$ServerPort}} -Gamemode={{Gamemode}} -MaxNumPlayers={{$MaxUsers}} {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} -Gamemode={{Gamemode}} -MaxNumPlayers={{$MaxUsers}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"3400000","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","XDG_RUNTIME_DIR":"/tmp"}
