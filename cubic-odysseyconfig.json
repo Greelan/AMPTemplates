@@ -5,11 +5,12 @@
         "Subcategory": "Server:dns:1",
         "Description": "",
         "Keywords": "",
-        "FieldName": "$ServerPort",
+        "FieldName": "startingPort",
         "InputType": "number",
         "Hidden": true,
         "ParamFieldName": "startingPort",
         "ExcludeFromImport": true,
+        "DefaultValue": "0",
         "EnumValues": {}
     },
     {
@@ -18,11 +19,12 @@
         "Subcategory": "Server:dns:1",
         "Description": "",
         "Keywords": "",
-        "FieldName": "$ServerPort",
+        "FieldName": "endingPort",
         "InputType": "number",
         "Hidden": true,
         "ParamFieldName": "endingPort",
         "ExcludeFromImport": true,
+        "DefaultValue": "0",
         "EnumValues": {}
     },
     {
