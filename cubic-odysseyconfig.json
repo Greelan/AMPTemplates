@@ -28,6 +28,18 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Server Networking",
+        "Category": "Cubic Odyssey:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "NOTE: The server uses EOS Relay for networking. This means that the Server Port will not show as listening, and no port forwarding is required. Connect through the server browser",
+        "Keywords": "server,networking",
+        "FieldName": "serverNetworking",
+        "InputType": "hidden",
+        "ParamFieldName": "serverNetworking",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Server Name",
         "Category": "Cubic Odyssey:stadia_controller",
         "Subcategory": "Server:dns:1",
