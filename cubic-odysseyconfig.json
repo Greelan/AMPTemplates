@@ -154,7 +154,7 @@
         "DisplayName": "Allow Relaying",
         "Category": "Cubic Odyssey:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, relaying of connections will be allowed",
+        "Description": "If set, EOS relay of connections will be allowed",
         "Keywords": "relay,allowRelaying",
         "FieldName": "allowRelaying",
         "InputType": "checkbox",
