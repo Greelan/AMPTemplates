@@ -4,6 +4,6 @@
         "Port": 27000,
         "Ref": "ServerPort",
         "Name": "Server Port",
-        "Description": "Port used for main game traffic"
+        "Description": "Placeholder port"
     }
 ]
