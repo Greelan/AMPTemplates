@@ -585,7 +585,7 @@
         "Category": "Updates",
         "Subcategory": "Steam Downloads:download",
         "Description": "Sets the server branch to install. Update the server after switching branches",
-        "Keywords": "server,branch,depot,public,staging,release,aux01,aux02,last-month,debug",
+        "Keywords": "server,branch,depot,public,staging,release,aux01-staging,aux02,last-month,debug",
         "FieldName": "ServerBranch",
         "InputType": "enum",
         "ParamFieldName": "ServerBranch",
@@ -594,7 +594,7 @@
             "public": "Public (default)",
             "staging": "Staging",
             "release": "Release",
-            "aux01": "Pre-Staging (aux01)",
+            "aux01-staging": "Pre-Staging (aux01-staging)",
             "aux02": "Up and Coming (aux02)",
             "last-month": "Last Month",
             "debug": "2021 Testing (debug)"
