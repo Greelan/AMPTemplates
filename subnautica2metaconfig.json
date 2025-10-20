@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "Nitrox/saves/{{save}}/server.cfg",
+        "ConfigFile": "NitroxData/saves/{{save}}/server.cfg",
         "AutoMap": true,
         "Importable": true,
         "ConfigType": "kvp"

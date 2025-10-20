@@ -41,10 +41,10 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Server Directory Creation",
+        "UpdateStageName": "Nitrox Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Server",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Nitrox",
         "SkipOnFailure": false
     },
     {
@@ -54,7 +54,7 @@
         "UpdateSource": "FetchURLFromJQ",
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[1].browser_download_url",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Server",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -67,7 +67,7 @@
         "UpdateSource": "FetchURLFromJQ",
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[0].browser_download_url",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Server",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -79,7 +79,7 @@
         "UpdateSource": "FetchURLFromJQ",
         "UpdateSourceData": "https://api.github.com/repos/SubnauticaNitrox/Nitrox/releases/latest",
         "UpdateSourceArgs": "$.assets[2].browser_download_url",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Server",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Nitrox",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
@@ -91,7 +91,7 @@
         "UpdateSourceArch": "x86_64",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd subnautica/264710/Server && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/Nitrox && \\cp -rf linux-x64/* ./ >/dev/null 2>&1; rm -rf linux-x64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
         "SkipOnFailure": false
     },
     {
@@ -100,7 +100,7 @@
         "UpdateSourceArch": "aarch64",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd subnautica/264710/Server && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
+        "UpdateSourceArgs": "-c \"cd subnautica/264710/Nitrox && \\cp -rf linux-arm64/* ./ >/dev/null 2>&1; rm -rf linux-arm64 >/dev/null 2>&1; chmod +x NitroxServer-Subnautica\"",
         "SkipOnFailure": false
     },
     {
@@ -108,24 +108,13 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'subnautica/264710/Server'; Copy-Item -Path 'win-x64/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'win-x64' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'subnautica/264710/Nitrox'; Copy-Item -Path 'win-x64/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'win-x64' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Data Directory Creation",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C mkdir \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1 & rd /S /Q \"{{$FullBaseDir}}Nitrox\" > NUL 2>&1 & mklink /J \"{{$FullBaseDir}}Nitrox\" \"%UserProfile%\\AppData\\Roaming\\Nitrox\" > NUL 2>&1",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Create Readme File",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "CreateFile",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Nitrox/README.txt",
-        "UpdateSourceData": "WARNING: This directory will include the save and log data of multiple Subnautica servers\nrun on this system.\n\nTake care when managing files in this directory or its subdirectories!",
-        "OverwriteExistingFiles": true,
-        "SkipOnFailure": true
+        "UpdateStageName": "Create NitroxData Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}NitroxData"
     }
 ]
