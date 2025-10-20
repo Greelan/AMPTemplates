@@ -1,18 +1,5 @@
 [
     {
-        "DisplayName": "Download Port",
-        "Category": "Dragons Dogma Online:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$DownloadPort",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "$.WebServerSetting.PublicWebEndPoint.Port",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Game Server Port",
         "Category": "Dragons Dogma Online:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -22,6 +9,19 @@
         "InputType": "number",
         "Hidden": true,
         "ParamFieldName": "$.GameServerSetting.ServerSetting.ServerPort",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Download Port",
+        "Category": "Dragons Dogma Online:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$DownloadPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "$.WebServerSetting.PublicWebEndPoint.Port",
         "ExcludeFromImport": true,
         "EnumValues": {}
     },
