@@ -27,7 +27,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'ddon/server'; $DownloadURL = (Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest').assets[2].browser_download_url; Invoke-WebRequest -UseBasicParsing -Uri \\\"$DownloadURL\\\" -OutFile 'arrowgene.tar.gz'; & tar -xzf arrowgene.tar.gz --strip-components=1 | Out-Null; Remove-Item -Path 'arrowgene.tar.gz' -Force -ErrorAction SilentlyContinue | Out-Null; $Dir = Get-ChildItem -Directory './win-x64-*' -ErrorAction Stop; Copy-Item \\\"$Dir/*\\\" -Destination '.' -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path \\\"$Dir\\\" -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'ddon/server'; $DownloadURL = (Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest').assets[2].browser_download_url; Invoke-WebRequest -UseBasicParsing -Uri \\\"$DownloadURL\\\" -OutFile 'arrowgene.tar.gz'; & tar -xjf arrowgene.tar.gz --strip-components=3 | Out-Null; Remove-Item -Path 'arrowgene.tar.gz' -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
     },
     {
@@ -35,7 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ddon/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest | jq -r \\\".assets[0].browser_download_url\\\") && wget -qO arrowgene.tar.gz $DownloadURL && tar -xzf arrowgene.tar.gz --strip-components=2 >/dev/null 2>&1 && rm -f arrowgene.tar.gz >/dev/null 2>&1 && chmod +x Server/Arrowgene.Ddon.Cli.exe\"",
+        "UpdateSourceArgs": "-c \"cd ddon/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest | jq -r \\\".assets[0].browser_download_url\\\") && wget -qO arrowgene.tar.gz $DownloadURL && tar -xjf arrowgene.tar.gz --strip-components=3 >/dev/null 2>&1 && rm -f arrowgene.tar.gz >/dev/null 2>&1 && chmod +x Server/Arrowgene.Ddon.Cli.exe\"",
         "SkipOnFailure": false
     }
 ]
