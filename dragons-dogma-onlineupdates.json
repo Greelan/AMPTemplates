@@ -35,7 +35,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ddon/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest | jq -r \\\".assets[0].browser_download_url\\\") && wget -qO arrowgene.tar.gz $DownloadURL && tar -xjf arrowgene.tar.gz --strip-components=3 >/dev/null 2>&1 && rm -f arrowgene.tar.gz >/dev/null 2>&1 && chmod +x Server/Arrowgene.Ddon.Cli.exe\"",
+        "UpdateSourceArgs": "-c \"cd ddon/server && DownloadURL=$(wget -qO- https://api.github.com/repos/sebastian-heinz/Arrowgene.DragonsDogmaOnline/releases/latest | jq -r \\\".assets[0].browser_download_url\\\") && wget -qO arrowgene.tar.gz $DownloadURL && tar -xjf arrowgene.tar.gz --strip-components=3 >/dev/null 2>&1 && rm -f arrowgene.tar.gz >/dev/null 2>&1 && chmod +x Server/Arrowgene.Ddon.Cli\"",
         "SkipOnFailure": false
     }
 ]
