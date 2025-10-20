@@ -1,6 +1,13 @@
 [
     {
         "Protocol": "TCP",
+        "Port": 3306,
+        "Ref": "DatabasePort",
+        "Name": "Database Port",
+        "Description": "Port for database traffic"
+    },
+    {
+        "Protocol": "TCP",
         "Port": 52000,
         "Ref": "GameServerPort",
         "Name": "Game Server Port",

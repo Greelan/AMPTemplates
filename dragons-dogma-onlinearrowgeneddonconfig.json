@@ -129,7 +129,7 @@
   },
   "DatabaseSetting": {
     "Type": "sqlite",
-    "DatabaseFolder": "/AMP/ddon/server/Server/Files/Database",
+    "DatabaseFolder": "",
     "Host": "localhost",
     "Port": 3306,
     "User": "",

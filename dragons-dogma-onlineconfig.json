@@ -13,6 +13,19 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Database Port",
+        "Category": "Dragons Dogma Online:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$DatabasePort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "$.DatabaseSetting.Port",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Download Port",
         "Category": "Dragons Dogma Online:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -76,6 +89,20 @@
         "ParamFieldName": "$.AssetPath",
         "ExcludeFromImport": true,
         "DefaultValue": "{{$FullBaseDir}}Server/Files/Assets",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Database Path",
+        "Category": "Dragons Dogma Online:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "DatabaseFolder",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "$.DatabaseSetting.DatabaseFolder",
+        "ExcludeFromImport": true,
+        "DefaultValue": "{{$FullBaseDir}}Server/Files/Database",
         "EnumValues": {}
     },
     {
