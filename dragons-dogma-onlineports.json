@@ -1,0 +1,23 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 52099,
+        "Ref": "DownloadPort",
+        "Name": "Download Port",
+        "Description": "Port for HTTP download traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 52000,
+        "Ref": "GameServerPort",
+        "Name": "Game Server Port",
+        "Description": "Port for game server traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 52100,
+        "Ref": "LoginServerPort",
+        "Name": "Login Server Port",
+        "Description": "Port for login server traffic"
+    }
+]
