@@ -1,11 +1,21 @@
 [
     {
+        "UpdateStageName": "Game Directory Creation",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Game",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Subnautica Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "264710",
         "UpdateSourceArgs": "264710",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Game",
         "ForceDownloadPlatform": "Windows",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
         "SkipOnFailure": false
     },
     {
