@@ -173,13 +173,14 @@
         "ParamFieldName": "online.songsperclient",
         "DefaultValue": "1",
         "Placeholder": "1",
+        "Suffix": "songs",
         "EnumValues": {}
     },
     {
-        "DisplayName": "Enable Redis Use",
+        "DisplayName": "Enable Redis Database Use",
         "Category": "Clone Hero:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, enables the use of Redis database by the server",
+        "Description": "If set, enables the use of a Redis database by the server",
         "Keywords": "redis,enable,enabled,redis_enable",
         "FieldName": "redis_enable",
         "InputType": "checkbox",
@@ -191,7 +192,7 @@
         }
     },
     {
-        "DisplayName": "Redis Hostname",
+        "DisplayName": "Redis Database Hostname",
         "Category": "Clone Hero:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets the hostname for the Redis database server",
@@ -217,7 +218,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Redis Password",
+        "DisplayName": "Redis Database Password",
         "Category": "Clone Hero:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "Sets the password for Redis database authentication",
