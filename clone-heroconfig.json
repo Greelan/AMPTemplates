@@ -22,7 +22,7 @@
         "FieldName": "EnablePassword",
         "InputType": "checkbox",
         "ParamFieldName": "EnablePassword",
-        "DefaultValue": "--nopass ",
+        "DefaultValue": "--password \"{{password}}\" ",
         "EnumValues": {
             "False": "--nopass ",
             "True": "--password \"{{password}}\" "
@@ -32,12 +32,12 @@
         "DisplayName": "Server Password",
         "Category": "Clone Hero:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets password required to join the server, if Enable Server Password is set. Maximum 50 characters",
+        "Description": "Sets the password required to join the server, if Enable Server Password is set. Maximum 50 characters. Default is a random secure password",
         "Keywords": "server,password",
         "FieldName": "password",
         "InputType": "password",
         "ParamFieldName": "password",
-        "DefaultValue": "",
+        "DefaultValue": "{{newguid()}}",
         "EnumValues": {}
     },
     {
