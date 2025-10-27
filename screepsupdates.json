@@ -32,28 +32,21 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Screeps-launcher Copy",
+        "UpdateStageName": "Screeps-launcher Symlink Creation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSourceArch": "x86_64",
-        "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}screeps-launcher",
-        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher_linux_amd64",
-        "OverwriteExistingFiles": false
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd screeps/server && rm -f screeps-launcher >/dev/null 2>&1 && ln -sf screeps-launcher_linux_amd64 screeps-launcher && chmod +x screeps-launcher\"",
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Screeps-launcher Copy",
+        "UpdateStageName": "Screeps-launcher Symlink Creation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSourceArch": "aarch64",
-        "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}screeps-launcher",
-        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher_linux_arm64",
-        "OverwriteExistingFiles": false
-    },
-    {
-        "UpdateStageName": "Make Server Executable",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd screeps/server && rm -f screeps-launcher >/dev/null 2>&1 && ln -sf screeps-launcher_linux_arm64 screeps-launcher && chmod +x screeps-launcher\"",
         "SkipOnFailure": false
     },
     {
