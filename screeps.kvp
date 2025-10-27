@@ -1,6 +1,6 @@
 Meta.DisplayName=Screeps
 Meta.Description=Screeps Server
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=Native
 Meta.Arch=All
 Meta.Author=Greelan
