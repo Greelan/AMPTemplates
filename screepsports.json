@@ -2,22 +2,22 @@
     {
         "Protocol": "TCP",
         "Port": 21025,
+        "Ref": "ServerPort",
         "Name": "Server Port",
-        "Description": "Port for server traffic",
-        "Ref": "ServerPort"
+        "Description": "Port for server traffic"
     },
     {
         "Protocol": "TCP",
         "Port": 21026,
+        "Ref": "CLIPort",
         "Name": "CLI Port",
-        "Description": "Port for CLI traffic",
-        "Ref": "CLIPort"
+        "Description": "Port for CLI traffic"
     },
     {
         "Protocol": "TCP",
         "Port": 21027,
+        "Ref": "StoragePort",
         "Name": "Storage Port",
-        "Description": "Port for storage traffic",
-        "Ref": "StoragePort"
+        "Description": "Port for storage traffic"
     }
 ]

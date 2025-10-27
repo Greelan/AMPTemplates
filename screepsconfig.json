@@ -9,6 +9,7 @@
         "InputType": "password",
         "ParamFieldName": "steam_api_key",
         "DefaultValue": "",
+        "Required": true,
         "EnumValues": {}
     },
     {

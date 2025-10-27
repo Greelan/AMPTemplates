@@ -2,24 +2,59 @@
     {
         "UpdateStageName": "Screeps-launcher Download",
         "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://github.com/screepers/screeps-launcher/releases/download/v1.16.0/screeps-launcher_v1.16.0_linux_amd64",
-        "UpdateSourceArgs": "screeps-launcher",
-        "UpdateSourceTarget": "{{$FullBaseDir}}"
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "screepers/screeps-launcher",
+        "UpdateSourceData": "screeps-launcher_linux_amd64",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Screeps-launcher Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "screepers/screeps-launcher",
+        "UpdateSourceData": "screeps-launcher_linux_arm64",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Screeps-launcher Download",
         "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://github.com/screepers/screeps-launcher/releases/download/v1.16.0/screeps-launcher_v1.16.0_windows_amd64.exe",
-        "UpdateSourceArgs": "screeps-launcher.exe",
-        "UpdateSourceTarget": "{{$FullBaseDir}}"
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "screepers/screeps-launcher",
+        "UpdateSourceData": "screeps-launcher_windows_amd64.exe",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Screeps-launcher Copy",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "{{$FullBaseDir}}screeps-launcher",
+        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher_linux_amd64",
+        "OverwriteExistingFiles": false
+    },
+    {
+        "UpdateStageName": "Screeps-launcher Copy",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "CopyFilePath",
+        "UpdateSourceData": "{{$FullBaseDir}}screeps-launcher",
+        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher_linux_arm64",
+        "OverwriteExistingFiles": false
     },
     {
         "UpdateStageName": "Make Server Executable",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "SetExecutableFlag",
-        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher"
+        "UpdateSourceArgs": "{{$FullBaseDir}}screeps-launcher",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Config.yml File Download",
