@@ -1,14 +1,83 @@
 [
     {
-        "DisplayName": "Additional Command Line Options",
+        "DisplayName": "AMP User Password",
         "Category": "Redis:database",
         "Subcategory": "Server:dns:1",
-        "Description": "Specifies additional command line options that are not otherwise set by AMP. Use with care",
-        "Keywords": "custom,server,options,arguments",
-        "FieldName": "CustomServerOptions",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "AMPPassword",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "AMPPassword",
+        "DefaultValue": "{{newguid()}}",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Server Memory",
+        "Category": "Redis:database",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the [maximum memory](https://docs.redislabs.com/latest/rs/administering/designing-production/hardware-requirements/) that the Redis server can use",
+        "Keywords": "maximum,memory,limit,maxmemory",
+        "FieldName": "maxmemory",
+        "InputType": "number",
+        "ParamFieldName": "maxmemory",
+        "DefaultValue": "4096",
+        "Placeholder": "4096",
+        "Suffix": "MB",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Config File Settings",
+        "Category": "Redis:database",
+        "Subcategory": "Server:dns:1",
+        "Description": "Config file settings for the Redis server can be set in 'redis.conf'. Consult the 'redis.conf.dist' (and if relevant 'redist-full.conf.dist') for available options for the current Redis version. Use with care",
+        "Keywords": "config,file,settings",
+        "FieldName": "ConfigFileSettings",
+        "InputType": "hidden",
+        "ParamFieldName": "ConfigFileSettings",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Client Command Line Options",
+        "Category": "Redis:database",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies [additional command line arguments](https://redis.io/docs/latest/develop/tools/cli/) (arguments that begin with a - (dash)) for the Redis client run by AMP that are not otherwise set by AMP. Use with care",
+        "Keywords": "custom,client,options,arguments",
+        "FieldName": "CustomClientOptions",
         "InputType": "Textarea",
-        "ParamFieldName": "CustomServerOptions",
+        "ParamFieldName": "CustomClientOptions",
         "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Redis Release Stream",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the Redis release stream from which to install the latest version, unless a specific version is specified under Redis Version. WARNING: SWITCHING BETWEEN RELEASE STREAMS MAY CORRUPT DATA! Update the server after changing this setting",
+        "Keywords": "redis,release,stream,RedisRelease",
+        "FieldName": "RedisRelease",
+        "InputType": "enum",
+        "ParamFieldName": "RedisRelease",
+        "DefaultValue": "8.0",
+        "EnumValues": {
+            "8.2": "8.2",
+            "8.0": "8.0 (default)",
+            "7.4": "7.4",
+            "7.0": "7.0",
+            "6.2": "6.2"
+        }
+    },
+    {
+        "DisplayName": "Redis Version",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the [Redis version](https://github.com/redis/redis/releases) to install. Empty = latest version for the release stream specified under Redis Release Stream. WARNING: SWITCHING BETWEEN RELEASE STREAMS MAY CORRUPT DATA! Update the server after changing this setting",
+        "Keywords": "redis,version,RedisVersion",
+        "FieldName": "RedisVersion",
+        "InputType": "text",
+        "ParamFieldName": "RedisVersion",
+        "DefaultValue": "",
+        "Placeholder": "8.0.4",
         "EnumValues": {}
     }
 ]

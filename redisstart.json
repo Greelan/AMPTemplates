@@ -1,0 +1,19 @@
+[
+    {
+        "UpdateStageName": "Run Redis Server",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd redis && export REDISCLI_AUTH={{AMPPassword}} && redis/bin/redis-cli -s \\\"{{$FullBaseDir}}run/redis.sock\\\" PING >/dev/null 2>&1 && exit 0 || { loadmodule_args=(); for module in \\\"{{$FullBaseDir}}redis/lib/redis/modules/\\\"*.so; do [[ -e \\\"$module\\\" ]] || continue; loadmodule_args+=( --loadmodule \\\"$module\\\" ); done; redis/bin/redis-server redis.conf --save 60 1 --protected-mode yes --dir \\\"{{$FullBaseDir}}data\\\" --bind {{$ApplicationIPBinding}} --port {{$ServerPort}} --unixsocket \\\"{{$FullBaseDir}}run/redis.sock\\\" --pidfile \\\"{{$FullBaseDir}}run/redis.pid\\\" --requirepass {{AMPPassword}} --maxmemory {{maxmemory}}mb \\\"${loadmodule_args[@]}\\\" --daemonize no & }\"",
+        "RunInBackground": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Wait For Server Start",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd redis && export REDISCLI_AUTH={{AMPPassword}} && timeout=60; while ((timeout--)); do redis/bin/redis-cli -s \\\"{{$FullBaseDir}}run/redis.sock\\\" PING >/dev/null 2>&1 && exit 0 || sleep 1; done; ((timeout<0)) && { echo \\\"Redis server failed to start. Aborting\\\"; exit 1; }\"",
+        "SkipOnFailure": false
+    }
+]
