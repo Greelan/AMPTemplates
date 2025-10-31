@@ -71,7 +71,7 @@
         "Description": "Sets whether the server will use an internal sqlite database (using the Database Port set by AMP) or instead connect to an external database server. Set External Database Port if using an external database server, and configure the database type in Arrowgene.Ddon.config.json",
         "Keywords": "database,mode",
         "FieldName": "DBPort",
-        "InputType": "number",
+        "InputType": "enum",
         "ParamFieldName": "$.DatabaseSetting.Port",
         "ExcludeFromImport": true,
         "DefaultValue": "{{$DatabasePort}}",
