@@ -116,6 +116,8 @@
         "Keywords": "external,database,port,custom",
         "FieldName": "CustomDBPort",
         "InputType": "number",
+        "MinValue": "1024",
+        "MaxValue": "65535",
         "ParamFieldName": "CustomDBPort",
         "DefaultValue": "3306",
         "EnumValues": {}
