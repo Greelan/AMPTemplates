@@ -13,19 +13,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Database Port",
-        "Category": "Dragons Dogma Online:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$DatabasePort",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "$.DatabaseSetting.Port",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Download Port",
         "Category": "Dragons Dogma Online:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -103,6 +90,34 @@
         "ParamFieldName": "$.DatabaseSetting.DatabaseFolder",
         "ExcludeFromImport": true,
         "DefaultValue": "{{$FullBaseDir}}Server/Files/Database",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Database Mode",
+        "Category": "Dragons Dogma Online:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets whether the server will use an internal sqlite database (using the Database Port set by AMP) or instead connect to an external database server. Set External Database Port if using an external database server, and configure the database type in Arrowgene.Ddon.config.json",
+        "Keywords": "database,mode",
+        "FieldName": "DBPort",
+        "InputType": "number",
+        "ParamFieldName": "$.DatabaseSetting.Port",
+        "ExcludeFromImport": true,
+        "DefaultValue": "{{$DatabasePort}}",
+        "EnumValues": {
+            "{{$DatabasePort}}": "Internal sqlite database (default)",
+            "{{CustomDBPort}}": "External database server"
+        }
+    },
+    {
+        "DisplayName": "External Database Port",
+        "Category": "Dragons Dogma Online:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the port to connect to an external database server. Only used if Database Mode is set to 'External database server'",
+        "Keywords": "external,database,port,custom",
+        "FieldName": "CustomDBPort",
+        "InputType": "number",
+        "ParamFieldName": "CustomDBPort",
+        "DefaultValue": "3306",
         "EnumValues": {}
     },
     {
