@@ -65,34 +65,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Asset Path",
-        "Category": "Dragons Dogma Online:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "AssetPath",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "$.AssetPath",
-        "ExcludeFromImport": true,
-        "DefaultValue": "{{$FullBaseDir}}Server/Files/Assets",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Database Path",
-        "Category": "Dragons Dogma Online:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "DatabaseFolder",
-        "InputType": "text",
-        "Hidden": true,
-        "ParamFieldName": "$.DatabaseSetting.DatabaseFolder",
-        "ExcludeFromImport": true,
-        "DefaultValue": "{{$FullBaseDir}}Server/Files/Database",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Database Mode",
         "Category": "Dragons Dogma Online:stadia_controller",
         "Subcategory": "Server:dns:1",
