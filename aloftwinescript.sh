@@ -26,7 +26,7 @@ WINE_VERSION=$(/usr/bin/wine --version | grep -oP '\d+' | head -1)
 case "$WINE_VERSION" in
   8) MONO_VERSION="8.1.0" ;;
   9) MONO_VERSION="9.4.0" ;;
-  10) MONO_VERSION="10.1.0" ;;
+  10) MONO_VERSION="10.3.0" ;;
   *)
     echo "Unsupported Wine version: $WINE_VERSION"
     kill $XVFB_PID
@@ -46,7 +46,7 @@ wget -q -O "$WINEPREFIX/mono.msi" "$MONO_URL"
 PACKAGES="vcrun2022 wmp11 sound=disabled"
 echo "" > winescript_log.txt 2>&1
 for PACKAGE in $PACKAGES; do
-  if [[ "$PACKAGE" == "vcrun2022" && "$WINE_VERSION" == "10" ]]; then continue; fi
+  #if [[ "$PACKAGE" == "vcrun2022" && "$WINE_VERSION" == "10" ]]; then continue; fi
   ./winetricks -q $PACKAGE >> winescript_log.txt 2>&1
 done
 rm -rf ~/.cache/winetricks
