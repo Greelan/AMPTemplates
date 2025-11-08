@@ -13,17 +13,32 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Islands Number For New World",
+        "DisplayName": "Islands Count For New World",
         "Category": "Aloft:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the number of islands to create for a new world",
-        "Keywords": "islands,number,map,create,world",
-        "FieldName": "IslandNumber",
-        "InputType": "number",
-        "ParamFieldName": "IslandNumber",
-        "DefaultValue": "500",
-        "Placeholder": "500",
-        "EnumValues": {}
+        "Description": "Sets the islands count for a new world",
+        "Keywords": "islands,count,map,create,world,islandscount",
+        "FieldName": "islandscount",
+        "InputType": "enum",
+        "ParamFieldName": "islandscount",
+        "DefaultValue": "normal",
+        "EnumValues": {
+            "normal": "Normal"
+        }
+    },
+    {
+        "DisplayName": "Corruption Count For New World",
+        "Category": "Aloft:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the corruption count for a new world",
+        "Keywords": "corruption,count,map,create,world,corruptioncount",
+        "FieldName": "corruptioncount",
+        "InputType": "enum",
+        "ParamFieldName": "corruptioncount",
+        "DefaultValue": "normal",
+        "EnumValues": {
+            "normal": "Normal"
+        }
     },
     {
         "DisplayName": "Enable Creative Mode For New World",
