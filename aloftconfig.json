@@ -29,10 +29,10 @@
         }
     },
     {
-        "DisplayName": "Corruption Count For New World",
+        "DisplayName": "Corruption Level For New World",
         "Category": "Aloft:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the corruption count for a new world",
+        "Description": "Sets the corruption level for a new world",
         "Keywords": "corruption,count,map,create,world,corruptioncount",
         "FieldName": "corruptioncount",
         "InputType": "enum",
