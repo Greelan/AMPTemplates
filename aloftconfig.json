@@ -13,14 +13,14 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Islands Count For New World",
+        "DisplayName": "Island Count For New World",
         "Category": "Aloft:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the islands count for a new world",
-        "Keywords": "islands,count,map,create,world,islandscount",
-        "FieldName": "islandscount",
+        "Description": "Sets the island count for a new world",
+        "Keywords": "island,count,map,create,world,islandcount",
+        "FieldName": "islandcount",
         "InputType": "enum",
-        "ParamFieldName": "islandscount",
+        "ParamFieldName": "islandcount",
         "DefaultValue": "normal",
         "EnumValues": {
             "normal": "Normal"
