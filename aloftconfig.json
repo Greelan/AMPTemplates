@@ -24,6 +24,8 @@
         "DefaultValue": "normal",
         "EnumValues": {
             "normal": "Normal"
+            "big": "Big",
+            "huge": "Huge"
         }
     },
     {
@@ -37,7 +39,11 @@
         "ParamFieldName": "corruptioncount",
         "DefaultValue": "normal",
         "EnumValues": {
-            "normal": "Normal"
+            "none": "None",
+            "little": "Little",
+            "normal": "Normal",
+            "lots": "Lots",
+            "shrooms": "Shrooms"
         }
     },
     {
