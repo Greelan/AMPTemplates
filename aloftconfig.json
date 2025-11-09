@@ -23,7 +23,7 @@
         "ParamFieldName": "islandcount",
         "DefaultValue": "normal",
         "EnumValues": {
-            "normal": "Normal"
+            "normal": "Normal",
             "big": "Big",
             "huge": "Huge"
         }
