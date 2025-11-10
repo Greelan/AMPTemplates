@@ -22,7 +22,8 @@
         "UpdateSourceData": "https://github.com/Greelan/AMPTemplates/raw/dev/altvpkgrc.json",
         "UpdateSourceArgs": ".altvpkgrc.json",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "alt:V Installation",
@@ -47,6 +48,7 @@
         "UpdateSourceData": "https://github.com/Greelan/AMPTemplates/raw/dev/altvserver.toml",
         "UpdateSourceArgs": "AMP_server.toml",
         "UpdateSourceTarget": "{{$FullRootDir}}",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     }
 ]
