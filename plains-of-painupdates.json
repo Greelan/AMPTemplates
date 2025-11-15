@@ -4,12 +4,14 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "2227360",
-        "UpdateSourceArgs": "2218970"
+        "UpdateSourceArgs": "2218970",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Create Data Directory",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}PlainsOfPain"
+        "UpdateSourceArgs": "{{$FullBaseDir}}PlainsOfPain",
+        "SkipOnFailure": false
     }
 ]

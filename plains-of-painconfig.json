@@ -1,16 +1,5 @@
 [
     {
-        "DisplayName": "Linux World Generation",
-        "Category": "Plains of Pain:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "The Linux server cannot currently generate the world files properly, and so the files need to be generated in the Windows client and transferred to the server. See the Documentation PDF installed with the server. Add the files to the PlainsOfPain directory in the instance datastore. AMP sets the required server command line flag",
-        "Keywords": "linux,world,generation",
-        "FieldName": "linuxworldgen",
-        "InputType": "hidden",
-        "ParamFieldName": "linuxworldgen",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Server Name",
         "Category": "Plains of Pain:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -60,13 +49,14 @@
         "FieldName": "worldSize",
         "InputType": "enum",
         "ParamFieldName": "worldSize",
-        "DefaultValue": "5",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "11",
         "EnumValues": {
-            "3": "Small",
-            "5": "Medium (default)",
-            "7": "Large",
-            "9": "Extra large",
-            "11": "Extra extra large"
+            "11": "Small (default)",
+            "21": "Medium",
+            "31": "Large",
+            "41": "Extra large",
+            "51": "Extra extra large"
         }
     },
     {
@@ -81,7 +71,7 @@
         "IncludeInCommandLine": true,
         "DefaultValue": "0",
         "EnumValues": {
-            "0": "Wasteland v0.4 (default)",
+            "0": "Wasteland v0.6 (default)",
             "1": "Dunes v0.4",
             "2": "Dunes v0.5"
         }
