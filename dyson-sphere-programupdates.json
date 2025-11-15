@@ -5,7 +5,8 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "1366540",
         "UpdateSourceArgs": "1366540",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Steam Emu Download",
@@ -13,13 +14,15 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://gitlab.com/Mr_Goldberg/goldberg_emulator/-/jobs/2987292049/artifacts/raw/steam_api64.dll",
         "UpdateSourceTarget": "{{$FullBaseDir}}DSPGAME_Data/Plugins",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "steam_settings Directory Creation",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}DSPGAME_Data/Plugins/steam_settings"
+        "UpdateSourceArgs": "{{$FullBaseDir}}DSPGAME_Data/Plugins/steam_settings",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "disable_networking.txt File Creation",
@@ -27,7 +30,8 @@
         "UpdateSource": "CreateFile",
         "UpdateSourceData": "",
         "UpdateSourceArgs": "{{$FullBaseDir}}DSPGAME_Data/Plugins/steam_settings/disable_networking.txt",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "steam_appid.txt File Creation",
@@ -35,7 +39,8 @@
         "UpdateSource": "CreateFile",
         "UpdateSourceData": "1366540",
         "UpdateSourceArgs": "{{$FullBaseDir}}DSPGAME_Data/Plugins/steam_appid.txt",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "steam_appid.txt File Creation",
@@ -43,7 +48,8 @@
         "UpdateSource": "CreateFile",
         "UpdateSourceData": "1366540",
         "UpdateSourceArgs": "{{$FullBaseDir}}steam_appid.txt",
-        "OverwriteExistingFiles": true
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "BepInEx Download",
@@ -53,7 +59,8 @@
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "BepInEx Copy",
