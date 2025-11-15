@@ -72,8 +72,10 @@
         "DefaultValue": "0",
         "EnumValues": {
             "0": "Wasteland v0.6 (default)",
+            "256": "Wasteland latest",
             "1": "Dunes v0.4",
             "2": "Dunes v0.5"
+           
         }
     },
     {
