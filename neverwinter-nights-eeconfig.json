@@ -1,0 +1,295 @@
+[
+    {
+        "DisplayName": "Server Name",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the server name as shown in the server browser",
+        "Keywords": "server,name,servername",
+        "FieldName": "servername",
+        "InputType": "text",
+        "ParamFieldName": "servername",
+        "IncludeInCommandLine": true,
+        "Required": true,
+        "DefaultValue": "AMP Powered NWNEE Server",
+        "Placeholder": "AMP Powered NWNEE Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Module Name",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the module to load on start. Official modules are stored in 'data' and custom modules need to be stored in 'user'. Module name must match the file name exactly without the extension",
+        "Keywords": "module,mod",
+        "FieldName": "module",
+        "InputType": "text",
+        "ParamFieldName": "module",
+        "IncludeInCommandLine": true,
+        "Required": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Make Server Public",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will be listed as public",
+        "Keywords": "public,server,publicserver",
+        "FieldName": "publicserver",
+        "InputType": "checkbox",
+        "ParamFieldName": "publicserver",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players that can connect to the server at one time",
+        "Keywords": "max,clients,players,maxclients",
+        "FieldName": "maxclients",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "maxclients",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "96",
+        "Placeholder": "96",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Minimum Player Level",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the minimum character level required to access the server",
+        "Keywords": "min,level,minlevel",
+        "FieldName": "maxlevel",
+        "InputType": "number",
+        "ParamFieldName": "maxlevel",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "1",
+        "Placeholder": "1",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Maximum Player Level",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum character level allowed to access the server",
+        "Keywords": "max,level,maxlevel",
+        "FieldName": "maxlevel",
+        "InputType": "number",
+        "ParamFieldName": "maxlevel",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "40",
+        "Placeholder": "40",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable Pause By Players",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the game can be paused by players. Otherwise, it can only be paused by a DM",
+        "Keywords": "pause,play,pauseandplay",
+        "FieldName": "pauseandplay",
+        "InputType": "checkbox",
+        "ParamFieldName": "pauseandplay",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "PvP Mode",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the PvP mode",
+        "Keywords": "pvp,player,versus,player",
+        "FieldName": "pvp",
+        "InputType": "enum",
+        "ParamFieldName": "pvp",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "2",
+        "EnumValues": {
+            "0": "No PvP",
+            "1": "Party",
+            "2": "Full (default)"
+        }
+    },
+    {
+        "DisplayName": "Server Vault Mode",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the server vault mode",
+        "Keywords": "vault,servervault",
+        "FieldName": "servervault",
+        "InputType": "enum",
+        "ParamFieldName": "servervault",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "0": "Local characters only (default)",
+            "1": "Server characters only"
+        }
+    },
+    {
+        "DisplayName": "Enable Legal Characters Enforcement",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, legal characters will be enforced",
+        "Keywords": "elc,enforce,legal,characters",
+        "FieldName": "ELC",
+        "InputType": "checkbox",
+        "ParamFieldName": "elc",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Enable Item Level Restrictions",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, item level restrictions will be enforced",
+        "Keywords": "ilr,enforce,item,level,restrictions",
+        "FieldName": "ilr",
+        "InputType": "checkbox",
+        "ParamFieldName": "ilr",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "1",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Game Type",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Set which game room to post the game to. This only applies if the server is public",
+        "Keywords": "gametype,type",
+        "FieldName": "GameType",
+        "InputType": "number",
+        "ParamFieldName": "gametype",
+        "IncludeInCommandLine": true,
+        "Required": true,
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Allow One Party Only",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will be restricted to one party, and mutliple parties will not be allowed",
+        "Keywords": "oneparty,party",
+        "FieldName": "oneparty",
+        "InputType": "checkbox",
+        "ParamFieldName": "oneparty",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    },
+    {
+        "DisplayName": "Difficulty Level",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the server difficulty Level",
+        "Keywords": "difficulty",
+        "FieldName": "difficulty",
+        "InputType": "enum",
+        "ParamFieldName": "difficulty",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "3",
+        "EnumValues": {
+            "1": "Easy",
+            "2": "Normal",
+            "3": "Hardcore (default)",
+            "4": "Very difficult"
+        }
+    },
+    {
+        "DisplayName": "Autosave Interval",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the autosave interval",
+        "Keywords": "autosave,interval,autosaveinterval",
+        "FieldName": "autosaveinterval",
+        "InputType": "number",
+        "ParamFieldName": "autosaveinterval",
+        "IncludeInCommandLine": true,
+        "Required": true,
+        "DefaultValue": "0",
+        "Placeholder": "0",
+        "Suffix": "minutes",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Password",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password required for players to join the server",
+        "Keywords": "player,password,playerpassword",
+        "FieldName": "playerpassword",
+        "InputType": "password",
+        "ParamFieldName": "playerpassword",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "DM Password",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password required to join the server as a DM",
+        "Keywords": "dm,password,dmpassword",
+        "FieldName": "dmpassword",
+        "InputType": "password",
+        "ParamFieldName": "dmpassword",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the admin password",
+        "Keywords": "admin,password,adminpassword",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "adminpassword",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Reload When Empty",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the module will be reloaded when the server is empty",
+        "Keywords": "reload,empty,reloadwhenempty",
+        "FieldName": "ReloadWhenEmpty",
+        "InputType": "checkbox",
+        "ParamFieldName": "reloadwhenempty",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "0",
+        "EnumValues": {
+            "False": "0",
+            "True": "1"
+        }
+    }
+]

@@ -1,0 +1,29 @@
+[
+    {
+        "UpdateStageName": "User Directories Creation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}user/cache",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd nwnee/server && ReleaseVersion=$(wget -qO- https://raw.githubusercontent.com/urothis/nwserver/refs/heads/main/version.json | jq -r .stable) && ReleaseVersion=\\\"${ReleaseVersion%.*}-${ReleaseVersion##*.}\\\" && wget -qO nwnee.zip https://nwn.beamdog.net/downloads/nwnee-dedicated-$ReleaseVersion.zip && unzip -uq nwnee.zip -d . >/dev/null 2>&1 && rm -f nwnee.zip >/dev/null 2>&1 && chmod +x bin/linux-x86/nwserver-linux\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "NWNX Binaries Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "GithubRelease",
+        "UpdateSourceArgs": "nwnxee/unified",
+        "UpdateSourceData": "NWNX-EE.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}bin/linux-x86",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    }
+]
