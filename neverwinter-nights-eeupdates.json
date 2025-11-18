@@ -1,6 +1,26 @@
 [
     {
-        "UpdateStageName": "Modules Directories Creation",
+        "UpdateStageName": "Client Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "704450",
+        "UpdateSourceArgs": "704450",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Client Data Copy",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"\\cp -rf ./nwnee/704450/data/. ./nwnee/server/data >/dev/null 2>&1\"",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "User Modules Directories Creation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}user/modules",
@@ -11,7 +31,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd nwnee/server && ReleaseVersion=$(wget -qO- https://raw.githubusercontent.com/urothis/nwserver/refs/heads/main/version.json | jq -r .stable) && ReleaseVersion=\\\"${ReleaseVersion%.*}-${ReleaseVersion##*.}\\\" && wget -qO nwnee.zip https://nwn.beamdog.net/downloads/nwnee-dedicated-$ReleaseVersion.zip && unzip -uq nwnee.zip -d . >/dev/null 2>&1 && rm -f nwnee.zip >/dev/null 2>&1 && chmod +x bin/linux-x86/nwserver-linux\"",
+        "UpdateSourceArgs": "-c \"cd nwnee/server && ReleaseVersion=\\\"{{ReleaseVersion}}\\\"; [[ -z \\\"$ReleaseVersion\\\" ]] && ReleaseVersion=$(wget -qO- https://nwn.beamdog.net/downloads/ | sed -n \\\"s/^.*nwnee-dedicated-\\([0-9.-]*\\)\\.zip.*/\\1/p\\\" | sort -V | tail -1); if [[ ! \\\"$ReleaseVersion\\\" =~ ^[0-9]+((-|\\.)[0-9]+)?((-|\\.)[0-9]+)?$ ]]; then echo \\\"Invalid server version format specified\\\" && exit 1; else [[ -f nwnee.zip ]] && rm -f nwnee.zip >/dev/null 2>&1; wget -qO nwnee.zip https://nwn.beamdog.net/downloads/nwnee-dedicated-$ReleaseVersion.zip || { echo \\\"Download failed from the Beamdog website. Aborting\\\"; exit 1; }; unzip -uq nwnee.zip -d . >/dev/null 2>&1 && rm -f nwnee.zip >/dev/null 2>&1 && chmod +x bin/linux-x86/nwserver-linux && echo \\\"Server v$ReleaseVersion downloaded\\\"\"",
         "SkipOnFailure": false
     },
     {
