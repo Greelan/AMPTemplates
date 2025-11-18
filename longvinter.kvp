@@ -26,7 +26,7 @@ App.BaseDirectory=./longvinter/1639880/
 App.ExecutableWin= 
 App.ExecutableLinux=.proton/proton
 App.WorkingDir=1639880
-App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}Longvinter\Binaries\Win64\LongvinterServer-Win64-Shipping.exe" Longvinter -stdout -FullStdOutLogOutput
+App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}Longvinter/Binaries/Win64/LongvinterServer-Win64-Shipping.exe" Longvinter -stdout -FullStdOutLogOutput
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -Port={{$GamePort}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
@@ -64,7 +64,7 @@ App.SteamUpdateAnonymousLogin=True
 App.SteamForceLoginPrompt=False
 App.RapidStartup=False
 App.MonitorChildProcess=False
-App.MonitorChildProcessName=^{{$WineBaseDir}}Binaries\\Win64\\LongvinterServer-Win64-Shipping\.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^{{$WineBaseDir}}Longvinter\\Binaries\\Win64\\LongvinterServer-Win64-Shipping\.exe.*-Port={{$GamePort}}.*$
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
 App.ApplicationReadyMode=RegexMatch
