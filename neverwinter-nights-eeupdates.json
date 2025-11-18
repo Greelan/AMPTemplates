@@ -46,17 +46,17 @@
     },
     {
         "UpdateStageName": "Start Server",
-        "UpdateSourcePlatform": "All",
+        "UpdateSourcePlatform": "Linux",
         "UpdateSource": "StartApplication"
     },
     {
         "UpdateStageName": "Wait For Server Start",
-        "UpdateSourcePlatform": "All",
+        "UpdateSourcePlatform": "Linux",
         "UpdateSource": "WaitForStartupComplete"
     },
     {
         "UpdateStageName": "Stop Server",
-        "UpdateSourcePlatform": "All",
+        "UpdateSourcePlatform": "Linux",
         "UpdateSource": "ShutdownApplication"
     }
 ]
