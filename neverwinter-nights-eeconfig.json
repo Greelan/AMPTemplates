@@ -284,7 +284,7 @@
         "DisplayName": "Server Version",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
-        "Description": "Sets the [server release version](https://nwn.beamdog.net/downloads/) to install. Must be the one-, two-, or three-part version number, as applicable. Empty = latest stable",
+        "Description": "Sets the [server release version](https://nwn.beamdog.net/downloads/) to install. Must be the one-, two-, or three-part version number, as applicable. Empty = latest",
         "Keywords": "server,version,release",
         "FieldName": "ReleaseVersion",
         "InputType": "text",
