@@ -25,7 +25,8 @@
         "ParamFieldName": "module",
         "IncludeInCommandLine": true,
         "Required": true,
-        "DefaultValue": "",
+        "DefaultValue": "Demo",
+        "Placeholder": "Demo",
         "EnumValues": {}
     },
     {
