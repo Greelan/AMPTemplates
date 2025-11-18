@@ -1,5 +1,5 @@
-Meta.DisplayName=Longvinter (Linux Proton)
-Meta.Description=Longvinter Dedicated Server (for Linux using Proton)
+Meta.DisplayName=Longvinter (Linux Wine)
+Meta.Description=Longvinter Dedicated Server (for Linux using Wine)
 Meta.OS=Linux
 Meta.Arch=x86_64
 Meta.Author=Greelan
@@ -10,7 +10,7 @@ Meta.ConfigManifest=longvinterconfig.json
 Meta.MetaConfigManifest=longvintermetaconfig.json
 Meta.ConfigRoot=longvinter.kvp
 Meta.MinAMPVersion=2.4.0.6
-Meta.SpecificDockerImage=cubecoders/ampbase:debian
+Meta.SpecificDockerImage=cubecoders/ampbase:wine-stable
 Meta.DockerRequired=False
 Meta.ContainerPolicy=Supported
 Meta.ContainerPolicyReason=
@@ -24,14 +24,14 @@ App.DisplayName=Longvinter
 App.RootDir=./longvinter/
 App.BaseDirectory=./longvinter/1639880/
 App.ExecutableWin= 
-App.ExecutableLinux=.proton/proton
+App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=1639880
-App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}Longvinter/Binaries/Win64/LongvinterServer-Win64-Shipping.exe" Longvinter -stdout -FullStdOutLogOutput
+App.LinuxCommandLineArgs=Longvinter/Binaries/Win64/LongvinterServer-Win64-Shipping.exe Longvinter -stdout -FullStdOutLogOutput
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -Port={{$GamePort}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:%LD_LIBRARY_PATH%","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp","SteamAppId":"1635450"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:%LD_LIBRARY_PATH%","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","XDG_RUNTIME_DIR":"/tmp","SteamAppId":"1635450"}
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
