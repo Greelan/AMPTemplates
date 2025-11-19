@@ -290,7 +290,7 @@
         "InputType": "text",
         "ParamFieldName": "ReleaseVersion",
         "DefaultValue": "",
-        "Placeholder": "8193.37-17 | 8193.37 | 8193",
+        "Placeholder": "8193.37-17 | 8193.34 | 8193",
         "EnumValues": {}
     },
     {
