@@ -301,7 +301,7 @@
         "DisplayName": "NWSync URL",
         "Category": "Neverwinter Nights:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the NWSync URL the server should advertise to clients",
+        "Description": "Sets the [NWSync URL](https://nwn.wiki/display/NWN1/NWSync) the server should advertise to clients",
         "Keywords": "nwsync,url,hakpacks,sync,nwsyncurl",
         "FieldName": "nwsyncurl",
         "InputType": "text",
