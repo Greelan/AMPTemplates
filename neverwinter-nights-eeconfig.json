@@ -30,6 +30,23 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Load Saved Game Slot",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Loads and runs the specified saved game slot number on server startup",
+        "Keywords": "load,save,slot,savedgame",
+        "FieldName": "load",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "999",
+        "ParamFieldName": "load",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "1",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Make Server Public",
         "Category": "Neverwinter Nights:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -278,6 +295,51 @@
         "EnumValues": {
             "False": "0",
             "True": "1"
+        }
+    },
+    {
+        "DisplayName": "NWSync URL",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the NWSync URL the server should advertise to clients",
+        "Keywords": "nwsync,url,hakpacks,sync,nwsyncurl",
+        "FieldName": "nwsyncurl",
+        "InputType": "text",
+        "ParamFieldName": "nwsyncurl",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "https://example.com/nwsync",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "NWSync Manifest Hash",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the NWSync Manifest Hash the server should advertise. Will attempt to fetch /latest from the URL if not given",
+        "Keywords": "nwsync,hash,manifest,nwsynchash",
+        "FieldName": "nwsynchash",
+        "InputType": "text",
+        "ParamFieldName": "nwsynchash",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "NWSync Publish Haks",
+        "Category": "Neverwinter Nights:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will advertise the hak list despite a manifest being present. By default, a present NWSync manifest replaces the hak advertisement",
+        "Keywords": "nwsync,publish,haks,hakpacks,nwsyncpublishhaks",
+        "FieldName": "nwsyncpublishhaks",
+        "InputType": "checkbox",
+        "ParamFieldName": "nwsyncpublishhaks",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "-nwsyncpublishhaks "
         }
     },
     {
