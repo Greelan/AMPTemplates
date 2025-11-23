@@ -8,7 +8,7 @@
         "FieldName": "$ServerPort",
         "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "server_port",
+        "ParamFieldName": "$.server_port",
         "EnumValues": {}
     },
     {
@@ -19,7 +19,7 @@
         "Keywords": "server,name,server_name",
         "FieldName": "server_name",
         "InputType": "text",
-        "ParamFieldName": "server_name",
+        "ParamFieldName": "$.server_name",
         "DefaultValue": "AMP Powered Shatterline Server",
         "Placeholder": "AMP Powered Shatterline Server",
         "EnumValues": {}
@@ -32,7 +32,7 @@
         "Keywords": "server,region,filter,matchmaking,server_region",
         "FieldName": "server_region",
         "InputType": "enum",
-        "ParamFieldName": "server_region",
+        "ParamFieldName": "$.server_region",
         "DefaultValue": "EU",
         "EnumValues": {
             "EU": "Europe (default)",
@@ -49,7 +49,7 @@
         "Keywords": "server,password,protection",
         "FieldName": "server_password",
         "InputType": "password",
-        "ParamFieldName": "server_password",
+        "ParamFieldName": "$.server_password",
         "DefaultValue": "",
         "EnumValues": {}
     },
@@ -96,7 +96,7 @@
         "Keywords": "public,ip,server_host",
         "FieldName": "server_host",
         "InputType": "enum",
-        "ParamFieldName": "server_host",
+        "ParamFieldName": "$.server_host",
         "DefaultValue": "",
         "EnumValues": {
             "": "Server automatically detects (default)",
@@ -124,7 +124,7 @@
         "Keywords": "rotate,missions,rotation,rotate_missions",
         "FieldName": "rotate_missions",
         "InputType": "checkbox",
-        "ParamFieldName": "rotate_missions",
+        "ParamFieldName": "$.rotate_missions",
         "DefaultValue": "true",
         "EnumValues": {
             "True": "true",
@@ -139,7 +139,7 @@
         "Keywords": "randomize,missions,random,selection,randomize_missions",
         "FieldName": "randomize_missions",
         "InputType": "checkbox",
-        "ParamFieldName": "randomize_missions",
+        "ParamFieldName": "$.randomize_missions",
         "DefaultValue": "true",
         "EnumValues": {
             "True": "true",
