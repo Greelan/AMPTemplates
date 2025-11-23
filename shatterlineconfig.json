@@ -118,6 +118,20 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Player Limit",
+        "Category": "Shatterline:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players at one time to display in the AMP status tab. This is visual only - the actual maximum is determined by the mission being played and the corresponding server configuration file",
+        "Keywords": "maximum,players,clients,limit,max_players_count",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "ParamFieldName": "max_players_count",
+        "DefaultValue": "10",
+        "Placeholder": "10",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Rotate Missions",
         "Category": "Shatterline:stadia_controller",
         "Subcategory": "Server:dns:1",
