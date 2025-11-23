@@ -36,8 +36,7 @@ App.ExecutableLinux=.proton/proton
 App.WorkingDir=4167970
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}Bin.Release.Dedicated\Shatterline_Server.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} +sv_port {{$ServerPort}} --
-server_config {{server_config}} {{community}}{{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} +sv_port {{$ServerPort}} --server_config {{server_config}} {{community}}{{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"2087030","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
