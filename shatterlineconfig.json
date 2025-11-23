@@ -57,7 +57,7 @@
         "DisplayName": "Server Configuration File",
         "Category": "Shatterline:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the server configuration file to use. Different configs provide different game modes and missions, which can be configured in the relevant file in the 'Bin.Release.Dedicated' directory, including player and bot limits",
+        "Description": "Sets the server configuration file to use. Different configs provide different game modes and missions, which can be configured in the relevant file in the 'Bin.Release.Dedicated' directory, including player and bot limits per mission",
         "Keywords": "server,config,file,game,modes,server_config",
         "FieldName": "server_config",
         "InputType": "enum",
