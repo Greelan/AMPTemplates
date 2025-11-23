@@ -263,7 +263,7 @@
         "DisplayName": "Dotnet Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Sets the [.NET Runtime 9.0 version](https://dotnet.microsoft.com/en-us/download/dotnet/9.0) to install. Empty = latest. Update the server after changing this setting",
+        "Description": "Sets the [.NET Runtime 10.0 version](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) to install. Empty = latest. Update the server after changing this setting",
         "Keywords": "dotnet,version",
         "FieldName": "DotnetVersion",
         "InputType": "text",
@@ -271,7 +271,7 @@
         "ParamFieldName": "DotnetVersion",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "Placeholder": "9.0.0",
+        "Placeholder": "10.0.0",
         "EnumValues": {}
     }
 ]
