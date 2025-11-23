@@ -1,0 +1,8 @@
+[
+    {
+        "ConfigFile": "Bin.Release.Dedicated/{{server_config}}",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "json"
+    }
+]
