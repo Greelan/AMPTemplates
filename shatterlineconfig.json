@@ -119,7 +119,7 @@
     {
         "DisplayName": "Rotate Missions",
         "Category": "Shatterline:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
+        "Subcategory": "Server:dns:1",
         "Description": "If set, mission rotation will be enabled on the server",
         "Keywords": "rotate,missions,rotation,rotate_missions",
         "FieldName": "rotate_missions",
@@ -134,7 +134,7 @@
     {
         "DisplayName": "Randomize Missions",
         "Category": "Shatterline:stadia_controller",
-        "Subcategory": "Gameplay:joystick:2",
+        "Subcategory": "Server:dns:1",
         "Description": "If set, random mission selection will occur when rotating missions",
         "Keywords": "randomize,missions,random,selection,randomize_missions",
         "FieldName": "randomize_missions",
