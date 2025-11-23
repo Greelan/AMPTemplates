@@ -97,7 +97,7 @@
         "FieldName": "server_host",
         "InputType": "enum",
         "ParamFieldName": "server_host",
-        "DefaultValue": "{{$ExternalIP}}",
+        "DefaultValue": "",
         "EnumValues": {
             "": "Server automatically detects (default)",
             "{{$ExternalIP}}": "AMP automatically detects",
