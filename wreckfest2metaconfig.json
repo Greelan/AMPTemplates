@@ -4,15 +4,15 @@
         "ConfigType": "kvp",
         "AutoMap": true,
         "Importable": true,
-        "ConfigFormat": "      \"{0}\": \"{1}\",",
-        "ConfigFormatRegex": "^\\s{6}\"(?<key>.+?)\":\\s*\"(?<value>.*?)\",$"
+        "ConfigFormat": "            \"{0}\": \"{1}\",",
+        "ConfigFormatRegex": "^\\s{12}\"(?<key>.+?)\":\\s*\"(?<value>.*?)\",$"
     },
     {
         "ConfigFile": "server_data/server_config.scnf",
         "ConfigType": "kvp",
         "AutoMap": true,
         "Importable": true,
-        "ConfigFormat": "      \"{0}\": {1}",
-        "ConfigFormatRegex": "^\\s{6}\"(?<key>.+?)\":\\s*(?<value>[^\",]*?)$"
+        "ConfigFormat": "            \"{0}\": {1}",
+        "ConfigFormatRegex": "^\\s{12}\"(?<key>.+?)\":\\s*(?<value>[^\",]*?)$"
     }
 ]
