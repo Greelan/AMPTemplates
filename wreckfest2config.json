@@ -39,7 +39,7 @@
         "DisplayName": "Server Password",
         "Category": "Wreckfest 2:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the password required to join the server. Default = no password",
+        "Description": "Sets the password required to join the server. Default is no password",
         "Keywords": "server,password",
         "FieldName": "net_server_config.password",
         "InputType": "password",
