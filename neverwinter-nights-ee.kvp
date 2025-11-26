@@ -1,6 +1,6 @@
 Meta.DisplayName=Neverwinter Nights: Enhanced Edition
 Meta.Description=Neverwinter Nights: Enhanced Edition Dedicated Server
-Meta.OS=Linux
+Meta.OS=Windows, Linux
 Meta.AarchSupport=NotSupported
 Meta.Arch=x86_64
 Meta.Author=Greelan
