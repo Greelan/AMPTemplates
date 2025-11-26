@@ -1,7 +1,7 @@
 [
     {
         "UpdateStageName": "Client Download",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "704450",
         "UpdateSourceArgs": "704450",
@@ -20,8 +20,18 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Client Data Copy",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Copy-Item -Path './nwnee/704450/data/*' -Destination './nwnee/server/data' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceConditionSetting": "DisableClientDownload",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "User Modules Directories Creation",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}user/modules",
         "SkipOnFailure": false
@@ -35,8 +45,16 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Server Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $ReleaseVersion='{{ReleaseVersion}}'; Set-Location -Path 'nwnee/server'; if ([string]::IsNullOrWhiteSpace($ReleaseVersion)) { $html = (Invoke-WebRequest -UseBasicParsing 'https://nwn.beamdog.net/downloads/').Content; $versions = [regex]::Matches($html,'nwnee-dedicated-([0-9.\\-]+)\\.zip') | ForEach-Object { $_.Groups[1].Value } | Select-Object -Unique; $ReleaseVersion = $versions | Sort-Object { $parts = ($_ -split '[^0-9]+' | Where-Object { $_ }); $p0 = if($parts.Count -gt 0){[int]$parts[0]}else{0}; $p1 = if($parts.Count -gt 1){[int]$parts[1]}else{0}; $p2 = if($parts.Count -gt 2){[int]$parts[2]}else{0}; $p3 = if($parts.Count -gt 3){[int]$parts[3]}else{0}; '{0:D5}.{1:D5}.{2:D5}.{3:D5}' -f $p0,$p1,$p2,$p3 } | Select-Object -Last 1; }; if ($ReleaseVersion -notmatch '^\\d+([.-]\\d+){0,2}$') { Write-Output 'Invalid server version format specified'; exit 1; }; if (Test-Path 'nwnee.zip') { Remove-Item 'nwnee.zip' -Force -ErrorAction SilentlyContinue *> $null }; try { Invoke-WebRequest -UseBasicParsing \\\"https://nwn.beamdog.net/downloads/nwnee-dedicated-$ReleaseVersion.zip\\\" -OutFile 'nwnee.zip' -ErrorAction Stop } catch { Write-Output 'Download failed from the Beamdog website. Aborting'; exit 1; }; Expand-Archive -Path 'nwnee.zip' -DestinationPath '.' -Force *> $null; if (Test-Path 'nwnee.zip') { Remove-Item 'nwnee.zip' -Force -ErrorAction SilentlyContinue *> $null }; Write-Output \\\"Server v$ReleaseVersion downloaded\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Demo Mod Download",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/urothis/nwserver/refs/heads/main/DockerDemo.mod",
         "UpdateSourceTarget": "{{$FullBaseDir}}user/modules",
@@ -46,17 +64,17 @@
     },
     {
         "UpdateStageName": "Start Server",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "StartApplication"
     },
     {
         "UpdateStageName": "Wait For Server Start",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "WaitForStartupComplete"
     },
     {
         "UpdateStageName": "Stop Server",
-        "UpdateSourcePlatform": "Linux",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "ShutdownApplication"
     }
 ]
