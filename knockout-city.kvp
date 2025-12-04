@@ -32,8 +32,8 @@ App.BaseDirectory=./knockout-city/2915930/
 App.SteamWorkshopDownloadLocation=
 App.ExecutableWin=2915930\KnockoutCityServer\KnockoutCityServer.exe
 App.ExecutableLinux=/usr/bin/wine
-App.WorkingDir=2915930
-App.LinuxCommandLineArgs=KnockoutCityServer/KnockoutCityServer.exe
+App.WorkingDir=2915930/KnockoutCityServer
+App.LinuxCommandLineArgs=KnockoutCityServer.exe
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -backend_port={{$ServerPort}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
