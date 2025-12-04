@@ -1,6 +1,6 @@
 Meta.DisplayName=Knockout City: Private Server Edition
 Meta.Description=Knockout City Private Server Edition Dedicated Server
-Meta.OS=Windows, Linux
+Meta.OS=Windows
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
@@ -35,7 +35,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=2915930/KnockoutCityServer
 App.LinuxCommandLineArgs=KnockoutCityServer.exe
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -backend_port={{$ServerPort}} {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} -backend_port={{$ServerPort1}} -server_min_port={{$ServerPort1}} -server_max_port={{$ServerPort3}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"2915930","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","XDG_RUNTIME_DIR":"/tmp"}
@@ -55,10 +55,10 @@ App.SupportsIPv6=False
 App.ApplicationIPBinding=0.0.0.0
 App.Ports=@IncludeJson[knockout-cityports.json]
 App.AdminPortRef=0
-App.PrimaryApplicationPortRef=ServerPort
+App.PrimaryApplicationPortRef=ServerPort1
 App.UniversalSleepApplicationUDPPortRef=0
 App.UniversalSleepSteamQueryPortRef=0
-App.MaxUsers=10
+App.MaxUsers=8
 App.UseRandomAdminPassword=True
 App.PersistRandomPassword=True
 App.RemoteAdminPassword=
@@ -85,15 +85,15 @@ App.RapidStartup=False
 App.SmartExcludeExemptions=["*.cfg","*.conf","*.config","*.ini","*.json","*.xml","*.properties","*.kvp","*.yml","*.yaml","*.toml","*.lua"]
 App.SmartExcludeSupported=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^{{$WineBaseDir}}KnockoutCityServer\\KnockoutCityServer\.exe.*-backend_port={{$ServerPort}}#.*$
+App.MonitorChildProcessName=^{{$WineBaseDir}}KnockoutCityServer\\KnockoutCityServer\.exe.*-backend_port={{$ServerPort1}}.*$
 App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
-App.ApplicationReadyMode=Immediate
+App.ApplicationReadyMode=RegexMatch
 Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
-Console.AppReadyRegex=^$
+Console.AppReadyRegex=^\[[\d-]+ [\d:\.]+\] .*: note: private_server: Ready to brawl\.$
 Console.UserJoinRegex=^$
 Console.UserLeaveRegex=^$
 Console.UserChatRegex=^$
