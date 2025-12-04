@@ -24,8 +24,8 @@
         "ParamFieldName": "backend_tunable_user_connections_max_per_backend",
         "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
-        "DefaultValue": "8",
-        "Placeholder": "8",
+        "DefaultValue": "10",
+        "Placeholder": "10",
         "Suffix": "players",
         "EnumValues": {}
     },
