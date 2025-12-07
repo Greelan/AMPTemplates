@@ -75,7 +75,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "resonite-modding-group/ResoniteModLoader",
-        "UpdateSourceData": "0Harmony-Net8.dll",
+        "UpdateSourceData": "0Harmony.dll",
         "UpdateSourceTarget": "{{$FullBaseDir}}rml_libs",
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "ModLoader",
