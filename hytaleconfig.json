@@ -1,0 +1,57 @@
+[
+    {
+        "DisplayName": "Server Port",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "ServerPort",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Save Name",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the save name to load, or create if it does not exist",
+        "Keywords": "save,name",
+        "FieldName": "save",
+        "InputType": "text",
+        "ParamFieldName": "save",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "My World",
+        "Placeholder": "My World",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players that may connect to the server at one time",
+        "Keywords": "maximum,players,clients,limit,MaxConnections",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "MaxConnections",
+        "DefaultValue": "100",
+        "Placeholder": "100",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password to connect to the server. Default is no password",
+        "Keywords": "server,password,ServerPassword",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "ParamFieldName": "ServerPassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
