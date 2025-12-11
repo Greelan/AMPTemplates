@@ -69,10 +69,11 @@
         "InputType": "enum",
         "ParamFieldName": "mapId",
         "IncludeInCommandLine": true,
-        "DefaultValue": "0",
+        "DefaultValue": "512",
         "EnumValues": {
-            "0": "Wasteland v0.6 (default)",
-            "256": "Wasteland latest",
+            "0": "Wasteland v0.6",
+            "256": "Wasteland v0.6.x latest",
+            "512": "Wasteland v0.7.x latest (default)",
             "1": "Dunes v0.4",
             "2": "Dunes v0.5"
            
