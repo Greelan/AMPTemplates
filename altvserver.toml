@@ -13,4 +13,6 @@ timeout = {{timeout}}
 announceRetryErrorDelay = {{announceRetryErrorDelay}}
 announceRetryErrorAttempts = {{announceRetryErrorAttempts}}
 duplicatePlayers = {{duplicatePlayers}}
+useCdn = {{useCdn}}
+cdnUrl = "{{cdnUrl}}"
 {{UserSettings}}

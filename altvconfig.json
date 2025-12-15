@@ -211,6 +211,46 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Use CDN",
+        "Category": "altV:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server's Content Delivery Network (CDN) functionality will be enabled to speed up resource downloads for connecting users and relieve server load. Start the server once with '--justpack' as an Additional Command Line Argument to generate the packages and a resources.json in the server's root folder, and upload these to the CDN server",
+        "Keywords": "cdn,content,delivery,network,resources,useCdn",
+        "FieldName": "useCdn",
+        "InputType": "checkbox",
+        "ParamFieldName": "useCdn",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "True": "true",
+            "False": "false"
+        }
+    },
+    {
+        "DisplayName": "CDN URL",
+        "Category": "altV:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the URL to the CDN server that provides resource files for clients. The CDN can be any file hosting server that supports HTTP/HTTPS. Requires Use CDN to be enabled",
+        "Keywords": "cdn,url,server,resources,http,https,cdnUrl",
+        "FieldName": "cdnUrl",
+        "InputType": "url",
+        "ParamFieldName": "cdnUrl",
+        "DefaultValue": "",
+        "Placeholder": "http://connect.example.com/",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Command Line Arguments",
+        "Category": "altV:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies additional command line arguments (anything that begins with a -- ) that are not otherwise set by AMP. Use with care",
+        "Keywords": "custom,server,arguments,parameters",
+        "FieldName": "CustomArgs",
+        "InputType": "text",
+        "ParamFieldName": "CustomArgs",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Additional Server Settings",
         "Category": "altV:stadia_controller",
         "Subcategory": "Server:dns:1",
