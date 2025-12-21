@@ -145,14 +145,13 @@
         "DisplayName": "Uptime Kuma Version",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
-        "Description": "Sets the [Uptime Kuma 2 release version](https://github.com/louislam/uptime-kuma/releases) to install",
+        "Description": "Sets the [Uptime Kuma 2 release version](https://github.com/louislam/uptime-kuma/releases) to install. Empty = latest stable release",
         "Keywords": "uptime,kuma,version,release",
         "FieldName": "ReleaseVersion",
         "InputType": "text",
         "ParamFieldName": "ReleaseVersion",
-        "DefaultValue": "2.0.0-beta.1",
-        "Placeholder": "2.0.0-beta.1",
-        "Required": true,
+        "DefaultValue": "",
+        "Placeholder": "2.0.2",
         "EnumValues": {}
     }
 ]
