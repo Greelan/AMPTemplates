@@ -53,5 +53,98 @@
         "ParamFieldName": "ServerPassword",
         "DefaultValue": "",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Custom Command Line Arguments",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies any command line arguments to pass to the server (NOT arguments to run Java wth)",
+        "Keywords": "command,line,arguments,jar,CustomArgs",
+        "FieldName": "CustomArgs",
+        "InputType": "text",
+        "ParamFieldName": "CustomArgs",
+        "DefaultValue": "",
+        "Placeholder": "nogui",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Java Version (Windows)",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java:code:2",
+        "Description": "Sets the Java version to run the server with. The version must be accessible to AMP. For \"Specific system version\", also set Specific System Java Version. For \"Specific instance version\", also set Specific Instance Java Version. Ensure the version is compatible with the server",
+        "Keywords": "java,version,JavaVersionWindows",
+        "FieldName": "JavaVersionWindows",
+        "InputType": "enum",
+        "ParamFieldName": "JavaVersionWindows",
+        "DefaultValue": "$PATH\\java.exe",
+        "EnumValues": {
+            "$PATH\\java.exe": "System default",
+            "{{SpecificJavaVersion}}": "Specific system version",
+            "java\\bin\\java.exe": "Specific instance version"
+        }
+    },
+    {
+        "DisplayName": "Java Version (Linux)",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java:code:2",
+        "Description": "Sets the Java version to run the server with. The version must be accessible to AMP. For \"Specific system version\", also set Specific System Java Version. For \"Specific instance version\", also set Specific Instance Java Version. Ensure the version is compatible with the server",
+        "Keywords": "java,version,JavaVersionLinux",
+        "FieldName": "JavaVersionLinux",
+        "InputType": "enum",
+        "ParamFieldName": "JavaVersionLinux",
+        "DefaultValue": "/usr/bin/java",
+        "EnumValues": {
+            "/usr/bin/java": "System default",
+            "{{SpecificJavaVersion}}": "Specific system version",
+            "java/bin/java": "Specific instance version"
+        }
+    },
+    {
+        "DisplayName": "Specific System Java Version",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java:code:2",
+        "Description": "Sets the full path to the Java executable on the system, if \"Specific system version\" is selected under Java Version",
+        "Keywords": "java,version,system,SpecificJavaVersion",
+        "FieldName": "SpecificJavaVersion",
+        "InputType": "text",
+        "ParamFieldName": "SpecificJavaVersion",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Specific Instance Java Version",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java:code:2",
+        "Description": "Sets the Eclipse Temurin Java version to install in the instance to run the app with, if \"Specific instance version\" is selected under Java Version. Useful for using a Java version that is not installed on the system or in AMP's Docker image (if using AMP's Docker). Update the server after changing this setting",
+        "Keywords": "java,version,instance,SpecificInstanceJavaVersion",
+        "FieldName": "SpecificInstanceJavaVersion",
+        "InputType": "enum",
+        "ParamFieldName": "SpecificInstanceJavaVersion",
+        "IncludeInCommandLine": false,
+        "DefaultValue": "21",
+        "EnumValues": {
+            "25": "25 - LTS",
+            "24": "24",
+            "23": "23",
+            "22": "22",
+            "21": "21 - LTS (default)",
+            "20": "20",
+            "19": "19",
+            "18": "18",
+            "17": "17 - LTS"
+        }
+    },
+    {
+        "DisplayName": "Java Arguments",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java:code:2",
+        "Description": "Specifies any command line arguments to run Java with (NOT options passed to the server jar)",
+        "Keywords": "command,line,arguments,args,java,JavaArgs",
+        "FieldName": "JavaArgs",
+        "InputType": "text",
+        "ParamFieldName": "JavaArgs",
+        "DefaultValue": "",
+        "Placeholder": "-Xmx1024M -Xms1024M",
+        "EnumValues": {}
     }
 ]
