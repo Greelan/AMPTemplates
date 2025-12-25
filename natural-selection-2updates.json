@@ -1,0 +1,31 @@
+[
+    {
+        "UpdateStageName": "Natural Selection 2 Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "4940",
+        "UpdateSourceArgs": "4920",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Config Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Config",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Workshop Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Workshop",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Logs Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Logs",
+        "SkipOnFailure": false
+    }
+]
