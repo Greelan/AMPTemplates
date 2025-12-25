@@ -111,21 +111,6 @@
         }
     },
     {
-        "DisplayName": "Enable Mod Server",
-        "Category": "Natural Selection 2:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "If set, the built-in mod backup file server will be enabled, allowing connecting clients to download mods if the current version of a mod on Steam is newer than the server's or if the client failed to download the mod from Steam. Recommended",
-        "Keywords": "mod,server,backup,web,startmodserver",
-        "FieldName": "startmodserver",
-        "InputType": "checkbox",
-        "ParamFieldName": "startmodserver",
-        "DefaultValue": "-startmodserver ",
-        "EnumValues": {
-            "False": "",
-            "True": "-startmodserver "
-        }
-    },
-    {
         "DisplayName": "Server IP Address",
         "Category": "Natural Selection 2:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -139,6 +124,21 @@
         "DefaultValue": "",
         "Placeholder": "192.168.1.100",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Enable Mod Server",
+        "Category": "Natural Selection 2:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the built-in mod backup file server will be enabled, allowing connecting clients to download mods if the current version of a mod on Steam is newer than the server's or if the client failed to download the mod from Steam. Recommended",
+        "Keywords": "mod,server,backup,web,startmodserver",
+        "FieldName": "startmodserver",
+        "InputType": "checkbox",
+        "ParamFieldName": "startmodserver",
+        "DefaultValue": "-startmodserver ",
+        "EnumValues": {
+            "False": "",
+            "True": "-startmodserver "
+        }
     },
     {
         "DisplayName": "Mod Server IP Address",
