@@ -8,24 +8,17 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Create Config Directory",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Config",
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Create Workshop Directory",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Workshop",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Natural Selection 2/workshop",
         "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Create Logs Directory",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Logs",
+        "UpdateSourceArgs": "{{$FullBaseDir}}Natural Selection 2/logs",
         "SkipOnFailure": false
     }
 ]
