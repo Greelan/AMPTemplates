@@ -15,7 +15,7 @@
                 "Description": "Port for query traffic"
             },
             {
-                "Protocol": "UDP",
+                "Protocol": "TCP",
                 "Port": 27017,
                 "Offset": 2,
                 "Ref": "ModServerPort",
