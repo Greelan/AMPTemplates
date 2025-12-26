@@ -81,7 +81,7 @@
         "DisplayName": "Initial Map",
         "Category": "Natural Selection 2:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the initial map that the server starts on. Defaults to ns2_summit if not set",
+        "Description": "Sets the initial map that the server starts on. Defaults to ns2_summit if not set. A [map rotation list](https://naturalselection.fandom.com/wiki/Dedicated_Server#MapCycle.json) can be set in 'Natural Selection 2/MapCycle.json'",
         "Keywords": "map,initial,start,level",
         "FieldName": "map",
         "InputType": "enum",
