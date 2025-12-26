@@ -20,5 +20,13 @@
         "UpdateSource": "CreateDirectory",
         "UpdateSourceArgs": "{{$FullBaseDir}}Natural Selection 2/logs",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Steam Runtime Setup",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"natural-selection-2/4940/steam-runtime/setup.sh --host=amd64 --target=amd64 --release --auto-update\"",
+        "SkipOnFailure": false
     }
 ]
