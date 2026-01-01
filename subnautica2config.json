@@ -457,7 +457,7 @@
         "ParamFieldName": "DotnetVersion",
         "IncludeInCommandLine": false,
         "DefaultValue": "",
-        "Placeholder": "9.0.9",
+        "Placeholder": "9.0.11",
         "EnumValues": {}
     }
 ]
