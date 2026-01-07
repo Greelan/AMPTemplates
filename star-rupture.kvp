@@ -94,8 +94,8 @@ Console.FilterMatchRegex=
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
 Console.AppReadyRegex=^\[[\d.]+-[\d.:]+\]\[[\d ]+\]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/.*/Maps/DedicatedServerStart$
-Console.UserJoinRegex=^$
-Console.UserLeaveRegex=^$
+Console.UserJoinRegex=^\[[\d\.]+-[\d\.]+:\d+\]\[[\d ]+\]LogNet: Login request: \?IdToken=.*\?Name=(?<username>.+?) userId: EOS:\|(?<userid>.+?) platform: EOSPlus$
+Console.UserLeaveRegex=^\[[\d\.]+-[\d\.]+:\d+\]\[[\d ]+\]LogNet: UChannel::Close: Sending CloseBunch\.(?:.+?) UniqueId: EOS:\|(?<userid>.+?)$
 Console.UserChatRegex=^$
 Console.ServerInfoRegex=
 Console.UpdateAvailableRegex=^\[\d\d:\d\d:\d\d\] \[INFO\] A new server update is available! v[\d\.]+.$
