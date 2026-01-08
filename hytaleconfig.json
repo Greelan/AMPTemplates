@@ -8,7 +8,7 @@
         "FieldName": "$ServerPort",
         "InputType": "number",
         "Hidden": true,
-        "ParamFieldName": "ServerPort",
+        "ParamFieldName": "listen_port",
         "ExcludeFromImport": true,
         "EnumValues": {}
     },

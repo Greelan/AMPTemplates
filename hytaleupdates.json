@@ -5,7 +5,7 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UpdateSourceArgs": "hytale.jar",
+        "UpdateSourceArgs": "HytaleServer.jar",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },
