@@ -76,7 +76,7 @@
         "FieldName": "JavaVersionWindows",
         "InputType": "enum",
         "ParamFieldName": "JavaVersionWindows",
-        "DefaultValue": "$PATH\\java.exe",
+        "DefaultValue": "java\\bin\\java.exe",
         "EnumValues": {
             "$PATH\\java.exe": "System default",
             "{{SpecificJavaVersion}}": "Specific system version",
@@ -92,7 +92,7 @@
         "FieldName": "JavaVersionLinux",
         "InputType": "enum",
         "ParamFieldName": "JavaVersionLinux",
-        "DefaultValue": "/usr/bin/java",
+        "DefaultValue": "java/bin/java",
         "EnumValues": {
             "/usr/bin/java": "System default",
             "{{SpecificJavaVersion}}": "Specific system version",
