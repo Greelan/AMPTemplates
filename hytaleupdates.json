@@ -1,12 +1,43 @@
 [
     {
-        "UpdateStageName": "Hytale Download",
-        "UpdateSourcePlatform": "All",
+        "UpdateStageName": "Hytale Downloader Tool Download",
+        "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UpdateSourceArgs": "HytaleServer.jar",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
         "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Make Hytale Downloader Tool Executable",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullInstanceDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Downloader Tool Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "",
+        "UpdateSourceTarget": "{{$FullInstanceDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "{{$FullInstanceDir}}",
+        "UpdateSourceArgs": "",
         "SkipOnFailure": false
     },
     {

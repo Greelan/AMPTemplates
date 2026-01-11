@@ -13,6 +13,32 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Hytale Account Username",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the hytale.com account login username for the server owner. Required to install and update the server",
+        "Keywords": "username,login,hytale.com",
+        "FieldName": "AccountUsername",
+        "InputType": "text",
+        "ParamFieldName": "AccountUsername",
+        "DefaultValue": "",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Hytale Account Password",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the hytale.com account login password for the server owner. Required to install and update the server",
+        "Keywords": "password,login,hytale.com",
+        "FieldName": "AccountPassword",
+        "InputType": "password",
+        "ParamFieldName": "AccountPassword",
+        "DefaultValue": "",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Save Name",
         "Category": "Hytale:stadia_controller",
         "Subcategory": "Server:dns:1",
