@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd \\\"{{$FullRootDir}}\\\" && [[ -f ./Assets.zip ]] && mv -f ./Assets.zip ./Server/Assets.zip >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd \\\"{{$FullRootDir}}\\\" && if [[ -f ./Assets.zip ]]; then mv -f ./Assets.zip ./Server/Assets.zip >/dev/null 2>&1; fi\"",
         "SkipOnFailure": false
     },
     {
