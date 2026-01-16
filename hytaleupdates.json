@@ -1,0 +1,153 @@
+[
+    {
+        "UpdateStageName": "Hytale Downloader CLI Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://downloader.hytale.com/hytale-downloader.zip",
+        "UpdateSourceTarget": "{{$FullRootDir}}",
+        "UnzipUpdateSource": true,
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Make Hytale Downloader CLI Executable",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullRootDir}}hytale-downloader-linux-amd64",
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "false",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Make Hytale Downloader CLI Executable",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "SetExecutableFlag",
+        "UpdateSourceArgs": "{{$FullRootDir}}hytale-downloader-linux-arm64",
+        "UpdateSourceConditionSetting": "Status",
+        "UpdateSourceConditionValue": "disabled",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd \\\"{{$FullRootDir}}\\\" && LatestVersion=$(./hytale-downloader-linux-amd64 -patchline {{ServerBuildChannel}} -print-version -skip-update-check); [[ -n ./Server/.installedversion ]] && { InstalledVersion=\\\"$(< Server/.installedversion 2>/dev/null || true)\\\"; if [[ \\\"$InstalledVersion\\\" == \\\"$LatestVersion\\\" ]]; then echo \\\"Latest Hytale {{ServerBuildChannel}} version $LatestVersion already installed. Skipping\\\"; exit 0; fi; }; ./hytale-downloader-linux-amd64 -patchline {{ServerBuildChannel}} -download-path ./server.zip || { echo \\\"Download failed from the Hytale CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; sleep 1 && if [[ -n ./server.zip ]]; then unzip -oq ./server.zip && sleep 1 && mv -f ./Assets.zip ./Server/Assets.zip >/dev/null 2>&1 && printf \\\"%s\\n\\\" \\\"$LatestVersion\\\" > Server/.installedversion && rm -f ./server.zip >/dev/null 2>&1; fi\"",
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "false",
+        "ProcessToolOutput": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd \\\"{{$FullRootDir}}\\\" && LatestVersion=$(./hytale-downloader-linux-arm64 -patchline {{ServerBuildChannel}} -print-version -skip-update-check); [[ -n ./Server/.installedversion ]] && { InstalledVersion=\\\"$(< Server/.installedversion 2>/dev/null || true)\\\"; if [[ \\\"$InstalledVersion\\\" == \\\"$LatestVersion\\\" ]]; then echo \\\"Latest Hytale {{ServerBuildChannel}} version $LatestVersion already installed. Skipping\\\"; exit 0; fi; }; ./hytale-downloader-linux-arm64 -patchline {{ServerBuildChannel}} -download-path ./server.zip || { echo \\\"Download failed from the Hytale CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; sleep 1 && if [[ -n ./server.zip ]]; then unzip -oq ./server.zip && sleep 1 && mv -f ./Assets.zip ./Server/Assets.zip >/dev/null 2>&1 && printf \\\"%s\\n\\\" \\\"$LatestVersion\\\" > Server/.installedversion && rm -f ./server.zip >/dev/null 2>&1; fi\"",
+        "UpdateSourceConditionSetting": "Status",
+        "UpdateSourceConditionValue": "disabled",
+        "ProcessToolOutput": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Hytale Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path '{{$FullRootDir}}'; $LatestVersion=(& ./hytale-downloader-windows-amd64.exe -patchline {{ServerBuildChannel}} -print-version -skip-update-check); if (./Server/.installedversion) { $InstalledVersion = Get-Content -LiteralPath 'Server/.installedversion' -Raw -ErrorAction SilentlyContinue; if ( $InstalledVersion -eq $LatestVersion ) { Write-Output \\\"Latest Hytale {{ServerBuildChannel}} version $LatestVersion already installed. Skipping\\\"; exit 0 } }; try { & ./hytale-downloader-windows-amd64.exe -patchline {{ServerBuildChannel}} -download-path ./server.zip } catch { Write-Output \\\"Download failed from the Hytale CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; Start-Sleep -Seconds 1; if (./server.zip) { Expand-Archive -LiteralPath ./server.zip -DestinationPath . -Force 2> $null; Start-Sleep -Seconds 1; Move-Item -LiteralPath './Assets.zip' -Destination './Server/Assets.zip' -Force -ErrorAction SilentlyContinue *> $null; Remove-Item -LiteralPath ./server.zip -Force -ErrorAction SilentlyContinue *> $null; Set-Content -LiteralPath 'Server/.installedversion' -Value $LatestVersion -Force }\"",
+        "UpdateSourceConditionSetting": "disable-server-download",
+        "UpdateSourceConditionValue": "false",
+        "ProcessToolOutput": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Default config.json File Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/hytaleserverconfig.json",
+        "UpdateSourceArgs": "config.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Java Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "x86_64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd hytale && if [[ -x java/bin/java ]]; then InstalledVersion=$(java/bin/java --version | grep \\\"Temurin-\\\" | head -n1 | sed -n \\\"s/.*Temurin-\\\\([^[:space:]]\\\\+\\\\).*/\\\\1/p\\\"); else InstalledVersion=\\\"\\\"; fi; LatestVersionBuild=$(wget -qO- \\\"https://api.adoptium.net/v3/assets/latest/{{SpecificInstanceJavaVersion}}/hotspot?architecture=x64&image_type=jdk&os=linux&vendor=eclipse\\\" | jq -r \\\".[0].version.openjdk_version\\\" | sed \\\"s/-LTS$//\\\"); if [[ \\\"$InstalledVersion\\\" == \\\"$LatestVersionBuild\\\" ]]; then echo \\\"Eclipse Temurin Java $LatestVersionBuild already installed. Skipping\\\" && exit 0; else [[ -f java.tar.gz ]] && rm -f java.tar.gz >/dev/null 2>&1; wget -qO java.tar.gz https://api.adoptium.net/v3/binary/latest/{{SpecificInstanceJavaVersion}}/ga/linux/x64/jdk/hotspot/normal/eclipse || { echo \\\"Download failed from the Eclipse Temurin CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; mkdir -p java && rm -rf java/* >/dev/null 2>&1 && tar -xzf java.tar.gz -C java --strip-components=1 >/dev/null 2>&1 && rm -f java.tar.gz >/dev/null 2>&1 && chmod +x java/bin/java && echo \\\"Eclipse Temurin Java $LatestVersionBuild downloaded\\\"; fi\"",
+        "UpdateSourceConditionSetting": "JavaVersionLinux",
+        "UpdateSourceConditionValue": "java/bin/java",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Java Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSourceArch": "aarch64",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd hytale && if [[ -x java/bin/java ]]; then InstalledVersion=$(java/bin/java --version | grep \\\"Temurin-\\\" | head -n1 | sed -n \\\"s/.*Temurin-\\\\([^[:space:]]\\\\+\\\\).*/\\\\1/p\\\"); else InstalledVersion=\\\"\\\"; fi; LatestVersionBuild=$(wget -qO- \\\"https://api.adoptium.net/v3/assets/latest/{{SpecificInstanceJavaVersion}}/hotspot?architecture=aarch64&image_type=jdk&os=linux&vendor=eclipse\\\" | jq -r \\\".[0].version.openjdk_version\\\" | sed \\\"s/-LTS$//\\\"); if [[ \\\"$InstalledVersion\\\" == \\\"$LatestVersionBuild\\\" ]]; then echo \\\"Eclipse Temurin Java $LatestVersionBuild already installed. Skipping\\\" && exit 0; else [[ -f java.tar.gz ]] && rm -f java.tar.gz >/dev/null 2>&1; wget -qO java.tar.gz https://api.adoptium.net/v3/binary/latest/{{SpecificInstanceJavaVersion}}/ga/linux/aarch64/jdk/hotspot/normal/eclipse || { echo \\\"Download failed from the Eclipse Temurin CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; mkdir -p java && rm -rf java/* >/dev/null 2>&1 && tar -xzf java.tar.gz -C java --strip-components=1 >/dev/null 2>&1 && rm -f java.tar.gz >/dev/null 2>&1 && chmod +x java/bin/java && echo \\\"Eclipse Temurin Java $LatestVersionBuild downloaded\\\"; fi\"",
+        "UpdateSourceConditionSetting": "JavaVersionLinux",
+        "UpdateSourceConditionValue": "java/bin/java",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Java Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'hytale'; if (Test-Path 'java/bin/java.exe') { $InstalledVersion = (& java/bin/java.exe --version | Select-String -Pattern 'Temurin-(\\d+(?:\\.\\d+\\.\\d+(?:\\.\\d+)?)?\\+\\d+)' | Select-Object -First 1 | ForEach-Object { $_.Matches[0].Groups[1].Value }) } else { $InstalledVersion = '' }; $LatestVersionBuild = (Invoke-RestMethod -UseBasicParsing -Uri \\\"https://api.adoptium.net/v3/assets/latest/{{SpecificInstanceJavaVersion}}/hotspot?architecture=x64&image_type=jdk&os=windows&vendor=eclipse\\\")[0].version.openjdk_version -replace '-LTS$', ''; if ( $InstalledVersion -eq $LatestVersionBuild ) { Write-Output \\\"Eclipse Temurin Java $LatestVersionBuild already installed. Skipping\\\"; exit 0 } else { if ( Test-Path java.zip ) { Remove-Item java.zip -Force -ErrorAction SilentlyContinue *> $null }; try { Invoke-WebRequest -UseBasicParsing -Uri https://api.adoptium.net/v3/binary/latest/{{SpecificInstanceJavaVersion}}/ga/windows/x64/jdk/hotspot/normal/eclipse -OutFile java.zip -ErrorAction Stop } catch { Write-Output \\\"Download failed from the Eclipse Temurin CDN. This is a fault with the CDN, not AMP. Aborting\\\"; exit 1; }; Expand-Archive -Path \\\"java.zip\\\" -DestinationPath \\\".\\\" -Force *> $null; if ( Test-Path java.zip ) { Remove-Item java.zip -Force -ErrorAction SilentlyContinue *> $null }; if (Test-Path \\\"jdk-*\\\") { Remove-Item -Recurse -Force java -ErrorAction SilentlyContinue *> $null; Start-Sleep -Seconds 2; Get-ChildItem -Directory | Where-Object { $_.Name -like \\\"jdk-*\\\" } | Rename-Item -NewName \\\"java\\\" *> $null; Write-Output \\\"Eclipse Temurin Java $LatestVersionBuild downloaded\\\" } }\"",
+        "UpdateSourceConditionSetting": "JavaVersionWindows",
+        "UpdateSourceConditionValue": "java\\bin\\java.exe",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Performance Saver Plugin Config Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}mods/Nitrado_PerformanceSaver",
+        "UpdateSourceConditionSetting": "performance-saver-install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Performance Saver Plugin Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd hytale/Server/mods && wget -qO nitrado-performance-saver.jar $(wget -qO- https://api.github.com/repos/nitrado/hytale-plugin-performance-saver/releases/latest | grep browser_download_url | cut -d\\\\\\\" -f4 | grep -E \\\"nitrado-performance-saver.*\\.jar\\\") && echo \\\"Latest Nitrado Performance Saver plugin downloaded\\\"\"",
+        "UpdateSourceConditionSetting": "performance-saver-install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Performance Saver Plugin Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'hytale/Server/mods'; Invoke-WebRequest -UseBasicParsing -Uri ((Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/nitrado/hytale-plugin-performance-saver/releases/latest').assets | Where-Object { $_.browser_download_url -like '*nitrado-performance-saver*.jar' }).browser_download_url -OutFile 'nitrado-performance-saver.jar'; if ($?) { Write-Output \\\"Latest Nitrado Performance Saver plugin downloaded\\\" }\"",
+        "UpdateSourceConditionSetting": "performance-saver-install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Default Performance Saver plugin config.json File Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/CubeCoders/AMPTemplates/main/hytaleperformancesaverconfig.json",
+        "UpdateSourceArgs": "config.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}mods/Nitrado_PerformanceSaver",
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionSetting": "performance-saver-install",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    }
+]
