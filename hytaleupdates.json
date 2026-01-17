@@ -18,7 +18,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSourceArch": "aarch64",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/p0t4t0sandwich/AMPTemplates/refs/heads/hytale-downloader/hytale-downloader-bash.sh",
+        "UpdateSourceData": "https://raw.githubusercontent.com/p0t4t0sandwich/AMPTemplates/refs/heads/hytale-downloader/hytaledownloaderscript.sh",
         "UpdateSourceArgs": "hytale-downloader-linux-arm64.sh",
         "UpdateSourceTarget": "{{$FullRootDir}}",
         "OverwriteExistingFiles": true,
