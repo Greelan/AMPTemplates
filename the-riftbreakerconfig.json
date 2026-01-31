@@ -1,0 +1,41 @@
+[
+    {
+        "DisplayName": "Server Port",
+        "Category": "The Riftbreaker:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "$.server_port",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "The Riftbreaker:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the server name that appears in the client's server browser. Maximum 50 characters",
+        "Keywords": "server,name,server_name",
+        "FieldName": "server_name",
+        "InputType": "text",
+        "ParamFieldName": "$.server_name",
+        "DefaultValue": "AMP Powered The Riftbreaker Server",
+        "Placeholder": "AMP Powered The Riftbreaker Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Proton GE Release Version (Linux)",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the Proton GE [release version](https://github.com/GloriousEggroll/proton-ge-custom/releases) to install. Empty = latest. Example: GE-Proton9-1",
+        "Keywords": "proton,release,version",
+        "FieldName": "SpecificReleaseVersion",
+        "InputType": "text",
+        "ParamFieldName": "SpecificReleaseVersion",
+        "DefaultValue": "",
+        "Placeholder": "GE-Proton9-1",
+        "EnumValues": {}
+    }
+]
