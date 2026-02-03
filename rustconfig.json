@@ -594,6 +594,7 @@
             "public": "Public (default)",
             "staging": "Staging",
             "release": "Release",
+            "aux01": "Pre-Staging (aux01)",
             "aux01-staging": "Pre-Staging (aux01-staging)",
             "aux02": "Up and Coming (aux02)",
             "last-month": "Last Month",
