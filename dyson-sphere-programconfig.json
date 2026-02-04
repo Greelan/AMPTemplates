@@ -99,7 +99,7 @@
         "DisplayName": "BepInEx Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Sets the [BepInEx version](https://thunderstore.io/c/dyson-sphere-program/p/xiaoye97/BepInEx/) to install. Empty = latest. NOTE: Update the server after switching versions!",
+        "Description": "Sets the [BepInEx version](https://thunderstore.io/c/dyson-sphere-program/p/xiaoye97/BepInEx/) to install. Format: 5.4.17. Empty = latest. NOTE: Update the server after switching versions!",
         "Keywords": "install,BepInEx,version",
         "FieldName": "BepInExVersion",
         "InputType": "text",
@@ -112,13 +112,26 @@
         "DisplayName": "Nebula Multiplayer Mod API Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
-        "Description": "Sets the [Nebula Multiplayer Mod API version](https://thunderstore.io/c/dyson-sphere-program/p/nebula/NebulaMultiplayerModApi/) to install. Empty = latest. NOTE: Update the server after switching versions!",
+        "Description": "Sets the [Nebula Multiplayer Mod API version](https://thunderstore.io/c/dyson-sphere-program/p/nebula/NebulaMultiplayerModApi/) to install. Format: 2.1.0. Empty = latest. NOTE: Update the server after switching versions!",
         "Keywords": "install,nebula,mod,api,version",
         "FieldName": "NebulaModAPIVersion",
         "InputType": "text",
         "ParamFieldName": "NebulaModAPIVersion",
         "DefaultValue": "",
         "Placeholder": "2.1.0",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Nebula Multiplayer Mod Version",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the [Nebula Multiplayer Mod release version](https://github.com/NebulaModTeam/nebula/releases) to install. Format: v0.9.20. Empty = latest. NOTE: Update the server after switching versions!",
+        "Keywords": "install,nebula,mod,version",
+        "FieldName": "NebulaModVersion",
+        "InputType": "text",
+        "ParamFieldName": "NebulaModVersion",
+        "DefaultValue": "",
+        "Placeholder": "v0.9.20",
         "EnumValues": {}
     }
 ]

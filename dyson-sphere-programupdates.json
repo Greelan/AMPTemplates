@@ -148,6 +148,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "NebulaModTeam/nebula",
+        "UpdateSourceVersion": "{{NebulaModVersion}}",
         "UpdateSourceTarget": "{{$FullBaseDir}}BepInEx/plugins",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
