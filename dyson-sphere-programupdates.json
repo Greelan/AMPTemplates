@@ -53,11 +53,26 @@
     },
     {
         "UpdateStageName": "BepInEx Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"BepInExVersion=\\\"{{BepInExVersion}}\\\" && if [[ -z \\\"$BepInExVersion\\\" ]]; then BepInExVersion=$(wget -qO- https://thunderstore.io/api/v1/package-metrics/xiaoye97/BepInEx | jq -r \\\".latest_version\\\"); fi && if [[ ! \\\"$BepInExVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid BepInEx version format specified\\\" && exit 1; fi && wget -qO BepInEx.zip https://gcdn.thunderstore.io/live/repository/packages/xiaoye97-BepInEx-$BepInExVersion.zip && echo \\\"BepInEx v$BepInExVersion downloaded\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "BepInEx Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $BepInExVersion='{{BepInExVersion}}'; if ([string]::IsNullOrWhiteSpace($BepInExVersion)) { $BepInExVersion=(Invoke-RestMethod -UseBasicParsing -Uri https://thunderstore.io/api/v1/package-metrics/xiaoye97/BepInEx).latest_version }; if ($BepInExVersion -notmatch '^\\d+\\.\\d+\\.\\d+$') { Write-Output \\\"Invalid BepInEx version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://gcdn.thunderstore.io/live/repository/packages/xiaoye97-BepInEx-$BepInExVersion.zip -OutFile 'BepInEx.zip'; if ($?) { Write-Output \\\"BepInEx v$BepInExVersion downloaded\\\" }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "BepInEx Extract",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://gcdn.thunderstore.io/live/repository/packages/xiaoye97-BepInEx-5.4.17.zip",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceData": "BepInEx.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
         "SkipOnFailure": false
@@ -103,7 +118,33 @@
         "UpdateSourceArgs": "{{$FullBaseDir}}BepInEx/plugins/BulletTime"
     },
     {
-        "UpdateStageName": "Nebula Mods Download",
+        "UpdateStageName": "Nebula Multiplayer Mod API Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"NebulaModAPIVersion=\\\"{{NebulaModAPIVersion}}\\\" && if [[ -z \\\"$NebulaModAPIVersion\\\" ]]; then NebulaModAPIVersion=$(wget -qO- https://thunderstore.io/api/v1/package-metrics/nebula/NebulaMultiplayerModApi | jq -r \\\".latest_version\\\"); fi && if [[ ! \\\"$NebulaModAPIVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid Nebula Multiplayer Mod API version format specified\\\" && exit 1; fi && wget -qO NebulaModAPI.zip https://gcdn.thunderstore.io/live/repository/packages/nebula-NebulaMultiplayerModApi-$NebulaModAPIVersion.zip && echo \\\"Nebula Multiplayer Mod API v$NebulaModAPIVersion downloaded\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Nebula Multiplayer Mod API Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; $NebulaModAPIVersion='{{NebulaModAPIVersion}}'; if ([string]::IsNullOrWhiteSpace($NebulaModAPIVersion)) { $NebulaModAPIVersion=(Invoke-RestMethod -UseBasicParsing -Uri https://thunderstore.io/api/v1/package-metrics/nebula/NebulaMultiplayerModApi).latest_version }; if ($NebulaModAPIVersion -notmatch '^\\d+\\.\\d+\\.\\d+$') { Write-Output \\\"Invalid Nebula Multiplayer Mod API version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://gcdn.thunderstore.io/live/repository/packages/nebula-NebulaMultiplayerModApi-$NebulaModAPIVersion.zip -OutFile 'NebulaModAPI.zip'; if ($?) { Write-Output \\\"Nebula Multiplayer Mod API v$NebulaModAPIVersion downloaded\\\" }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Nebula Multiplayer Mod API Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "ExtractArchive",
+        "UpdateSourceData": "NebulaModAPI.zip",
+        "UpdateSourceTarget": "{{$FullBaseDir}}BepInEx/plugins",
+        "OverwriteExistingFiles": true,
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Nebula Multiplayer Mod Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "NebulaModTeam/nebula",

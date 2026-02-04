@@ -94,5 +94,31 @@
         "ParamFieldName": "SaveFile",
         "DefaultValue": "",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "BepInEx Version",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the [BepInEx version](https://thunderstore.io/c/dyson-sphere-program/p/xiaoye97/BepInEx/) to install. Empty = latest. NOTE: Update the server after switching versions!",
+        "Keywords": "install,BepInEx,version",
+        "FieldName": "BepInExVersion",
+        "InputType": "text",
+        "ParamFieldName": "BepInExVersion",
+        "DefaultValue": "",
+        "Placeholder": "5.4.17",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Nebula Multiplayer Mod API Version",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the [Nebula Multiplayer Mod API version](https://thunderstore.io/c/dyson-sphere-program/p/nebula/NebulaMultiplayerModApi/) to install. Empty = latest. NOTE: Update the server after switching versions!",
+        "Keywords": "install,nebula,mod,api,version",
+        "FieldName": "NebulaModAPIVersion",
+        "InputType": "text",
+        "ParamFieldName": "NebulaModAPIVersion",
+        "DefaultValue": "",
+        "Placeholder": "2.1.0",
+        "EnumValues": {}
     }
 ]
