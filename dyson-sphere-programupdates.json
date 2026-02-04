@@ -151,7 +151,7 @@
         "UpdateStageName": "Required Mods Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://gcdn.thunderstore.io/live/repository/packages/starfi5h-BulletTime-1.5.8.zip",
+        "UpdateSourceData": "https://gcdn.thunderstore.io/live/repository/packages/starfi5h-BulletTime-1.5.13.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}BepInEx/plugins/BulletTime",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
