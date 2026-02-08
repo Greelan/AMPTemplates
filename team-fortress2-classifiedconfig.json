@@ -409,8 +409,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "sv_minrate",
-        "DefaultValue": "3500",
-        "Placeholder": "3500",
+        "DefaultValue": "65536",
+        "Placeholder": "65536",
         "Suffix": "bytes/second",
         "EnumValues": {}
     },
@@ -439,8 +439,8 @@
         "InputType": "number",
         "MinValue": "0",
         "ParamFieldName": "sv_minupdaterate",
-        "DefaultValue": "40",
-        "Placeholder": "40",
+        "DefaultValue": "30",
+        "Placeholder": "30",
         "EnumValues": {}
     },
     {
