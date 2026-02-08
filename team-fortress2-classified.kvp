@@ -5,7 +5,7 @@ Meta.AarchSupport=NotSupported
 Meta.Arch=x86_64
 Meta.Author=Greelan
 Meta.URL=https://tf2classified.com/
-Meta.DisplayImageSource=url:https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3545060/fdd001c58b1ae3654eb444272c99bc9766bdeafc/capsule_616x353.jpg?t=1770175489
+Meta.DisplayImageSource=url:https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3545060/cede55b7156e2fc893d6eef6ecbe9c6cdfe52e9b/header.jpg
 Meta.EndpointURIFormat=steam://connect/{0}
 Meta.ConfigManifest=team-fortress2-classifiedconfig.json
 Meta.MetaConfigManifest=team-fortress2-classifiedmetaconfig.json
