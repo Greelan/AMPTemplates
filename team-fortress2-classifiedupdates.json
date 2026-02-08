@@ -5,7 +5,6 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "232250",
         "UpdateSourceArgs": "3545060",
-        "UpdateSourceTarget": "{{$FullRootDir}}232250",
         "SkipOnFailure": false
     },
     {
