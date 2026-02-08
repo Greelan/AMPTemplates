@@ -16,6 +16,15 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "SteamCMD Components Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceArgs": "3545060",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Server.cfg Template File Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "FetchURL",
