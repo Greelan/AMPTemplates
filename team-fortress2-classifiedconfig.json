@@ -79,30 +79,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Server Account ID",
-        "Category": "Team Fortress 2 Classified:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the server account ID",
-        "Keywords": "server,account,id,tf_server_identity_account_id",
-        "FieldName": "tf_server_identity_account_id",
-        "InputType": "text",
-        "ParamFieldName": "tf_server_identity_account_id",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Server Account Token",
-        "Category": "Team Fortress 2 Classified:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "Sets the server account token",
-        "Keywords": "server,account,token,tf_server_identity_token",
-        "FieldName": "tf_server_identity_token",
-        "InputType": "password",
-        "ParamFieldName": "tf_server_identity_token",
-        "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Initial Map",
         "Category": "Team Fortress 2 Classified:stadia_controller",
         "Subcategory": "Server:dns:1",
