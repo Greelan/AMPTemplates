@@ -106,7 +106,7 @@
         "DisplayName": "Initial Map",
         "Category": "Team Fortress 2 Classified:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the map to start the server with. If \"Custom\" is selected, Custom Initial Map must also be specified. The Player Limit must be set to 32 for Man vs Machine maps",
+        "Description": "Sets the map to start the server with. If \"Custom\" is selected, Custom Initial Map must also be specified",
         "Keywords": "map",
         "FieldName": "map",
         "InputType": "enum",
@@ -212,8 +212,8 @@
         "FieldName": "mapcycle",
         "InputType": "Textarea",
         "ParamFieldName": "mapcycle",
-        "DefaultValue": "cp_gravelpit\ncp_dustbowl\ncp_granary\ncp_well\nctf_2fort\ntc_hydro\nctf_well\ncp_badlands\npl_goldrush\ncp_fastlane\nctf_turbine\npl_badwater\ncp_steel\ncp_egypt_final\ncp_junction_final\nplr_pipeline\npl_hoodoo_final\nkoth_sawmill\nkoth_nucleus\nkoth_viaduct\nctf_sawmill\ncp_yukon_final\nkoth_harvest_final\nctf_doublecross\ncp_gorge\ncp_freight_final1\npl_upward\nplr_hightower\npl_thundermountain\ncp_coldfront\ncp_mountainlab\ncp_degrootkeep\ncp_5gorge\npl_frontier_final\nplr_nightfall_final\nkoth_lakeside_final\nkoth_badlands\npl_barnblitz\ncp_gullywash_final1\ncp_foundry\nsd_doomsday\nkoth_king\ncp_process_final\ncp_standin_final\ncp_snakewater_final1\ncp_sunshine\ncp_metalworks\npl_swiftwater_final1",
-        "Placeholder": "cp_gravelpit\ncp_dustbowl\ncp_granary\ncp_well\nctf_2fort\ntc_hydro\nctf_well\ncp_badlands\npl_goldrush\ncp_fastlane\nctf_turbine\npl_badwater\ncp_steel\ncp_egypt_final\ncp_junction_final\nplr_pipeline\npl_hoodoo_final\nkoth_sawmill\nkoth_nucleus\nkoth_viaduct\nctf_sawmill\ncp_yukon_final\nkoth_harvest_final\nctf_doublecross\ncp_gorge\ncp_freight_final1\npl_upward\nplr_hightower\npl_thundermountain\ncp_coldfront\ncp_mountainlab\ncp_degrootkeep\ncp_5gorge\npl_frontier_final\nplr_nightfall_final\nkoth_lakeside_final\nkoth_badlands\npl_barnblitz\ncp_gullywash_final1\ncp_foundry\nsd_doomsday\nkoth_king\ncp_process_final\ncp_standin_final\ncp_snakewater_final1\ncp_sunshine\ncp_metalworks\npl_swiftwater_final1",
+        "DefaultValue": "4arena_flask\n4arena_floodgate\n4dom_hydro\n4dom_krepost\n4koth_frigid\n4plr_sisyphus\narena_badlands\narena_granary\narena_lumberyard\narena_nucleus\narena_offblast_final\narena_ravine\narena_sawmill\narena_watchtower\narena_well\ncp_5gorge\ncp_amaranth\ncp_badlands\ncp_coldfront\ncp_degrootkeep\ncp_dustbowl\ncp_egypt_final\ncp_fastlane\ncp_foundry\ncp_freight_final1\ncp_furnace_rc\ncp_gorge\ncp_granary\ncp_gravelpit\ncp_gullywash\ncp_junction_final\ncp_mountainlab\ncp_powerhouse\ncp_steel\ncp_tidal_v4\ncp_well\ncp_yukon_final\nctf_2fort\nctf_doublecross\nctf_landfall\nctf_pelican_peak\nctf_sawmill\nctf_turbine\nctf_well\ndom_oilcanyon\ndom_railway\ndom_sawtooth\nkoth_badlands\nkoth_harvest_final\nkoth_lakeside_final\nkoth_nucleus\nkoth_sawmill\nkoth_viaduct\npl_badwater\npl_barnblitz\npl_frontier_final\npl_goldrush\npl_hoodoo_final\npl_jinn\npl_thundermountain\npl_upward\nplr_hightower\nplr_nightfall_final\nplr_pipeline\ntc_hydro\ntd_caper\ntd_sunnyside\nvip_avanti\nvip_badwater\nvip_harbor\nvip_mineside\nvip_trainyard\nvipr_2bridge\nvipr_chopper\nvipr_drizzle",
+        "Placeholder": "4arena_flask\n4arena_floodgate\n4dom_hydro\n4dom_krepost\n4koth_frigid\n4plr_sisyphus\narena_badlands\narena_granary\narena_lumberyard\narena_nucleus\narena_offblast_final\narena_ravine\narena_sawmill\narena_watchtower\narena_well\ncp_5gorge\ncp_amaranth\ncp_badlands\ncp_coldfront\ncp_degrootkeep\ncp_dustbowl\ncp_egypt_final\ncp_fastlane\ncp_foundry\ncp_freight_final1\ncp_furnace_rc\ncp_gorge\ncp_granary\ncp_gravelpit\ncp_gullywash\ncp_junction_final\ncp_mountainlab\ncp_powerhouse\ncp_steel\ncp_tidal_v4\ncp_well\ncp_yukon_final\nctf_2fort\nctf_doublecross\nctf_landfall\nctf_pelican_peak\nctf_sawmill\nctf_turbine\nctf_well\ndom_oilcanyon\ndom_railway\ndom_sawtooth\nkoth_badlands\nkoth_harvest_final\nkoth_lakeside_final\nkoth_nucleus\nkoth_sawmill\nkoth_viaduct\npl_badwater\npl_barnblitz\npl_frontier_final\npl_goldrush\npl_hoodoo_final\npl_jinn\npl_thundermountain\npl_upward\nplr_hightower\nplr_nightfall_final\nplr_pipeline\ntc_hydro\ntd_caper\ntd_sunnyside\nvip_avanti\nvip_badwater\nvip_harbor\nvip_mineside\nvip_trainyard\nvipr_2bridge\nvipr_chopper\nvipr_drizzle",
         "EnumValues": {}
     },
     {
@@ -243,7 +243,7 @@
         "DisplayName": "Player Limit",
         "Category": "Team Fortress 2 Classified:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the maximum number of players allowed on the server at one time. Must be set to 32 for Man vs Machine maps",
+        "Description": "Sets the maximum number of players allowed on the server at one time",
         "Keywords": "max,players,limit,maxplayers",
         "FieldName": "$MaxUsers",
         "InputType": "number",
