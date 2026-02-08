@@ -27,13 +27,13 @@
         "DisplayName": "Server Tags",
         "Category": "Team Fortress 2 Classified:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Comma-separated list of server tags that give additional information about the server in the server browser",
+        "Description": "Comma-separated list of server tags that give additional information about the server in the server browser. Requires [server verification](https://servers.tf2classified.com/)",
         "Keywords": "tags,sv_tags",
         "FieldName": "sv_tags",
         "InputType": "text",
         "ParamFieldName": "sv_tags",
         "DefaultValue": "",
-        "Placeholder": "increased_maxplayers",
+        "Placeholder": "type_customrules,type_customweapons",
         "EnumValues": {}
     },
     {
