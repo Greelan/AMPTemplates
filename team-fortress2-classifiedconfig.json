@@ -577,7 +577,7 @@
         "FieldName": "mp_flashlight",
         "InputType": "checkbox",
         "ParamFieldName": "mp_flashlight",
-        "DefaultValue": "1",
+        "DefaultValue": "0",
         "EnumValues": {
             "False": "0",
             "True": "1"
@@ -802,7 +802,7 @@
         "FieldName": "mp_forcecamera",
         "InputType": "checkbox",
         "ParamFieldName": "mp_forcecamera",
-        "DefaultValue": "0",
+        "DefaultValue": "1",
         "EnumValues": {
             "False": "0",
             "True": "1"
