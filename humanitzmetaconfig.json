@@ -1,0 +1,18 @@
+[
+    {
+        "ConfigFile": "HumanitZServer/GameServerSettings.ini",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}=\"{1}\"",
+        "ConfigFormatRegex": "^(?<key>.+?)=\"(?<value>.*?)\"$"
+    },
+    {
+        "ConfigFile": "HumanitZServer/GameServerSettings.ini",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}={1}",
+        "ConfigFormatRegex": "^(?<key>.+?)=(?<value>[^\"]*?)$"
+    }
+]
