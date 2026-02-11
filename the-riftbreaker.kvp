@@ -1,6 +1,6 @@
 Meta.DisplayName=The Riftbreaker [WIP]
 Meta.Description=The Riftbreaker Dedicated Server
-Meta.OS=
+Meta.OS=Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
@@ -36,11 +36,11 @@ App.ExecutableLinux=.proton/proton
 App.WorkingDir=4114030/bin
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}bin/DedicatedServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} disable_steam=1 app_mode=server campaign=open/open mission=campaigns/open/headquarters_magma difficulty=brutal {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"780310","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","XDG_RUNTIME_DIR":"/tmp"}
-App.CommandLineParameterFormat=/{0} {1}
+App.CommandLineParameterFormat={0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
