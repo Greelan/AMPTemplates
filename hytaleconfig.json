@@ -362,6 +362,21 @@
         }
     },
     {
+        "DisplayName": "Use Compact Object Headers",
+        "Category": "Hytale:stadia_controller",
+        "Subcategory": "Java and Memory:code:2",
+        "Description": "If set, the server will use compact object headers, which can reduce memory usage. See [JEP-519](https://openjdk.org/jeps/519)",
+        "Keywords": "compact,object,headers,memory",
+        "FieldName": "UseCompactObjectHeaders",
+        "InputType": "checkbox",
+        "ParamFieldName": "UseCompactObjectHeaders",
+        "DefaultValue": "-XX:+UseCompactObjectHeaders ",
+        "EnumValues": {
+            "False": "",
+            "True": "-XX:+UseCompactObjectHeaders "
+        }
+    },
+    {
         "DisplayName": "Additional Java Arguments",
         "Category": "Hytale:stadia_controller",
         "Subcategory": "Java and Memory:code:2",
