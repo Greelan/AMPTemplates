@@ -95,7 +95,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"\\cd call-of-dutymw3 && cp -f ./configs/IW5ServerConfig-master/admin/* ./server/admin >/dev/null 2>&1 && rm -rf ./configs/\"",
+        "UpdateSourceArgs": "-c \"\\cd call-of-dutymw3 && cp -f ./configs/IW5ServerConfig-master/admin/* ./server/IW5/admin >/dev/null 2>&1 && rm -rf ./configs/\"",
         "SkipOnFailure": false
     },
     {
@@ -103,7 +103,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'call-of-dutymw3'; Copy-Item -Path 'configs/IW5ServerConfig-master/admin/*' -Destination 'server/admin' -Force -ErrorAction SilentlyContinue *> $null; Remove-Item -Path 'configs' -Recurse -Force -ErrorAction SilentlyContinue *> $null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'call-of-dutymw3'; Copy-Item -Path 'configs/IW5ServerConfig-master/admin/*' -Destination 'server/IW5/admin' -Force -ErrorAction SilentlyContinue *> $null; Remove-Item -Path 'configs' -Recurse -Force -ErrorAction SilentlyContinue *> $null\"",
         "SkipOnFailure": false
     },
     {
