@@ -22,6 +22,38 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "IW4x Raw Files Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && mkdir -p rawfiles && wget -qO release.zip https://github.com/iw4x/iw4x-rawfiles/releases/latest/download/release.zip || { echo \\\"Download of latest IW4x raw files failed from GitHub. Aborting\\\"; exit 1; }; unzip -qo release.zip -d rawfiles && \\cp -a rawfiles/ ./ >/dev/null 2>&1 && rm -rf rawfiles release.zip >/dev/null 2>&1\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "IW4x Raw Files Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location '{{$FullBaseDir}}'; New-Item -ItemType Directory -Force -Path 'rawfiles' *> $null; try { Invoke-WebRequest -Uri 'https://github.com/iw4x/iw4x-rawfiles/releases/latest/download/release.zip' -OutFile 'release.zip' -UseBasicParsing -ErrorAction Stop } catch { Write-Error 'Download of latest IW4x raw files failed from GitHub. Aborting'; exit 1 }; Expand-Archive -Path 'release.zip' -DestinationPath 'rawfiles' -Force; Get-ChildItem 'rawfiles' -Force | ForEach-Object { Move-Item $_.FullName -Destination $PWD -Force }; Remove-Item 'rawfiles','release.zip' -Recurse -Force *> $null}\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "IW4x Client DLL Download",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd {{$FullBaseDir}} && wget -qO iw4x.dll https://github.com/iw4x/iw4x-client/releases/latest/download/iw4x.dll || { echo \\\"Download of latest IW4x client DLL failed from GitHub. Aborting\\\"; exit 1; }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "IW4x Client DLL Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location '{{$FullBaseDir}}'; try { Invoke-WebRequest -Uri 'https://github.com/iw4x/iw4x-client/releases/latest/download/iw4x.dll' -OutFile 'iw4x.dll' -UseBasicParsing -ErrorAction Stop } catch { Write-Error 'Download of latest IW4x client DLL failed from GitHub. Aborting'; exit 1 }\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "IW4x Launcher Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURLFromJQ",
@@ -60,19 +92,19 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Client Installation",
+        "UpdateStageName": "Client Files Installation",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path '{{$FullBaseDir}}'; & ./iw4x-launcher.exe --update --no-self-update --force --path=\\\"{{$FullBaseDir}}\\\"\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path '{{$FullBaseDir}}'; & ./iw4x-launcher.exe --no-self-update --path=\\\"{{$FullBaseDir}}\\\"\"",
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Client Installation",
+        "UpdateStageName": "Client Files Installation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ./call-of-dutymw2/10190 && chmod +x iw4x-launcher && ./iw4x-launcher --update --no-self-update --force --path=\\\"{{$FullBaseDir}}\\\"\"",
+        "UpdateSourceArgs": "-c \"cd ./call-of-dutymw2/10190 && chmod +x iw4x-launcher && ./iw4x-launcher --no-self-update --path=\\\"{{$FullBaseDir}}\\\"\"",
         "SkipOnFailure": false
     },
     {
