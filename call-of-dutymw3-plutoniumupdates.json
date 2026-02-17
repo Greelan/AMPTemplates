@@ -3,8 +3,8 @@
         "UpdateStageName": "server.cfg Backup",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}admin/server.cfg.bak",
-        "UpdateSourceArgs": "{{$FullBaseDir}}admin/server.cfg",
+        "UpdateSourceData": "{{$FullBaseDir}}IW5/admin/server.cfg.bak",
+        "UpdateSourceArgs": "{{$FullBaseDir}}IW5/admin/server.cfg",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -12,8 +12,8 @@
         "UpdateStageName": "default.dspl Backup",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}admin/default.dspl.bak",
-        "UpdateSourceArgs": "{{$FullBaseDir}}admin/default.dspl",
+        "UpdateSourceData": "{{$FullBaseDir}}IW5/admin/default.dspl.bak",
+        "UpdateSourceArgs": "{{$FullBaseDir}}IW5/admin/default.dspl",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -110,8 +110,8 @@
         "UpdateStageName": "server.cfg Restore",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}admin/server.cfg",
-        "UpdateSourceArgs": "{{$FullBaseDir}}admin/server.cfg.bak",
+        "UpdateSourceData": "{{$FullBaseDir}}IW5/admin/server.cfg",
+        "UpdateSourceArgs": "{{$FullBaseDir}}IW5/admin/server.cfg.bak",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -119,8 +119,8 @@
         "UpdateStageName": "default.dspl Restore",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}admin/default.dspl",
-        "UpdateSourceArgs": "{{$FullBaseDir}}admin/default.dspl.bak",
+        "UpdateSourceData": "{{$FullBaseDir}}IW5/admin/default.dspl",
+        "UpdateSourceArgs": "{{$FullBaseDir}}IW5/admin/default.dspl.bak",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
