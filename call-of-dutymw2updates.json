@@ -34,7 +34,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location '{{$FullBaseDir}}'; New-Item -ItemType Directory -Force -Path 'rawfiles' *> $null; try { Invoke-WebRequest -Uri 'https://github.com/iw4x/iw4x-rawfiles/releases/latest/download/release.zip' -OutFile 'release.zip' -UseBasicParsing -ErrorAction Stop } catch { Write-Error 'Download of latest IW4x raw files failed from GitHub. Aborting'; exit 1 }; Expand-Archive -Path 'release.zip' -DestinationPath 'rawfiles' -Force; Get-ChildItem 'rawfiles' -Force | ForEach-Object { Move-Item $_.FullName -Destination $PWD -Force }; Remove-Item 'rawfiles','release.zip' -Recurse -Force *> $null}\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location '{{$FullBaseDir}}'; New-Item -ItemType Directory -Force -Path 'rawfiles' *> $null; try { Invoke-WebRequest -Uri 'https://github.com/iw4x/iw4x-rawfiles/releases/latest/download/release.zip' -OutFile 'release.zip' -UseBasicParsing -ErrorAction Stop } catch { Write-Error 'Download of latest IW4x raw files failed from GitHub. Aborting'; exit 1 }; Expand-Archive -Path 'release.zip' -DestinationPath 'rawfiles' -Force; Get-ChildItem 'rawfiles' -Force | ForEach-Object { Move-Item $_.FullName -Destination $PWD -Force }; Remove-Item 'rawfiles','release.zip' -Recurse -Force *> $null\"",
         "SkipOnFailure": false
     },
     {
