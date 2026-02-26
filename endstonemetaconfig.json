@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "server.properties",
+        "ConfigFile": "bedrock_server/server.properties",
         "ConfigType": "kvp",
         "ConfigFormat": "{0}{1}",
         "Importable": "true",

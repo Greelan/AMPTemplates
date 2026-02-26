@@ -3,8 +3,8 @@
         "UpdateStageName": "Allowlist.json Backup",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}allowlist.json.bak",
-        "UpdateSourceArgs": "{{$FullBaseDir}}allowlist.json",
+        "UpdateSourceData": "{{$FullBaseDir}}bedrock_server/allowlist.json.bak",
+        "UpdateSourceArgs": "{{$FullBaseDir}}bedrock_server/allowlist.json",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -12,8 +12,8 @@
         "UpdateStageName": "Permissions.json Backup",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}permissions.json.bak",
-        "UpdateSourceArgs": "{{$FullBaseDir}}permissions.json",
+        "UpdateSourceData": "{{$FullBaseDir}}bedrock_server/permissions.json.bak",
+        "UpdateSourceArgs": "{{$FullBaseDir}}bedrock_server/permissions.json",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -53,8 +53,8 @@
         "UpdateStageName": "Allowlist.json Restore",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}allowlist.json",
-        "UpdateSourceArgs": "{{$FullBaseDir}}allowlist.json.bak",
+        "UpdateSourceData": "{{$FullBaseDir}}bedrock_server/allowlist.json",
+        "UpdateSourceArgs": "{{$FullBaseDir}}bedrock_server/allowlist.json.bak",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
     },
@@ -62,7 +62,7 @@
         "UpdateStageName": "Permissions.json Restore",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}permissions.json",
+        "UpdateSourceData": "{{$FullBaseDir}}bedrock_server/permissions.json",
         "UpdateSourceArgs": "{{$FullBaseDir}}permissions.json.bak",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": true
