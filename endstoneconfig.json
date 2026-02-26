@@ -451,7 +451,7 @@
         "DisplayName": "Hash Block Network IDs",
         "Category": "Endstone:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Specifies if the server will send hashed block network ID's instead of id's that start from 0 and go up",
+        "Description": "Specifies if the server will send hashed block network IDs instead of IDs that start from 0 and go up",
         "Keywords": "block,network,ids,hashed,block-network-ids-are-hashes",
         "FieldName": "block-network-ids-are-hashes",
         "InputType": "checkbox",
