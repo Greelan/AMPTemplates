@@ -1,5 +1,11 @@
 [
     {
+        "UpdateStageName": "Create Server Directory",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullBaseDir}}bedrock_server"
+    },
+    {
         "UpdateStageName": "Allowlist.json Backup",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CopyFilePath",
