@@ -5,5 +5,12 @@
         "Ref": "ServerPort",
         "Name": "Server Port",
         "Description": "Port for server traffic"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27016,
+        "Ref": "QueryPort",
+        "Name": "Query Port",
+        "Description": "Port for server query traffic"
     }
 ]
