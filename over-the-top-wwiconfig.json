@@ -26,6 +26,30 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Server Password",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password for players to join the server. Default is no password. Maximum 20 characters",
+        "Keywords": "server,password,ServerPassword",
+        "FieldName": "ServerPassword",
+        "InputType": "password",
+        "ParamFieldName": "ServerPassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password for players to join the server as an admin in-game. Default is a secure random password. Maximum 20 characters",
+        "Keywords": "admin,password,AdminPassword",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "AdminPassword",
+        "DefaultValue": "{{randomdigits(20)}}",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Player Limit",
         "Category": "Over The Top WWI:stadia_controller",
         "Subcategory": "Server:dns:1",
