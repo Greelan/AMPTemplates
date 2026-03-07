@@ -9,6 +9,15 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "SteamCMD Component Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Initialise Wine",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
