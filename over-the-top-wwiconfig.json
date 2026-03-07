@@ -1,0 +1,43 @@
+[
+    {
+        "DisplayName": "Port",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$GamePort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "PortID",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Query Port",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$QueryPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "SteamQueryPortID",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Player Limit",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum number of players allowed on the server at one time",
+        "Keywords": "max,players,player,limit,MaxPlayers",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "MaxPlayers",
+        "DefaultValue": "16",
+        "Placeholder": "16",
+        "Suffix": "players",
+        "EnumValues": {}
+    }
+]
