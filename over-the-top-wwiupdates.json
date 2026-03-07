@@ -9,16 +9,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Config File Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/main/over-the-top-wwiserverconfiguration.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "UpdateSourceArgs": "ServerConfiguration.ini",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Initialise Wine",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",

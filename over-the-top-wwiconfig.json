@@ -33,10 +33,11 @@
         "Keywords": "max,players,player,limit,MaxPlayers",
         "FieldName": "$MaxUsers",
         "InputType": "number",
-        "MinValue": "1",
-        "ParamFieldName": "MaxPlayers",
-        "DefaultValue": "16",
-        "Placeholder": "16",
+        "MinValue": "20",
+        "MaxValue": "200",
+        "ParamFieldName": "MaxPlayerCount",
+        "DefaultValue": "130",
+        "Placeholder": "130",
         "Suffix": "players",
         "EnumValues": {}
     }
