@@ -89,7 +89,7 @@ App.ApplicationReadyMode=RegexMatch
 Console.FilterMatchRegex=\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
-Console.AppReadyRegex=^$
+Console.AppReadyRegex=^started synapse\.app\.homeserver\(homeserver.yaml\)$
 Console.UserJoinRegex=^$
 Console.UserLeaveRegex=^$
 Console.UserChatRegex=^$
