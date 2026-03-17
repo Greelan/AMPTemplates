@@ -4,8 +4,8 @@ Meta.OS=Linux
 Meta.AarchSupport=Native
 Meta.Arch=All
 Meta.Author=Greelan
-Meta.URL=https://element-hq.github.io/synapse
-Meta.DisplayImageSource=url:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5alSZicXefNqdFMKv2xLcKSee982ZS2b1nG-Cep3Oag&s
+Meta.URL=https://element.io/
+Meta.DisplayImageSource=url:https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/synapselogo.svg
 Meta.EndpointURIFormat= 
 Meta.ConfigManifest=synapseconfig.json
 Meta.MetaConfigManifest=synapsemetaconfig.json
