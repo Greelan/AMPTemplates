@@ -1,0 +1,62 @@
+[
+    {
+        "DisplayName": "Python Version",
+        "Category": "Synapse:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the specific Python 3 version to run the server with. The version must be installed on the system for all users (and in the System Path on Windows). Minimum Python 3.10, maximum Python 3.13",
+        "Keywords": "python,version,PythonVersion",
+        "FieldName": "PythonVersion",
+        "InputType": "enum",
+        "ParamFieldName": "PythonVersion",
+        "DefaultValue": "3",
+        "EnumValues": {
+            "3": "System default",
+            "3.10": "3.10",
+            "3.11": "3.11",
+            "3.12": "3.12",
+            "3.13": "3.13"
+        }
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "Synapse:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the server. This must be set before installing the server, as it cannot be changed later. [More information](https://element-hq.github.io/synapse/latest/setup/installation.html#choosing-your-server-name)",
+        "Keywords": "server,name,server-name",
+        "FieldName": "server-name",
+        "InputType": "text",
+        "ParamFieldName": "server-name",
+        "DefaultValue": "",
+        "Placeholder": "my.domain.name",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Report Statistics",
+        "Category": "Synapse:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, the server will report usage statistics (hostname, Synapse version, uptime, total users, etc) to the developers of Synapse",
+        "Keywords": "report,stats,report-stats,usage,telemetry,data",
+        "FieldName": "report-stats",
+        "InputType": "checkbox",
+        "ParamFieldName": "report-stats",
+        "DefaultValue": "no",
+        "EnumValues": {
+            "False": "no",
+            "True": "yes"
+        }
+    },
+    {
+        "DisplayName": "Additional Command Line Arguments",
+        "Category": "Synapse:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Specifies any additional command line arguments to include when running the server. Use with care",
+        "Keywords": "command,line,arguments,args,CommandLineArgs",
+        "FieldName": "CommandLineArgs",
+        "InputType": "text",
+        "ParamFieldName": "CommandLineArgs",
+        "DefaultValue": "",
+        "Placeholder": "--value1 foo --value2 bar",
+        "EnumValues": {}
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "UpdateStageName": "Create Virtual Environment",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"/usr/bin/python{{PythonVersion}} -u -m venv --clear --upgrade-deps \\\"{{$FullRootDir}}venv\\\"\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Install Packages",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"source \\\"{{$FullRootDir}}venv/bin/activate\\\" && python3 -u -m pip install -U pip setuptools matrix-synapse[postgres]\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Generate Configuration",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"cd synapse && if [[ ! -f homeserver.yaml ]]; then source \\\"{{$FullRootDir}}venv/bin/activate\\\" && python3 -u -m synapse.app.homeserver --server-name {{server-name}} --config-path homeserver.yaml --generate-config --report-stats={{report-stats}}; fi\"",
+        "SkipOnFailure": false
+    }
+]

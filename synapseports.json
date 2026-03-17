@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 8008,
+        "Ref": "HTTPPort",
+        "Name": "HTTP Port",
+        "Description": "Port for HTTP traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 8448,
+        "Ref": "HTTPSPort",
+        "Name": "HTTPS Port",
+        "Description": "Port for HTTPS traffic"
+    }
+]
