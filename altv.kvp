@@ -1,6 +1,6 @@
 Meta.DisplayName=alt:V - Grand Theft Auto V Server
 Meta.Description=alt:V Dedicated Server for GTA V
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=NotSupported
 Meta.Arch=x86_64
 Meta.Author=Greelan
