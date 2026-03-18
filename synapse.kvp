@@ -40,7 +40,7 @@ App.AppSettings={}
 App.EnvironmentVariables={"VIRTUAL_ENV":"{{$FullRootDir}}venv","PATH":"{{$FullRootDir}}venv/bin:%PATH%","PYTHONHOME":""}
 App.CommandLineParameterFormat={0}={1}
 App.CommandLineParameterDelimiter= 
-App.ExitMethod=String
+App.ExitMethod=OS_CLOSE
 App.ExitTimeout=30
 App.ExitString=stop
 App.ExitFile=app_exit.lck
@@ -85,7 +85,7 @@ App.MonitorChildProcessName=
 App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.WakeupMode=Any
-App.ApplicationReadyMode=RegexMatch
+App.ApplicationReadyMode=Immediate
 Console.FilterMatchRegex=\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
