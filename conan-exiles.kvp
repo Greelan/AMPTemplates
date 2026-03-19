@@ -73,7 +73,7 @@ App.SupportsUniversalSleep=True
 App.WakeupMode=Any
 App.ApplicationReadyMode=RegexMatch
 App.MonitorChildProcessName=^.*ConanSandboxServer-Win64-Shipping\.exe.*-Port={{$ApplicationPort1}}.*$
-Console.FilterMatchRegex=
+Console.FilterMatchRegex=(\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+|ProtonFixes\[\d+\] WARN: Skipping fix execution\. We are probably running a unit test\.)
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^((WARNING|ERROR): Shader.+|\d+:err:ole:.*|Could not find Wine Gecko.*)|.*LogRcon:Warning: Received Rcon: ping, from PeerAddr: [\d\.:]+|.*Couldn't find the command: ping\. Try "help"$
 Console.AppReadyRegex=^.*LogGameState: Match State Changed from WaitingToStart to InProgress$
