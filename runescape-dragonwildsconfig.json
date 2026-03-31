@@ -1,0 +1,66 @@
+[
+    {
+        "DisplayName": "Owner ID",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the server owner's RuneScape: Dragonwilds Player ID. This can be found in-game at the bottom of the Settings Menu",
+        "Keywords": "owner,id,ownerid,playerid",
+        "FieldName": "OwnerID",
+        "InputType": "text",
+        "ParamFieldName": "DedicatedServerSettings.OwnerID",
+        "DefaultValue": "",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the server as shown in the server browser",
+        "Keywords": "server,name,servername",
+        "FieldName": "ServerName",
+        "InputType": "text",
+        "ParamFieldName": "DedicatedServerSettings.ServerName",
+        "DefaultValue": "AMP Powered RuneScape: Dragonwilds Server",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Default World Name",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the default world that is created on start",
+        "Keywords": "default,world,name,defaultworldname",
+        "FieldName": "DefaultWorldName",
+        "InputType": "text",
+        "ParamFieldName": "DedicatedServerSettings.DefaultWorldName",
+        "DefaultValue": "Default World",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the admin password, allowing access to the Server Management tab in-game",
+        "Keywords": "admin,password,adminpassword",
+        "FieldName": "AdminPassword",
+        "InputType": "password",
+        "ParamFieldName": "DedicatedServerSettings.AdminPassword",
+        "DefaultValue": "",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "World Password",
+        "Category": "RuneScape Dragonwilds:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password required to join the world. Empty = no password",
+        "Keywords": "world,password,worldpassword",
+        "FieldName": "WorldPassword",
+        "InputType": "password",
+        "ParamFieldName": "DedicatedServerSettings.WorldPassword",
+        "DefaultValue": "",
+        "EnumValues": {}
+    }
+]
