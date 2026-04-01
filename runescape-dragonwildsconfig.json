@@ -34,7 +34,7 @@
         "FieldName": "DefaultWorldName",
         "InputType": "text",
         "ParamFieldName": "/Script/Dominion.DedicatedServerSettings.DefaultWorldName",
-        "DefaultValue": "World-{{randomdigits(5)}}",
+        "DefaultValue": "World-12345",
         "Placeholder": "World-12345",
         "Required": true,
         "EnumValues": {}
