@@ -36,7 +36,7 @@ App.ExecutableLinux=4019830/RSDragonwilds/Binaries/Linux/RSDragonwildsServer-Lin
 App.WorkingDir=4019830
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} -Port={{$GamePort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput
+App.CommandLineArgs={{$PlatformArgs}} RSDragonwilds -Port={{$GamePort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"1374490"}
