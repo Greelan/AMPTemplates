@@ -6,39 +6,5 @@
         "UpdateSourceData": "4019830",
         "UpdateSourceArgs": "1374490",
         "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Create Config Directory",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Create Config Directory",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/Linux",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "DedicatedServer.ini Download",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/runescape-dragonwildsdedicatedserver.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/WindowsServer",
-        "UpdateSourceArgs": "DedicatedServer.ini",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "DedicatedServer.ini Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/runescape-dragonwildsdedicatedserver.ini",
-        "UpdateSourceTarget": "{{$FullBaseDir}}RSDragonwilds/Saved/Config/Linux",
-        "UpdateSourceArgs": "DedicatedServer.ini",
-        "OverwriteExistingFiles": false,
-        "SkipOnFailure": false
     }
 ]
