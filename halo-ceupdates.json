@@ -10,7 +10,7 @@
         "UpdateStageName": "7-Zip Installer Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://7-zip.org/a/7z2407-x64.exe",
+        "UpdateSourceData": "https://github.com/ip7z/7zip/releases/download/26.00/7z2600-x64.exe",
         "UpdateSourceTarget": "{{$FullRootDir}}7-Zip",
         "OverwriteExistingFiles": true,
         "OneShot": true
@@ -19,7 +19,7 @@
         "UpdateStageName": "7-Zip Console Tool Download",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://www.7-zip.org/a/7zr.exe",
+        "UpdateSourceData": "https://github.com/ip7z/7zip/releases/download/26.00/7zr.exe",
         "UpdateSourceTarget": "{{$FullRootDir}}7-Zip",
         "OverwriteExistingFiles": true,
         "OneShot": true
@@ -29,7 +29,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C cd halo-ce\\7-Zip && 7zr.exe x -y -aoa 7z2407-x64.exe > NUL 2>&1",
+        "UpdateSourceArgs": "/C cd halo-ce\\7-Zip && 7zr.exe x -y -aoa 7z2600-x64.exe > NUL 2>&1",
         "SkipOnFailure": true,
         "OneShot": true
     },
@@ -37,7 +37,7 @@
         "UpdateStageName": "7-Zip Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://www.7-zip.org/a/7z2407-linux-x64.tar.xz",
+        "UpdateSourceData": "https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-x64.tar.xz",
         "UpdateSourceTarget": "{{$FullRootDir}}7-Zip",
         "OverwriteExistingFiles": true,
         "OneShot": true
@@ -47,7 +47,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd halo-ce/7-Zip && /usr/bin/tar -xf 7z2407-linux-x64.tar.xz && rm -f 7z2407-linux-x64.tar.xz\"",
+        "UpdateSourceArgs": "-c \"cd halo-ce/7-Zip && /usr/bin/tar -xf 7z2600-linux-x64.tar.xz && rm -f 7z2600-linux-x64.tar.xz\"",
         "OneShot": true
     },
     {

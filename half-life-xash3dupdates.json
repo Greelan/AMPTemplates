@@ -122,7 +122,7 @@
         "UpdateStageName": "7-Zip Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://www.7-zip.org/a/7z2301-linux-x64.tar.xz",
+        "UpdateSourceData": "https://github.com/ip7z/7zip/releases/download/26.00/7z2600-linux-x64.tar.xz",
         "UpdateSourceTarget": "{{$FullRootDir}}7-Zip",
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "EngineVersion",
@@ -133,7 +133,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd ./half-life/7-Zip && tar -xf 7z2301-linux-x64.tar.xz && rm -f 7z2301-linux-x64.tar.xz\"",
+        "UpdateSourceArgs": "-c \"cd ./half-life/7-Zip && tar -xf 7z2600-linux-x64.tar.xz && rm -f 7z2600-linux-x64.tar.xz\"",
         "UpdateSourceConditionSetting": "EngineVersion",
         "UpdateSourceConditionValue": "old"
     },
