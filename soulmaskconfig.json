@@ -83,6 +83,25 @@
         }
     },
     {
+        "DisplayName": "Server Difficulty Level",
+        "Category": "Soulmask:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the difficulty level of the server, which presets the values of various gameplay settings (unless set to 'Custom')",
+        "Keywords": "difficulty,level,server,casual,easy,normal,hard,master,custom,nd",
+        "FieldName": "ND",
+        "InputType": "enum",
+        "ParamFieldName": "ND",
+        "DefaultValue": "?ND=5",
+        "EnumValues": {
+            "?ND=0": "Casual",
+            "?ND=1": "Easy",
+            "?ND=2": "Normal",
+            "?ND=3": "Hard",
+            "?ND=4": "Master",
+            "?ND=5": "Custom (default)"
+        }
+    },
+    {
         "DisplayName": "Player Limit",
         "Category": "Soulmask:stadia_controller",
         "Subcategory": "Server:dns:1",
