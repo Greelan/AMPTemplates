@@ -1,6 +1,6 @@
 Meta.DisplayName=Windrose
 Meta.Description=Windrose Dedicated Server
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
