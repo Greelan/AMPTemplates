@@ -1,0 +1,12 @@
+{
+    "Version": 1,
+    "ServerDescription_Persistent": {
+        "PersistentServerId": "",
+        "InviteCode": "",
+        "IsPasswordProtected": false,
+        "Password": "",
+        "Note": "",
+        "WorldIslandId": "",
+        "MaxPlayerCount": 8
+    }
+}
