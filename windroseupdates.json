@@ -26,6 +26,16 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Default ServerDescription.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/windroseserverdescription.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}R5",
+        "UpdateSourceArgs": "ServerDescription.json",
+        "OverwriteExistingFiles": false,
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Proton GE Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",

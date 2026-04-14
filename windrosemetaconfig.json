@@ -4,5 +4,11 @@
         "AutoMap": true,
         "Importable": true,
         "ConfigType": "json"
+    },
+    {
+        "ConfigFile": "R5/ServerDescription.json",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "json"
     }
 ]
