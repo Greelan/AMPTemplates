@@ -77,7 +77,7 @@
         "ParamFieldName": "$.ServerDescription_Persistent.MaxPlayerCount",
         "DefaultValue": "4",
         "Placeholder": "4",
-        "Suffix": " players",
+        "Suffix": "players",
         "EnumValues": {}
     }
 ]
