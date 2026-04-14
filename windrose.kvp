@@ -77,7 +77,7 @@ App.RCONHeartbeatCommand=ping
 App.RCONSelectIPMethod=Default
 App.TelnetLoginFormat={0}
 App.TelnetNewLineType=Default
-App.TailLogFilePath=
+App.TailLogFilePath={{$FullBaseDir}}R5/Saved/Logs/R5.log
 App.UpdateSources=@IncludeJson[windroseupdates.json]
 App.PreStartStages=[]
 App.CommandTriggers={}
@@ -103,7 +103,7 @@ App.QuiesceSettleDelayMilliseconds=5
 Console.FilterMatchRegex=(\e\[(\d+;)*(\d+)?[ABCDHJKfmsu]|\e\[?[?\>\=\da-z]+|ProtonFixes\[\d+\] WARN: Skipping fix execution\. We are probably running a unit test\.)
 Console.FilterMatchReplacement=
 Console.ThrowawayMessageRegex=^(WARNING|ERROR): Shader.+$
-Console.AppReadyRegex=
+Console.AppReadyRegex=^\[[\d\.]+-[\d\.]+:\d+\]\[[\d ]+\]LogGlobalStatus: UEngine::LoadMap Load map complete .*$
 Console.UserJoinRegex=
 Console.UserLeaveRegex=
 Console.UserChatRegex=
