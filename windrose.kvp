@@ -91,7 +91,7 @@ App.RapidStartup=False
 App.SmartExcludeExemptions=[".cfg",".conf",".config",".ini",".json",".xml",".properties",".kvp",".yml",".yaml",".toml",".lua"]
 App.SmartExcludeSupported=False
 App.DumpFullChildProcessTree=False
-App.MonitorChildProcessName=^.*{{$WineBaseDir}}R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping\.exe.*-Port={{$GamePort}}.*$
+App.MonitorChildProcessName=^.*{{$WineBaseDir}}R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping\.exe.*$
 App.MonitorDirectChildOnly=False
 App.SupportsUniversalSleep=False
 App.UseSteamQueryForStatus=False
