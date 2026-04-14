@@ -10,10 +10,11 @@
     },
     {
         "UpdateStageName": "SteamCMD Component Download",
-        "UpdateSourcePlatform": "Windows",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "1007",
         "UpdateSourceTarget": "{{$FullBaseDir}}R5/Binaries/Win64",
+        "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
     {
