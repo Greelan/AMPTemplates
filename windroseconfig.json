@@ -16,7 +16,7 @@
         "DisplayName": "World Island ID",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the ID of world to load on server start. It must match the ID in that world's '`WorldDescription.json' file. Empty = new world (the world ID generated for that world can be imported from 'ServerDescription.json' into this setting)",
+        "Description": "Sets the ID of world to load on server start. It must match the ID in that world's 'WorldDescription.json' file. Empty = new world (the world ID generated for that world can be imported from 'ServerDescription.json' into this setting)",
         "Keywords": "world,id,worldId,worldislandid",
         "FieldName": "WorldIslandId",
         "InputType": "text",
