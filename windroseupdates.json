@@ -3,9 +3,17 @@
         "UpdateStageName": "Windrose Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "0000000",
+        "UpdateSourceData": "4129620",
         "UpdateSourceArgs": "3041230",
         "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "SteamCMD Component Download",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceTarget": "{{$FullBaseDir}}R5/Binaries/Win64",
         "SkipOnFailure": false
     },
     {

@@ -1,6 +1,6 @@
 Meta.DisplayName=Windrose
 Meta.Description=Windrose Dedicated Server
-Meta.OS=
+Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
@@ -29,11 +29,11 @@ Meta.ImportableExtensions=[".json"]
 Meta.AppIsMultiIPAware=False
 App.DisplayName=Windrose
 App.RootDir=./windrose/
-App.BaseDirectory=./windrose/0000000/
+App.BaseDirectory=./windrose/4129620/
 App.SteamWorkshopDownloadLocation=
-App.ExecutableWin=0000000\R5\Binaries\Win64\WindroseServer-Win64-Shipping.exe
+App.ExecutableWin=4129620\R5\Binaries\Win64\WindroseServer-Win64-Shipping.exe
 App.ExecutableLinux=.proton/proton
-App.WorkingDir=0000000
+App.WorkingDir=4129620
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}R5/Binaries/Win64/WindroseServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} R5 -Port={{$GamePort}} -QueryPort={{$QueryPort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput
