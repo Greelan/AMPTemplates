@@ -36,7 +36,7 @@ App.ExecutableLinux=/usr/bin/wine
 App.WorkingDir=4129620
 App.LinuxCommandLineArgs="{{$FullBaseDir}}R5/Binaries/Win64/WindroseServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} R5 -Port={{$GamePort}} {{$FormattedArgs}} -stdout -FullStdOutLogOutput
+App.CommandLineArgs={{$PlatformArgs}} R5 {{$FormattedArgs}} -stdout -FullStdOutLogOutput
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"3041230","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
