@@ -1,5 +1,18 @@
 [
     {
+        "DisplayName": "IP Binding",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ApplicationIPBinding",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "$.ServerDescription_Persistent.P2pProxyAddress",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Invite Code",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "Server:dns:1",
