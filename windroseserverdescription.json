@@ -8,6 +8,6 @@
         "Note": "",
         "WorldIslandId": "",
         "MaxPlayerCount": 8,
-        "P2pProxyAddress": "0.0.0.0"
+        "P2pProxyAddress": "127.0.0.1"
     }
 }

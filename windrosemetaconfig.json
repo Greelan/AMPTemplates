@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "ServerDescription.json",
+        "ConfigFile": "R5/Saved/SaveProfiles/Default/ServerDescription.json",
         "AutoMap": true,
         "Importable": true,
         "ConfigType": "json"
