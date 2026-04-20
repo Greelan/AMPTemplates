@@ -256,7 +256,7 @@
     {
         "DisplayName": "Stack Size Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the item stack size multiplier. 5.0 = five times the default stack size",
         "Keywords": "stack,size,inventory,multiplier,multipliers.stack_size",
         "FieldName": "multipliers.stack_size",
@@ -271,7 +271,7 @@
     {
         "DisplayName": "Craft Cost Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the crafting resource cost multiplier. 0.5 = half the normal crafting cost",
         "Keywords": "crafting,cost,multiplier,multipliers.craft_cost",
         "FieldName": "multipliers.craft_cost",
@@ -286,7 +286,7 @@
     {
         "DisplayName": "Crop Speed Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the crop growth speed multiplier. 2.0 = crops grow twice as fast",
         "Keywords": "farming,crop,speed,multiplier,multipliers.crop_speed",
         "FieldName": "multipliers.crop_speed",
@@ -301,7 +301,7 @@
     {
         "DisplayName": "Harvest Yield Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the amount of resources gathered from harvesting. 2.0 = double yield",
         "Keywords": "harvest,yield,resources,multiplier,multipliers.harvest_yield",
         "FieldName": "multipliers.harvest_yield",
@@ -316,7 +316,7 @@
     {
         "DisplayName": "Inventory Size Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Player inventory slot count multiplier",
         "Keywords": "inventory,size,slots,multiplier,multipliers.inventory_size",
         "FieldName": "multipliers.inventory_size",
@@ -331,7 +331,7 @@
     {
         "DisplayName": "Carry Weight Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the player carry weight multiplier",
         "Keywords": "weight,carry,multiplier,multipliers.weight",
         "FieldName": "multipliers.weight",
@@ -346,7 +346,7 @@
     {
         "DisplayName": "Points Per Level Multiplier",
         "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus Multipliers:tune:3",
+        "Subcategory": "WindrosePlus:extension:2",
         "Description": "Sets the skill points granted per level up. 2.0 = double points",
         "Keywords": "points,level,skill,multiplier,multipliers.points_per_level",
         "FieldName": "multipliers.points_per_level",
