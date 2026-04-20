@@ -1,0 +1,23 @@
+[
+    {
+        "Protocol": "Both",
+        "Port": 7777,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Port used for direct connection game traffic"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27105,
+        "Ref": "QueryPort",
+        "Name": "Windrose+ Query Port",
+        "Description": "Port used for Windrose+ query traffic"
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 27106,
+        "Ref": "DashboardPort",
+        "Name": "Windrose+ Dashboard Port",
+        "Description": "Port used for Windrose+ dashboard and RCON traffic"
+    }
+]

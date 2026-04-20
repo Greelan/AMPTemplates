@@ -1,0 +1,22 @@
+[
+    {
+        "UpdateStageName": "Windrose+ Pak Rebuild",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -File \"{{$FullBaseDir}}windrose_plus/tools/WindrosePlus-BuildPak.ps1\" -ServerDir \"{{$FullBaseDir}}\"",
+        "UpdateSourceConditionSetting": "InstallWindrosePlus",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Windrose+ Pak Rebuild",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wine \\\"{{$FullBaseDir}}windrose_plus/tools/bin/repak.exe\\\" pack \\\"{{$WineBaseDir}}windrose_plus\\overrides\\\" \\\"{{$WineBaseDir}}R5\\Content\\Paks\\WindrosePlus_override_P.pak\\\"\"",
+        "UpdateSourceConditionSetting": "InstallWindrosePlus",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    }
+]
