@@ -264,7 +264,7 @@
         "ParamFieldName": "$.multipliers.xp",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -280,7 +280,7 @@
         "ParamFieldName": "$.multipliers.loot",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -296,7 +296,7 @@
         "ParamFieldName": "$.multipliers.stack_size",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -312,7 +312,7 @@
         "ParamFieldName": "$.multipliers.craft_cost",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -328,7 +328,7 @@
         "ParamFieldName": "$.multipliers.crop_speed",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -344,7 +344,7 @@
         "ParamFieldName": "$.multipliers.cooking_speed",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -360,7 +360,7 @@
         "ParamFieldName": "$.multipliers.harvest_yield",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -376,7 +376,7 @@
         "ParamFieldName": "$.multipliers.inventory_size",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -392,7 +392,7 @@
         "ParamFieldName": "$.multipliers.weight",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
@@ -408,7 +408,7 @@
         "ParamFieldName": "$.multipliers.points_per_level",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
-        "MultipleOf": "0.1",
+        "MultipleOf": "0.000001",
         "EnumValues": {}
     },
     {
