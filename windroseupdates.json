@@ -82,5 +82,17 @@
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Default windrose_plus.json Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/windrosewindrose_plus.json",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UpdateSourceArgs": "windrose_plus.json",
+        "OverwriteExistingFiles": false,
+        "UpdateSourceConditionSetting": "InstallWindrosePlus",
+        "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": false
     }
 ]

@@ -152,21 +152,6 @@
         }
     },
     {
-        "DisplayName": "Enable Windrose+",
-        "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus:extension:2",
-        "Description": "If set, [Windrose+](https://github.com/humangenome/WindrosePlus) will be installed when the server is updated and enabled when it is started. Includes UE4SS experimental build. On Linux, multiplier/.ini overrides require manually placing modified files in 'windrose_plus/overrides'",
-        "Keywords": "install,windrose+,windrose,plus,InstallWindrosePlus",
-        "FieldName": "InstallWindrosePlus",
-        "InputType": "checkbox",
-        "ParamFieldName": "InstallWindrosePlus",
-        "DefaultValue": "false",
-        "EnumValues": {
-            "False": "false",
-            "True": "true"
-        }
-    },
-    {
         "DisplayName": "Enable RCON and Web Dashboard",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
@@ -175,7 +160,7 @@
         "FieldName": "rcon.enabled",
         "InputType": "checkbox",
         "ParamFieldName": "$.rcon.enabled",
-        "DefaultValue": "false",
+        "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
             "True": "true"
@@ -270,7 +255,7 @@
         "DisplayName": "XP Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the experience gain multiplier. 1.0 = default, 2.0 = double XP",
+        "Description": "Sets the experience gain multiplier. 1.0 = default, 2.0 = double XP. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "xp,experience,multiplier.mulipliers.xp",
         "FieldName": "mulipliers.xp",
         "InputType": "number",
@@ -286,7 +271,7 @@
         "DisplayName": "Loot Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the loot drop rate multiplier. 1.0 = default, 2.0 = double loot.",
+        "Description": "Sets the loot drop rate multiplier. 1.0 = default, 2.0 = double loot. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "loot,drop,multiplier,multipliers.loot",
         "FieldName": "multipliers.loot",
         "InputType": "number",
@@ -302,7 +287,7 @@
         "DisplayName": "Stack Size Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the item stack size multiplier. 5.0 = five times the default stack size",
+        "Description": "Sets the item stack size multiplier. 5.0 = five times the default stack size. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "stack,size,inventory,multiplier,multipliers.stack_size",
         "FieldName": "multipliers.stack_size",
         "InputType": "number",
@@ -318,7 +303,7 @@
         "DisplayName": "Craft Cost Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the crafting resource cost multiplier. 0.5 = half the normal crafting cost",
+        "Description": "Sets the crafting resource cost multiplier. 0.5 = half the normal crafting cost. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "crafting,cost,multiplier,multipliers.craft_cost",
         "FieldName": "multipliers.craft_cost",
         "InputType": "number",
@@ -334,7 +319,7 @@
         "DisplayName": "Crop Speed Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the crop growth speed multiplier. 2.0 = crops grow twice as fast",
+        "Description": "Sets the crop growth speed multiplier. 2.0 = crops grow twice as fast. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "farming,crop,speed,multiplier,multipliers.crop_speed",
         "FieldName": "multipliers.crop_speed",
         "InputType": "number",
@@ -350,7 +335,7 @@
         "DisplayName": "Crop Speed Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the cooking/fermentation/smelting speed multiplier. 2.0 = twice as fast",
+        "Description": "Sets the cooking/fermentation/smelting speed multiplier. 2.0 = twice as fast. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "cooking,fermentation,smelting,speed,multiplier,multipliers.cooking_speed",
         "FieldName": "multipliers.cooking_speed",
         "InputType": "number",
@@ -366,7 +351,7 @@
         "DisplayName": "Harvest Yield Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the amount of resources gathered from harvesting. 2.0 = double yield",
+        "Description": "Sets the amount of resources gathered from harvesting. 2.0 = double yield. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "harvest,yield,resources,multiplier,multipliers.harvest_yield",
         "FieldName": "multipliers.harvest_yield",
         "InputType": "number",
@@ -398,7 +383,7 @@
         "DisplayName": "Carry Weight Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the player carry weight multiplier",
+        "Description": "Sets the player carry weight multiplier. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "weight,carry,multiplier,multipliers.weight",
         "FieldName": "multipliers.weight",
         "InputType": "number",
@@ -414,7 +399,7 @@
         "DisplayName": "Points Per Level Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the skill points granted per level up. 2.0 = double points",
+        "Description": "Sets the skill points granted per level up. 2.0 = double points. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "points,level,skill,multiplier,multipliers.points_per_level",
         "FieldName": "multipliers.points_per_level",
         "InputType": "number",
@@ -425,5 +410,20 @@
         "Placeholder": "1.0",
         "MultipleOf": "0.1",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Install Windrose+",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "If set, [Windrose+](https://github.com/humangenome/WindrosePlus) will be installed when the server is updated. Includes UE4SS experimental build. On Linux, multiplier/.ini overrides require manually placing modified files in 'windrose_plus/overrides'",
+        "Keywords": "install,windrose+,windrose,plus,InstallWindrosePlus",
+        "FieldName": "InstallWindrosePlus",
+        "InputType": "checkbox",
+        "ParamFieldName": "InstallWindrosePlus",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
     }
 ]
