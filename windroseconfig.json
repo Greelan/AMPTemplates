@@ -367,7 +367,7 @@
         "DisplayName": "Inventory Size Multiplier",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Player inventory slot count multiplier",
+        "Description": "Player inventory slot count multiplier. Only works on Linux with modified files in 'windrose_plus/overrides'",
         "Keywords": "inventory,size,slots,multiplier,multipliers.inventory_size",
         "FieldName": "multipliers.inventory_size",
         "InputType": "number",
