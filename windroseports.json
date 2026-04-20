@@ -8,13 +8,6 @@
     },
     {
         "Protocol": "UDP",
-        "Port": 27015,
-        "Ref": "QueryPort",
-        "Name": "Windrose+ Query Port",
-        "Description": "Port used for Windrose+ query traffic"
-    },
-    {
-        "Protocol": "UDP",
         "Port": 27016,
         "Ref": "DashboardPort",
         "Name": "Windrose+ Dashboard Port",

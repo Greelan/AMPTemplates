@@ -175,7 +175,7 @@
         "FieldName": "rcon.enabled",
         "InputType": "checkbox",
         "ParamFieldName": "$.rcon.enabled",
-        "DefaultValue": "true",
+        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
@@ -185,7 +185,7 @@
         "DisplayName": "RCON/Dashboard Password",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the password for the Windrose+ RCON and web dashboard. Default is a strong random password",
+        "Description": "Sets the password for the Windrose+ RCON and web dashboard. Default is a strong random password. Blank = disabled",
         "Keywords": "rcon,dashboard,password,rcon.password",
         "FieldName": "rcon.password",
         "InputType": "password",
@@ -194,27 +194,14 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Server Admins",
+        "DisplayName": "Enable Server Query",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Comma-separated list of [Steam64 IDs](https://steamid.io/) of server admins. Admins can run all wp.* commands without the RCON/web dashboard",
-        "Keywords": "rcon,dashboard,admin,steam,ids,admin_steam_ids",
-        "FieldName": "admin_steam_ids",
-        "InputType": "text",
-        "ParamFieldName": "$.admin_steam_ids",
-        "DefaultValue": "",
-        "Placeholder": "776561198123456789,76561198098765432",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Enable Live Map",
-        "Category": "Windrose:stadia_controller",
-        "Subcategory": "WindrosePlus:extension:2",
-        "Description": "If set, the real-time Sea Chart (live map) showing player positions, creatures and island terrain will be enabled in the web dashboard",
-        "Keywords": "live,map,sea,chart,players,location,features.live_map",
-        "FieldName": "features.live_map",
+        "Description": "If set, server query responses will be enabled",
+        "Keywords": "query,enable,enabled,query.enabled",
+        "FieldName": "query.enabled",
         "InputType": "checkbox",
-        "ParamFieldName": "$.features.live_map",
+        "ParamFieldName": "$.query.enabled",
         "DefaultValue": "true",
         "EnumValues": {
             "False": "false",
@@ -222,15 +209,58 @@
         }
     },
     {
-        "DisplayName": "Enable CPU Optimization",
+        "DisplayName": "Server Query Interval",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "If set, CPU core usage will be automatically restricted when no players are online, to reduce idle resource usage",
-        "Keywords": "cpu,optimization,performance,idle,features.cpu_optimization",
-        "FieldName": "features.cpu_optimization",
+        "Description": "Sets the interval for server query responses. Lower values provide more frequent updates but increase server load",
+        "Keywords": "query,interval,server.query.interval_ms",
+        "FieldName": "query.interval_ms",
+        "InputType": "number",
+        "MinValue": "0",
+        "ParamFieldName": "$.query.interval_ms",
+        "DefaultValue": "5000",
+        "Placeholder": "5000",
+        "Suffix": "milliseconds",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Admins",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "WindrosePlus:extension:2",
+        "Description": "Sets a list of [Steam64 IDs](https://steamid.io/) of server admins. Admins can run all wp.* commands without the RCON/web dashboard",
+        "Keywords": "rcon,dashboard,admin,steam,ids,admin.steam_ids",
+        "FieldName": "admin.steam_ids",
+        "InputType": "list",
+        "ParamFieldName": "$.admin.steam_ids",
+        "DefaultValue": "[]",
+        "Special": "array:text",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Unlock All Ships",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "WindrosePlus:extension:2",
+        "Description": "If set, all ships will be unlocked",
+        "Keywords": "features,unlock,all,ships,features.unlock_all_ships",
+        "FieldName": "features.unlock_all_ships",
         "InputType": "checkbox",
-        "ParamFieldName": "$.features.cpu_optimization",
-        "DefaultValue": "true",
+        "ParamFieldName": "$.features.unlock_all_ships",
+        "DefaultValue": "false",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
+        }
+    },
+    {
+        "DisplayName": "Unlock All Recipes",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "WindrosePlus:extension:2",
+        "Description": "If set, all recipes will be unlocked",
+        "Keywords": "features,unlock,all,recipes,features.unlock_all_recipes",
+        "FieldName": "features.unlock_all_recipes",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.features.unlock_all_recipes",
+        "DefaultValue": "false",
         "EnumValues": {
             "False": "false",
             "True": "true"
@@ -249,6 +279,7 @@
         "ParamFieldName": "$.multipliers.xp",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -264,6 +295,7 @@
         "ParamFieldName": "$.multipliers.loot",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -279,6 +311,7 @@
         "ParamFieldName": "$.multipliers.stack_size",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -294,6 +327,7 @@
         "ParamFieldName": "$.multipliers.craft_cost",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -309,6 +343,23 @@
         "ParamFieldName": "$.multipliers.crop_speed",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Crop Speed Multiplier",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "WindrosePlus:extension:2",
+        "Description": "Sets the cooking/fermentation/smelting speed multiplier. 2.0 = twice as fast",
+        "Keywords": "cooking,fermentation,smelting,speed,multiplier,multipliers.cooking_speed",
+        "FieldName": "multipliers.cooking_speed",
+        "InputType": "number",
+        "MinValue": "0.1",
+        "MaxValue": "100",
+        "ParamFieldName": "$.multipliers.cooking_speed",
+        "DefaultValue": "1.0",
+        "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -324,6 +375,7 @@
         "ParamFieldName": "$.multipliers.harvest_yield",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -339,6 +391,7 @@
         "ParamFieldName": "$.multipliers.inventory_size",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -354,6 +407,7 @@
         "ParamFieldName": "$.multipliers.weight",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     },
     {
@@ -369,6 +423,7 @@
         "ParamFieldName": "$.multipliers.points_per_level",
         "DefaultValue": "1.0",
         "Placeholder": "1.0",
+        "MultipleOf": "0.1",
         "EnumValues": {}
     }
 ]
