@@ -54,7 +54,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -File \"{{$FullBaseDir}}install.ps1\" -GameDir \"{{$FullBaseDir}}\"",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -File \"{{$FullBaseDir}}install.ps1\" -GameDir \"{{$FullRootDir}}.\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false

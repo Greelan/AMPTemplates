@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -File \"{{$FullBaseDir}}windrose_plus/tools/WindrosePlus-BuildPak.ps1\" -ServerDir \"{{$FullBaseDir}}\"",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -File \"{{$FullBaseDir}}windrose_plus/tools/WindrosePlus-BuildPak.ps1\" -ServerDir \"{{$FullBaseDir}}.\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": true
