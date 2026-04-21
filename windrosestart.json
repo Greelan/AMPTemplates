@@ -24,7 +24,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process powershell -ArgumentList '-NoProfile', '-File', '\\\"{{$FullBaseDir}}windrose_plus/server/windrose_plus_server.ps1\\\"', '-Port', '{{$HTTPPort}}', '-GameDir', '\\\"{{$FullBaseDir}}.\\\"', '-WindowStyle', 'Hidden'\"",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process powershell -ArgumentList '-NoProfile', '-File', '\\\"{{$FullBaseDir}}windrose_plus/server/windrose_plus_server.ps1\\\"', '-Port', '{{$HTTPPort}}', '-GameDir', '\\\"{{$FullBaseDir}}.\\\"' -WindowStyle Hidden\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "WIP",
         "RunInBackground": true,
