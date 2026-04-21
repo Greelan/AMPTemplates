@@ -13,19 +13,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Windrose+ Dashboard Port",
-        "Category": "Windrose:stadia_controller",
-        "Subcategory": "Server:dns:1",
-        "Description": "",
-        "Keywords": "",
-        "FieldName": "$DashboardPort",
-        "InputType": "number",
-        "Hidden": true,
-        "ParamFieldName": "$.rcon.port",
-        "ExcludeFromImport": true,
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Direct Connection IP Binding",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "Server:dns:1",
