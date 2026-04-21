@@ -152,10 +152,10 @@
         }
     },
     {
-        "DisplayName": "Enable RCON and Web Dashboard",
+        "DisplayName": "Enable RCON",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "If set, the Windrose+ RCON and web dashboard will be enabled. Required to use the admin console and dashboard features of Windrose+",
+        "Description": "If set, the Windrose+ RCON will be enabled",
         "Keywords": "rcon,dashboard,enable,enabled,rcon.enabled",
         "FieldName": "rcon.enabled",
         "InputType": "checkbox",
@@ -167,10 +167,10 @@
         }
     },
     {
-        "DisplayName": "RCON/Dashboard Password",
+        "DisplayName": "RCON Password",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the password for the Windrose+ RCON and web dashboard. Default is a strong random password. Blank = disabled",
+        "Description": "Sets the password for the Windrose+ RCON. Default is a strong random password. Blank = disabled",
         "Keywords": "rcon,dashboard,password,rcon.password",
         "FieldName": "rcon.password",
         "InputType": "password",
@@ -182,7 +182,7 @@
         "DisplayName": "Enable Server Query",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "If set, server query responses will be enabled",
+        "Description": "If set, Windrose+ server query responses will be enabled",
         "Keywords": "query,enable,enabled,query.enabled",
         "FieldName": "query.enabled",
         "InputType": "checkbox",
@@ -212,7 +212,7 @@
         "DisplayName": "Server Admins",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets a list of [Steam64 IDs](https://steamid.io/) of server admins. Admins can run all wp.* commands without the RCON/web dashboard",
+        "Description": "Sets a list of [Steam64 IDs](https://steamid.io/) of server admins",
         "Keywords": "rcon,dashboard,admin,steam,ids,admin.steam_ids",
         "FieldName": "admin.steam_ids",
         "InputType": "list",
