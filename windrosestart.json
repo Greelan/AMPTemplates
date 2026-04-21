@@ -10,13 +10,35 @@
         "SkipOnFailure": true
     },
     {
-        "UpdateStageName": "Windrose+ Pak Repack",
+        "UpdateStageName": "Windrose+ Pak Rebuild",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"WINEPREFIX=\\\"{{$FullRootDir}}.wine\\\" WINEARCH=win64 WINEDEBUG=-all /usr/bin/wine \\\"{{$FullBaseDir}}windrose_plus/tools/bin/repak.exe\\\" pack \\\"{{$WineBaseDir}}windrose_plus\\overrides\\\" \\\"{{$WineBaseDir}}R5\\Content\\Paks\\WindrosePlus_override_P.pak\\\"\"",
+        "UpdateSourceArgs": "-c \"export TEMP=${TMPDIR-/tmp}; cd \\\"{{$FullBaseDir}}\\\" && powershell/pwsh ./windrose_plus/tools/WindrosePlus-BuildPak.ps1 -ServerDir \\\"{{$FullBaseDir}}.\\\"\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "true",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Run Windrose+ Dashboard",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -ExecutionPolicy Bypass -Command \"Start-Process powershell -ArgumentList '-NoProfile', '-File', '\\\"{{$FullBaseDir}}windrose_plus/server/windrose_plus_server.ps1\\\"' -WindowStyle Hidden\"",
+        "UpdateSourceConditionSetting": "InstallWindrosePlus",
+        "UpdateSourceConditionValue": "WIP",
+        "RunInBackground": true,
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Run Windrose+ Dashboard",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"export TEMP=${TMPDIR-/tmp}; cd \\\"{{$FullBaseDir}}\\\" && powershell/pwsh -NoProfile -File ./windrose_plus/server/windrose_plus_server.ps1 &\"",
+        "UpdateSourceConditionSetting": "InstallWindrosePlus",
+        "UpdateSourceConditionValue": "WIP",
+        "RunInBackground": true,
         "SkipOnFailure": true
     }
 ]

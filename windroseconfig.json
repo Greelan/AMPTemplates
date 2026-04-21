@@ -157,7 +157,7 @@
         "DisplayName": "RCON Password",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets the password for the Windrose+ RCON. Default is a strong random password. Blank = disabled",
+        "Description": "Sets the password for the Windrose+ RCON. This password is also used for the Windrose+ dashboard login. Default is a strong random password. Blank = disabled",
         "Keywords": "rcon,dashboard,password,rcon.password",
         "FieldName": "rcon.password",
         "InputType": "password",
