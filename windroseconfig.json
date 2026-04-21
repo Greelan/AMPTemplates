@@ -199,7 +199,7 @@
         "DisplayName": "Server Admins",
         "Category": "Windrose:stadia_controller",
         "Subcategory": "WindrosePlus:extension:2",
-        "Description": "Sets a list of [Steam64 IDs](https://steamid.io/) of server admins",
+        "Description": "Sets a list of [Steam64 IDs](https://steamid.io/) of server admins. Admins can run all wp.* commands without the Windrose+ RCON",
         "Keywords": "rcon,dashboard,admin,steam,ids,admin.steam_ids",
         "FieldName": "admin.steam_ids",
         "InputType": "list",
