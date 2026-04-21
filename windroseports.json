@@ -10,7 +10,7 @@
         "Protocol": "TCP",
         "Port": 8780,
         "Ref": "HTTPPort",
-        "Name": "Windrose+ HTTP Port",
-        "Description": "Port used for Windrose+ HTTP connections"
+        "Name": "Windrose+ Dashboard Port",
+        "Description": "Port used for Windrose+ dashboard and API traffic"
     }
 ]
