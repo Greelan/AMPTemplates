@@ -10,7 +10,7 @@
         "SkipOnFailure": true
     },
     {
-        "UpdateStageName": "Windrose+ Pak Rebuild",
+        "UpdateStageName": "Windrose+ Pak Repack",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
