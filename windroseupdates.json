@@ -106,7 +106,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd \\\"{{$FullBaseDir}}windrose_plus/tools/bin\\\" && tar -xzf repak.tar.xz && tar -xzf retoc.tar.xz && chmod +x repak retoc && rm -f repak.exe retoc.exe && mv repak repak.exe && mv retoc retoc.exe\"",
+        "UpdateSourceArgs": "-c \"cd \\\"{{$FullBaseDir}}windrose_plus/tools/bin\\\" && tar -xzf repak_cli-x86_64-unknown-linux-gnu.tar.xz && tar -xzf retoc_cli-x86_64-unknown-linux-gnu.tar.xz && chmod +x repak retoc && rm -f repak.exe retoc.exe && mv repak repak.exe && mv retoc retoc.exe && rm -f repak_cli-x86_64-unknown-linux-gnu.tar.xz retoc_cli-x86_64-unknown-linux-gnu.tar.xz\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
