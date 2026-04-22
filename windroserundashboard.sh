@@ -10,7 +10,7 @@ export TEMP=${TMPDIR:-/tmp}
 # If not, exit
 serverStarted=false
 for i in $(seq 1 60); do
-    serverPid=$(ps aux | grep "${serverProcess}" | grep -v grep | awk '{print $2}')
+    serverPid=$(ps aux | grep -F "${serverProcess}" | grep -v grep | awk '{print $2}')
     if [[ -n "$serverPid" ]]; then
         serverStarted=true
         break
