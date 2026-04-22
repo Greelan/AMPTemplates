@@ -402,7 +402,7 @@
         "DisplayName": "Install Windrose+",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
-        "Description": "If set, [Windrose+](https://github.com/humangenome/WindrosePlus) will be installed when the server is updated. Includes UE4SS experimental build",
+        "Description": "If set, [Windrose+](https://github.com/humangenome/WindrosePlus) will be installed when the server is updated, and the PAK builder and dashboard run when the server is started. Includes UE4SS experimental build",
         "Keywords": "install,windrose+,windrose,plus,InstallWindrosePlus",
         "FieldName": "InstallWindrosePlus",
         "InputType": "checkbox",
