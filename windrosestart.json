@@ -1,6 +1,6 @@
 [
     {
-        "UpdateStageName": "Windrose+ Pak Rebuild",
+        "UpdateStageName": "Windrose+ PAK Rebuild",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
@@ -10,7 +10,7 @@
         "SkipOnFailure": true
     },
     {
-        "UpdateStageName": "Windrose+ Pak Rebuild",
+        "UpdateStageName": "Windrose+ PAK Rebuild",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
