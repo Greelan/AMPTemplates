@@ -18,6 +18,12 @@ if (-not $serverStarted) { exit 0 }
 Set-Location "windrose\4129620"
 $dashboardProcess = Start-Process powershell -ArgumentList '-NoProfile', '-File', '.\windrose_plus\server\windrose_plus_server.ps1', '-Port', "$args[0]", '-GameDir', "$PSScriptRoot\windrose\4129620" -WindowStyle Hidden -PassThru
 
+# Exit if dashboard fails to start
+Start-Sleep -Seconds 1
+if (-not (Get-Process -Id $dashboardProcess.Id -ErrorAction SilentlyContinue)) {
+    exit 0
+}
+
 # Monitor server process and terminate dashboard
 # when server terminates
 while ($true) {

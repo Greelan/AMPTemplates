@@ -26,6 +26,12 @@ cd ./windrose/4129620
 powershell/pwsh -NoProfile -File ./windrose_plus/server/windrose_plus_server.ps1 -Port $1 -GameDir "$scriptDir/windrose/4129620" -WindowStyle Hidden &
 dashboardPid=$!
 
+# Exit if dashboard fails to start
+sleep 1
+if ! kill -0 "$dashboardPid" 2>/dev/null; then
+    exit 0
+fi
+
 # Monitor server process and terminate dashboard
 # when server terminates or SIGTERM/SIGINT received
 trap 'kill $dashboardPid' SIGTERM SIGINT
