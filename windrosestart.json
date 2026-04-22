@@ -40,7 +40,7 @@
         "UpdateSourceTarget": "{{$FullInstanceDir}}",
         "OverwriteExistingFiles": true,
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
-        "UpdateSourceConditionValue": "WIP",
+        "UpdateSourceConditionValue": "true",
         "SkipOnFailure": false
     },
     {
@@ -61,7 +61,7 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"chmod +x rundashboard.sh; ./rundashboard.sh {{$HTTPPort}} &\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
-        "UpdateSourceConditionValue": "WIP",
+        "UpdateSourceConditionValue": "true",
         "RunInBackground": true,
         "SkipOnFailure": true
     }
