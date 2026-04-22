@@ -2,7 +2,7 @@
 
 # Arguments: [http_port]
 
-scriptDir=$(dirname "$0")
+scriptDir=$(pwd)
 serverProcess="Z:${scriptDir//\//\\}\\windrose\\4129620\\R5\\Binaries\\Win64\\WindroseServer-Win64-Shipping.exe"
 export TEMP=${TMPDIR:-/tmp}
 
