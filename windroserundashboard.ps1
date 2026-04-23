@@ -23,11 +23,12 @@ if (-not $serverStarted) { exit 0 }
 Set-Location "windrose\4129620"
 Log "Starting dashboard"
 $dashboardProcess = Start-Process powershell -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '.\windrose_plus\server\windrose_plus_server.ps1', '-Port', "$args[0]", '-GameDir', "$PSScriptRoot\windrose\4129620" -PassThru
-Log "Dashboard started: $dashboardProcess.Id"
+Log "Dashboard started: $(dashboardProcess.Id)"
 
 # Exit if dashboard fails to start
 Start-Sleep -Seconds 1
 if (-not (Get-Process -Id $dashboardProcess.Id -ErrorAction SilentlyContinue)) {
+    Log "Dashboard process exited immediately"
     exit 0
 }
 
