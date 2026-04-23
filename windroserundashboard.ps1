@@ -1,8 +1,5 @@
 # Arguments: [http_port]
 
-$log = Join-Path $PSScriptRoot 'rundashboard.log'
-function Log($msg) { "$(Get-Date -Format s) $msg" | Out-File $log -Append }
-
 $serverProcess = "$PSScriptRoot\windrose\4129620\R5\Binaries\Win64\WindroseServer-Win64-Shipping.exe"
 
 # Check if Windrose server starts successfully within 1 minute
@@ -11,7 +8,6 @@ $serverStarted = $false
 Log "Checking for process: $serverProcess"
 for ($i = 1; $i -le 60; $i++) {
     if (Get-WmiObject Win32_Process | Where-Object {$_.ExecutablePath -eq "$serverProcess"} -ErrorAction SilentlyContinue) {
-        Log "Server process started"
         $serverStarted = $true
         break
     }
@@ -21,20 +17,11 @@ if (-not $serverStarted) { exit 0 }
 
 # Start the Windrose+ dashboard
 Set-Location "windrose\4129620"
-Log "Starting dashboard"
-$dashboardProcess = Start-Process powershell.exe `
-    -WorkingDirectory "$PSScriptRoot\windrose\4129620" `
-    -ArgumentList @(
-        '-NoProfile'
-        '-ExecutionPolicy','Bypass'
-        '-Command',"& '.\windrose_plus\server\windrose_plus_server.ps1' -Port '$($args[0])' -GameDir '$PSScriptRoot\windrose\4129620' *>> '$log'"
-    ) -PassThru
-Log "Dashboard started: $(dashboardProcess.Id)"
+$dashboardProcess = Start-Process powershell.exe -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', '.\windrose_plus\server\windrose_plus_server.ps1', '-Port', "$args[0]", '-GameDir', "$PSScriptRoot\windrose\4129620" -PassThru
 
 # Exit if dashboard fails to start
-Start-Sleep -Seconds 1
+Start-Sleep -Seconds 10
 if (-not (Get-Process -Id $dashboardProcess.Id -ErrorAction SilentlyContinue)) {
-    Log "Dashboard process exited immediately"
     exit 0
 }
 

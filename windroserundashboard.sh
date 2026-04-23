@@ -27,7 +27,7 @@ powershell/pwsh -NoProfile -File ./windrose_plus/server/windrose_plus_server.ps1
 dashboardPid=$!
 
 # Exit if dashboard fails to start
-sleep 1
+sleep 10
 if ! kill -0 "$dashboardPid" 2>/dev/null; then
     exit 0
 fi
