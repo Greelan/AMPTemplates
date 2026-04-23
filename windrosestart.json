@@ -48,7 +48,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Start-Process powershell -ArgumentList '-NoProfile', '-File', 'rundashboard.ps1', '{{$HTTPPort}}'\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Start-Process powershell -ArgumentList '-NoProfile', '-File', '-ExecutionPolicy', 'Bypass', 'rundashboard.ps1', '{{$HTTPPort}}'\"",
         "UpdateSourceConditionSetting": "InstallWindrosePlus",
         "UpdateSourceConditionValue": "WIP",
         "RunInBackground": true,
