@@ -16,7 +16,7 @@ for ($i = 1; $i -le 60; $i++) {
 if (-not $serverStarted) { exit 0 }
 
 # Start the Windrose+ dashboard
-$dashboardProcess = Start-Process powershell.exe -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "$PSScriptRoot\windrose_plus\server\windrose_plus_server.ps1", '-Port', "$args[0]", '-GameDir', "$PSScriptRoot\windrose\4129620" -PassThru
+$dashboardProcess = Start-Process powershell.exe -ArgumentList '-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', "$PSScriptRoot\windrose\4129620\windrose_plus\server\windrose_plus_server.ps1", '-Port', "$args[0]", '-GameDir', "$PSScriptRoot\windrose\4129620" -PassThru
 
 # Exit if dashboard fails to start
 Start-Sleep -Seconds 10
