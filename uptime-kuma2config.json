@@ -45,7 +45,7 @@
         "DisplayName": "Cloudflare Tunnel Token",
         "Category": "Uptime Kuma:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the server's Cloudflare tunnel token, if used. Requires v1.14.0+. [Cloudflared](https://pkg.cloudflare.com/index.html) must be installed on the system, and AMP's Docker mode cannot be used",
+        "Description": "Sets the server's Cloudflare tunnel token, if used. Requires v1.14.0+. [Cloudflared](https://pkg.cloudflare.com/index.html) must be installed on the system, and AMP's Docker/Podman mode cannot be used",
         "Keywords": "cloudflare,cloudflared,tunnel,token,UPTIME_KUMA_CLOUDFLARED_TOKEN,cloudflared-token",
         "FieldName": "cloudflared-token",
         "InputType": "text",

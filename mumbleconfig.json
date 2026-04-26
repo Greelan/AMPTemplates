@@ -54,7 +54,7 @@
         "DisplayName": "Executable Path (Linux)",
         "Category": "Mumble:headset_mic",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the path to the Mumble server executable (which you must install separately to AMP unless using Docker for the instance). Only change this if your distro package manager installs the executable with a different path or name",
+        "Description": "Sets the path to the Mumble server executable (which you must install separately to AMP unless using Docker/Podman for the instance). Only change this if your distro package manager installs the executable with a different path or name",
         "Keywords": "linux,executable,binary,LinuxExecutable",
         "FieldName": "LinuxExecutable",
         "InputType": "text",
