@@ -18,14 +18,6 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "SteamCMD Component Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "1007",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "SkipOnFailure": false
-    },
-    {
         "UpdateStageName": "Create Dotnet Directory",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
