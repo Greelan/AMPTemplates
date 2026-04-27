@@ -59,8 +59,8 @@
         "FieldName": "LinuxExecutable",
         "InputType": "text",
         "ParamFieldName": "LinuxExecutable",
-        "DefaultValue": "/usr/sbin/murmurd",
-        "Placeholder": "/usr/sbin/murmurd",
+        "DefaultValue": "/usr/bin/mumble-server",
+        "Placeholder": "/usr/bin/mumble-server",
         "Required": true,
         "EnumValues": {}
     },
