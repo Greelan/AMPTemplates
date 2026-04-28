@@ -232,7 +232,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Server Branch (Windows)",
+        "DisplayName": "Server Branch",
         "Category": "Updates",
         "Subcategory": "Steam Downloads:download",
         "Description": "Sets the server branch to install. Update the server after switching branches",

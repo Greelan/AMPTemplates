@@ -1,20 +1,11 @@
 [
     {
         "UpdateStageName": "s&box SteamCMD Download",
-        "UpdateSourcePlatform": "Windows",
+        "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "1892930",
         "UpdateSourceArgs": "590830",
         "UpdateSourceVersion": "{{ServerBranch}}",
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "s&box SteamCMD Download",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "1892930",
-        "UpdateSourceArgs": "590830",
-        "UpdateSourceVersion": "staging",
         "SkipOnFailure": false
     },
     {
