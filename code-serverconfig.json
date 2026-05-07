@@ -3,7 +3,7 @@
         "DisplayName": "Authentication Mode",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the authentication method for the web UI",
+        "Description": "Sets the authentication mode for the web UI. The Web Password must be set if the authentication Mode is set to 'Password'",
         "Keywords": "auth,authentication,login,mode",
         "FieldName": "auth",
         "InputType": "enum",
@@ -16,16 +16,16 @@
         }
     },
     {
-        "DisplayName": "Password",
+        "DisplayName": "Web Password",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the password for the code-server web UI. Used when Authentication Mode is set to 'Password'",
+        "Description": "Sets the password for the code-server web UI. Used when Authentication Mode is set to 'Password'. Default is a secure random password",
         "Keywords": "password,auth,login",
         "FieldName": "Password",
         "InputType": "password",
         "ParamFieldName": "Password",
         "IncludeInCommandLine": false,
-        "DefaultValue": "",
+        "DefaultValue": "{{newguid()}}",
         "EnumValues": {}
     },
     {
