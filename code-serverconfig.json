@@ -1,6 +1,6 @@
 [
     {
-        "DisplayName": "Authentication Mode",
+        "DisplayName": "Web Authentication Mode",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
         "Description": "Sets the authentication mode for the web UI. The Web Password must be set if the authentication Mode is set to 'Password'",
@@ -126,8 +126,8 @@
         "ParamFieldName": "disable-getting-started-override",
         "DefaultValue": "--disable-getting-started-override ",
         "EnumValues": {
-                "False": "",
-                "True": "--disable-getting-started-override "
+            "False": "",
+            "True": "--disable-getting-started-override "
         }
     },
     {
@@ -282,25 +282,55 @@
         }
     },
     {
+        "DisplayName": "SSL Mode",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets whether the server's internal webserver should use HTTPS. Certificate Path, Certificate Key Path and Certificate Host must be set accordingly",
+        "Keywords": "cert,certificate,ssl,tls,https",
+        "FieldName": "SSLMode",
+        "InputType": "enum",
+        "ParamFieldName": "SSLMode",
+        "DefaultValue": "",
+        "EnumValues": {
+            "": "Do not use HTTPS (default)",
+            "--cert ": "Generate and use self-signed certificate",
+            "--cert \"{{CertPath}}\" --cert-key \"{{cert-key}}\" ": "Use specified certificate"
+        }
+    },
+    {
         "DisplayName": "Certificate Path",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the path to an SSL certificate file. A self-signed certificate is generated if none is provided",
-        "Keywords": "cert,certificate,ssl,tls,https",
-        "FieldName": "cert",
+        "Description": "Sets the path to an SSL certificate file. Required when SSL Mode is set to 'Use specified certificate'",
+        "Keywords": "cert,certificate,ssl,tls,https,path",
+        "FieldName": "CertPath",
         "InputType": "text",
-        "ParamFieldName": "cert",
+        "ParamFieldName": "CertPath",
+        "DefaultValue": "",
+        "Placeholder": "/path/to/cert",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Certificate Key Path",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets the path to the certificate key file (which may be a self-signed certificate). Required when SSL Mode is set to 'Use specified certificate'",
+        "Keywords": "cert,key,ssl,tls,https,cert-key",
+        "FieldName": "cert-key",
+        "InputType": "text",
+        "ParamFieldName": "cert-key",
         "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
         "DefaultValue": "",
-        "Placeholder": "/path/to/cert.pem",
+        "Placeholder": "/path/to/key",
         "EnumValues": {}
     },
     {
         "DisplayName": "Certificate Host",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the hostname to use when generating a self-signed certificate",
+        "Description": "Sets the hostname to use when the server generates a self-signed certificate. Required when SSL Mode is set to 'Generate and use self-signed certificate'",
         "Keywords": "cert,host,hostname,ssl,tls,cert-host",
         "FieldName": "cert-host",
         "InputType": "text",
@@ -309,21 +339,6 @@
         "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "example.com",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Certificate Key Path",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the path to the certificate key file. Required when using a non-generated certificate",
-        "Keywords": "cert,key,ssl,tls,https,cert-key",
-        "FieldName": "cert-key",
-        "InputType": "text",
-        "ParamFieldName": "cert-key",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "/path/to/key.pem",
         "EnumValues": {}
     },
     {
