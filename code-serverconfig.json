@@ -308,7 +308,6 @@
         "ParamFieldName": "CertPath",
         "DefaultValue": "",
         "Placeholder": "/path/to/cert",
-        "Required": true,
         "EnumValues": {}
     },
     {
@@ -320,8 +319,6 @@
         "FieldName": "cert-key",
         "InputType": "text",
         "ParamFieldName": "cert-key",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "/path/to/key",
         "EnumValues": {}
@@ -335,8 +332,6 @@
         "FieldName": "cert-host",
         "InputType": "text",
         "ParamFieldName": "cert-host",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "example.com",
         "EnumValues": {}
