@@ -301,36 +301,6 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Skip Auth Preflight",
-        "Category": "code-server:stadia_controller",
-        "Subcategory": "Proxy & SSL:lock:2",
-        "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
-        "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
-        "FieldName": "skip-auth-preflight",
-        "InputType": "checkbox",
-        "ParamFieldName": "skip-auth-preflight",
-        "DefaultValue": "",
-        "EnumValues": {
-            "False": "",
-            "True": "--skip-auth-preflight "
-        }
-    },
-    {
-        "DisplayName": "Cookie Suffix",
-        "Category": "code-server:stadia_controller",
-        "Subcategory": "Proxy & SSL:lock:2",
-        "Description": "Adds a suffix to the session cookie to prevent cookie collisions on subdomains",
-        "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
-        "FieldName": "cookie-suffix",
-        "InputType": "text",
-        "ParamFieldName": "cookie-suffix",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "my-instance",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Proxy Domain",
         "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
@@ -343,6 +313,21 @@
         "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "example.com",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Absolute Proxy Base Path",
+        "Category": "code-server:stadia_controller",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
+        "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
+        "FieldName": "abs-proxy-base-path",
+        "InputType": "text",
+        "ParamFieldName": "abs-proxy-base-path",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "/code-server",
         "EnumValues": {}
     },
     {
@@ -364,7 +349,7 @@
         "DisplayName": "Trusted Origins",
         "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
-        "Description": "If set, disables the origin authentication check for trusted origins. Useful when behind a reverse proxy that cannot set the origin header",
+        "Description": "Sets trusted origins for which the origin authentication check should be disabled. Useful when behind a reverse proxy that cannot set the origin header",
         "Keywords": "trusted,origins,reverse,proxy,trusted-origins",
         "FieldName": "trusted-origins",
         "InputType": "text",
@@ -376,18 +361,33 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Absolute Proxy Base Path",
+        "DisplayName": "Skip Auth Preflight",
         "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
-        "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
-        "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
-        "FieldName": "abs-proxy-base-path",
+        "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
+        "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
+        "FieldName": "skip-auth-preflight",
+        "InputType": "checkbox",
+        "ParamFieldName": "skip-auth-preflight",
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "--skip-auth-preflight "
+        }
+    },
+    {
+        "DisplayName": "Cookie Suffix",
+        "Category": "code-server:stadia_controller",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets a suffix to add to the cookie. This can prevent a collision of cookies for subdomains, making them explicit",
+        "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
+        "FieldName": "cookie-suffix",
         "InputType": "text",
-        "ParamFieldName": "abs-proxy-base-path",
+        "ParamFieldName": "cookie-suffix",
         "IncludeInCommandLine": true,
         "SkipIfEmpty": true,
         "DefaultValue": "",
-        "Placeholder": "/code-server",
+        "Placeholder": "my-instance",
         "EnumValues": {}
     },
     {
