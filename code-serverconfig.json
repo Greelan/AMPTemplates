@@ -16,7 +16,7 @@
     {
         "DisplayName": "Certificate File Path",
         "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
+        "Subcategory": "Proxy & SSL:lock:2",
         "Description": "",
         "Keywords": "",
         "FieldName": "cert",
@@ -65,36 +65,6 @@
         "InputType": "password",
         "ParamFieldName": "GitHubToken",
         "DefaultValue": "",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Skip Auth Preflight",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
-        "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
-        "FieldName": "skip-auth-preflight",
-        "InputType": "checkbox",
-        "ParamFieldName": "skip-auth-preflight",
-        "DefaultValue": "",
-        "EnumValues": {
-            "False": "",
-            "True": "--skip-auth-preflight "
-        }
-    },
-    {
-        "DisplayName": "Cookie Suffix",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Adds a suffix to the session cookie to prevent cookie collisions on subdomains",
-        "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
-        "FieldName": "cookie-suffix",
-        "InputType": "text",
-        "ParamFieldName": "cookie-suffix",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "my-instance",
         "EnumValues": {}
     },
     {
@@ -217,21 +187,6 @@
         }
     },
     {
-        "DisplayName": "Proxy Domain",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the domain used for proxying ports",
-        "Keywords": "proxy,domain,proxy-domain",
-        "FieldName": "proxy-domain",
-        "InputType": "text",
-        "ParamFieldName": "proxy-domain",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "example.com",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Socket Path",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
@@ -245,21 +200,6 @@
         "DefaultValue": "",
         "Placeholder": "./code-server.sock",
         "EnumValues": {}
-    },
-    {
-        "DisplayName": "Disable Proxy",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "If set, domain and path proxy routes will be disabled",
-        "Keywords": "proxy,disable,security,disable-proxy",
-        "FieldName": "disable-proxy",
-        "InputType": "checkbox",
-        "ParamFieldName": "disable-proxy",
-        "DefaultValue": "",
-        "EnumValues": {
-            "False": "",
-            "True": "--disable-proxy "
-        }
     },
     {
         "DisplayName": "Idle Timeout",
@@ -323,91 +263,6 @@
         }
     },
     {
-        "DisplayName": "SSL Mode",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets whether the server's internal webserver should use HTTPS. Certificate Path, Certificate Key Path and Certificate Host must be set accordingly",
-        "Keywords": "cert,certificate,ssl,tls,https",
-        "FieldName": "SSLMode",
-        "InputType": "enum",
-        "ParamFieldName": "SSLMode",
-        "DefaultValue": "",
-        "EnumValues": {
-            "": "Do not use HTTPS (default)",
-            "--cert ": "Generate and use self-signed certificate",
-            "--cert \"{{CertPath}}\" --cert-key \"{{cert-key}}\" ": "Use specified certificate"
-        }
-    },
-    {
-        "DisplayName": "Certificate Path",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the path to an SSL certificate file. Required when SSL Mode is set to 'Use specified certificate'",
-        "Keywords": "cert,certificate,ssl,tls,https,path",
-        "FieldName": "CertPath",
-        "InputType": "text",
-        "ParamFieldName": "CertPath",
-        "DefaultValue": "",
-        "Placeholder": "/path/to/cert",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Certificate Key Path",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the path to the certificate key file (which may be a self-signed certificate). Required when SSL Mode is set to 'Use specified certificate'",
-        "Keywords": "cert,key,ssl,tls,https,cert-key",
-        "FieldName": "cert-key",
-        "InputType": "text",
-        "ParamFieldName": "cert-key",
-        "DefaultValue": "",
-        "Placeholder": "/path/to/key",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Certificate Host",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the hostname to use when the server generates a self-signed certificate. Required when SSL Mode is set to 'Generate and use self-signed certificate'",
-        "Keywords": "cert,host,hostname,ssl,tls,cert-host",
-        "FieldName": "cert-host",
-        "InputType": "text",
-        "ParamFieldName": "cert-host",
-        "DefaultValue": "",
-        "Placeholder": "example.com",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Trusted Origins",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "If set, disables the origin authentication check for trusted origins. Useful when behind a reverse proxy that cannot set the origin header",
-        "Keywords": "trusted,origins,reverse,proxy,trusted-origins",
-        "FieldName": "trusted-origins",
-        "InputType": "text",
-        "ParamFieldName": "trusted-origins",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "https://example.com",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Absolute Proxy Base Path",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
-        "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
-        "FieldName": "abs-proxy-base-path",
-        "InputType": "text",
-        "ParamFieldName": "abs-proxy-base-path",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "/code-server",
-        "EnumValues": {}
-    },
-    {
         "DisplayName": "Enable Proposed API",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
@@ -432,6 +287,151 @@
         "InputType": "text",
         "ParamFieldName": "CustomArgs",
         "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Skip Auth Preflight",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
+        "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
+        "FieldName": "skip-auth-preflight",
+        "InputType": "checkbox",
+        "ParamFieldName": "skip-auth-preflight",
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "--skip-auth-preflight "
+        }
+    },
+    {
+        "DisplayName": "Cookie Suffix",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Adds a suffix to the session cookie to prevent cookie collisions on subdomains",
+        "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
+        "FieldName": "cookie-suffix",
+        "InputType": "text",
+        "ParamFieldName": "cookie-suffix",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "my-instance",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Proxy Domain",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the domain used for proxying ports",
+        "Keywords": "proxy,domain,proxy-domain",
+        "FieldName": "proxy-domain",
+        "InputType": "text",
+        "ParamFieldName": "proxy-domain",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "example.com",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Disable Proxy",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "If set, domain and path proxy routes will be disabled",
+        "Keywords": "proxy,disable,security,disable-proxy",
+        "FieldName": "disable-proxy",
+        "InputType": "checkbox",
+        "ParamFieldName": "disable-proxy",
+        "DefaultValue": "",
+        "EnumValues": {
+            "False": "",
+            "True": "--disable-proxy "
+        }
+    },
+    {
+        "DisplayName": "Trusted Origins",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "If set, disables the origin authentication check for trusted origins. Useful when behind a reverse proxy that cannot set the origin header",
+        "Keywords": "trusted,origins,reverse,proxy,trusted-origins",
+        "FieldName": "trusted-origins",
+        "InputType": "text",
+        "ParamFieldName": "trusted-origins",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "https://example.com",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Absolute Proxy Base Path",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
+        "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
+        "FieldName": "abs-proxy-base-path",
+        "InputType": "text",
+        "ParamFieldName": "abs-proxy-base-path",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "/code-server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "SSL Mode",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets whether the server's internal webserver should use HTTPS. Certificate Path, Certificate Key Path and Certificate Host must be set accordingly",
+        "Keywords": "cert,certificate,ssl,tls,https",
+        "FieldName": "SSLMode",
+        "InputType": "enum",
+        "ParamFieldName": "SSLMode",
+        "DefaultValue": "",
+        "EnumValues": {
+            "": "Do not use HTTPS (default)",
+            "--cert ": "Generate and use self-signed certificate",
+            "--cert \"{{CertPath}}\" --cert-key \"{{cert-key}}\" ": "Use specified certificate"
+        }
+    },
+    {
+        "DisplayName": "Certificate Path",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the path to an SSL certificate file. Required when SSL Mode is set to 'Use specified certificate'",
+        "Keywords": "cert,certificate,ssl,tls,https,path",
+        "FieldName": "CertPath",
+        "InputType": "text",
+        "ParamFieldName": "CertPath",
+        "DefaultValue": "",
+        "Placeholder": "/path/to/cert",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Certificate Key Path",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the path to the certificate key file (which may be a self-signed certificate). Required when SSL Mode is set to 'Use specified certificate'",
+        "Keywords": "cert,key,ssl,tls,https,cert-key",
+        "FieldName": "cert-key",
+        "InputType": "text",
+        "ParamFieldName": "cert-key",
+        "DefaultValue": "",
+        "Placeholder": "/path/to/key",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Certificate Host",
+        "Category": "code-server:web",
+        "Subcategory": "Proxy & SSL:lock:2",
+        "Description": "Sets the hostname to use when the server generates a self-signed certificate. Required when SSL Mode is set to 'Generate and use self-signed certificate'",
+        "Keywords": "cert,host,hostname,ssl,tls,cert-host",
+        "FieldName": "cert-host",
+        "InputType": "text",
+        "ParamFieldName": "cert-host",
+        "DefaultValue": "",
+        "Placeholder": "example.com",
         "EnumValues": {}
     },
     {
