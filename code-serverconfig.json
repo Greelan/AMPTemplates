@@ -290,7 +290,7 @@
         }
     },
     {
-        "DisplayName": "Verbose Logging",
+        "DisplayName": "Enable Verbose Logging",
         "Category": "code-server:code",
         "Subcategory": "Server:dns:1",
         "Description": "If set, verbose logging output for debugging will be enabled",
