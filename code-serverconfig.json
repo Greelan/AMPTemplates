@@ -139,6 +139,21 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Custom Translations",
+        "Category": "code-server:stadia_controller",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets the path to a JSON file with custom translations. Merges with default strings and supports all i18n keys",
+        "Keywords": "i18n,translations,language,locale,custom,strings",
+        "FieldName": "i18n",
+        "InputType": "text",
+        "ParamFieldName": "i18n",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "/path/to/i18n.json",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Ignore Last Opened",
         "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
@@ -226,6 +241,22 @@
         "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "./code-server.sock",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Reconnection Grace Time",
+        "Category": "code-server:stadia_controller",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets the reconnection grace time. Clients who disconnect for longer than this duration will need to reload the window. Defaults to 10800 (3 hours)",
+        "Keywords": "reconnection,grace,time,timeout,disconnect,reconnection-grace-time",
+        "FieldName": "reconnection-grace-time",
+        "InputType": "number",
+        "ParamFieldName": "reconnection-grace-time",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "10800",
+        "Placeholder": "10800",
+        "Suffix": "seconds",
         "EnumValues": {}
     },
     {
