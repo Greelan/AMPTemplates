@@ -28,6 +28,21 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Idle Timeout",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "idle-timeout-seconds",
+        "Hidden": true,
+        "InputType": "number",
+        "ParamFieldName": "idle-timeout-seconds",
+        "IncludeInCommandLine": true,
+        "DefaultValue": "0",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Web Authentication Mode",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
@@ -199,22 +214,6 @@
         "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "./code-server.sock",
-        "EnumValues": {}
-    },
-    {
-        "DisplayName": "Idle Timeout",
-        "Category": "code-server:web",
-        "Subcategory": "Server:code:1",
-        "Description": "Sets the timeout before the server shuts down when idle. Empty = disabled",
-        "Keywords": "idle,timeout,shutdown,seconds,idle-timeout-seconds",
-        "FieldName": "idle-timeout-seconds",
-        "InputType": "text",
-        "ParamFieldName": "idle-timeout-seconds",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
-        "DefaultValue": "",
-        "Placeholder": "3600",
-        "Suffix": "seconds",
         "EnumValues": {}
     },
     {
