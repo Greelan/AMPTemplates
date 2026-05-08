@@ -20,7 +20,7 @@ Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=1
+Meta.ConfigVersion=2
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.AppConfigId=95ab603e-0f31-463c-8d1b-c9a5338a65a2
@@ -38,7 +38,7 @@ App.ExecutableLinux=443030/ConanSandbox/Binaries/Linux/ConanSandboxServer-Linux-
 App.WorkingDir={{Windows:443030/ConanSandbox/Binaries/Win64}}{{Linux:443030/ConanSandbox/Binaries/Linux}}
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} {{Map}} -stdout -FullStdOutLogOutput -Port={{$GamePort}} -QueryPort={{$QueryPort}} -RconPort={{$RCONPort}} -RconEnabled=1 -RconPassword="{{$RemoteAdminPassword}}" -MaxPlayers={{$MaxUsers}} {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} ConanSandbox {{Map}} -stdout -FullStdOutLogOutput -Port={{$GamePort}} -QueryPort={{$QueryPort}} -RconPort={{$RCONPort}} -RconEnabled=1 -RconPassword="{{$RemoteAdminPassword}}" -MaxPlayers={{$MaxUsers}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullBaseDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"440900"}
