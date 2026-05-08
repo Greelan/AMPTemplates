@@ -98,7 +98,7 @@
         "DisplayName": "App Name",
         "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the application name used in the browser title bar, and another strings that use '{{app}}'. Defaults to 'code-server' if nothing is set",
+        "Description": "Sets the application name used in the browser title bar and on the login page, and any other strings that use '{{app}}'. Defaults to 'code-server' if nothing is set",
         "Keywords": "app,name,title,app-name",
         "FieldName": "app-name",
         "InputType": "text",
