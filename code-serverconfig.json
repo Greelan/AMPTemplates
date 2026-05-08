@@ -1,5 +1,19 @@
 [
     {
+        "DisplayName": "Bind Address",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "bind-addr",
+        "Hidden": true,
+        "InputType": "text",
+        "ParamFieldName": "bind-addr",
+        "DefaultValue": "{{$ApplicationIPBinding}}:{{$ServerPort}}",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Web Authentication Mode",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
