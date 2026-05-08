@@ -14,6 +14,20 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Certificate File Path",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "cert",
+        "Hidden": true,
+        "InputType": "text",
+        "ParamFieldName": "cert",
+        "DefaultValue": "false",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Web Authentication Mode",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
@@ -38,7 +52,6 @@
         "FieldName": "password",
         "InputType": "password",
         "ParamFieldName": "password",
-        "IncludeInCommandLine": false,
         "DefaultValue": "{{newguid()}}",
         "EnumValues": {}
     },
@@ -88,7 +101,7 @@
         "DisplayName": "App Name",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the application name used in the browser title bar",
+        "Description": "Sets the application name used in the browser title bar. Defaults to 'code-server' if nothing is set",
         "Keywords": "app,name,title,app-name",
         "FieldName": "app-name",
         "InputType": "text",
@@ -97,6 +110,20 @@
         "SkipIfEmpty": true,
         "DefaultValue": "",
         "Placeholder": "code-server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Workspace Path",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets the path to the workspace directory or a .code-workspace file. Default is the 'workspace' directory in the instance's root directory",
+        "Keywords": "workspace,path",
+        "FieldName": "WorkspacePath",
+        "InputType": "text",
+        "ParamFieldName": "WorkspacePath",
+        "DefaultValue": "./workspace",
+        "Placeholder": "./workspace",
+        "Required": true,
         "EnumValues": {}
     },
     {
