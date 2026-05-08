@@ -71,6 +71,18 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Hashed Web Password",
+        "Category": "code-server:web",
+        "Subcategory": "Server:code:1",
+        "Description": "Sets the argon2-hashed password for the code-server web UI. Used when Authentication Mode is set to 'Password', and overrides the plain text Web Password",
+        "Keywords": "password,hashed,auth,login,hashed-password",
+        "FieldName": "hashed-password",
+        "InputType": "password",
+        "ParamFieldName": "hashed-password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "GitHub Token",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
@@ -86,7 +98,7 @@
         "DisplayName": "App Name",
         "Category": "code-server:web",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the application name used in the browser title bar. Defaults to 'code-server' if nothing is set",
+        "Description": "Sets the application name used in the browser title bar, and another strings that use '{{app}}'. Defaults to 'code-server' if nothing is set",
         "Keywords": "app,name,title,app-name",
         "FieldName": "app-name",
         "InputType": "text",
@@ -150,7 +162,7 @@
         "FieldName": "disable-getting-started-override",
         "InputType": "checkbox",
         "ParamFieldName": "disable-getting-started-override",
-        "DefaultValue": "--disable-getting-started-override ",
+        "DefaultValue": "",
         "EnumValues": {
             "False": "",
             "True": "--disable-getting-started-override "
@@ -165,7 +177,7 @@
         "FieldName": "disable-workspace-trust",
         "InputType": "checkbox",
         "ParamFieldName": "disable-workspace-trust",
-        "DefaultValue": "--disable-workspace-trust ",
+        "DefaultValue": "",
         "EnumValues": {
             "False": "",
             "True": "--disable-workspace-trust "
@@ -240,7 +252,7 @@
         "FieldName": "disable-update-check",
         "InputType": "checkbox",
         "ParamFieldName": "disable-update-check",
-        "DefaultValue": "--disable-update-check ",
+        "DefaultValue": "",
         "EnumValues": {
             "False": "",
             "True": "--disable-update-check "
