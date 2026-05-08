@@ -16,7 +16,7 @@
     {
         "DisplayName": "Certificate File Path",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "",
         "Keywords": "",
         "FieldName": "cert",
@@ -334,7 +334,7 @@
     {
         "DisplayName": "Proxy Domain",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets the domain used for proxying ports",
         "Keywords": "proxy,domain,proxy-domain",
         "FieldName": "proxy-domain",
@@ -349,7 +349,7 @@
     {
         "DisplayName": "Absolute Proxy Base Path",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
         "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
         "FieldName": "abs-proxy-base-path",
@@ -364,7 +364,7 @@
     {
         "DisplayName": "Disable Proxy",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "If set, domain and path proxy routes will be disabled",
         "Keywords": "proxy,disable,security,disable-proxy",
         "FieldName": "disable-proxy",
@@ -379,7 +379,7 @@
     {
         "DisplayName": "Trusted Origins",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets trusted origins for which the origin authentication check should be disabled. Useful when behind a reverse proxy that cannot set the origin header",
         "Keywords": "trusted,origins,reverse,proxy,trusted-origins",
         "FieldName": "trusted-origins",
@@ -394,7 +394,7 @@
     {
         "DisplayName": "Skip Auth Preflight",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
         "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
         "FieldName": "skip-auth-preflight",
@@ -409,7 +409,7 @@
     {
         "DisplayName": "Cookie Suffix",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets a suffix to add to the cookie. This can prevent a collision of cookies for subdomains, making them explicit",
         "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
         "FieldName": "cookie-suffix",
@@ -424,7 +424,7 @@
     {
         "DisplayName": "SSL Mode",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets whether the server's internal webserver should use HTTPS. Certificate Path, Certificate Key Path and Certificate Host must be set accordingly",
         "Keywords": "cert,certificate,ssl,tls,https",
         "FieldName": "SSLMode",
@@ -440,7 +440,7 @@
     {
         "DisplayName": "Certificate Path",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets the path to an SSL certificate file (which may be a self-signed certificate). Required when SSL Mode is set to 'Use specified certificate'",
         "Keywords": "cert,certificate,ssl,tls,https,path",
         "FieldName": "CertPath",
@@ -453,7 +453,7 @@
     {
         "DisplayName": "Certificate Key Path",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets the path to the certificate key file. Required when SSL Mode is set to 'Use specified certificate'",
         "Keywords": "cert,key,ssl,tls,https,cert-key",
         "FieldName": "cert-key",
@@ -466,7 +466,7 @@
     {
         "DisplayName": "Certificate Host",
         "Category": "code-server:code",
-        "Subcategory": "Proxy & SSL:lock:2",
+        "Subcategory": "Proxy and SSL:lock:2",
         "Description": "Sets the hostname to use when the server generates a self-signed certificate. Used when SSL Mode is set to 'Generate and use self-signed certificate'. Defaults to 'localhost' if not set",
         "Keywords": "cert,host,hostname,ssl,tls,cert-host",
         "FieldName": "cert-host",
