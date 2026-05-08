@@ -4,6 +4,6 @@
         "Port": 9090,
         "Ref": "ServerPort",
         "Name": "Server Port",
-        "Description": "Primary HTTP port used by code-server"
+        "Description": "Port for web UI traffic"
     }
 ]
