@@ -1,7 +1,7 @@
 [
     {
         "DisplayName": "Bind Address",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "",
         "Keywords": "",
@@ -15,7 +15,7 @@
     },
     {
         "DisplayName": "Certificate File Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "",
         "Keywords": "",
@@ -29,7 +29,7 @@
     },
     {
         "DisplayName": "Idle Timeout",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "",
         "Keywords": "",
@@ -44,7 +44,7 @@
     },
     {
         "DisplayName": "Web Authentication Mode",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets the authentication mode for the web UI. The Web Password must be set if the authentication Mode is set to 'Password'",
         "Keywords": "auth,authentication,login,mode",
@@ -60,7 +60,7 @@
     },
     {
         "DisplayName": "Web Password",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets the password for the code-server web UI. Used when Authentication Mode is set to 'Password'. Default is a secure random password",
         "Keywords": "password,auth,login",
@@ -72,7 +72,7 @@
     },
     {
         "DisplayName": "Hashed Web Password",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets the argon2-hashed password for the code-server web UI. Used when Authentication Mode is set to 'Password', and overrides the plain text Web Password",
         "Keywords": "password,hashed,auth,login,hashed-password",
@@ -84,19 +84,19 @@
     },
     {
         "DisplayName": "GitHub Token",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets a GitHub authentication token for GitHub integration features",
-        "Keywords": "github,token,auth,authentication",
-        "FieldName": "GitHubToken",
+        "Keywords": "github,token,auth,authentication,github-auth",
+        "FieldName": "github-auth",
         "InputType": "password",
-        "ParamFieldName": "GitHubToken",
+        "ParamFieldName": "github-auth",
         "DefaultValue": "",
         "EnumValues": {}
     },
     {
         "DisplayName": "App Name",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets the application name used in the browser title bar, and another strings that use '{{app}}'. Defaults to 'code-server' if nothing is set",
         "Keywords": "app,name,title,app-name",
@@ -111,9 +111,9 @@
     },
     {
         "DisplayName": "Workspace Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the path to the workspace directory or a .code-workspace file. Default is the 'workspace' directory in the instance's root directory",
+        "Description": "Sets the path to the workspace directory or a .code-workspace file to be opened on launch. Default is the 'workspace' directory in the instance's root directory",
         "Keywords": "workspace,path",
         "FieldName": "WorkspacePath",
         "InputType": "text",
@@ -124,10 +124,10 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Locale",
-        "Category": "code-server:web",
+        "DisplayName": "Display Language",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "Sets the display language of the web UI",
+        "Description": "Sets the VSCode display language and the language to show on the login page. Specify the [2-letter language code](https://en.wikipedia.org/wiki/IETF_language_tag)",
         "Keywords": "locale,language,lang",
         "FieldName": "locale",
         "InputType": "text",
@@ -140,9 +140,9 @@
     },
     {
         "DisplayName": "Ignore Last Opened",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, the last opened directory or workspace will be ignored in favor of an empty window",
+        "Description": "If set, the last opened directory or workspace will be ignored in favor of an empty window on launch",
         "Keywords": "ignore,last,opened,workspace,window,ignore-last-opened",
         "FieldName": "ignore-last-opened",
         "InputType": "checkbox",
@@ -155,9 +155,9 @@
     },
     {
         "DisplayName": "Disable Getting Started Override",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, the getting started page override on first launch will be disabled",
+        "Description": "If set, the coder/coder override in the Help: Getting Started page will be disabled",
         "Keywords": "getting,started,welcome,disable-getting-started-override",
         "FieldName": "disable-getting-started-override",
         "InputType": "checkbox",
@@ -170,9 +170,9 @@
     },
     {
         "DisplayName": "Disable Workspace Trust",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, workspace trust prompts will be disabled",
+        "Description": "If set, the Workspace Trust feature will be disabled",
         "Keywords": "workspace,trust,disable-workspace-trust",
         "FieldName": "disable-workspace-trust",
         "InputType": "checkbox",
@@ -185,9 +185,9 @@
     },
     {
         "DisplayName": "Disable File Downloads",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, file downloads from the editor will be disabled",
+        "Description": "If set, file downloads from code-server will be disabled",
         "Keywords": "download,file,disable,security,disable-file-downloads",
         "FieldName": "disable-file-downloads",
         "InputType": "checkbox",
@@ -200,9 +200,9 @@
     },
     {
         "DisplayName": "Disable File Uploads",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, file uploads to the editor will be disabled",
+        "Description": "If set, file uploads to code-server will be disabled",
         "Keywords": "upload,file,disable,security,disable-file-uploads",
         "FieldName": "disable-file-uploads",
         "InputType": "checkbox",
@@ -215,7 +215,7 @@
     },
     {
         "DisplayName": "Socket Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets the path to listen on a Unix socket instead of host:port. Empty = disabled",
         "Keywords": "socket,unix,path,listen",
@@ -230,7 +230,7 @@
     },
     {
         "DisplayName": "Disable Telemetry",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "If set, telemetry reporting will be disabled",
         "Keywords": "telemetry,tracking,privacy,disable-telemetry",
@@ -245,9 +245,9 @@
     },
     {
         "DisplayName": "Disable Update Check",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, the automatic update check on startup will be disabled",
+        "Description": "If set, the automatic update check will be disabled. Otherwise, code-server checks every 6 hours against the latest GitHub release and then notifies once every week that a new release is available",
         "Keywords": "update,check,auto,disable-update-check",
         "FieldName": "disable-update-check",
         "InputType": "checkbox",
@@ -260,9 +260,9 @@
     },
     {
         "DisplayName": "Verbose Logging",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
-        "Description": "If set, enables verbose logging output for debugging",
+        "Description": "If set, verbose logging output for debugging will be enabled",
         "Keywords": "verbose,logging,debug,log",
         "FieldName": "verbose",
         "InputType": "checkbox",
@@ -270,12 +270,12 @@
         "DefaultValue": "",
         "EnumValues": {
             "False": "",
-            "True": "-vvv "
+            "True": "--verbose "
         }
     },
     {
         "DisplayName": "Enable Proposed API",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "If set, the proposed VS Code API features for extensions will be enabled",
         "Keywords": "proposed,api,extensions,enable-proposed-api",
@@ -290,7 +290,7 @@
     },
     {
         "DisplayName": "Custom Command Line Arguments",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Server:code:1",
         "Description": "Sets custom [command line arguments](https://github.com/coder/code-server/blob/main/src/node/cli.ts) for the server. Don't use arguments already in AMP's settings!",
         "Keywords": "custom,args,flags",
@@ -302,7 +302,7 @@
     },
     {
         "DisplayName": "Skip Auth Preflight",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "If set, allows preflight requests through the proxy without authentication. Useful when behind a reverse proxy",
         "Keywords": "auth,preflight,proxy,skip,skip-auth-preflight",
@@ -317,7 +317,7 @@
     },
     {
         "DisplayName": "Cookie Suffix",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Adds a suffix to the session cookie to prevent cookie collisions on subdomains",
         "Keywords": "cookie,suffix,subdomain,session,cookie-suffix",
@@ -332,7 +332,7 @@
     },
     {
         "DisplayName": "Proxy Domain",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets the domain used for proxying ports",
         "Keywords": "proxy,domain,proxy-domain",
@@ -347,7 +347,7 @@
     },
     {
         "DisplayName": "Disable Proxy",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "If set, domain and path proxy routes will be disabled",
         "Keywords": "proxy,disable,security,disable-proxy",
@@ -362,7 +362,7 @@
     },
     {
         "DisplayName": "Trusted Origins",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "If set, disables the origin authentication check for trusted origins. Useful when behind a reverse proxy that cannot set the origin header",
         "Keywords": "trusted,origins,reverse,proxy,trusted-origins",
@@ -377,7 +377,7 @@
     },
     {
         "DisplayName": "Absolute Proxy Base Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets the base path to prefix to all absproxy requests. Useful when running behind a reverse proxy on a subpath",
         "Keywords": "proxy,base,path,reverse,abs-proxy-base-path",
@@ -392,7 +392,7 @@
     },
     {
         "DisplayName": "SSL Mode",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets whether the server's internal webserver should use HTTPS. Certificate Path, Certificate Key Path and Certificate Host must be set accordingly",
         "Keywords": "cert,certificate,ssl,tls,https",
@@ -408,7 +408,7 @@
     },
     {
         "DisplayName": "Certificate Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets the path to an SSL certificate file. Required when SSL Mode is set to 'Use specified certificate'",
         "Keywords": "cert,certificate,ssl,tls,https,path",
@@ -421,7 +421,7 @@
     },
     {
         "DisplayName": "Certificate Key Path",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets the path to the certificate key file (which may be a self-signed certificate). Required when SSL Mode is set to 'Use specified certificate'",
         "Keywords": "cert,key,ssl,tls,https,cert-key",
@@ -434,7 +434,7 @@
     },
     {
         "DisplayName": "Certificate Host",
-        "Category": "code-server:web",
+        "Category": "code-server:stadia_controller",
         "Subcategory": "Proxy & SSL:lock:2",
         "Description": "Sets the hostname to use when the server generates a self-signed certificate. Required when SSL Mode is set to 'Generate and use self-signed certificate'",
         "Keywords": "cert,host,hostname,ssl,tls,cert-host",
