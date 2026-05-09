@@ -4,7 +4,7 @@
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "clonehero-game/releases",
-        "UpdateSourceData": "CloneHero-standalone_server.zip",
+        "UpdateSourceData": "CloneHero-StandaloneServer.zip",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
