@@ -101,8 +101,8 @@
         "MinValue": "1",
         "MaxValue": "10",
         "ParamFieldName": "$.ServerDescription_Persistent.MaxPlayerCount",
-        "DefaultValue": "4",
-        "Placeholder": "4",
+        "DefaultValue": "8",
+        "Placeholder": "8",
         "Suffix": "players",
         "EnumValues": {}
     },
@@ -136,6 +136,21 @@
             "SEA": "SEA",
             "CIS": "CIS",
             "EU": "EU and NA"
+        }
+    },
+    {
+        "DisplayName": "Load From Backup If Broken",
+        "Category": "Windrose:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "If set, on launch the server will try to restore broken save files from backups, as described in 'SaveWorkflow.md'",
+        "Keywords": "restore,load,save,file,backup,auto,broken,AutoLoadLatestBackupIfHasBroken",
+        "FieldName": "AutoLoadLatestBackupIfHasBroken",
+        "InputType": "checkbox",
+        "ParamFieldName": "$.ServerDescription_Persistent.AutoLoadLatestBackupIfHasBroken",
+        "DefaultValue": "true",
+        "EnumValues": {
+            "False": "false",
+            "True": "true"
         }
     },
     {
