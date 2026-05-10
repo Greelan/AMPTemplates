@@ -1,0 +1,10 @@
+[
+    {
+        "UpdateStageName": "Dune: Awakening Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "3104830",
+        "UpdateSourceArgs": "2995470",
+        "SkipOnFailure": false
+    }
+]

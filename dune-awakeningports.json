@@ -1,0 +1,16 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 7777,
+        "Ref": "ServerPort",
+        "Name": "Server Port",
+        "Description": "Port for main game traffic"
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 31982,
+        "Ref": "RMQPort",
+        "Name": "RMQ Port",
+        "Description": "Port for RMQ traffic"
+    }
+]
