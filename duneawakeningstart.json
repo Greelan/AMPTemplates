@@ -1,0 +1,74 @@
+[
+    {
+        "UpdateStageName": "Prepare runtime (world identity, certs, DB init)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"DUNE_JWT='{{FlsServiceAuthToken}}' DUNE_WORLD_TITLE='{{WorldTitle}}' DUNE_REGION='{{Region}}' DUNE_WORLD_NAME_OVERRIDE='{{WorldNameOverride}}' DUNE_HOST_DC_ID='{{ProviderName}}' DUNE_BIND_IP='{{$ApplicationIPBinding}}' DUNE_EXTERNAL_IP='{{PublicIPMode}}' DUNE_MQ_GAME_PORT='{{$RmqGamePort}}' DUNE_MQ_GAME_MGMT_PORT='{{$RmqGameHttpPort}}' DUNE_UE5_SURVIVAL1_GAME_PORT='{{$Survival1GamePort}}' DUNE_UE5_OVERMAP_GAME_PORT='{{$OvermapGamePort}}' DUNE_UE5_SURVIVAL1_IGW_PORT='{{$Survival1IgwPort}}' DUNE_UE5_OVERMAP_IGW_PORT='{{$OvermapIgwPort}}' '{{$FullRootDir}}scripts/prestart.sh' '{{$FullRootDir}}'\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start Postgres",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-pg.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start RabbitMQ Admin broker",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-mq-admin.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start RabbitMQ Game broker (TLS)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-mq-game.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start Text Router",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-text-router.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start Battlegroup Director",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-director.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start Gateway",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-gateway.sh {{$FullRootDir}}",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start UE5 (Survival_1)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-ue5.sh {{$FullRootDir}} Survival_1",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Start UE5 (Overmap)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "{{$FullRootDir}}scripts/start-ue5.sh {{$FullRootDir}} Overmap",
+        "SkipOnFailure": false
+    }
+]

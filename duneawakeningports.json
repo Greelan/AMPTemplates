@@ -1,0 +1,44 @@
+[
+    {
+        "Protocol": "TCP",
+        "Port": 5673,
+        "Ref": "RmqGamePort",
+        "Name": "RabbitMQ Game (AMQPS)",
+        "Description": "TLS AMQP endpoint that game clients use for messaging. Advertised to clients via FLS as $ExternalIP:$RmqGamePort."
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 15673,
+        "Ref": "RmqGameHttpPort",
+        "Name": "RabbitMQ Game (HTTP mgmt)",
+        "Description": "Management HTTP endpoint clients use for token auth. Advertised to clients via FLS."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 7777,
+        "Ref": "OvermapGamePort",
+        "Name": "UE5 Overmap game port",
+        "Description": "UDP port for the Overmap map's UE5 dedicated server."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 7778,
+        "Ref": "Survival1GamePort",
+        "Name": "UE5 Survival_1 game port",
+        "Description": "UDP port for the Survival_1 (Abbir) map's UE5 dedicated server."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 7888,
+        "Ref": "OvermapIgwPort",
+        "Name": "UE5 Overmap IGW port",
+        "Description": "Funcom Internet Gateway port for the Overmap instance."
+    },
+    {
+        "Protocol": "UDP",
+        "Port": 7889,
+        "Ref": "Survival1IgwPort",
+        "Name": "UE5 Survival_1 IGW port",
+        "Description": "Funcom Internet Gateway port for the Survival_1 instance."
+    }
+]

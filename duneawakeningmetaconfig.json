@@ -1,0 +1,20 @@
+[
+    {
+        "_comment": "UserEngine.ini \u2014 single entry. Bgd.* values keep their quotes as-typed by the user (UE5 INI parses quoted strings).",
+        "ConfigFile": "UserEngine.ini",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}={1}",
+        "ConfigFormatRegex": "^(?<key>[^;\\[][^=]*?)\\s*=\\s*(?<value>.*?)\\s*$"
+    },
+    {
+        "_comment": "UserGame.ini \u2014 UE5 property syntax, unquoted scalars.",
+        "ConfigFile": "UserGame.ini",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "ini",
+        "ConfigFormat": "{0}={1}",
+        "ConfigFormatRegex": "^(?<key>[^;\\[][^=]*?)\\s*=\\s*(?<value>.*?)\\s*$"
+    }
+]
