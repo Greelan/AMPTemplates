@@ -14,7 +14,7 @@
         "UpdateSource": "FetchURL",
         "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/the-riftbreakerconfig.cfg",
         "UpdateSourceArgs": "config.cfg",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}bin",
         "OverwriteExistingFiles": true,
         "SkipOnFailure": false
     },

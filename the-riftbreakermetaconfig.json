@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "config.cfg",
+        "ConfigFile": "bin/config.cfg",
         "AutoMap": true,
         "Importable": true,
         "ConfigType": "kvp",
