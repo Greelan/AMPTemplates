@@ -1,6 +1,6 @@
 Meta.DisplayName=The Riftbreaker [WIP]
 Meta.Description=The Riftbreaker Dedicated Server
-Meta.OS=
+Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
@@ -10,7 +10,7 @@ Meta.EndpointURIFormat=
 Meta.ConfigManifest=the-riftbreakerconfig.json
 Meta.MetaConfigManifest=the-riftbreakermetaconfig.json
 Meta.ConfigRoot=the-riftbreaker.kvp
-Meta.MinAMPVersion=2.6.4.0
+Meta.MinAMPVersion=2.7.0.0
 Meta.SpecificDockerImage=cubecoders/ampbase:debian
 Meta.DockerRequired=False
 Meta.DockerBaseReadOnly=False
@@ -36,7 +36,7 @@ App.ExecutableLinux=.proton/proton
 App.WorkingDir=4114030/bin
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}bin/DedicatedServer.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} disable_steam=1 app_mode=server campaign=open/open mission=campaigns/open/headquarters_magma difficulty=brutal {{$FormattedArgs}}
+App.CommandLineArgs={{$PlatformArgs}} cli=1 config=config.cfg {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"780310","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}"}

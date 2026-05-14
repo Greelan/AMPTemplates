@@ -1,8 +1,10 @@
 [
     {
-        "ConfigFile": "conf/initial_config.cfg",
+        "ConfigFile": "config.cfg",
         "AutoMap": true,
         "Importable": true,
-        "ConfigType": "kvp"
+        "ConfigType": "kvp",
+        "ConfigFormat": "set {0} \"{1}\"",
+        "ConfigFormatRegex": "^set\\s+(?<key>.+?)\\s+\"(?<value>.*?)\"$"
     }
 ]

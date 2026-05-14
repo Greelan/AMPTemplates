@@ -9,6 +9,16 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Config.cfg File Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "FetchURL",
+        "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/the-riftbreakerconfig.cfg",
+        "UpdateSourceArgs": "config.cfg",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Proton GE Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
