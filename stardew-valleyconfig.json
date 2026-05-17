@@ -13,13 +13,13 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Password",
+        "DisplayName": "Server Password",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the password to join the server. Default is no password",
+        "Description": "Sets the password used to log in on the server, which enables password-protected commands to be run. To log in a player must run '/message ServerBot LogIn' followed by the password. Default is no password",
         "Keywords": "password,security",
         "FieldName": "Password",
-        "InputType": "text",
+        "InputType": "password",
         "ParamFieldName": "$.Password",
         "DefaultValue": "",
         "EnumValues": {}
