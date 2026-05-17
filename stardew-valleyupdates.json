@@ -40,5 +40,22 @@
         "UpdateSourceData": "/bin/bash",
         "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}Mods/DedicatedServer\\\" && ModVersion=\\\"{{DedicatedServerModVersion}}\\\" && if [[ -z \\\"$ModVersion\\\" ]]; then ModVersion=$(wget -qO- https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest | jq -r .tag_name) && ModVersion=${ModVersion#v}; fi && if [[ ! \\\"$ModVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid Dedicated Server Mod version format specified\\\" && exit 1; fi && wget -qO mod.zip https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/DedicatedServer.$ModVersion.zip && unzip -oq mod.zip -d \\\"{{$FullBaseDir}}Mods\\\" && rm -f mod.zip && wget -qO \\\"{{$FullBaseDir}}Mods/DedicatedServer/config.json\\\" https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/config.json\"",
         "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Saves Directory Creation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$SavesDir = Join-Path $env:APPDATA 'StardewValley'; New-Item -Path $SavesDir -ItemType Directory -Force | Out-Null; if (-Not (Test-Path '{{$FullBaseDir}}StardewValley')) { New-Item -ItemType Junction -Path '{{$FullBaseDir}}StardewValley' -Target \\\"$SavesDir\\\" -Force | Out-Null }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Create Readme File",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CreateFile",
+        "UpdateSourceArgs": "{{$FullBaseDir}}StardewValley/README.txt",
+        "UpdateSourceData": "WARNING: This directory will include the save data of multiple Stardew Valley servers\nrun on this system.\n\nTake care when managing files in this directory or its subdirectory!",
+        "OverwriteExistingFiles": true,
+        "SkipOnFailure": true
     }
 ]
