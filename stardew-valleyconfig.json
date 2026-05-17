@@ -25,7 +25,7 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Password Protected: Pause",
+        "DisplayName": "Require Password For Pause Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Pause command",
@@ -40,7 +40,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: Build",
+        "DisplayName": "Require Password For Build Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Build command",
@@ -55,7 +55,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: Demolish",
+        "DisplayName": "Require Password For Demolish Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Demolish command",
@@ -70,7 +70,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: LetMePlay",
+        "DisplayName": "Require Password For LetMePlay Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the LetMePlay command",
@@ -85,7 +85,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: TakeOver",
+        "DisplayName": "Require Password For TakeOver Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the TakeOver command",
@@ -100,7 +100,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: SafeInviteCode",
+        "DisplayName": "Require Password For SafeInviteCode Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the SafeInviteCode command",
@@ -115,7 +115,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: InviteCode",
+        "DisplayName": "Require Password For InviteCode Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the InviteCode command",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: ForceInviteCode",
+        "DisplayName": "Require Password For ForceInviteCode Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the ForceInviteCode command",
@@ -145,7 +145,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: Invisible",
+        "DisplayName": "Require Password For Invisible Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Invisible command",
@@ -160,7 +160,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: Sleep",
+        "DisplayName": "Require Password For Sleep Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Sleep command",
@@ -175,7 +175,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: ForceSleep",
+        "DisplayName": "Require Password For ForceSleep Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the ForceSleep command",
@@ -190,7 +190,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: ForceResetDay",
+        "DisplayName": "Require Password For ForceResetDay Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the ForceResetDay command",
@@ -205,7 +205,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: ForceShutdown",
+        "DisplayName": "Require Password For ForceShutdown Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the ForceShutdown command",
@@ -220,7 +220,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: Wallet",
+        "DisplayName": "Require Password For Wallet Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the Wallet command",
@@ -235,7 +235,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: SpawnMonster",
+        "DisplayName": "Require Password For SpawnMonster Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the SpawnMonster command",
@@ -250,7 +250,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: MoveBuildPermission",
+        "DisplayName": "Require Password For MoveBuildPermission Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the MoveBuildPermission command",
@@ -265,7 +265,7 @@
         }
     },
     {
-        "DisplayName": "Password Protected: UpgradeHouseLevelBasedOnFarmhand",
+        "DisplayName": "Require Password For UpgradeHouseLevelBasedOnFarmhand Command",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
         "Description": "If set, the password will be required to use the UpgradeHouseLevelBasedOnFarmhand command",
@@ -280,7 +280,7 @@
         }
     },
     {
-        "DisplayName": "Starting Cabins",
+        "DisplayName": "Starting Cabins Number",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
         "Description": "Sets the number of initial cabins for multiplayer",
@@ -427,13 +427,12 @@
         "DisplayName": "Random Seed",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
-        "Description": "Sets the farm's random seed. Empty = random",
+        "Description": "Sets the farm's random seed. Must be a number. Empty = randomly generated seed",
         "Keywords": "random,seed,RandomSeed",
         "FieldName": "RandomSeed",
         "InputType": "text",
         "ParamFieldName": "$.RandomSeed",
         "DefaultValue": "",
-        "Placeholder": "",
         "EnumValues": {}
     },
     {
