@@ -16,7 +16,7 @@
         "DisplayName": "Server Password",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the password used to log in on the server, which enables password-protected commands to be run. To log in a player must run '/message ServerBot LogIn' followed by the password. Default is no password",
+        "Description": "Sets the password used to log in on the server, which enables [password-protected commands](https://github.com/Chris82111/SMAPIDedicatedServerMod/tree/main#in-game-command) to be run in-game. To log in a player must run '/message ServerBot LogIn' followed by the password. Default is no password",
         "Keywords": "password,security",
         "FieldName": "Password",
         "InputType": "password",
@@ -283,7 +283,7 @@
         "DisplayName": "Starting Cabins Number",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
-        "Description": "Sets the number of initial cabins for multiplayer",
+        "Description": "Sets the number of initial cabins for the farm",
         "Keywords": "starting,cabins,multiplayer,StartingCabins",
         "FieldName": "StartingCabins",
         "InputType": "enum",
@@ -297,10 +297,10 @@
         }
     },
     {
-        "DisplayName": "Cabin Layout",
+        "DisplayName": "Starting Cabins Layout",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
-        "Description": "Sets the starting cabin layout",
+        "Description": "Sets the starting cabins layout",
         "Keywords": "cabin,layout,nearby,separate,CabinLayout",
         "FieldName": "CabinLayout",
         "InputType": "enum",
@@ -379,7 +379,7 @@
         }
     },
     {
-        "DisplayName": "Guarantee Year 1 Completable",
+        "DisplayName": "Guarantee First Year Completable",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
         "Description": "If set, ensures the community center can be completed in year one",
@@ -397,7 +397,7 @@
         "DisplayName": "Mine Rewards",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Farm Creation:landscape:2",
-        "Description": "Sets the mine reward configuration",
+        "Description": "Sets the mine rewards configuration",
         "Keywords": "mine,rewards,normal,remixed,MineRewards",
         "FieldName": "MineRewards",
         "InputType": "enum",
@@ -439,16 +439,25 @@
         "DisplayName": "Pet Breed",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Host Automation:smart_toy:3",
-        "Description": "Sets the pet breed index (0-9). Set to -1 for no pet",
+        "Description": "Sets the pet breed index",
         "Keywords": "pet,breed,PetBreed",
         "FieldName": "PetBreed",
-        "InputType": "number",
-        "MinValue": "-1",
-        "MaxValue": "9",
+        "InputType": "enum",
         "ParamFieldName": "$.PetBreed",
         "DefaultValue": "0",
-        "Placeholder": "0",
-        "EnumValues": {}
+        "EnumValues": {
+            "-1": "No pet",
+            "0": "0 (default)",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9"
+        }
     },
     {
         "DisplayName": "Pet Name",
@@ -464,18 +473,18 @@
         "EnumValues": {}
     },
     {
-        "DisplayName": "Mushrooms Or Bats",
+        "DisplayName": "Cave Type",
         "Category": "Stardew Valley:stadia_controller",
         "Subcategory": "Host Automation:smart_toy:3",
-        "Description": "Sets the cave type to mushrooms or bats",
+        "Description": "Sets the cave type",
         "Keywords": "mushrooms,bats,cave,MushroomsOrBats",
         "FieldName": "MushroomsOrBats",
         "InputType": "enum",
         "ParamFieldName": "$.MushroomsOrBats",
         "DefaultValue": "Mushrooms",
         "EnumValues": {
-            "Mushrooms": "Mushrooms (default)",
-            "Bats": "Bats"
+            "Mushrooms": "Mushroom cave (default)",
+            "Bats": "Bat cave"
         }
     },
     {
@@ -558,8 +567,8 @@
         "DisplayName": "Game Branch",
         "Category": "Updates",
         "Subcategory": "Server Updates:build:-1",
-        "Description": "Sets the game branch to install. The SMAPI Release Version should be set appropriately. Update the server after changing this setting",
-        "Keywords": "game,branch,public,legacy,GameBranch",
+        "Description": "Sets the game branch to install. The SMAPI Version and Dedicated Server Mod Version should be set appropriately. Update the server after changing this setting",
+        "Keywords": "game,branch,public,previous_version,beta,GameBranch",
         "FieldName": "GameBranch",
         "InputType": "enum",
         "ParamFieldName": "GameBranch",
