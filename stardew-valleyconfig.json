@@ -582,5 +582,18 @@
         "DefaultValue": "",
         "Placeholder": "4.5.2",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Dedicated Server Mod Version",
+        "Category": "Updates",
+        "Subcategory": "Server Updates:build:-1",
+        "Description": "Sets the [Dedicated Server Mod version](https://github.com/Chris82111/SMAPIDedicatedServerMod/releases) to install. Empty = latest. Update the server after changing this setting",
+        "Keywords": "dedicated,server,mod,version,DedicatedServerModVersion",
+        "FieldName": "DedicatedServerModVersion",
+        "InputType": "text",
+        "ParamFieldName": "DedicatedServerModVersion",
+        "DefaultValue": "",
+        "Placeholder": "1.2.2",
+        "EnumValues": {}
     }
 ]

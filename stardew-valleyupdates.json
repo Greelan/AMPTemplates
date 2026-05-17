@@ -26,40 +26,19 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Dedicated Server Mod Cleanup",
-        "UpdateSourcePlatform": "Linux",
-        "UpdateSource": "Executable",
-        "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}Mods/DedicatedServer\\\"\"",
-        "SkipOnFailure": true
-    },
-    {
-        "UpdateStageName": "Dedicated Server Mod Cleanup",
+        "UpdateStageName": "Dedicated Server Mod Installation",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Remove-Item -Path '{{$FullBaseDir}}Mods\\DedicatedServer' -Recurse -Force -ErrorAction SilentlyContinue\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Remove-Item -Path '{{$FullBaseDir}}Mods\\DedicatedServer' -Recurse -Force -ErrorAction SilentlyContinue; $ModVersion='{{DedicatedServerModVersion}}'; if ([string]::IsNullOrWhiteSpace($ModVersion)) { $ModVersion = ((Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest').tag_name) -replace '^v','' }; if ($ModVersion -notmatch '^\\d+\\.\\d+\\.\\d+$') { Write-Output \\\"Invalid Dedicated Server Mod version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/DedicatedServer.$ModVersion.zip -OutFile 'mod.zip'; Expand-Archive -Path 'mod.zip' -DestinationPath '{{$FullBaseDir}}Mods' -Force; Remove-Item -Path 'mod.zip' -Force; Invoke-WebRequest -UseBasicParsing -Uri https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/config.json -OutFile '{{$FullBaseDir}}Mods\\DedicatedServer\\config.json'\"",
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Dedicated Server Mod Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURLFromJQ",
-        "UpdateSourceData": "https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest",
-        "UpdateSourceArgs": "$.assets[1].browser_download_url",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Mods",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "SkipOnFailure": false
-    },
-    {
-        "UpdateStageName": "Dedicated Server Mod Config Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURLFromJQ",
-        "UpdateSourceData": "https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest",
-        "UpdateSourceArgs": "$.assets[0].browser_download_url",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Mods/DedicatedServer",
+        "UpdateStageName": "Dedicated Server Mod Installation",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}Mods/DedicatedServer\\\" && ModVersion=\\\"{{DedicatedServerModVersion}}\\\" && if [[ -z \\\"$ModVersion\\\" ]]; then ModVersion=$(wget -qO- https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest | jq -r .tag_name) && ModVersion=${ModVersion#v}; fi && if [[ ! \\\"$ModVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid Dedicated Server Mod version format specified\\\" && exit 1; fi && wget -qO mod.zip https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/DedicatedServer.$ModVersion.zip && unzip -oq mod.zip -d \\\"{{$FullBaseDir}}Mods\\\" && rm -f mod.zip && wget -qO \\\"{{$FullBaseDir}}Mods/DedicatedServer/config.json\\\" https://github.com/Chris82111/SMAPIDedicatedServerMod/releases/download/v$ModVersion/config.json\"",
         "SkipOnFailure": false
     }
 ]

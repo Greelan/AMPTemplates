@@ -32,7 +32,7 @@ App.WindowsCommandLineArgs=--use-current-shell
 App.CommandLineArgs={{$PlatformArgs}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"SteamAppId":"413150","SMAPI_USE_CURRENT_SHELL":"true"}
+App.EnvironmentVariables={"SteamAppId":"413150","SMAPI_USE_CURRENT_SHELL":"true","HOME":"{{$FullRootDir}}"}
 App.CommandLineParameterFormat=--{0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
