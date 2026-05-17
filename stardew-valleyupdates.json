@@ -6,90 +6,59 @@
         "UpdateSourceData": "413150",
         "UpdateSourceArgs": "413150",
         "UpdateSourceVersion": "{{GameBranch}}",
-        "UpdateSourceTarget": "{{$FullBaseDir}}"
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Create SMAPI Download Directory",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullRootDir}}smapi"
-    },
-    {
-        "UpdateStageName": "SMAPI Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURLFromJQ",
-        "UpdateSourceData": "https://api.github.com/repos/Pathoschild/SMAPI/releases/latest",
-        "UpdateSourceArgs": "$.assets[1].browser_download_url",
-        "UpdateSourceTarget": "{{$FullRootDir}}smapi",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "UpdateSourceConditionSetting": "SMAPIRelease",
-        "UpdateSourceConditionValue": "latest"
-    },
-    {
-        "UpdateStageName": "SMAPI Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "FetchURL",
-        "UpdateSourceData": "https://github.com/Pathoschild/SMAPI/releases/download/{{SMAPIReleaseVersion}}/SMAPI-{{SMAPIReleaseVersion}}-installer.zip",
-        "UpdateSourceTarget": "{{$FullRootDir}}smapi",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true,
-        "UpdateSourceConditionSetting": "SMAPIRelease",
-        "UpdateSourceConditionValue": "specificversion"
+        "UpdateStageName": "SMAPI Installation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'stardew-valley'; New-Item -ItemType Directory -Force -Path 'smapi' | Out-Null; $SMAPIVersion='{{SMAPIVersion}}'; if ([string]::IsNullOrWhiteSpace($SMAPIVersion)) { $SMAPIVersion = (Invoke-RestMethod -UseBasicParsing -Uri 'https://api.github.com/repos/Pathoschild/SMAPI/releases/latest').tag_name }; if ($SMAPIVersion -notmatch '^\\d+\\.\\d+\\.\\d+$') { Write-Output \\\"Invalid SMAPI version format specified\\\"; exit 1 }; Invoke-WebRequest -UseBasicParsing -Uri https://github.com/Pathoschild/SMAPI/releases/download/$SMAPIVersion/SMAPI-$SMAPIVersion-installer.zip -OutFile 'installer.zip'; Expand-Archive -Path 'smapi\\installer.zip' -DestinationPath 'smapi' -Force; Remove-Item -Path 'smapi\\installer.zip' -Force; $smapiDir = Get-ChildItem -Path 'smapi' -Directory -Filter 'SMAPI*' | Select-Object -First 1; & \\\"$($smapiDir.FullName)\\internal\\windows\\SMAPI.Installer.exe\\\" --install --game-path '{{$FullBaseDir}}' --no-prompt; Remove-Item -Path 'smapi\\SMAPI*' -Recurse -Force\"",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "SMAPI Installation",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd stardew-valley/smapi/SMAPI* && chmod +x internal/linux/SMAPI.Installer && internal/linux/SMAPI.Installer --install --game-path \\\"{{$FullBaseDir}}\\\" --no-prompt; cd .. && rm -rf SMAPI*\"",
+        "UpdateSourceArgs": "-c \"cd stardew-valley && mkdir -p smapi && SMAPIVersion=\\\"{{SMAPIVersion}}\\\" && if [[ -z \\\"$SMAPIVersion\\\" ]]; then SMAPIVersion=$(wget -qO- https://api.github.com/repos/Pathoschild/SMAPI/releases/latest | jq -r .tag_name); fi && if [[ ! \\\"$SMAPIVersion\\\" =~ ^[0-9]+\\.[0-9]+\\.[0-9]+$ ]]; then echo \\\"Invalid SMAPI version format specified\\\" && exit 1; fi && wget -qO smapi/installer.zip https://github.com/Pathoschild/SMAPI/releases/download/$SMAPIVersion/SMAPI-$SMAPIVersion-installer.zip && unzip -o smapi/installer.zip -d smapi && rm -f smapi/installer.zip && cd smapi/SMAPI* && chmod +x internal/linux/SMAPI.Installer && internal/linux/SMAPI.Installer --install --game-path \\\"{{$FullBaseDir}}\\\" --no-prompt && cd ../.. && rm -rf smapi/SMAPI*\"",
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "SMAPI Installation",
+        "UpdateStageName": "Dedicated Server Mod Cleanup",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"rm -rf \\\"{{$FullBaseDir}}Mods/DedicatedServer\\\"\"",
+        "SkipOnFailure": true
+    },
+    {
+        "UpdateStageName": "Dedicated Server Mod Cleanup",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
-        "UpdateSourceData": "cmd.exe",
-        "UpdateSourceArgs": "/C cd stardew-valley\\smapi\\SMAPI* && copy /Y internal\\windows\\install.dat ..\\..\\..\\install.zip > NUL 2>&1 && cd .. && for /d %G in (\"SMAPI*\") do @rd /S /Q \"%~G\" > NUL 2>&1",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"Remove-Item -Path '{{$FullBaseDir}}Mods\\DedicatedServer' -Recurse -Force -ErrorAction SilentlyContinue\"",
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "SMAPI Installation",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "ExtractArchive",
-        "UpdateSourceData": "install.zip",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
-    },
-    {
-        "UpdateStageName": "SMAPI Installation",
-        "UpdateSourcePlatform": "Windows",
-        "UpdateSource": "CopyFilePath",
-        "UpdateSourceData": "{{$FullBaseDir}}StardewModdingAPI.deps.json",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Stardew Valley.deps.json",
-        "OverwriteExistingFiles": true
-    },
-    {
-        "UpdateStageName": "Always On Server Mod Download",
+        "UpdateStageName": "Dedicated Server Mod Download",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "perkmi/Always-On-Server-for-Multiplayer",
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest",
+        "UpdateSourceArgs": "$.assets[1].browser_download_url",
         "UpdateSourceTarget": "{{$FullBaseDir}}Mods",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+        "DeleteAfterExtract": true,
+        "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Stardew Port Changer Mod Download",
+        "UpdateStageName": "Dedicated Server Mod Config Download",
         "UpdateSourcePlatform": "All",
-        "UpdateSource": "GithubRelease",
-        "UpdateSourceArgs": "PhantomGamers/StardewPortChanger",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Mods",
-        "UnzipUpdateSource": true,
-        "OverwriteExistingFiles": true,
-        "DeleteAfterExtract": true
+        "UpdateSource": "FetchURLFromJQ",
+        "UpdateSourceData": "https://api.github.com/repos/Chris82111/SMAPIDedicatedServerMod/releases/latest",
+        "UpdateSourceArgs": "$.assets[0].browser_download_url",
+        "UpdateSourceTarget": "{{$FullBaseDir}}Mods/DedicatedServer",
+        "SkipOnFailure": false
     }
 ]

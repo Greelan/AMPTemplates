@@ -1,12 +1,8 @@
 [
     {
-        "ConfigFile": "Mods/Always On Server/config.json",
+        "ConfigFile": "Mods/DedicatedServer/config.json",
         "AutoMap": true,
-        "ConfigType": "json"
-    },
-    {
-        "ConfigFile": "Mods/ServerPortChanger/config.json",
-        "AutoMap": true,
+        "Importable": true,
         "ConfigType": "json"
     }
 ]
