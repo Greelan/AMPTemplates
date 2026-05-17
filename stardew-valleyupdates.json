@@ -6,6 +6,7 @@
         "UpdateSourceData": "413150",
         "UpdateSourceArgs": "413150",
         "UpdateSourceVersion": "{{GameBranch}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}",
         "SkipOnFailure": false
     },
     {
