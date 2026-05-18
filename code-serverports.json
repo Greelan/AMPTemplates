@@ -1,9 +1,0 @@
-[
-    {
-        "Protocol": "TCP",
-        "Port": 9090,
-        "Ref": "ServerPort",
-        "Name": "Server Port",
-        "Description": "Port for web UI traffic"
-    }
-]
