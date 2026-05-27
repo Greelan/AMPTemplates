@@ -43,16 +43,16 @@
         "DisplayName": "World Size",
         "Category": "Romestead:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the size for generation of a new world",
+        "Description": "Sets the size for generation of a new world. A large world requires at least 8GB RAM to generate",
         "Keywords": "world,size,map,generation,AutoCreateWorldSize",
         "FieldName": "AutoCreateWorldSize",
         "InputType": "enum",
         "ParamFieldName": "$.AutoCreateWorldSize",
         "DefaultValue": "1",
         "EnumValues": {
-            "1": "Large",
-            "2": "Standard",
-            "3": "Small"
+            "0": "Small",
+            "1": "Standard",
+            "2": "Large"
         }
     },
     {
@@ -99,7 +99,7 @@
         "DisplayName": "Enable Cheats",
         "Category": "Romestead:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, cheats will be enabled on the server",
+        "Description": "If set, cheats will be enabled on the server. Not currently used",
         "Keywords": "enable,cheats,commands,console,EnableCheats",
         "FieldName": "EnableCheats",
         "InputType": "checkbox",
