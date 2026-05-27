@@ -30,7 +30,7 @@
         "DisplayName": "Create New World",
         "Category": "Romestead:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "If set, the server will generate a new world with the specified World Name when started",
+        "Description": "If set, the server will generate a new world with the specified World Name when started, if that world does not already exist",
         "Keywords": "auto,create,world,startup,AutoCreateAndLoadWorld",
         "FieldName": "AutoCreateAndLoadWorld",
         "InputType": "checkbox",
