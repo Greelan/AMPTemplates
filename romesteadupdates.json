@@ -14,7 +14,7 @@
         "UpdateSourceData": "https://raw.githubusercontent.com/Greelan/AMPTemplates/dev/romesteadserverconfig.json",
         "UpdateSourceArgs": "config.json",
         "UpdateSourceTarget": "{{$FullBaseDir}}",
-        "OverwriteExistingFiles": false
+        "OverwriteExistingFiles": true
     },
     {
         "UpdateStageName": "Dotnet Directory Creation",
