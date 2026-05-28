@@ -43,7 +43,7 @@
         "DisplayName": "World Size",
         "Category": "Romestead:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the size for generation of a new world. A large world requires at least 8GB RAM to generate",
+        "Description": "Sets the size for generation of a new world. A large world requires at least 8GB of RAM to generate",
         "Keywords": "world,size,map,generation,AutoCreateWorldSize",
         "FieldName": "AutoCreateWorldSize",
         "InputType": "enum",
