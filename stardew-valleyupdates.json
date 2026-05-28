@@ -42,6 +42,29 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "7-Zip Directory Creation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "CreateDirectory",
+        "UpdateSourceArgs": "{{$FullRootDir}}7-Zip",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "7-Zip Installation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'stardew-valley/7-Zip'; if (Test-Path '7z.exe') { exit 0 } else { Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/ip7z/7zip/releases/download/26.00/7z2600-x64.exe' -OutFile '7z-installer.exe' }; if ($?) { Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/ip7z/7zip/releases/download/26.00/7zr.exe' -OutFile '7zr.exe' }; if ($?) { & ./7zr.exe x -y -aoa 7z-installer.exe *> $null 2>&1; Remove-Item -Path '7z-installer.exe' -Force -ErrorAction SilentlyContinue | Out-Null }\"",
+        "SkipOnFailure": false
+    },
+    {
+        "UpdateStageName": "Mesa Installation",
+        "UpdateSourcePlatform": "Windows",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "powershell.exe",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'stardew-valley/server'; if ($?) { Invoke-WebRequest -UseBasicParsing -Uri https://github.com/pal1000/mesa-dist-win/releases/download/26.1.1/mesa3d-26.1.1-release-msvc.7z -OutFile 'mesa.7z'; if ($?) { & ../7-Zip/7z.exe x -y -aoa mesa.7z | Out-Null; Copy-Item mesa3d-26.1.1-release-msvc/x64/* . -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'mesa.7z', 'mesa3d-26.1.1-release-msvc' -Force -ErrorAction SilentlyContinue | Out-Null } }\"",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "Saves Directory Creation",
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",

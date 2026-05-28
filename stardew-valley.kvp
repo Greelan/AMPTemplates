@@ -42,7 +42,7 @@ App.WindowsCommandLineArgs=--use-current-shell
 App.CommandLineArgs={{$PlatformArgs}} {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"413150","SMAPI_USE_CURRENT_SHELL":"true","XDG_CONFIG_HOME":"{{$FullBaseDir}}"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"{{$FullRootDir}}linux64:%LD_LIBRARY_PATH%","SteamAppId":"413150","SMAPI_USE_CURRENT_SHELL":"true","XDG_CONFIG_HOME":"{{$FullBaseDir}}","GALLIUM_DRIVER":"llvmpipe","MESA_GL_VERSION_OVERRIDE":"4.5COMPAT","MESA_GLSL_VERSION_OVERRIDE":"450","SDL_AUDIODRIVER":"dummy","VK_ICD_FILENAMES":"{{$FullBaseDir}}lvp_icd.x86_64.json"}
 App.CommandLineParameterFormat=--{0}={1}
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
