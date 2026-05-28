@@ -61,7 +61,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'stardew-valley/server'; if ($?) { Invoke-WebRequest -UseBasicParsing -Uri https://github.com/pal1000/mesa-dist-win/releases/download/26.1.1/mesa3d-26.1.1-release-msvc.7z -OutFile 'mesa.7z'; if ($?) { & ../7-Zip/7z.exe x -y -aoa mesa.7z | Out-Null; Copy-Item mesa3d-26.1.1-release-msvc/x64/* . -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'mesa.7z', 'mesa3d-26.1.1-release-msvc' -Force -ErrorAction SilentlyContinue | Out-Null } }\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"$ProgressPreference='SilentlyContinue'; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Set-Location -Path 'stardew-valley/server'; New-Item -ItemType Directory -Path 'mesa' -Force -ErrorAction SilentlyContinue | Out-Null; Invoke-WebRequest -UseBasicParsing -Uri https://github.com/pal1000/mesa-dist-win/releases/download/26.1.1/mesa3d-26.1.1-release-msvc.7z -OutFile 'mesa/mesa.7z'; if ($?) { & ../7-Zip/7z.exe x -y -aoa -omesa mesa/mesa.7z | Out-Null; Copy-Item mesa/x64/* . -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'mesa.7z', 'mesa' -Force -ErrorAction SilentlyContinue | Out-Null }\"",
         "SkipOnFailure": false
     },
     {
