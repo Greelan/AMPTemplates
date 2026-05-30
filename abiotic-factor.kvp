@@ -36,7 +36,7 @@ App.ExecutableLinux=.proton/proton
 App.WorkingDir=2857200
 App.LinuxCommandLineArgs=runinprefix "{{$FullBaseDir}}AbioticFactor/Binaries/Win64/AbioticFactorServer-Win64-Shipping.exe"
 App.WindowsCommandLineArgs=
-App.CommandLineArgs={{$PlatformArgs}} AbioticFactor {{useperfthreads}}{{NoAsyncLoadingThread}}{{useallavailablecores}}{{LANOnly}}{{UseLocalIPs}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -MultiHome={{$ApplicationIPBinding}} -SteamServerName="{{ServerName}}" -SandboxIniPath=Config/WindowsServer/SandboxSettings.ini -log=AbioticFactor.log {{$FormattedArgs}} {{CustomArgs}}
+App.CommandLineArgs={{$PlatformArgs}} AbioticFactor {{useperfthreads}}{{NoAsyncLoadingThread}}{{useallavailablecores}}{{LANOnly}}{{UseLocalIPs}} -Port={{$GamePort}} -QueryPort={{$QueryPort}} -SteamServerName="{{ServerName}}" -SandboxIniPath=Config/WindowsServer/SandboxSettings.ini -log=AbioticFactor.log {{$FormattedArgs}} {{CustomArgs}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={"SteamAppId":"427410","STEAM_COMPAT_DATA_PATH":"{{$FullRootDir}}.proton/compatdata","STEAM_COMPAT_CLIENT_INSTALL_PATH":"{{$FullBaseDir}}.steam/steam","HOME":"{{$FullBaseDir}}","WINEDLLOVERRIDES":"version.dll=n,b"}
