@@ -1,6 +1,6 @@
 Meta.DisplayName=s&box (Linux native)
 Meta.Description=s&box Dedicated Server
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=Native
 Meta.Arch=All
 Meta.Author=Greelan
