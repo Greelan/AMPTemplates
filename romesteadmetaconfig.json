@@ -1,6 +1,6 @@
 [
     {
-        "ConfigFile": "server_config.json",
+        "ConfigFile": "config.json",
         "AutoMap": true,
         "Importable": true,
         "ConfigType": "json"
