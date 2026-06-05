@@ -124,7 +124,7 @@
         "DisplayName": "Module Argument Format",
         "Category": "Mount + Blade Warband:stadia_controller",
         "Subcategory": "Server:dns:1",
-        "Description": "Sets the module argument format to use when launching the server. Some mods require a different format",
+        "Description": "Sets the module argument format to use when starting the server. Some mods require a different format",
         "Keywords": "module,argument,format",
         "FieldName": "ModuleArgFormat",
         "InputType": "enum",
