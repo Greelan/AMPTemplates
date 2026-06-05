@@ -44,8 +44,6 @@
         "FieldName": "set_welcome_message",
         "InputType": "Textarea",
         "ParamFieldName": "set_welcome_message",
-        "IncludeInCommandLine": true,
-        "SkipIfEmpty": true,
         "DefaultValue": "Welcome to my server",
         "EnumValues": {}
     },
@@ -170,6 +168,21 @@
         "DefaultValue": "32",
         "Placeholder": "32",
         "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Additional Startup Config",
+        "Category": "Mount + Blade Warband:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name (and path if needed) of an optional config file to load on start. Useful for modded servers",
+        "Keywords": "config-path,config,path,file,additional,modded",
+        "FieldName": "config-path",
+        "InputType": "text",
+        "ParamFieldName": "config-path",
+        "IncludeInCommandLine": true,
+        "SkipIfEmpty": true,
+        "DefaultValue": "",
+        "Placeholder": "server_config.ini",
         "EnumValues": {}
     }
 ]
