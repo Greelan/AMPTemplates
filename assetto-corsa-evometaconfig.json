@@ -1,0 +1,23 @@
+[
+    {
+        "ConfigFile": "cfg/configuration.json",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "json",
+        "ConfigEncoding": "utf16-le-nobom"
+    },
+    {
+        "ConfigFile": "cfg/settings.json",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "json",
+        "ConfigEncoding": "utf16-le-nobom"
+    },
+    {
+        "ConfigFile": "cfg/event.json",
+        "AutoMap": true,
+        "Importable": true,
+        "ConfigType": "json",
+        "ConfigEncoding": "utf16-le-nobom"
+    }
+]

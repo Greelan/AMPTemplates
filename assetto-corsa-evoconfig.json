@@ -1,0 +1,92 @@
+[
+    {
+        "DisplayName": "UDP Port",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "udpPort",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "TCP Port",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$ServerPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "tcpPort",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "HTTP Port",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "$HTTPPort",
+        "InputType": "number",
+        "Hidden": true,
+        "ParamFieldName": "httpPort",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Name",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the name of the server as it appears publicly",
+        "Keywords": "name,serverName",
+        "FieldName": "serverName",
+        "InputType": "text",
+        "ParamFieldName": "$.serverName",
+        "DefaultValue": "AMP Powered Assetto Corsa EVO Server",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Password",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the password to connect to the server as a player. Default is no password",
+        "Keywords": "password",
+        "FieldName": "password",
+        "InputType": "password",
+        "ParamFieldName": "$.password",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Admin Password",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the in-game 'admin' user password. Default is a secure random password",
+        "Keywords": "admin,password,adminPassword",
+        "FieldName": "adminPassword",
+        "InputType": "password",
+        "ParamFieldName": "$.adminPassword",
+        "DefaultValue": "{{newguid()}}",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Connection Limit",
+        "Category": "Assetto Corsa EVO:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the grid size. 16-24 is comfortable for most setups. Going above 30 puts real demand on CPU and network bandwidth",
+        "Keywords": "connection,limit,maxConnections",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "maxConnections",
+        "DefaultValue": "24",
+        "Placeholder": "24",
+        "Suffix": "connections",
+        "EnumValues": {}
+    }
+]
