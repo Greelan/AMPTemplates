@@ -14,6 +14,22 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Server ID",
+        "Category": "Miscreated:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets a unique numeric identifier for the server",
+        "Keywords": "server,id,identifier,mis_gameserverid",
+        "FieldName": "mis_gameserverid",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "65535",
+        "ParamFieldName": "mis_gameserverid",
+        "DefaultValue": "100",
+        "Placeholder": "100",
+        "Required": true,
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Message Of The Day",
         "Category": "Miscreated:stadia_controller",
         "Subcategory": "Server:dns:1",
@@ -34,6 +50,18 @@
         "FieldName": "sv_url",
         "InputType": "text",
         "ParamFieldName": "sv_url",
+        "DefaultValue": "",
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Steam Web API Key",
+        "Category": "Miscreated:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the [Steam Web API key](https://steamcommunity.com/dev/apikey) for the server. This will enable the 'sv_noBannedAccounts' variable to block Steam accounts with bans from connecting to the server",
+        "Keywords": "steam,api,key,sv_steamWebAPIKey",
+        "FieldName": "sv_steamWebAPIKey",
+        "InputType": "password",
+        "ParamFieldName": "sv_steamWebAPIKey",
         "DefaultValue": "",
         "EnumValues": {}
     },
@@ -75,10 +103,12 @@
         "Keywords": "max,players,limit",
         "FieldName": "$MaxUsers",
         "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "100",
         "ParamFieldName": "sv_maxplayers",
         "IncludeInCommandLine": true,
-        "DefaultValue": "50",
-        "Placeholder": "50",
+        "DefaultValue": "36",
+        "Placeholder": "36",
         "Suffix": "players",
         "EnumValues": {}
     },
