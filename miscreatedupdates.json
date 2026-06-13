@@ -5,16 +5,8 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "302200",
         "UpdateSourceArgs": "299740",
-        "ForceDownloadPlatform": "Windows"
-    },
-    {
-        "UpdateStageName": "SteamCMD Component Download",
-        "UpdateSourcePlatform": "All",
-        "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "1007",
-        "UpdateSourceTarget": "302200",
-        "UpdateSourceArgs": "299740",
-        "ForceDownloadPlatform": "Windows"
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
     },
     {
         "UpdateStageName": "Settings Template Download",
