@@ -60,7 +60,7 @@
         "SkipOnFailure": false
     },
     {
-        "UpdateStageName": "Powershell Download",
+        "UpdateStageName": "PowerShell Download",
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
