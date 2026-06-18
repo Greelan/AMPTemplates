@@ -3,7 +3,7 @@
         "UpdateStageName": "Create Game Directory",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "CreateDirectory",
-        "UpdateSourceArgs": "{{$FullBaseDir}}Subnautica2",
+        "UpdateSourceArgs": "{{$FullBaseDir}}game",
         "SkipOnFailure": false
     },
     {
@@ -12,7 +12,7 @@
         "UpdateSource": "SteamCMD",
         "UpdateSourceData": "1962700",
         "UpdateSourceArgs": "1962700",
-        "UpdateSourceTarget": "{{$FullBaseDir}}Subnautica2",
+        "UpdateSourceTarget": "{{$FullBaseDir}}game",
         "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
     },
