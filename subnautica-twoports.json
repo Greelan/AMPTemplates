@@ -7,6 +7,14 @@
         "Description": "Port for game traffic",
         "ChildPorts": [
             {
+                "Protocol": "TCP",
+                "Port": 27016,
+                "Ref": "BeaconControlPort",
+                "Offset": 1,
+                "Name": "Beacon Control Port",
+                "Description": "Reserved"
+            },
+            {
                 "Protocol": "UDP",
                 "Port": 27017,
                 "Ref": "QueryPort",
@@ -31,12 +39,5 @@
                 "Description": "Port for HTTP API traffic"
             }
         ]
-    },
-    {
-        "Protocol": "TCP",
-        "Port": 27016,
-        "Ref": "BeaconControlPort",
-        "Name": "Beacon Control Port",
-        "Description": "Reserved"
     }
 ]
