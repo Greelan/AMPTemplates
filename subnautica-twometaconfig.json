@@ -1,0 +1,8 @@
+[
+    {
+        "ConfigFile": "BeaconServer/appsettings.json",
+        "ConfigType": "json",
+        "AutoMap": true,
+        "Importable": true
+    }
+]

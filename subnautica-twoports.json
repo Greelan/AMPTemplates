@@ -1,0 +1,42 @@
+[
+    {
+        "Protocol": "UDP",
+        "Port": 27015,
+        "Ref": "GamePort",
+        "Name": "Game Port",
+        "Description": "Port for game traffic",
+        "ChildPorts": [
+            {
+                "Protocol": "UDP",
+                "Port": 27017,
+                "Ref": "QueryPort",
+                "Offset": 2,
+                "Name": "Query Port",
+                "Description": "Port for query traffic"
+            },
+            {
+                "Protocol": "TCP",
+                "Port": 27018,
+                "Ref": "RCONPort",
+                "Offset": 3,
+                "Name": "RCON Port",
+                "Description": "Port for RCON traffic"
+            },
+            {
+                "Protocol": "TCP",
+                "Port": 27019,
+                "Ref": "HTTPAPIPort",
+                "Offset": 4,
+                "Name": "HTTP API Port",
+                "Description": "Port for HTTP API traffic"
+            }
+        ]
+    },
+    {
+        "Protocol": "TCP",
+        "Port": 27016,
+        "Ref": "BeaconControlPort",
+        "Name": "Beacon Control Port",
+        "Description": "Reserved"
+    }
+]
