@@ -69,7 +69,7 @@
         "InputType": "text",
         "Hidden": true,
         "ParamFieldName": "$.Beacon.SnInstallRoot",
-        "DefaultValue": "{{$FullBaseDir}}game",
+        "DefaultValue": "../game",
         "EnumValues": {}
     },
     {
@@ -82,7 +82,7 @@
         "InputType": "text",
         "Hidden": true,
         "ParamFieldName": "$.Beacon.SnUserDir",
-        "DefaultValue": "{{$FullBaseDir}}userdir",
+        "DefaultValue": "../userdir",
         "EnumValues": {}
     },
     {
@@ -95,7 +95,7 @@
         "InputType": "text",
         "Hidden": true,
         "ParamFieldName": "$.Beacon.SaveDir",
-        "DefaultValue": "{{$FullBaseDir}}saves",
+        "DefaultValue": "../saves",
         "EnumValues": {}
     },
     {
