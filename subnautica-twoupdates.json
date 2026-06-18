@@ -10,8 +10,8 @@
         "UpdateStageName": "Subnautica 2 Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "SteamCMD",
-        "UpdateSourceData": "2327760",
-        "UpdateSourceArgs": "2327760",
+        "UpdateSourceData": "1962700",
+        "UpdateSourceArgs": "1962700",
         "UpdateSourceTarget": "{{$FullBaseDir}}Subnautica2",
         "ForceDownloadPlatform": "Windows",
         "SkipOnFailure": false
