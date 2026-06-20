@@ -1,6 +1,6 @@
 Meta.DisplayName=Subnautica 2 (BeaconServer)
 Meta.Description=Subnautica 2 Dedicated Server using BeaconServer
-Meta.OS=Windows, Linux
+Meta.OS=
 Meta.AarchSupport=Unknown
 Meta.Arch=x86_64
 Meta.Author=Greelan
