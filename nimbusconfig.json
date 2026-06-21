@@ -1,0 +1,29 @@
+[
+    {
+        "DisplayName": "Binding",
+        "Category": "Nimbus:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "",
+        "Keywords": "",
+        "FieldName": "bind",
+        "InputType": "text",
+        "Hidden": true,
+        "ParamFieldName": "bind",
+        "DefaultValue": "{{$ApplicationIPBinding}}:{{$ProxyPort}}",
+        "ExcludeFromImport": true,
+        "EnumValues": {}
+    },
+    {
+        "DisplayName": "Dotnet Version",
+        "Category": "Updates",
+        "Subcategory": "Runtime Configuration:build:3",
+        "Description": "Sets the [.NET Runtime 10.0 version](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) to install. Empty = latest. Update the server after changing this setting",
+        "Keywords": "dotnet,version",
+        "FieldName": "DotnetVersion",
+        "InputType": "text",
+        "ParamFieldName": "DotnetVersion",
+        "DefaultValue": "",
+        "Placeholder": "10.0.9",
+        "EnumValues": {}
+    }
+]
