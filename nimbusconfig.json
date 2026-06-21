@@ -59,13 +59,13 @@
         "DisplayName": "Admin Binding",                 
         "Category": "Nimbus:stadia_controller",           
         "Subcategory": "Server:dns:1",                    
-        "Description": "Sets the URL for the admin interface (will listen on the Admin Port). Keep on localhost unless you have an authenticated reverse proxy in front",                                        
+        "Description": "Sets the IP binding for the admin interface (will listen on the Admin Port). Keep on localhost unless you have an authenticated reverse proxy in front",                                        
         "Keywords": "admin,bind",            
         "FieldName": "AdminBinding",                    
         "InputType": "text",                              
         "ParamFieldName": "AdminBinding",               
-        "DefaultValue": "http://127.0.0.1",               
-        "Placeholder": "http://127.0.0.1",                
+        "DefaultValue": "127.0.0.1",               
+        "Placeholder": "127.0.0.1",                
         "EnumValues": {}                                  
     },   
     {
