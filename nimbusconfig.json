@@ -95,6 +95,18 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Embedded Registry Shared Secret",
+        "Category": "Nimbus:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the embedded registry HMAC secret. Must match 'SharedSecret' in every backend's nimbus-server.json. Default is a strong random value",
+        "Keywords": "registry,shared,secret,hmac,embedded_shared_secret",
+        "FieldName": "registry.embedded_shared_secret",
+        "InputType": "text",
+        "ParamFieldName": "registry.embedded_shared_secret",
+        "DefaultValue": "{{newguid()}}",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Dotnet Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
