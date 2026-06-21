@@ -15,7 +15,7 @@
         "UpdateSourcePlatform": "Windows",
         "UpdateSource": "Executable",
         "UpdateSourceData": "powershell.exe",
-        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'nimbus/server'; Copy-Item -Path 'Nimbus/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'Nimbus' 'Nimbus.ServerMod' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
+        "UpdateSourceArgs": "-NoProfile -Command \"Set-Location -Path 'nimbus/server'; Copy-Item -Path 'release_full/Nimbus/*' -Destination './' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null; Remove-Item -Path 'release_full' -Recurse -Force -ErrorAction SilentlyContinue | Out-Null\"",
         "SkipOnFailure": false
     },
     {
@@ -23,7 +23,7 @@
         "UpdateSourcePlatform": "Linux",
         "UpdateSource": "Executable",
         "UpdateSourceData": "/bin/bash",
-        "UpdateSourceArgs": "-c \"cd nimbus/server && \\cp -rf Nimbus/* ./ >/dev/null 2>&1; rm -rf Nimbus Nimbus.ServerMod >/dev/null 2>&1\"",
+        "UpdateSourceArgs": "-c \"cd nimbus/server && \\cp -rf release_full/Nimbus/* ./ >/dev/null 2>&1; rm -rf release_full >/dev/null 2>&1\"",
         "SkipOnFailure": false
     },
     {
