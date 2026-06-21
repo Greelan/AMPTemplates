@@ -107,6 +107,21 @@
         "EnumValues": {}
     },
     {
+        "DisplayName": "Player Limit",
+        "Category": "Nimbus:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Sets the maximum player count that players see when their Vintage Story client sends a server-list ping to the proxy address",
+        "Keywords": "max,maximum,players,limit,connection,max_players",
+        "FieldName": "$MaxUsers",
+        "InputType": "number",
+        "MinValue": "1",
+        "ParamFieldName": "status.max_players",
+        "DefaultValue": "100",
+        "Placeholder": "100",
+        "Suffix": "players",
+        "EnumValues": {}
+    },
+    {
         "DisplayName": "Dotnet Version",
         "Category": "Updates",
         "Subcategory": "Runtime Configuration:build:3",
