@@ -101,7 +101,7 @@
         "Description": "Sets the embedded registry HMAC secret. Must match 'SharedSecret' in every backend's nimbus-server.json. Default is a strong random value",
         "Keywords": "registry,shared,secret,hmac,embedded_shared_secret",
         "FieldName": "registry.embedded_shared_secret",
-        "InputType": "text",
+        "InputType": "password",
         "ParamFieldName": "registry.embedded_shared_secret",
         "DefaultValue": "{{newguid()}}",
         "EnumValues": {}
