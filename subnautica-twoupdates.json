@@ -17,6 +17,16 @@
         "SkipOnFailure": false
     },
     {
+        "UpdateStageName": "Steam Component Download",
+        "UpdateSourcePlatform": "All",
+        "UpdateSource": "SteamCMD",
+        "UpdateSourceData": "1007",
+        "UpdateSourceArgs": "1962700",
+        "UpdateSourceTarget": "{{$FullBaseDir}}BeaconServer",
+        "ForceDownloadPlatform": "Windows",
+        "SkipOnFailure": false
+    },
+    {
         "UpdateStageName": "BeaconServer Download",
         "UpdateSourcePlatform": "All",
         "UpdateSource": "GithubRelease",
