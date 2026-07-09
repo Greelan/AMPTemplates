@@ -22,7 +22,7 @@
         "UpdateSource": "GithubRelease",
         "UpdateSourceArgs": "humangenome/BeaconServer",
         "UpdateSourceVersion": "{{BeaconServerVersion}}",
-        "UpdateSourceTarget": "{{$FullBaseDir}}",
+        "UpdateSourceTarget": "{{$FullBaseDir}}/BeaconServer",
         "UnzipUpdateSource": true,
         "OverwriteExistingFiles": true,
         "DeleteAfterExtract": true,
