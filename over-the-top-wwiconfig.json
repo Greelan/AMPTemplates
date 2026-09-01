@@ -64,5 +64,148 @@
         "Placeholder": "130",
         "Suffix": "players",
         "EnumValues": {}
+    },
+    {
+        "DisplayName": "Server Region",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "The geographic region the server is listed under.",
+        "Keywords": "region,location",
+        "FieldName": "Region",
+        "InputType": "enum",
+        "ParamFieldName": "Region",
+        "DefaultValue": "2",
+        "EnumValues": {
+            "-1": "Any",
+            "0": "USA",
+            "1": "EU West",
+            "2": "Australia",
+            "3": "EU East",
+            "4": "China",
+            "5": "South America",
+            "6": "North Africa",
+            "7": "South Africa",
+            "8": "Japan"
+        }
+    },
+    {
+        "DisplayName": "Enable Whitelist",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Server:dns:1",
+        "Description": "Only allow whitelisted players to join.",
+        "Keywords": "whitelist",
+        "FieldName": "WhiteListIsEnabled",
+        "InputType": "checkbox",
+        "ParamFieldName": "WhiteListIsEnabled",
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Officer Spawn on Officer",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Whether officers can spawn on other officers.",
+        "Keywords": "officer,spawn",
+        "FieldName": "OfficerSpawnOfficer",
+        "InputType": "checkbox",
+        "ParamFieldName": "OfficerSpawnOfficer",
+        "DefaultValue": "false"
+    },
+    {
+        "DisplayName": "Attacker Respawn Time",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Respawn timer for the attacking team.",
+        "FieldName": "AttackerRespawnTime",
+        "InputType": "number",
+        "Suffix": "seconds",
+        "DefaultValue": "8"
+    },
+    {
+        "DisplayName": "Defender Respawn Time",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Respawn timer for the defending team.",
+        "FieldName": "DefenderRespawnTime",
+        "InputType": "number",
+        "Suffix": "seconds",
+        "DefaultValue": "8"
+    },
+    {
+        "DisplayName": "Friendly Fire Percent",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Percentage of damage dealt to allies.",
+        "FieldName": "FriendlyFirePercent",
+        "InputType": "number",
+        "Suffix": "%",
+        "DefaultValue": "5"
+    },
+    {
+        "DisplayName": "Auto Kick for Teamkills",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Gameplay:sports_kabaddi",
+        "Description": "Automatically kick players who exceed teamkill thresholds.",
+        "FieldName": "AutoKickForTeamkills",
+        "InputType": "checkbox",
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Enable Class Limits",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Enables or disables the enforcement of class limits.",
+        "FieldName": "EnableClassLimits",
+        "InputType": "checkbox",
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "Cavalry Percentage",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Percent of team allowed as Cavalry.",
+        "FieldName": "PercentofCavPerTeam",
+        "InputType": "number",
+        "MinValue": "0",
+        "MaxValue": "100",
+        "Suffix": "%",
+        "DefaultValue": "20"
+    },
+    {
+        "DisplayName": "Number of Snipers",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Maximum number of snipers allowed.",
+        "FieldName": "NumberOfSnipers",
+        "InputType": "number",
+        "DefaultValue": "10"
+    },
+    {
+        "DisplayName": "Min Players for Class Limits",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "Class Restrictions:groups",
+        "Description": "Number of players required before class limits are enforced.",
+        "FieldName": "MinimumNumOfPlayerForClassLimits",
+        "InputType": "number",
+        "MinValue": "1",
+        "MaxValue": "1020",
+        "DefaultValue": "15"
+    },
+    {
+        "DisplayName": "Allow VOIP",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "VOIP:record_voice_over",
+        "Description": "Enable or disable in-game voice chat.",
+        "FieldName": "VoipAllowed",
+        "InputType": "checkbox",
+        "DefaultValue": "true"
+    },
+    {
+        "DisplayName": "VOIP Quality",
+        "Category": "Over The Top WWI:stadia_controller",
+        "Subcategory": "VOIP:record_voice_over",
+        "Description": "0 is standard quality.",
+        "FieldName": "VoipQuality",
+        "InputType": "number",
+        "DefaultValue": "0"
     }
 ]
