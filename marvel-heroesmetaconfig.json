@@ -1,8 +1,0 @@
-[
-    {
-        "ConfigFile": "ConfigOverride.ini",
-        "ConfigType": "ini",
-        "Importable": true,
-        "AutoMap": true
-    }
-]
